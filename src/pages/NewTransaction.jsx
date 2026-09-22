@@ -8,7 +8,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import CardFields from "@/components/checkout/CardFields";
 import MoMoFields from "@/components/checkout/MoMoFields";
 import ProcessingOverlay from "@/components/checkout/ProcessingOverlay";
-import { Image } from "@/components/ui/image";
+import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
 
 const FALLBACK_PK = "nexa_pk_test_123";
@@ -199,12 +199,7 @@ export default function NewTransaction() {
           <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-emerald-50 border border-emerald-200">
             <CheckCircle2 className="h-7 w-7 text-emerald-600" />
           </div>
-          <Image
-            src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png"
-            alt="NexaPay"
-            className="h-10 w-10 mx-auto mt-4 rounded-xl"
-            fittingType="fill"
-          />
+          <NexaMark size={38} className="mx-auto mt-4" />
           <h2 className="font-display text-xl font-semibold mt-3">{t.success}</h2>
           <p className="text-sm text-muted-foreground mt-1">{t.successMsg}</p>
           <div className="mt-4 rounded-xl border border-border bg-secondary/40 px-4 py-3">
@@ -240,12 +235,7 @@ export default function NewTransaction() {
         {/* Merchant lockup + language toggle */}
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
-            <Image
-              src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png"
-              alt="NexaPay"
-              className="h-12 w-12 rounded-2xl"
-              fittingType="fill"
-            />
+            <NexaMark size={44} />
             <div>
               <h1 className="font-display text-lg font-semibold tracking-tight leading-none">NexaPay</h1>
               <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1"><Lock className="h-3 w-3" /> {t.secure}</p>
