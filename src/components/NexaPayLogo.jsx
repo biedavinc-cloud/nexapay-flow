@@ -1,10 +1,8 @@
 import { cn } from "@/lib/utils";
 
-// Official NexaPay mark — the green "N" (#3BB77E) only, transparent background.
-// Drawn as one continuous angular stroke (left vertical slightly shorter than
-// the right). No container, no fill behind it.
-const GREEN = "#3BB77E";
-
+// Official NexaPay mark — a geometric eye (almond outline + centered solid
+// pupil), transparent background. Uses currentColor so it adapts to the
+// surrounding text color: navy on light surfaces, white on dark surfaces.
 export function NexaMark({ size = 28, className }) {
   return (
     <svg
@@ -16,12 +14,12 @@ export function NexaMark({ size = 28, className }) {
       aria-hidden="true"
     >
       <path
-        d="M32 25 L32 75 L68 20 L68 80"
-        stroke={GREEN}
-        strokeWidth="16"
-        strokeLinecap="round"
+        d="M8 50 C30 24 70 24 92 50 C70 76 30 76 8 50 Z"
+        stroke="currentColor"
+        strokeWidth="7"
         strokeLinejoin="round"
       />
+      <circle cx="50" cy="50" r="13" fill="currentColor" />
     </svg>
   );
 }
@@ -34,7 +32,7 @@ export default function NexaPayLogo({
 }) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
-      <NexaMark size={size} />
+      <NexaMark size={size} className={wordmarkClassName} />
       {wordmark && (
         <span className={cn("font-semibold tracking-tight", wordmarkClassName)}>NexaPay</span>
       )}
