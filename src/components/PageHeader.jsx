@@ -1,1 +1,20 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBhZ2VIZWFkZXIoeyB0aXRsZSwgZGVzY3JpcHRpb24sIGljb246IEljb24sIGFjdGlvbiB9KSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIG1kOmZsZXgtcm93IG1kOml0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTMgbWItNiI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAge0ljb24gJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaC0xMCB3LTEwIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLWxnIGJnLXByaW1hcnkvMTAgYm9yZGVyIGJvcmRlci1wcmltYXJ5LzIwIHNocmluay0wIj4KICAgICAgICAgICAgPEljb24gY2xhc3NOYW1lPSJoLTUgdy01IHRleHQtcHJpbWFyeSIgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMSBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctdGlnaHQgdGV4dC1mb3JlZ3JvdW5kIj57dGl0bGV9PC9oMT4KICAgICAgICAgIHtkZXNjcmlwdGlvbiAmJiA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj57ZGVzY3JpcHRpb259PC9wPn0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIHthY3Rpb259CiAgICA8L2Rpdj4KICApOwp9
+import React from "react";
+
+export default function PageHeader({ title, description, icon: Icon, action }) {
+  return (
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6">
+      <div className="flex items-center gap-3">
+        {Icon && (
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 shrink-0">
+            <Icon className="h-5 w-5 text-primary" />
+          </div>
+        )}
+        <div>
+          <h1 className="font-display text-xl font-semibold tracking-tight text-foreground">{title}</h1>
+          {description && <p className="text-sm text-muted-foreground">{description}</p>}
+        </div>
+      </div>
+      {action}
+    </div>
+  );
+}

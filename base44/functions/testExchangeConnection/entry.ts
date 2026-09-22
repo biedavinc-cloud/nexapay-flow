@@ -1,1 +1,122 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QgfSBmcm9tICducG06QGJhc2U0NC9zZGtAMC44LjQ0JzsKaW1wb3J0IHsgc2VjcmV0cyB9IGZyb20gImJhc2U0NDpydW50aW1lIjsKCmNvbnN0IGVuYyA9IG5ldyBUZXh0RW5jb2RlcigpOwoKYXN5bmMgZnVuY3Rpb24gaG1hY0I2NChrZXk6IHN0cmluZywgbXNnOiBzdHJpbmcpIHsKICBjb25zdCBjayA9IGF3YWl0IGNyeXB0by5zdWJ0bGUuaW1wb3J0S2V5KCJyYXciLCBlbmMuZW5jb2RlKGtleSksIHsgbmFtZTogIkhNQUMiLCBoYXNoOiAiU0hBLTI1NiIgfSwgZmFsc2UsIFsic2lnbiJdKTsKICBjb25zdCBzaWcgPSBhd2FpdCBjcnlwdG8uc3VidGxlLnNpZ24oIkhNQUMiLCBjaywgZW5jLmVuY29kZShtc2cpKTsKICByZXR1cm4gYnRvYShTdHJpbmcuZnJvbUNoYXJDb2RlKC4uLm5ldyBVaW50OEFycmF5KHNpZykpKTsKfQoKYXN5bmMgZnVuY3Rpb24gaG1hY0hleChrZXk6IHN0cmluZywgbXNnOiBzdHJpbmcpIHsKICBjb25zdCBjayA9IGF3YWl0IGNyeXB0by5zdWJ0bGUuaW1wb3J0S2V5KCJyYXciLCBlbmMuZW5jb2RlKGtleSksIHsgbmFtZTogIkhNQUMiLCBoYXNoOiAiU0hBLTI1NiIgfSwgZmFsc2UsIFsic2lnbiJdKTsKICBjb25zdCBzaWcgPSBhd2FpdCBjcnlwdG8uc3VidGxlLnNpZ24oIkhNQUMiLCBjaywgZW5jLmVuY29kZShtc2cpKTsKICByZXR1cm4gQXJyYXkuZnJvbShuZXcgVWludDhBcnJheShzaWcpKS5tYXAoKGIpID0+IGIudG9TdHJpbmcoMTYpLnBhZFN0YXJ0KDIsICIwIikpLmpvaW4oIiIpOwp9CgpmdW5jdGlvbiBzYWZlKG5hbWU6IHN0cmluZykgewogIHRyeSB7IHJldHVybiBzZWNyZXRzLmdldChuYW1lKTsgfSBjYXRjaCB7IHJldHVybiB1bmRlZmluZWQ7IH0KfQoKLy8gTWluaW1hbCByZWFkLW9ubHkgc2lnbmVkIEFQSSBjYWxscyB0byB2ZXJpZnkgZXhjaGFuZ2Uga2V5cyBhcmUgdmFsaWQuCmFzeW5jIGZ1bmN0aW9uIHRlc3RLdUNvaW4oKSB7CiAgY29uc3Qga2V5ID0gc2FmZSgiS1VDT0lOX0FQSV9LRVkiKTsKICBjb25zdCBzZWNyZXQgPSBzYWZlKCJLVUNPSU5fQVBJX1NFQ1JFVCIpOwogIGNvbnN0IHBhc3NwaHJhc2UgPSBzYWZlKCJLVUNPSU5fUEFTU1BIUkFTRSIpOwogIGlmICgha2V5IHx8ICFzZWNyZXQgfHwgIXBhc3NwaHJhc2UpIHJldHVybiB7IG9rOiBmYWxzZSwgbWVzc2FnZTogIkNsw6lzIEt1Q29pbiBub24gY29uZmlndXLDqWVzIChLVUNPSU5fQVBJX0tFWSAvIFNFQ1JFVCAvIFBBU1NQSFJBU0UpLiIgfTsKICBjb25zdCBwYXRoID0gIi9hcGkvdjEvc3ViL3VzZXIiOwogIGNvbnN0IHRzID0gRGF0ZS5ub3coKS50b1N0cmluZygpOwogIGNvbnN0IHNpZ24gPSBhd2FpdCBobWFjQjY0KHNlY3JldCwgYCR7dHN9R0VUJHtwYXRofWApOwogIGNvbnN0IHIgPSBhd2FpdCBmZXRjaCgiaHR0cHM6Ly9hcGkua3Vjb2luLmNvbSIgKyBwYXRoLCB7CiAgICBoZWFkZXJzOiB7ICJLQy1BUEktS0VZIjoga2V5LCAiS0MtQVBJLVNJR04iOiBzaWduLCAiS0MtQVBJLVRJTUVTVEFNUCI6IHRzLCAiS0MtQVBJLVBBU1NQSFJBU0UiOiBwYXNzcGhyYXNlLCAiS0MtQVBJLUtFWS1WRVJTSU9OIjogIjIiIH0sCiAgfSk7CiAgY29uc3QgZCA9IGF3YWl0IHIuanNvbigpOwogIGlmIChkPy5jb2RlICE9PSAiMjAwMDAwIikgdGhyb3cgbmV3IEVycm9yKGQ/Lm1zZyB8fCBgSFRUUCAke3Iuc3RhdHVzfWApOwogIHJldHVybiB7IG9rOiB0cnVlLCBtZXNzYWdlOiAiQ29ubmV4aW9uIEt1Q29pbiB2YWxpZMOpZS4iIH07Cn0KCmFzeW5jIGZ1bmN0aW9uIHRlc3RCaW5hbmNlKCkgewogIGNvbnN0IGtleSA9IHNhZmUoIkJJTkFOQ0VfQVBJX0tFWSIpOwogIGNvbnN0IHNlY3JldCA9IHNhZmUoIkJJTkFOQ0VfQVBJX1NFQ1JFVCIpOwogIGlmICgha2V5IHx8ICFzZWNyZXQpIHJldHVybiB7IG9rOiBmYWxzZSwgbWVzc2FnZTogIkNsw6lzIEJpbmFuY2Ugbm9uIGNvbmZpZ3Vyw6llcyAoQklOQU5DRV9BUElfS0VZIC8gU0VDUkVUKS4iIH07CiAgY29uc3QgdHMgPSBEYXRlLm5vdygpOwogIGNvbnN0IHFzID0gYHRpbWVzdGFtcD0ke3RzfWA7CiAgY29uc3Qgc2lnID0gYXdhaXQgaG1hY0hleChzZWNyZXQsIHFzKTsKICBjb25zdCByID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vYXBpLmJpbmFuY2UuY29tL3NhcGkvdjEvYWNjb3VudC9hcGlSZXN0cmljdGlvbnM/JHtxc30mc2lnbmF0dXJlPSR7c2lnfWAsIHsKICAgIGhlYWRlcnM6IHsgIlgtTUJYLUFQSUtFWSI6IGtleSB9LAogIH0pOwogIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICBpZiAoZD8uY29kZSAmJiBkLmNvZGUgIT09IDIwMCkgdGhyb3cgbmV3IEVycm9yKGQ/Lm1zZyB8fCBgSFRUUCAke3Iuc3RhdHVzfWApOwogIHJldHVybiB7IG9rOiB0cnVlLCBtZXNzYWdlOiAiQ29ubmV4aW9uIEJpbmFuY2UgdmFsaWTDqWUuIiB9Owp9Cgphc3luYyBmdW5jdGlvbiB0ZXN0QmluZ1goKSB7CiAgY29uc3Qga2V5ID0gc2FmZSgiQklOR1hfQVBJX0tFWSIpOwogIGNvbnN0IHNlY3JldCA9IHNhZmUoIkJJTkdYX0FQSV9TRUNSRVQiKTsKICBpZiAoIWtleSB8fCAhc2VjcmV0KSByZXR1cm4geyBvazogZmFsc2UsIG1lc3NhZ2U6ICJDbMOpcyBCaW5nWCBub24gY29uZmlndXLDqWVzLiIgfTsKICBjb25zdCBwYXRoID0gIi9vcGVuQXBpL3Nwb3QvdjEvYWNjb3VudC9iYWxhbmNlIjsKICBjb25zdCB0cyA9IERhdGUubm93KCkudG9TdHJpbmcoKTsKICBjb25zdCBzaWduID0gYXdhaXQgaG1hY0hleChzZWNyZXQsIGAke3RzfVxuJHtwYXRofVxuYCk7CiAgY29uc3QgciA9IGF3YWl0IGZldGNoKGBodHRwczovL29wZW4tYXBpLmJpbmd4LmNvbSR7cGF0aH1gLCB7CiAgICBoZWFkZXJzOiB7ICJCSU5HWC1BUEktS0VZIjoga2V5LCAiQklOR1gtU0lHTiI6IHNpZ24sICJCSU5HWC1USU1FU1RBTVAiOiB0cyB9LAogIH0pOwogIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICBpZiAoZD8uY29kZSAhPT0gMCkgdGhyb3cgbmV3IEVycm9yKGQ/Lm1zZyB8fCBgSFRUUCAke3Iuc3RhdHVzfWApOwogIHJldHVybiB7IG9rOiB0cnVlLCBtZXNzYWdlOiAiQ29ubmV4aW9uIEJpbmdYIHZhbGlkw6llLiIgfTsKfQoKYXN5bmMgZnVuY3Rpb24gdGVzdENvaW5iYXNlKCkgewogIGNvbnN0IGtleSA9IHNhZmUoIkNPSU5CQVNFX0FQSV9LRVkiKTsKICBjb25zdCBzZWNyZXQgPSBzYWZlKCJDT0lOQkFTRV9BUElfU0VDUkVUIik7CiAgaWYgKCFrZXkgfHwgIXNlY3JldCkgcmV0dXJuIHsgb2s6IGZhbHNlLCBtZXNzYWdlOiAiQ2zDqXMgQ29pbmJhc2Ugbm9uIGNvbmZpZ3Vyw6llcy4iIH07CiAgY29uc3QgcGF0aCA9ICIvdXNlcnMvc2VsZi92ZXJpZnkiOwogIGNvbnN0IHRzID0gTWF0aC5mbG9vcihEYXRlLm5vdygpIC8gMTAwMCkudG9TdHJpbmcoKTsKICBjb25zdCBzaWduID0gYXdhaXQgaG1hY0I2NChzZWNyZXQsIGAke3RzfUdFVCR7cGF0aH1gKTsKICBjb25zdCByID0gYXdhaXQgZmV0Y2goImh0dHBzOi8vYXBpLmV4Y2hhbmdlLmNvaW5iYXNlLmNvbSIgKyBwYXRoLCB7CiAgICBoZWFkZXJzOiB7ICJDQi1BQ0NFU1MtS0VZIjoga2V5LCAiQ0ItQUNDRVNTLVNJR04iOiBzaWduLCAiQ0ItQUNDRVNTLVRJTUVTVEFNUCI6IHRzIH0sCiAgfSk7CiAgaWYgKCFyLm9rKSB7IGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsgdGhyb3cgbmV3IEVycm9yKGQ/Lm1lc3NhZ2UgfHwgYEhUVFAgJHtyLnN0YXR1c31gKTsgfQogIHJldHVybiB7IG9rOiB0cnVlLCBtZXNzYWdlOiAiQ29ubmV4aW9uIENvaW5iYXNlIHZhbGlkw6llLiIgfTsKfQoKY29uc3QgVEVTVEVSUyA9IHsKICBLVUNPSU46IHRlc3RLdUNvaW4sCiAgQklOQU5DRTogdGVzdEJpbmFuY2UsCiAgQklOR1g6IHRlc3RCaW5nWCwKICBDT0lOQkFTRTogdGVzdENvaW5iYXNlLAp9OwoKLy8gVGVzdHMgY29ubmVjdGl2aXR5IHdpdGggY29uZmlndXJlZCBleGNoYW5nZSBBUElzIHRvIHZlcmlmeSBrZXlzIGFyZSB2YWxpZC4KLy8gQWRtaW4tb25seS4gQWNjZXB0cyB7IHByb3ZpZGVyIH0gdG8gdGVzdCBvbmUsIG9yIG5vIGJvZHkgdG8gdGVzdCBhbGwgZW5hYmxlZCBwcm92aWRlcnMuCmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIChyZXE6IFJlcXVlc3QpOiBQcm9taXNlPFJlc3BvbnNlPiB7CiAgY29uc3QgYmFzZTQ0ID0gY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QocmVxKTsKICB0cnkgewogICAgY29uc3QgdXNlciA9IGF3YWl0IGJhc2U0NC5hdXRoLm1lKCk7CiAgICBpZiAoIXVzZXIpIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJVbmF1dGhvcml6ZWQiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgICBpZiAodXNlci5yb2xlICE9PSAiYWRtaW4iKSByZXR1cm4gUmVzcG9uc2UuanNvbih7IGVycm9yOiAiRm9yYmlkZGVuIiB9LCB7IHN0YXR1czogNDAzIH0pOwoKICAgIGNvbnN0IGJvZHkgPSBhd2FpdCByZXEuanNvbigpLmNhdGNoKCgpID0+ICh7fSkpOwogICAgY29uc3QgcHJvdmlkZXJzID0gYm9keS5wcm92aWRlcgogICAgICA/IFtTdHJpbmcoYm9keS5wcm92aWRlcikudG9VcHBlckNhc2UoKV0KICAgICAgOiBbIktVQ09JTiIsICJCSU5BTkNFIiwgIkJJTkdYIiwgIkNPSU5CQVNFIl07CgogICAgY29uc3QgcmVzdWx0cyA9IFtdOwogICAgZm9yIChjb25zdCBuYW1lIG9mIHByb3ZpZGVycykgewogICAgICBjb25zdCB0ZXN0ZXIgPSBURVNURVJTW25hbWVdOwogICAgICBpZiAoIXRlc3RlcikgeyByZXN1bHRzLnB1c2goeyBwcm92aWRlcjogbmFtZSwgb2s6IGZhbHNlLCBtZXNzYWdlOiAiRm91cm5pc3NldXIgaW5jb25udS4iIH0pOyBjb250aW51ZTsgfQogICAgICB0cnkgewogICAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IHRlc3RlcigpOwogICAgICAgIHJlc3VsdHMucHVzaCh7IHByb3ZpZGVyOiBuYW1lLCAuLi5yZXMgfSk7CiAgICAgIH0gY2F0Y2ggKGUpIHsKICAgICAgICByZXN1bHRzLnB1c2goeyBwcm92aWRlcjogbmFtZSwgb2s6IGZhbHNlLCBtZXNzYWdlOiBgw4ljaGVjIDogJHtlLm1lc3NhZ2V9YCB9KTsKICAgICAgfQogICAgfQoKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgcmVzdWx0cyB9KTsKICB9IGNhdGNoIChlcnJvcikgewogICAgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwogIH0KfQ==
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.44';
+import { secrets } from "base44:runtime";
+
+const enc = new TextEncoder();
+
+async function hmacB64(key: string, msg: string) {
+  const ck = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", ck, enc.encode(msg));
+  return btoa(String.fromCharCode(...new Uint8Array(sig)));
+}
+
+async function hmacHex(key: string, msg: string) {
+  const ck = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", ck, enc.encode(msg));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function safe(name: string) {
+  try { return secrets.get(name); } catch { return undefined; }
+}
+
+// Minimal read-only signed API calls to verify exchange keys are valid.
+async function testKuCoin() {
+  const key = safe("KUCOIN_API_KEY");
+  const secret = safe("KUCOIN_API_SECRET");
+  const passphrase = safe("KUCOIN_PASSPHRASE");
+  if (!key || !secret || !passphrase) return { ok: false, message: "Clés KuCoin non configurées (KUCOIN_API_KEY / SECRET / PASSPHRASE)." };
+  const path = "/api/v1/sub/user";
+  const ts = Date.now().toString();
+  // KuCoin API key version 2 requires the passphrase HMAC-encrypted with the secret (base64).
+  const encPass = await hmacB64(secret, passphrase);
+  const sign = await hmacB64(secret, `${ts}GET${path}`);
+  const r = await fetch("https://api.kucoin.com" + path, {
+    headers: { "KC-API-KEY": key, "KC-API-SIGN": sign, "KC-API-TIMESTAMP": ts, "KC-API-PASSPHRASE": encPass, "KC-API-KEY-VERSION": "2" },
+  });
+  const d = await r.json();
+  if (d?.code !== "200000") throw new Error(d?.msg || `HTTP ${r.status}`);
+  return { ok: true, message: "Connexion KuCoin validée." };
+}
+
+async function testBinance() {
+  const key = safe("BINANCE_API_KEY");
+  const secret = safe("BINANCE_API_SECRET");
+  if (!key || !secret) return { ok: false, message: "Clés Binance non configurées (BINANCE_API_KEY / SECRET)." };
+  const ts = Date.now();
+  const qs = `timestamp=${ts}`;
+  const sig = await hmacHex(secret, qs);
+  const r = await fetch(`https://api.binance.com/sapi/v1/account/apiRestrictions?${qs}&signature=${sig}`, {
+    headers: { "X-MBX-APIKEY": key },
+  });
+  const d = await r.json();
+  if (d?.code && d.code !== 200) throw new Error(d?.msg || `HTTP ${r.status}`);
+  return { ok: true, message: "Connexion Binance validée." };
+}
+
+async function testBingX() {
+  const key = safe("BINGX_API_KEY");
+  const secret = safe("BINGX_API_SECRET");
+  if (!key || !secret) return { ok: false, message: "Clés BingX non configurées." };
+  const path = "/openApi/spot/v1/account/balance";
+  const ts = Date.now().toString();
+  const sign = await hmacHex(secret, `${ts}\n${path}\n`);
+  const r = await fetch(`https://open-api.bingx.com${path}`, {
+    headers: { "BINGX-API-KEY": key, "BINGX-SIGN": sign, "BINGX-TIMESTAMP": ts },
+  });
+  const d = await r.json();
+  if (d?.code !== 0) throw new Error(d?.msg || `HTTP ${r.status}`);
+  return { ok: true, message: "Connexion BingX validée." };
+}
+
+async function testCoinbase() {
+  const key = safe("COINBASE_API_KEY");
+  const secret = safe("COINBASE_API_SECRET");
+  if (!key || !secret) return { ok: false, message: "Clés Coinbase non configurées." };
+  const path = "/users/self/verify";
+  const ts = Math.floor(Date.now() / 1000).toString();
+  const sign = await hmacB64(secret, `${ts}GET${path}`);
+  const r = await fetch("https://api.exchange.coinbase.com" + path, {
+    headers: { "CB-ACCESS-KEY": key, "CB-ACCESS-SIGN": sign, "CB-ACCESS-TIMESTAMP": ts },
+  });
+  if (!r.ok) { const d = await r.json().catch(() => ({})); throw new Error(d?.message || `HTTP ${r.status}`); }
+  return { ok: true, message: "Connexion Coinbase validée." };
+}
+
+const TESTERS = {
+  KUCOIN: testKuCoin,
+  BINANCE: testBinance,
+  BINGX: testBingX,
+  COINBASE: testCoinbase,
+};
+
+// Tests connectivity with configured exchange APIs to verify keys are valid.
+// Admin-only. Accepts { provider } to test one, or no body to test all enabled providers.
+export default async function (req: Request): Promise<Response> {
+  const base44 = createClientFromRequest(req);
+  try {
+    const user = await base44.auth.me();
+    if (!user) return Response.json({ error: "Unauthorized" }, { status: 401 });
+    if (user.role !== "admin") return Response.json({ error: "Forbidden" }, { status: 403 });
+
+    const body = await req.json().catch(() => ({}));
+    const providers = body.provider
+      ? [String(body.provider).toUpperCase()]
+      : ["KUCOIN", "BINANCE", "BINGX", "COINBASE"];
+
+    const results = [];
+    for (const name of providers) {
+      const tester = TESTERS[name];
+      if (!tester) { results.push({ provider: name, ok: false, message: "Fournisseur inconnu." }); continue; }
+      try {
+        const res = await tester();
+        results.push({ provider: name, ...res });
+      } catch (e) {
+        results.push({ provider: name, ok: false, message: `Échec : ${e.message}` });
+      }
+    }
+
+    return Response.json({ results });
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
+}

@@ -1,1 +1,55 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgTG9hZGVyMiwgQ2hlY2tDaXJjbGUyLCBDcmVkaXRDYXJkLCBTaGllbGRDaGVjaywgTG9jayB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CgovLyBOZXV0cmFsLCBjYXJkaG9sZGVyLWZhY2luZyBzdGVwcyDigJQgbm8gY3J5cHRvIHRlcm1pbm9sb2d5IGlzIHNob3duIHRvIHRoZSBjbGllbnQuCmNvbnN0IEwgPSB7CiAgRlI6IFsKICAgICJWw6lyaWZpY2F0aW9uIGRlIHZvdHJlIGNhcnRl4oCmIiwKICAgICJBdXRvcmlzYXRpb24gc8OpY3VyaXPDqWXigKYiLAogICAgIkNvbmZpcm1hdGlvbiBkZSB2b3RyZSBwYWllbWVudOKApiIsCiAgICAiUGFpZW1lbnQgY29uZmlybcOpIiwKICBdLAogIEVOOiBbCiAgICAiVmVyaWZ5aW5nIHlvdXIgY2FyZOKApiIsCiAgICAiU2VjdXJlIGF1dGhvcml6YXRpb27igKYiLAogICAgIkNvbmZpcm1pbmcgeW91ciBwYXltZW504oCmIiwKICAgICJQYXltZW50IGNvbmZpcm1lZCIsCiAgXSwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFByb2Nlc3NpbmdPdmVybGF5KHsgc3RlcCwgbGFuZyA9ICJGUiIgfSkgewogIGNvbnN0IGxhYmVscyA9IExbbGFuZ10gfHwgTC5GUjsKICBjb25zdCBzdGVwcyA9IFsKICAgIHsgaWNvbjogQ3JlZGl0Q2FyZCwgbGFiZWw6IGxhYmVsc1swXSB9LAogICAgeyBpY29uOiBMb2NrLCBsYWJlbDogbGFiZWxzWzFdIH0sCiAgICB7IGljb246IFNoaWVsZENoZWNrLCBsYWJlbDogbGFiZWxzWzJdIH0sCiAgICB7IGljb246IENoZWNrQ2lyY2xlMiwgbGFiZWw6IGxhYmVsc1szXSB9LAogIF07CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJhYnNvbHV0ZSBpbnNldC0wIHotMjAgcm91bmRlZC0yeGwgYmctY2FyZC85NSBiYWNrZHJvcC1ibHVyLXNtIGZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC01IHAtOCI+CiAgICAgIHtzdGVwcy5tYXAoKHMsIGkpID0+IHsKICAgICAgICBjb25zdCBkb25lID0gaSA8IHN0ZXA7CiAgICAgICAgY29uc3QgYWN0aXZlID0gaSA9PT0gc3RlcDsKICAgICAgICBjb25zdCBJY29uID0gcy5pY29uOwogICAgICAgIHJldHVybiAoCiAgICAgICAgICA8ZGl2IGtleT17aX0gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICBjbGFzc05hbWU9e2BmbGV4IGgtMTAgdy0xMCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciAkewogICAgICAgICAgICAgICAgZG9uZQogICAgICAgICAgICAgICAgICA/ICJiZy1lbWVyYWxkLTUwIGJvcmRlci1lbWVyYWxkLTIwMCB0ZXh0LWVtZXJhbGQtNjAwIgogICAgICAgICAgICAgICAgICA6IGFjdGl2ZQogICAgICAgICAgICAgICAgICA/ICJiZy1wcmltYXJ5LzEwIGJvcmRlci1wcmltYXJ5LzMwIHRleHQtcHJpbWFyeSIKICAgICAgICAgICAgICAgICAgOiAiYmctc2Vjb25kYXJ5IGJvcmRlci1ib3JkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIgogICAgICAgICAgICAgIH1gfQogICAgICAgICAgICA+CiAgICAgICAgICAgICAge2RvbmUgPyA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT0iaC01IHctNSIgLz4gOiBhY3RpdmUgPyA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNSB3LTUgYW5pbWF0ZS1zcGluIiAvPiA6IDxJY29uIGNsYXNzTmFtZT0iaC01IHctNSIgLz59CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9e2B0ZXh0LXNtIGZvbnQtbWVkaXVtICR7ZG9uZSA/ICJ0ZXh0LWVtZXJhbGQtNjAwIiA6IGFjdGl2ZSA/ICJ0ZXh0LWZvcmVncm91bmQiIDogInRleHQtbXV0ZWQtZm9yZWdyb3VuZCJ9YH0+CiAgICAgICAgICAgICAge3MubGFiZWx9CiAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICk7CiAgICAgIH0pfQogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import { Loader2, CheckCircle2, CreditCard, ShieldCheck, Lock } from "lucide-react";
+
+// Neutral, cardholder-facing steps — no crypto terminology is shown to the client.
+const L = {
+  FR: [
+    "Vérification de votre carte…",
+    "Autorisation sécurisée…",
+    "Confirmation de votre paiement…",
+    "Paiement confirmé",
+  ],
+  EN: [
+    "Verifying your card…",
+    "Secure authorization…",
+    "Confirming your payment…",
+    "Payment confirmed",
+  ],
+};
+
+export default function ProcessingOverlay({ step, lang = "FR" }) {
+  const labels = L[lang] || L.FR;
+  const steps = [
+    { icon: CreditCard, label: labels[0] },
+    { icon: Lock, label: labels[1] },
+    { icon: ShieldCheck, label: labels[2] },
+    { icon: CheckCircle2, label: labels[3] },
+  ];
+  return (
+    <div className="absolute inset-0 z-20 rounded-2xl bg-card/95 backdrop-blur-sm flex flex-col items-center justify-center gap-5 p-8">
+      {steps.map((s, i) => {
+        const done = i < step;
+        const active = i === step;
+        const Icon = s.icon;
+        return (
+          <div key={i} className="flex items-center gap-3">
+            <div
+              className={`flex h-10 w-10 items-center justify-center rounded-full border ${
+                done
+                  ? "bg-emerald-50 border-emerald-200 text-emerald-600"
+                  : active
+                  ? "bg-primary/10 border-primary/30 text-primary"
+                  : "bg-secondary border-border text-muted-foreground"
+              }`}
+            >
+              {done ? <CheckCircle2 className="h-5 w-5" /> : active ? <Loader2 className="h-5 w-5 animate-spin" /> : <Icon className="h-5 w-5" />}
+            </div>
+            <span className={`text-sm font-medium ${done ? "text-emerald-600" : active ? "text-foreground" : "text-muted-foreground"}`}>
+              {s.label}
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}

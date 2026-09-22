@@ -1,1 +1,12 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50IH0gZnJvbSAnQGJhc2U0NC9zZGsnOwppbXBvcnQgeyBhcHBQYXJhbXMgfSBmcm9tICdAL2xpYi9hcHAtcGFyYW1zJzsKCmNvbnN0IHsgYXBwSWQsIHRva2VuLCBmdW5jdGlvbnNWZXJzaW9uLCBhcHBCYXNlVXJsIH0gPSBhcHBQYXJhbXM7CgpleHBvcnQgY29uc3QgYmFzZTQ0ID0gY3JlYXRlQ2xpZW50KHsKICBhcHBJZCwKICB0b2tlbiwKICBmdW5jdGlvbnNWZXJzaW9uLAogIHNlcnZlclVybDogJycsCiAgYXBwQmFzZVVybAp9KTsK
+import { createClient } from '@base44/sdk';
+import { appParams } from '@/lib/app-params';
+
+const { appId, token, functionsVersion, appBaseUrl } = appParams;
+
+export const base44 = createClient({
+  appId,
+  token,
+  functionsVersion,
+  serverUrl: '',
+  appBaseUrl
+});

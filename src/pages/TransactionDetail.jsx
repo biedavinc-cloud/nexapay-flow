@@ -1,1 +1,147 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHVzZVBhcmFtcywgdXNlTmF2aWdhdGUgfSBmcm9tICJyZWFjdC1yb3V0ZXItZG9tIjsKaW1wb3J0IHsgQXJyb3dMZWZ0LCBFeHRlcm5hbExpbmssIENvcHksIENoZWNrIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgYmFzZTQ0IH0gZnJvbSAiQC9hcGkvYmFzZTQ0Q2xpZW50IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCBTdGF0dXNCYWRnZSBmcm9tICJAL2NvbXBvbmVudHMvU3RhdHVzQmFkZ2UiOwoKY29uc3QgUElQRUxJTkUgPSBbIlBFTkRJTkciLCAiRklBVF9BUFBST1ZFRCIsICJQUk9DRVNTSU5HX0NSWVBUTyIsICJDT01QTEVURUQiXTsKCmZ1bmN0aW9uIEZpZWxkKHsgbGFiZWwsIHZhbHVlLCBtb25vIH0pIHsKICByZXR1cm4gKAogICAgPGRpdj4KICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntsYWJlbH08L3A+CiAgICAgIDxwIGNsYXNzTmFtZT17YG10LTEgdGV4dC1zbSB0ZXh0LWZvcmVncm91bmQgJHttb25vID8gImZvbnQtbW9ubyBicmVhay1hbGwiIDogIiJ9YH0+e3ZhbHVlIHx8ICLigJQifTwvcD4KICAgIDwvZGl2PgogICk7Cn0KCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFRyYW5zYWN0aW9uRGV0YWlsKCkgewogIGNvbnN0IHsgaWQgfSA9IHVzZVBhcmFtcygpOwogIGNvbnN0IG5hdmlnYXRlID0gdXNlTmF2aWdhdGUoKTsKICBjb25zdCBbdHgsIHNldFR4XSA9IHVzZVN0YXRlKG51bGwpOwogIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKHRydWUpOwogIGNvbnN0IFtjb3BpZWQsIHNldENvcGllZF0gPSB1c2VTdGF0ZShmYWxzZSk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBsZXQgYWN0aXZlID0gdHJ1ZTsKICAgIGJhc2U0NC5lbnRpdGllcy5UcmFuc2FjdGlvbgogICAgICAuZ2V0KGlkKQogICAgICAudGhlbigocm93KSA9PiBhY3RpdmUgJiYgc2V0VHgocm93KSkKICAgICAgLmZpbmFsbHkoKCkgPT4gYWN0aXZlICYmIHNldExvYWRpbmcoZmFsc2UpKTsKICAgIHJldHVybiAoKSA9PiB7IGFjdGl2ZSA9IGZhbHNlOyB9OwogIH0sIFtpZF0pOwoKICBjb25zdCBjb3B5SGFzaCA9ICgpID0+IHsKICAgIGlmICh0eD8udHhfaGFzaF9jcnlwdG8pIHsKICAgICAgbmF2aWdhdG9yLmNsaXBib2FyZC53cml0ZVRleHQodHgudHhfaGFzaF9jcnlwdG8pOwogICAgICBzZXRDb3BpZWQodHJ1ZSk7CiAgICAgIHNldFRpbWVvdXQoKCkgPT4gc2V0Q29waWVkKGZhbHNlKSwgMTUwMCk7CiAgICB9CiAgfTsKCiAgaWYgKGxvYWRpbmcpIHsKICAgIHJldHVybiA8ZGl2IGNsYXNzTmFtZT0icC04IHRleHQtY2VudGVyIHRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5Mb2FkaW5nIHRyYW5zYWN0aW9u4oCmPC9kaXY+OwogIH0KCiAgaWYgKCF0eCkgewogICAgcmV0dXJuICgKICAgICAgPGRpdiBjbGFzc05hbWU9InAtOCB0ZXh0LWNlbnRlciI+CiAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+VHJhbnNhY3Rpb24gbm90IGZvdW5kLjwvcD4KICAgICAgICA8QnV0dG9uIHZhcmlhbnQ9ImxpbmsiIG9uQ2xpY2s9eygpID0+IG5hdmlnYXRlKCIvIil9PkJhY2sgdG8gZGFzaGJvYXJkPC9CdXR0b24+CiAgICAgIDwvZGl2PgogICAgKTsKICB9CgogIGNvbnN0IGZhaWxlZCA9IHR4LnN0YXR1cyA9PT0gIkZBSUxFRCI7CiAgY29uc3QgYWN0aXZlU3RlcEluZGV4ID0gZmFpbGVkID8gUElQRUxJTkUuaW5kZXhPZigiUFJPQ0VTU0lOR19DUllQVE8iKSA6IFBJUEVMSU5FLmluZGV4T2YodHguc3RhdHVzKTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJweC00IG1kOnB4LTggcHktNiBtZDpweS04IG1heC13LTR4bCBteC1hdXRvIj4KICAgICAgPGJ1dHRvbgogICAgICAgIG9uQ2xpY2s9eygpID0+IG5hdmlnYXRlKCIvIil9CiAgICAgICAgY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBob3Zlcjp0ZXh0LWZvcmVncm91bmQgdHJhbnNpdGlvbi1jb2xvcnMgbWItNiIKICAgICAgPgogICAgICAgIDxBcnJvd0xlZnQgY2xhc3NOYW1lPSJoLTQgdy00IiAvPiBCYWNrIHRvIGRhc2hib2FyZAogICAgICA8L2J1dHRvbj4KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIHNtOmZsZXgtcm93IHNtOml0ZW1zLWNlbnRlciBzbTpqdXN0aWZ5LWJldHdlZW4gZ2FwLTMgbWItNiI+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMSBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctdGlnaHQgZm9udC1tb25vIj57dHgucmVmZXJlbmNlX2ZpYXR9PC9oMT4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPnt0eC5jbGllbnRfbmFtZSB8fCAiQW5vbnltb3VzIGNsaWVudCJ9PC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxTdGF0dXNCYWRnZSBzdGF0dXM9e3R4LnN0YXR1c30gY2xhc3NOYW1lPSJ0ZXh0LXNtIiAvPgogICAgICA8L2Rpdj4KCiAgICAgIHsvKiBUaW1lbGluZSAqL30KICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC02IG1iLTYiPgogICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LWJhc2UgZm9udC1zZW1pYm9sZCBtYi01Ij5FeGVjdXRpb24gcGlwZWxpbmU8L2gyPgogICAgICAgIDxvbCBjbGFzc05hbWU9InJlbGF0aXZlIj4KICAgICAgICAgIHtQSVBFTElORS5tYXAoKHN0ZXAsIGkpID0+IHsKICAgICAgICAgICAgY29uc3QgZG9uZSA9ICFmYWlsZWQgJiYgaSA8PSBhY3RpdmVTdGVwSW5kZXg7CiAgICAgICAgICAgIGNvbnN0IGN1cnJlbnQgPSAhZmFpbGVkICYmIGkgPT09IGFjdGl2ZVN0ZXBJbmRleCAmJiB0eC5zdGF0dXMgIT09ICJDT01QTEVURUQiOwogICAgICAgICAgICByZXR1cm4gKAogICAgICAgICAgICAgIDxsaSBrZXk9e3N0ZXB9IGNsYXNzTmFtZT0iZmxleCBnYXAtMyBwYi02IGxhc3Q6cGItMCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCBpdGVtcy1jZW50ZXIiPgogICAgICAgICAgICAgICAgICA8ZGl2CiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgZmxleCBoLTcgdy03IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLWZ1bGwgYm9yZGVyIHRleHQteHMgJHsKICAgICAgICAgICAgICAgICAgICAgIGRvbmUKICAgICAgICAgICAgICAgICAgICAgICAgPyAiYmctZW1lcmFsZC00MDAvMTUgYm9yZGVyLWVtZXJhbGQtNDAwLzQwIHRleHQtZW1lcmFsZC00MDAiCiAgICAgICAgICAgICAgICAgICAgICAgIDogY3VycmVudAogICAgICAgICAgICAgICAgICAgICAgICA/ICJiZy1za3ktNDAwLzE1IGJvcmRlci1za3ktNDAwLzQwIHRleHQtc2t5LTQwMCIKICAgICAgICAgICAgICAgICAgICAgICAgOiAiYmctc2Vjb25kYXJ5IGJvcmRlci1ib3JkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIgogICAgICAgICAgICAgICAgICAgIH1gfQogICAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgICAge2RvbmUgPyAi4pyTIiA6IGkgKyAxfQogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAge2kgPCBQSVBFTElORS5sZW5ndGggLSAxICYmICgKICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17YHctcHggaC04IG10LTEgJHtkb25lID8gImJnLWVtZXJhbGQtNDAwLzQwIiA6ICJiZy1ib3JkZXIifWB9IC8+CiAgICAgICAgICAgICAgICAgICl9CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwdC0wLjUiPgogICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e2B0ZXh0LXNtIGZvbnQtbWVkaXVtICR7ZG9uZSB8fCBjdXJyZW50ID8gInRleHQtZm9yZWdyb3VuZCIgOiAidGV4dC1tdXRlZC1mb3JlZ3JvdW5kIn1gfT4KICAgICAgICAgICAgICAgICAgICB7c3RlcC5yZXBsYWNlKCJfIiwgIiAiKX0KICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAgICB7Y3VycmVudCAmJiA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1za3ktNDAwIj5JbiBwcm9ncmVzc+KApjwvcD59CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICApOwogICAgICAgICAgfSl9CiAgICAgICAgPC9vbD4KICAgICAgICB7ZmFpbGVkICYmICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC0yIHJvdW5kZWQtbGcgYm9yZGVyIGJvcmRlci1yZWQtNDAwLzI1IGJnLXJlZC00MDAvMTAgcHgtMyBweS0yIHRleHQtc20gdGV4dC1yZWQtNDAwIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LW1lZGl1bSI+RmFpbGVkOjwvc3Bhbj4ge3R4LmVycm9yX21lc3NhZ2UgfHwgIlByb3ZpZGVyIGV4ZWN1dGlvbiBlcnJvci4ifQogICAgICAgICAgPC9kaXY+CiAgICAgICAgKX0KICAgICAgPC9kaXY+CgogICAgICB7LyogRGV0YWlscyBncmlkICovfQogICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTYgbWItNiI+CiAgICAgICAgPGgyIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQtYmFzZSBmb250LXNlbWlib2xkIG1iLTQiPlRyYW5zYWN0aW9uIGRldGFpbHM8L2gyPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0xIHNtOmdyaWQtY29scy0yIGdhcC01Ij4KICAgICAgICAgIDxGaWVsZCBsYWJlbD0iRmlhdCBhbW91bnQiIHZhbHVlPXtgJHtOdW1iZXIodHguYW1vdW50X2ZpYXQpLnRvTG9jYWxlU3RyaW5nKHVuZGVmaW5lZCwgeyBtaW5pbXVtRnJhY3Rpb25EaWdpdHM6IDIgfSl9ICR7dHguY3VycmVuY3lfZmlhdH1gfSAvPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJFeGNoYW5nZSByYXRlIiB2YWx1ZT17YDEgJHt0eC5jdXJyZW5jeV9maWF0fSA9ICR7TnVtYmVyKHR4LmV4Y2hhbmdlX3JhdGUpLnRvRml4ZWQoNCl9IFVTRFRgfSAvPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJVU0RUIGRlbGl2ZXJlZCIgdmFsdWU9e2Ake051bWJlcih0eC51c2R0X2Ftb3VudCkudG9GaXhlZCg2KX0gVVNEVGB9IC8+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IlBheW1lbnQgbWV0aG9kIiB2YWx1ZT17dHgucGF5bWVudF9tZXRob2Q/LnJlcGxhY2UoIl8iLCAiICIpfSAvPgogICAgICAgICAgPEZpZWxkIGxhYmVsPSJDcnlwdG8gcHJvdmlkZXIiIHZhbHVlPXt0eC5jcnlwdG9fcHJvdmlkZXJ9IC8+CiAgICAgICAgICA8RmllbGQgbGFiZWw9IkNyZWF0ZWQiIHZhbHVlPXt0eC5jcmVhdGVkX2RhdGUgPyBuZXcgRGF0ZSh0eC5jcmVhdGVkX2RhdGUpLnRvTG9jYWxlU3RyaW5nKCkgOiAi4oCUIn0gLz4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzbTpjb2wtc3Bhbi0yIj4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkRlc3RpbmF0aW9uIHdhbGxldDwvcD4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC0xIHRleHQtc20gdGV4dC1mb3JlZ3JvdW5kIGZvbnQtbW9ubyBicmVhay1hbGwiPnt0eC5kZXN0aW5hdGlvbl93YWxsZXR9PC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICB7dHgudHhfaGFzaF9jcnlwdG8gJiYgKAogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic206Y29sLXNwYW4tMiI+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPk9uLWNoYWluIHR4IGhhc2g8L3A+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTEgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtZW1lcmFsZC00MDAgZm9udC1tb25vIGJyZWFrLWFsbCI+e3R4LnR4X2hhc2hfY3J5cHRvfTwvcD4KICAgICAgICAgICAgICAgIDxCdXR0b24gdmFyaWFudD0iZ2hvc3QiIHNpemU9InNtIiBvbkNsaWNrPXtjb3B5SGFzaH0gY2xhc3NOYW1lPSJzaHJpbmstMCBweC0yIj4KICAgICAgICAgICAgICAgICAge2NvcGllZCA/IDxDaGVjayBjbGFzc05hbWU9ImgtNCB3LTQgdGV4dC1lbWVyYWxkLTQwMCIgLz4gOiA8Q29weSBjbGFzc05hbWU9ImgtNCB3LTQiIC8+fQogICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { ArrowLeft, ExternalLink, Copy, Check } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import StatusBadge from "@/components/StatusBadge";
+
+const PIPELINE = ["PENDING", "FIAT_APPROVED", "PROCESSING_CRYPTO", "COMPLETED"];
+
+function Field({ label, value, mono }) {
+  return (
+    <div>
+      <p className="text-xs uppercase tracking-wider text-muted-foreground">{label}</p>
+      <p className={`mt-1 text-sm text-foreground ${mono ? "font-mono break-all" : ""}`}>{value || "—"}</p>
+    </div>
+  );
+}
+
+export default function TransactionDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [tx, setTx] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    base44.entities.Transaction
+      .get(id)
+      .then((row) => active && setTx(row))
+      .finally(() => active && setLoading(false));
+    return () => { active = false; };
+  }, [id]);
+
+  const copyHash = () => {
+    if (tx?.tx_hash_crypto) {
+      navigator.clipboard.writeText(tx.tx_hash_crypto);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    }
+  };
+
+  if (loading) {
+    return <div className="p-8 text-center text-sm text-muted-foreground">Loading transaction…</div>;
+  }
+
+  if (!tx) {
+    return (
+      <div className="p-8 text-center">
+        <p className="text-sm text-muted-foreground">Transaction not found.</p>
+        <Button variant="link" onClick={() => navigate("/dashboard")}>Back to dashboard</Button>
+      </div>
+    );
+  }
+
+  const failed = tx.status === "FAILED";
+  const activeStepIndex = failed ? PIPELINE.indexOf("PROCESSING_CRYPTO") : PIPELINE.indexOf(tx.status);
+
+  return (
+    <div className="px-4 md:px-8 py-6 md:py-8 max-w-4xl mx-auto">
+      <button
+        onClick={() => navigate("/dashboard")}
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
+      >
+        <ArrowLeft className="h-4 w-4" /> Back to dashboard
+      </button>
+
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+        <div>
+          <h1 className="font-display text-xl font-semibold tracking-tight font-mono">{tx.reference_fiat}</h1>
+          <p className="text-sm text-muted-foreground">{tx.client_name || "Anonymous client"}</p>
+        </div>
+        <StatusBadge status={tx.status} className="text-sm" />
+      </div>
+
+      {/* Timeline */}
+      <div className="rounded-2xl border border-border bg-card p-6 mb-6">
+        <h2 className="font-display text-base font-semibold mb-5">Execution pipeline</h2>
+        <ol className="relative">
+          {PIPELINE.map((step, i) => {
+            const done = !failed && i <= activeStepIndex;
+            const current = !failed && i === activeStepIndex && tx.status !== "COMPLETED";
+            return (
+              <li key={step} className="flex gap-3 pb-6 last:pb-0">
+                <div className="flex flex-col items-center">
+                  <div
+                    className={`flex h-7 w-7 items-center justify-center rounded-full border text-xs ${
+                      done
+                        ? "bg-emerald-400/15 border-emerald-400/40 text-emerald-400"
+                        : current
+                        ? "bg-sky-400/15 border-sky-400/40 text-sky-400"
+                        : "bg-secondary border-border text-muted-foreground"
+                    }`}
+                  >
+                    {done ? "✓" : i + 1}
+                  </div>
+                  {i < PIPELINE.length - 1 && (
+                    <div className={`w-px h-8 mt-1 ${done ? "bg-emerald-400/40" : "bg-border"}`} />
+                  )}
+                </div>
+                <div className="pt-0.5">
+                  <p className={`text-sm font-medium ${done || current ? "text-foreground" : "text-muted-foreground"}`}>
+                    {step.replace("_", " ")}
+                  </p>
+                  {current && <p className="text-xs text-sky-400">In progress…</p>}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+        {failed && (
+          <div className="mt-2 rounded-lg border border-red-400/25 bg-red-400/10 px-3 py-2 text-sm text-red-400">
+            <span className="font-medium">Failed:</span> {tx.error_message || "Provider execution error."}
+          </div>
+        )}
+      </div>
+
+      {/* Details grid */}
+      <div className="rounded-2xl border border-border bg-card p-6 mb-6">
+        <h2 className="font-display text-base font-semibold mb-4">Transaction details</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <Field label="Fiat amount" value={`${Number(tx.amount_fiat).toLocaleString(undefined, { minimumFractionDigits: 2 })} ${tx.currency_fiat}`} />
+          <Field label="Exchange rate" value={`1 ${tx.currency_fiat} = ${Number(tx.exchange_rate).toFixed(4)} USDT`} />
+          <Field label="USDT delivered" value={`${Number(tx.usdt_amount).toFixed(6)} USDT`} />
+          <Field label="Payment method" value={tx.payment_method?.replace("_", " ")} />
+          <Field label="Crypto provider" value={tx.crypto_provider} />
+          <Field label="Created" value={tx.created_date ? new Date(tx.created_date).toLocaleString() : "—"} />
+          <div className="sm:col-span-2">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground">Destination wallet</p>
+            <p className="mt-1 text-sm text-foreground font-mono break-all">{tx.destination_wallet}</p>
+          </div>
+          {tx.tx_hash_crypto && (
+            <div className="sm:col-span-2">
+              <p className="text-xs uppercase tracking-wider text-muted-foreground">On-chain tx hash</p>
+              <div className="mt-1 flex items-center gap-2">
+                <p className="text-sm text-emerald-400 font-mono break-all">{tx.tx_hash_crypto}</p>
+                <Button variant="ghost" size="sm" onClick={copyHash} className="shrink-0 px-2">
+                  {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Copy className="h-4 w-4" />}
+                </Button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}

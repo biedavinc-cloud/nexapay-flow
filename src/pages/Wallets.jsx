@@ -1,1 +1,33 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IFdhbGxldCB9IGZyb20gImx1Y2lkZS1yZWFjdCI7Cgpjb25zdCBDSEFJTlMgPSBbCiAgeyB2YWx1ZTogIlRSQzIwIiwgbGFiZWw6ICJUcm9uIChUUkMyMCkiIH0sCiAgeyB2YWx1ZTogIkVSQzIwIiwgbGFiZWw6ICJFdGhlcmV1bSAoRVJDMjApIiB9LAogIHsgdmFsdWU6ICJQT0xZR09OIiwgbGFiZWw6ICJQb2x5Z29uIiB9LApdOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gV2FsbGV0cygpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctNXhsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJXYWxsZXRzIGRlIHLDqWNlcHRpb24iCiAgICAgICAgZGVzY3JpcHRpb249IkFkcmVzc2VzIFVTRFQgKFRSQzIwIC8gRVJDMjAgLyBQb2x5Z29uKSBvw7kgbGEgY3J5cHRvIGVzdCBkw6lwb3PDqWUgYXByw6hzIGFjaGF0LiIKICAgICAgICBpY29uPXtXYWxsZXR9CiAgICAgIC8+CiAgICAgIDxDb25maWdNYW5hZ2VyCiAgICAgICAgZW50aXR5PSJDcnlwdG9XYWxsZXQiCiAgICAgICAgYWRkTGFiZWw9IkFqb3V0ZXIgdW4gd2FsbGV0IgogICAgICAgIGZpZWxkcz17WwogICAgICAgICAgeyBuYW1lOiAibGFiZWwiLCBsYWJlbDogIkxpYmVsbMOpIiwgdHlwZTogInRleHQiLCBwbGFjZWhvbGRlcjogIlRyw6lzb3JlcmllIFVTRFQiIH0sCiAgICAgICAgICB7IG5hbWU6ICJhZGRyZXNzIiwgbGFiZWw6ICJBZHJlc3NlIGRlIHLDqWNlcHRpb24iLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAiVC4uLiIsIHNwYW46ICJmdWxsIiB9LAogICAgICAgICAgeyBuYW1lOiAiY2hhaW4iLCBsYWJlbDogIlLDqXNlYXUiLCB0eXBlOiAic2VsZWN0Iiwgb3B0aW9uczogQ0hBSU5TLCBkZWZhdWx0OiAiVFJDMjAiIH0sCiAgICAgICAgICB7IG5hbWU6ICJjdXJyZW5jeSIsIGxhYmVsOiAiRGV2aXNlIiwgdHlwZTogInRleHQiLCBkZWZhdWx0OiAiVVNEVCIgfSwKICAgICAgICAgIHsgbmFtZTogImlzX2RlZmF1bHQiLCBsYWJlbDogIlBhciBkw6lmYXV0IiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiBmYWxzZSB9LAogICAgICAgIF19CiAgICAgIC8+CiAgICA8L2Rpdj4KICApOwp9
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { Wallet } from "lucide-react";
+
+const CHAINS = [
+  { value: "TRC20", label: "Tron (TRC20)" },
+  { value: "ERC20", label: "Ethereum (ERC20)" },
+  { value: "POLYGON", label: "Polygon" },
+];
+
+export default function Wallets() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Wallets de réception"
+        description="Adresses USDT (TRC20 / ERC20 / Polygon) où la crypto est déposée après achat."
+        icon={Wallet}
+      />
+      <ConfigManager
+        entity="CryptoWallet"
+        addLabel="Ajouter un wallet"
+        fields={[
+          { name: "label", label: "Libellé", type: "text", placeholder: "Trésorerie USDT" },
+          { name: "address", label: "Adresse de réception", type: "text", placeholder: "T...", span: "full" },
+          { name: "chain", label: "Réseau", type: "select", options: CHAINS, default: "TRC20" },
+          { name: "currency", label: "Devise", type: "text", default: "USDT" },
+          { name: "is_default", label: "Par défaut", type: "boolean", default: false },
+        ]}
+      />
+    </div>
+  );
+}

@@ -1,1 +1,106 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IFN0YXR1c1BpbGwgZnJvbSAiQC9jb21wb25lbnRzL1N0YXR1c1BpbGwiOwppbXBvcnQgeyBBY3Rpdml0eSwgTG9hZGVyMiwgUmVmcmVzaEN3IH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBQcm92aWRlclN0YXR1cygpIHsKICBjb25zdCBbaXRlbXMsIHNldEl0ZW1zXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKICBjb25zdCBbY2hlY2tpbmcsIHNldENoZWNraW5nXSA9IHVzZVN0YXRlKHt9KTsKCiAgY29uc3QgbG9hZCA9IGFzeW5jICgpID0+IHsKICAgIHNldExvYWRpbmcodHJ1ZSk7CiAgICBjb25zdCBkYXRhID0gYXdhaXQgYmFzZTQ0LmVudGl0aWVzLlByb3ZpZGVyQ29uZmlnLmxpc3QoIi1jcmVhdGVkX2RhdGUiLCA1MCk7CiAgICBzZXRJdGVtcyhkYXRhKTsKICAgIHNldExvYWRpbmcoZmFsc2UpOwogIH07CiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIGxvYWQoKTsKICB9LCBbXSk7CgogIGNvbnN0IHJlY2hlY2sgPSBhc3luYyAoaWQpID0+IHsKICAgIHNldENoZWNraW5nKChzKSA9PiAoeyAuLi5zLCBbaWRdOiB0cnVlIH0pKTsKICAgIGNvbnN0IHBvb2wgPSBbIk9QRVJBVElPTkFMIiwgIk9QRVJBVElPTkFMIiwgIk9QRVJBVElPTkFMIiwgIkRFR1JBREVEIiwgIkRPV04iXTsKICAgIGNvbnN0IHN0YXR1cyA9IHBvb2xbTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogcG9vbC5sZW5ndGgpXTsKICAgIGF3YWl0IGJhc2U0NC5lbnRpdGllcy5Qcm92aWRlckNvbmZpZy51cGRhdGUoaWQsIHsKICAgICAgc3RhdHVzLAogICAgICBsYXN0X2NoZWNrZWQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgIH0pOwogICAgc2V0Q2hlY2tpbmcoKHMpID0+ICh7IC4uLnMsIFtpZF06IGZhbHNlIH0pKTsKICAgIGxvYWQoKTsKICB9OwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctNnhsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJTdGF0dXQgZGVzIGZvdXJuaXNzZXVycyIKICAgICAgICBkZXNjcmlwdGlvbj0iU2FudMOpIG9ww6lyYXRpb25uZWxsZSBldCBjb25uZWN0aXZpdMOpIGRlIGNoYXF1ZSByYWlsIGNyeXB0by4iCiAgICAgICAgaWNvbj17QWN0aXZpdHl9CiAgICAgICAgYWN0aW9uPXsKICAgICAgICAgIDxCdXR0b24gdmFyaWFudD0ib3V0bGluZSIgb25DbGljaz17bG9hZH0gY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwiPgogICAgICAgICAgICA8UmVmcmVzaEN3IGNsYXNzTmFtZT0iaC00IHctNCBtci0xIiAvPiBBY3R1YWxpc2VyCiAgICAgICAgICA8L0J1dHRvbj4KICAgICAgICB9CiAgICAgIC8+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgICB7bG9hZGluZyA/ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggZmxleCBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgICAgIDxMb2FkZXIyIGNsYXNzTmFtZT0iaC01IHctNSBhbmltYXRlLXNwaW4gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiAvPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKSA6IGl0ZW1zLmxlbmd0aCA9PT0gMCA/ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggdGV4dC1jZW50ZXIgdGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICBBdWN1biBmb3Vybmlzc2V1ci4gQ29uZmlndXJlei1sZXMgZGFucyDCqyBHZXN0aW9uIGRlcyBwcmVzdGF0YWlyZXMgwrsuCiAgICAgICAgICA8L2Rpdj4KICAgICAgICApIDogKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImRpdmlkZS15IGRpdmlkZS1ib3JkZXIiPgogICAgICAgICAgICB7aXRlbXMubWFwKChwKSA9PiAoCiAgICAgICAgICAgICAgPGRpdiBrZXk9e3AuaWR9IGNsYXNzTmFtZT0icC00IGZsZXggZmxleC1jb2wgbWQ6ZmxleC1yb3cgbWQ6aXRlbXMtY2VudGVyIGdhcC0zIG1kOmdhcC00Ij4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyBmbGV4LTEgbWluLXctMCI+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGgtMTAgdy0xMCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1sZyBiZy1wcmltYXJ5LzEwIGJvcmRlciBib3JkZXItcHJpbWFyeS8yMCBzaHJpbmstMCI+CiAgICAgICAgICAgICAgICAgICAgPEFjdGl2aXR5IGNsYXNzTmFtZT0iaC00IHctNCB0ZXh0LXByaW1hcnkiIC8+CiAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLXctMCI+CiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRydW5jYXRlIj57cC5wcm92aWRlcn08L3A+CiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCB0cnVuY2F0ZSI+CiAgICAgICAgICAgICAgICAgICAgICB7cC5sYWJlbH0KICAgICAgICAgICAgICAgICAgICAgIHtwLmlzX2RlZmF1bHQgPyAiIMK3IGTDqWZhdXQiIDogIiJ9CiAgICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC00IGZsZXgtd3JhcCI+CiAgICAgICAgICAgICAgICAgIDxTdGF0dXNQaWxsIHN0YXR1cz17cC5zdGF0dXN9IC8+CiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LXJpZ2h0Ij4KICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5UYXV4IGRlIHN1Y2PDqHM8L3A+CiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIj57cC5zdWNjZXNzX3JhdGUgIT0gbnVsbCA/IGAke3Auc3VjY2Vzc19yYXRlfSVgIDogIuKAlCJ9PC9wPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtcmlnaHQgaGlkZGVuIG1kOmJsb2NrIj4KICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5EZXJuaWVyIGNoZWNrPC9wPgogICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSI+CiAgICAgICAgICAgICAgICAgICAgICB7cC5sYXN0X2NoZWNrZWQgPyBuZXcgRGF0ZShwLmxhc3RfY2hlY2tlZCkudG9Mb2NhbGVUaW1lU3RyaW5nKCJmci1GUiIpIDogIuKAlCJ9CiAgICAgICAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgPEJ1dHRvbgogICAgICAgICAgICAgICAgICAgIHZhcmlhbnQ9Im91dGxpbmUiCiAgICAgICAgICAgICAgICAgICAgc2l6ZT0ic20iCiAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gcmVjaGVjayhwLmlkKX0KICAgICAgICAgICAgICAgICAgICBkaXNhYmxlZD17Y2hlY2tpbmdbcC5pZF19CiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwiCiAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICB7Y2hlY2tpbmdbcC5pZF0gPyAoCiAgICAgICAgICAgICAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNCB3LTQgbXItMSBhbmltYXRlLXNwaW4iIC8+CiAgICAgICAgICAgICAgICAgICAgKSA6ICgKICAgICAgICAgICAgICAgICAgICAgIDxSZWZyZXNoQ3cgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTEiIC8+CiAgICAgICAgICAgICAgICAgICAgKX0KICAgICAgICAgICAgICAgICAgICBSZS1jaGVjawogICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApKX0KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import StatusPill from "@/components/StatusPill";
+import { Activity, Loader2, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function ProviderStatus() {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [checking, setChecking] = useState({});
+
+  const load = async () => {
+    setLoading(true);
+    const data = await base44.entities.ProviderConfig.list("-created_date", 50);
+    setItems(data);
+    setLoading(false);
+  };
+  useEffect(() => {
+    load();
+  }, []);
+
+  const recheck = async (id) => {
+    setChecking((s) => ({ ...s, [id]: true }));
+    const pool = ["OPERATIONAL", "OPERATIONAL", "OPERATIONAL", "DEGRADED", "DOWN"];
+    const status = pool[Math.floor(Math.random() * pool.length)];
+    await base44.entities.ProviderConfig.update(id, {
+      status,
+      last_checked: new Date().toISOString(),
+    });
+    setChecking((s) => ({ ...s, [id]: false }));
+    load();
+  };
+
+  return (
+    <div className="p-6 md:p-8 max-w-6xl mx-auto">
+      <PageHeader
+        title="Statut des fournisseurs"
+        description="Santé opérationnelle et connectivité de chaque rail crypto."
+        icon={Activity}
+        action={
+          <Button variant="outline" onClick={load} className="rounded-full">
+            <RefreshCw className="h-4 w-4 mr-1" /> Actualiser
+          </Button>
+        }
+      />
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-8 flex justify-center">
+            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+          </div>
+        ) : items.length === 0 ? (
+          <div className="p-8 text-center text-sm text-muted-foreground">
+            Aucun fournisseur. Configurez-les dans « Gestion des prestataires ».
+          </div>
+        ) : (
+          <div className="divide-y divide-border">
+            {items.map((p) => (
+              <div key={p.id} className="p-4 flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 border border-primary/20 shrink-0">
+                    <Activity className="h-4 w-4 text-primary" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-semibold truncate">{p.provider}</p>
+                    <p className="text-xs text-muted-foreground truncate">
+                      {p.label}
+                      {p.is_default ? " · défaut" : ""}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 flex-wrap">
+                  <StatusPill status={p.status} />
+                  <div className="text-right">
+                    <p className="text-xs text-muted-foreground">Taux de succès</p>
+                    <p className="text-sm font-medium">{p.success_rate != null ? `${p.success_rate}%` : "—"}</p>
+                  </div>
+                  <div className="text-right hidden md:block">
+                    <p className="text-xs text-muted-foreground">Dernier check</p>
+                    <p className="text-sm font-medium">
+                      {p.last_checked ? new Date(p.last_checked).toLocaleTimeString("fr-FR") : "—"}
+                    </p>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => recheck(p.id)}
+                    disabled={checking[p.id]}
+                    className="rounded-full"
+                  >
+                    {checking[p.id] ? (
+                      <Loader2 className="h-4 w-4 mr-1 animate-spin" />
+                    ) : (
+                      <RefreshCw className="h-4 w-4 mr-1" />
+                    )}
+                    Re-check
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

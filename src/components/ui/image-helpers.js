@@ -1,1 +1,109 @@
-Y29uc3QgV0lYX01FRElBX0hPU1RTID0gewogICJtZWRpYS5iYXNlNDQuY29tIjogIi9pbWFnZXMvcHVibGljLyIsCiAgInN0YXRpYy53aXhzdGF0aWMuY29tIjogIi9tZWRpYS8iLAp9CgpleHBvcnQgY29uc3QgREVGQVVMVF9UUkFOU0ZPUk1fV0lEVEggPSAxMDI0CmV4cG9ydCBjb25zdCBJTUFHRV9MT0FEX01PREUgPSB7CiAgT1BUSU1JWkVEOiAib3B0aW1pemVkIiwKICBPUklHSU5BTDogIm9yaWdpbmFsIiwKICBGQUxMQkFDSzogImZhbGxiYWNrIiwKfQoKY29uc3QgREVWSUNFX1BJWEVMX1JBVElPUyA9IFsxLCAyLCAzXQpjb25zdCBNQVhfRElNRU5TSU9OID0gNjAwMAoKZXhwb3J0IGZ1bmN0aW9uIHNwbGl0SW1hZ2VQcm9wcyhwcm9wcykgewogIGNvbnN0IHdyYXBwZXJQcm9wcyA9IHt9CiAgY29uc3QgaW1hZ2VQcm9wcyA9IHt9CiAgZm9yIChjb25zdCBba2V5LCB2YWx1ZV0gb2YgT2JqZWN0LmVudHJpZXMocHJvcHMpKSB7CiAgICBpZiAoa2V5LnN0YXJ0c1dpdGgoImRhdGEtIikpIHdyYXBwZXJQcm9wc1trZXldID0gdmFsdWUKICAgIGVsc2UgaW1hZ2VQcm9wc1trZXldID0gdmFsdWUKICB9CiAgcmV0dXJuIHsgd3JhcHBlclByb3BzLCBpbWFnZVByb3BzIH0KfQoKZXhwb3J0IGZ1bmN0aW9uIGdldEltYWdlUHJldmlld0NsYXNzTmFtZShjbGFzc05hbWUsIGN1cnJlbnRDbGFzc05hbWUsIGJhc2VsaW5lQ2xhc3NOYW1lKSB7CiAgY29uc3Qgc291cmNlQ2xhc3NlcyA9IG5ldyBTZXQoKGNsYXNzTmFtZSB8fCAiIikuc3BsaXQoL1xzKy8pKQogIGNvbnN0IGJhc2VsaW5lQ2xhc3NlcyA9IG5ldyBTZXQoYmFzZWxpbmVDbGFzc05hbWUuc3BsaXQoL1xzKy8pKQogIHJldHVybiBjdXJyZW50Q2xhc3NOYW1lLnNwbGl0KC9ccysvKS5maWx0ZXIoKHRva2VuKSA9PgogICAgIVsiaW5saW5lLWJsb2NrIiwgInJlbGF0aXZlIl0uaW5jbHVkZXModG9rZW4pIHx8ICFiYXNlbGluZUNsYXNzZXMuaGFzKHRva2VuKSB8fCBzb3VyY2VDbGFzc2VzLmhhcyh0b2tlbikKICApLmpvaW4oIiAiKQp9CgovKiogUmV0dXJucyB0cmFuc2Zvcm0gbWV0YWRhdGEgb25seSBmb3IgY2Fub25pY2FsIHB1YmxpYyBXaXggaW1hZ2UgVVJMcy4gKi8KZXhwb3J0IGZ1bmN0aW9uIHBhcnNlV2l4TWVkaWFVcmwoc3JjKSB7CiAgdHJ5IHsKICAgIGNvbnN0IHVybCA9IG5ldyBVUkwoc3JjKQogICAgaWYgKAogICAgICB1cmwucHJvdG9jb2wgIT09ICJodHRwczoiIHx8CiAgICAgIHVybC51c2VybmFtZSB8fAogICAgICB1cmwucGFzc3dvcmQgfHwKICAgICAgKHVybC5wb3J0ICYmIHVybC5wb3J0ICE9PSAiNDQzIikKICAgICkgewogICAgICByZXR1cm4gbnVsbAogICAgfQoKICAgIGNvbnN0IHBhdGhQcmVmaXggPSBXSVhfTUVESUFfSE9TVFNbdXJsLmhvc3RuYW1lXQogICAgaWYgKCFwYXRoUHJlZml4KSByZXR1cm4gbnVsbAoKICAgIGNvbnN0IHRyYW5zZm9ybWVkID0gdXJsLnBhdGhuYW1lLm1hdGNoKC9eKC4qKVwvdjFcLyg/OmZpbGx8Zml0KVwvW14vXStcL1teL10rJC9pKQogICAgY29uc3QgYmFzZVBhdGggPSB0cmFuc2Zvcm1lZCA/IHRyYW5zZm9ybWVkWzFdIDogdXJsLnBhdGhuYW1lCiAgICBjb25zdCBmaWxlbmFtZSA9IGJhc2VQYXRoLnNwbGl0KCIvIikucG9wKCkKICAgIGlmICgKICAgICAgIWJhc2VQYXRoLnN0YXJ0c1dpdGgocGF0aFByZWZpeCkgfHwKICAgICAgIWZpbGVuYW1lIHx8CiAgICAgICEvXC5bYS16MC05XSskL2kudGVzdChmaWxlbmFtZSkgfHwKICAgICAgL1wuc3ZnJC9pLnRlc3QoZmlsZW5hbWUpCiAgICApIHsKICAgICAgcmV0dXJuIG51bGwKICAgIH0KCiAgICByZXR1cm4geyBiYXNlVXJsOiBgJHt1cmwub3JpZ2lufSR7YmFzZVBhdGh9YCwgZmlsZW5hbWUgfQogIH0gY2F0Y2ggewogICAgcmV0dXJuIG51bGwKICB9Cn0KCmNvbnN0IGNsYW1wRGltID0gKG4pID0+IE1hdGgubWluKE1hdGgubWF4KE1hdGgucm91bmQobiksIDEpLCBNQVhfRElNRU5TSU9OKQpjb25zdCBjbGFtcDAxID0gKG4pID0+IE1hdGgubWluKDEsIE1hdGgubWF4KDAsIG4pKQoKZXhwb3J0IGZ1bmN0aW9uIGJ1aWxkVHJhbnNmb3JtVXJsKAogIHsgYmFzZVVybCwgZmlsZW5hbWUgfSwKICB7IHdpZHRoLCBoZWlnaHQsIGNyb3AsIGZvY2FsUG9pbnQsIHF1YWxpdHkgfQopIHsKICBjb25zdCBwYXJhbXMgPSBbYHdfJHtjbGFtcERpbSh3aWR0aCl9YCwgYGhfJHtjbGFtcERpbShoZWlnaHQgfHwgd2lkdGgpfWBdCiAgaWYgKGNyb3ApIHsKICAgIHBhcmFtcy5wdXNoKAogICAgICBmb2NhbFBvaW50CiAgICAgICAgPyBgZnBfJHtjbGFtcDAxKGZvY2FsUG9pbnQueCkudG9GaXhlZCgyKX1fJHtjbGFtcDAxKGZvY2FsUG9pbnQueSkudG9GaXhlZCgyKX1gCiAgICAgICAgOiAiYWxfYyIKICAgICkKICB9CiAgcGFyYW1zLnB1c2goYHFfJHtxdWFsaXR5fWAsICJ1c21fMC42Nl8xLjAwXzAuMDEiLCAiZW5jX3dlYnAiLCAicXVhbGl0eV9hdXRvIikKICBjb25zdCBvdXRwdXROYW1lID0gL1wuZ2lmJC9pLnRlc3QoZmlsZW5hbWUpCiAgICA/IGZpbGVuYW1lCiAgICA6IGZpbGVuYW1lLnJlcGxhY2UoL1wuW2EtejAtOV0rJC9pLCAiIikgKyAiLndlYnAiCiAgcmV0dXJuIGAke2Jhc2VVcmx9L3YxLyR7Y3JvcCA/ICJmaWxsIiA6ICJmaXQifS8ke3BhcmFtcy5qb2luKCIsIil9LyR7b3V0cHV0TmFtZX1gCn0KCmV4cG9ydCBmdW5jdGlvbiBidWlsZFNyY1NldChwYXJzZWQsIG9wdGlvbnMpIHsKICByZXR1cm4gREVWSUNFX1BJWEVMX1JBVElPUy5tYXAoCiAgICAoZHByKSA9PgogICAgICBgJHtidWlsZFRyYW5zZm9ybVVybChwYXJzZWQsIHsKICAgICAgICAuLi5vcHRpb25zLAogICAgICAgIHdpZHRoOiBvcHRpb25zLndpZHRoICogZHByLAogICAgICAgIGhlaWdodDogb3B0aW9ucy5oZWlnaHQgPyBvcHRpb25zLmhlaWdodCAqIGRwciA6IHVuZGVmaW5lZCwKICAgICAgfSl9ICR7ZHByfXhgCiAgKS5qb2luKCIsICIpCn0KCmV4cG9ydCBmdW5jdGlvbiBnZXRPcmlnaW5hbEltYWdlVXJsKHNyYywgcGFyc2VkKSB7CiAgcmV0dXJuIHBhcnNlZD8uYmFzZVVybCB8fCBzcmMKfQoKZXhwb3J0IGZ1bmN0aW9uIG5leHRJbWFnZUxvYWRNb2RlKG1vZGUpIHsKICByZXR1cm4gbW9kZSA9PT0gSU1BR0VfTE9BRF9NT0RFLk9QVElNSVpFRAogICAgPyBJTUFHRV9MT0FEX01PREUuT1JJR0lOQUwKICAgIDogSU1BR0VfTE9BRF9NT0RFLkZBTExCQUNLCn0K
+const WIX_MEDIA_HOSTS = {
+  "media.base44.com": "/images/public/",
+  "static.wixstatic.com": "/media/",
+}
+
+export const DEFAULT_TRANSFORM_WIDTH = 1024
+export const IMAGE_LOAD_MODE = {
+  OPTIMIZED: "optimized",
+  ORIGINAL: "original",
+  FALLBACK: "fallback",
+}
+
+const DEVICE_PIXEL_RATIOS = [1, 2, 3]
+const MAX_DIMENSION = 6000
+
+export function splitImageProps(props) {
+  const wrapperProps = {}
+  const imageProps = {}
+  for (const [key, value] of Object.entries(props)) {
+    if (key.startsWith("data-")) wrapperProps[key] = value
+    else imageProps[key] = value
+  }
+  return { wrapperProps, imageProps }
+}
+
+export function getImagePreviewClassName(className, currentClassName, baselineClassName) {
+  const sourceClasses = new Set((className || "").split(/\s+/))
+  const baselineClasses = new Set(baselineClassName.split(/\s+/))
+  return currentClassName.split(/\s+/).filter((token) =>
+    !["inline-block", "relative"].includes(token) || !baselineClasses.has(token) || sourceClasses.has(token)
+  ).join(" ")
+}
+
+/** Returns transform metadata only for canonical public Wix image URLs. */
+export function parseWixMediaUrl(src) {
+  try {
+    const url = new URL(src)
+    if (
+      url.protocol !== "https:" ||
+      url.username ||
+      url.password ||
+      (url.port && url.port !== "443")
+    ) {
+      return null
+    }
+
+    const pathPrefix = WIX_MEDIA_HOSTS[url.hostname]
+    if (!pathPrefix) return null
+
+    const transformed = url.pathname.match(/^(.*)\/v1\/(?:fill|fit)\/[^/]+\/[^/]+$/i)
+    const basePath = transformed ? transformed[1] : url.pathname
+    const filename = basePath.split("/").pop()
+    if (
+      !basePath.startsWith(pathPrefix) ||
+      !filename ||
+      !/\.[a-z0-9]+$/i.test(filename) ||
+      /\.svg$/i.test(filename)
+    ) {
+      return null
+    }
+
+    return { baseUrl: `${url.origin}${basePath}`, filename }
+  } catch {
+    return null
+  }
+}
+
+const clampDim = (n) => Math.min(Math.max(Math.round(n), 1), MAX_DIMENSION)
+const clamp01 = (n) => Math.min(1, Math.max(0, n))
+
+export function buildTransformUrl(
+  { baseUrl, filename },
+  { width, height, crop, focalPoint, quality }
+) {
+  const params = [`w_${clampDim(width)}`, `h_${clampDim(height || width)}`]
+  if (crop) {
+    params.push(
+      focalPoint
+        ? `fp_${clamp01(focalPoint.x).toFixed(2)}_${clamp01(focalPoint.y).toFixed(2)}`
+        : "al_c"
+    )
+  }
+  params.push(`q_${quality}`, "usm_0.66_1.00_0.01", "enc_webp", "quality_auto")
+  const outputName = /\.gif$/i.test(filename)
+    ? filename
+    : filename.replace(/\.[a-z0-9]+$/i, "") + ".webp"
+  return `${baseUrl}/v1/${crop ? "fill" : "fit"}/${params.join(",")}/${outputName}`
+}
+
+export function buildSrcSet(parsed, options) {
+  return DEVICE_PIXEL_RATIOS.map(
+    (dpr) =>
+      `${buildTransformUrl(parsed, {
+        ...options,
+        width: options.width * dpr,
+        height: options.height ? options.height * dpr : undefined,
+      })} ${dpr}x`
+  ).join(", ")
+}
+
+export function getOriginalImageUrl(src, parsed) {
+  return parsed?.baseUrl || src
+}
+
+export function nextImageLoadMode(mode) {
+  return mode === IMAGE_LOAD_MODE.OPTIMIZED
+    ? IMAGE_LOAD_MODE.ORIGINAL
+    : IMAGE_LOAD_MODE.FALLBACK
+}

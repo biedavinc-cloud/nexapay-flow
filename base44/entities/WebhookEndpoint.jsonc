@@ -1,1 +1,34 @@
-ewogICJuYW1lIjogIldlYmhvb2tFbmRwb2ludCIsCiAgInR5cGUiOiAib2JqZWN0IiwKICAicHJvcGVydGllcyI6IHsKICAgICJsYWJlbCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIkVuZHBvaW50IGxhYmVsIgogICAgfSwKICAgICJ1cmwiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJUYXJnZXQgVVJMIHJlY2VpdmluZyB3ZWJob29rIGV2ZW50cyIKICAgIH0sCiAgICAic2lnbmluZ19zZWNyZXQiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJTZWNyZXQgdXNlZCB0byBzaWduIG91dGdvaW5nIHdlYmhvb2tzICh3aHNlY18pIgogICAgfSwKICAgICJhY3RpdmUiOiB7CiAgICAgICJ0eXBlIjogImJvb2xlYW4iLAogICAgICAiZGVmYXVsdCI6IHRydWUsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJXaGV0aGVyIGV2ZW50cyBhcmUgZGVsaXZlcmVkIHRvIHRoaXMgZW5kcG9pbnQiCiAgICB9LAogICAgImV2ZW50cyI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlZmF1bHQiOiAicGF5bWVudC5zdWNjZWVkZWQscGF5bWVudC5mYWlsZWQiLAogICAgICAiZGVzY3JpcHRpb24iOiAiQ29tbWEtc2VwYXJhdGVkIHN1YnNjcmliZWQgZXZlbnRzIgogICAgfQogIH0sCiAgInJlcXVpcmVkIjogWwogICAgImxhYmVsIiwKICAgICJ1cmwiLAogICAgInNpZ25pbmdfc2VjcmV0IiwKICAgICJhY3RpdmUiCiAgXQp9
+{
+  "name": "WebhookEndpoint",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Endpoint label"
+    },
+    "url": {
+      "type": "string",
+      "description": "Target URL receiving webhook events"
+    },
+    "signing_secret": {
+      "type": "string",
+      "description": "Secret used to sign outgoing webhooks (whsec_)"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether events are delivered to this endpoint"
+    },
+    "events": {
+      "type": "string",
+      "default": "payment.succeeded,payment.failed",
+      "description": "Comma-separated subscribed events"
+    }
+  },
+  "required": [
+    "label",
+    "url",
+    "signing_secret",
+    "active"
+  ]
+}

@@ -1,1 +1,96 @@
-LyoqIEB0eXBlIHtpbXBvcnQoJ3RhaWx3aW5kY3NzJykuQ29uZmlnfSAqLwptb2R1bGUuZXhwb3J0cyA9IHsKICAgIGRhcmtNb2RlOiBbImNsYXNzIl0sCiAgICBjb250ZW50OiBbIi4vaW5kZXguaHRtbCIsICIuL3NyYy8qKi8qLnt0cyx0c3gsanMsanN4fSJdLAogIHRoZW1lOiB7CiAgCWV4dGVuZDogewogIAkJb3BhY2l0eTogT2JqZWN0LmZyb21FbnRyaWVzKEFycmF5LmZyb20oeyBsZW5ndGg6IDEwMSB9LCAoXywgaSkgPT4gW2ksIGAke2kgLyAxMDB9YF0pKSwKICAJCWJvcmRlclJhZGl1czogewogIAkJCWxnOiAndmFyKC0tcmFkaXVzKScsCiAgCQkJbWQ6ICdjYWxjKHZhcigtLXJhZGl1cykgLSAycHgpJywKICAJCQlzbTogJ2NhbGModmFyKC0tcmFkaXVzKSAtIDRweCknCiAgCQl9LAogIAkJY29sb3JzOiB7CiAgCQkJYmFja2dyb3VuZDogJ2hzbCh2YXIoLS1iYWNrZ3JvdW5kKSknLAogIAkJCWZvcmVncm91bmQ6ICdoc2wodmFyKC0tZm9yZWdyb3VuZCkpJywKICAJCQljYXJkOiB7CiAgCQkJCURFRkFVTFQ6ICdoc2wodmFyKC0tY2FyZCkpJywKICAJCQkJZm9yZWdyb3VuZDogJ2hzbCh2YXIoLS1jYXJkLWZvcmVncm91bmQpKScKICAJCQl9LAogIAkJCXBvcG92ZXI6IHsKICAJCQkJREVGQVVMVDogJ2hzbCh2YXIoLS1wb3BvdmVyKSknLAogIAkJCQlmb3JlZ3JvdW5kOiAnaHNsKHZhcigtLXBvcG92ZXItZm9yZWdyb3VuZCkpJwogIAkJCX0sCiAgCQkJcHJpbWFyeTogewogIAkJCQlERUZBVUxUOiAnaHNsKHZhcigtLXByaW1hcnkpKScsCiAgCQkJCWZvcmVncm91bmQ6ICdoc2wodmFyKC0tcHJpbWFyeS1mb3JlZ3JvdW5kKSknCiAgCQkJfSwKICAJCQlzZWNvbmRhcnk6IHsKICAJCQkJREVGQVVMVDogJ2hzbCh2YXIoLS1zZWNvbmRhcnkpKScsCiAgCQkJCWZvcmVncm91bmQ6ICdoc2wodmFyKC0tc2Vjb25kYXJ5LWZvcmVncm91bmQpKScKICAJCQl9LAogIAkJCW11dGVkOiB7CiAgCQkJCURFRkFVTFQ6ICdoc2wodmFyKC0tbXV0ZWQpKScsCiAgCQkJCWZvcmVncm91bmQ6ICdoc2wodmFyKC0tbXV0ZWQtZm9yZWdyb3VuZCkpJwogIAkJCX0sCiAgCQkJYWNjZW50OiB7CiAgCQkJCURFRkFVTFQ6ICdoc2wodmFyKC0tYWNjZW50KSknLAogIAkJCQlmb3JlZ3JvdW5kOiAnaHNsKHZhcigtLWFjY2VudC1mb3JlZ3JvdW5kKSknCiAgCQkJfSwKICAJCQlkZXN0cnVjdGl2ZTogewogIAkJCQlERUZBVUxUOiAnaHNsKHZhcigtLWRlc3RydWN0aXZlKSknLAogIAkJCQlmb3JlZ3JvdW5kOiAnaHNsKHZhcigtLWRlc3RydWN0aXZlLWZvcmVncm91bmQpKScKICAJCQl9LAogIAkJCWJvcmRlcjogJ2hzbCh2YXIoLS1ib3JkZXIpKScsCiAgCQkJaW5wdXQ6ICdoc2wodmFyKC0taW5wdXQpKScsCiAgCQkJcmluZzogJ2hzbCh2YXIoLS1yaW5nKSknLAogIAkJCWNoYXJ0OiB7CiAgCQkJCScxJzogJ2hzbCh2YXIoLS1jaGFydC0xKSknLAogIAkJCQknMic6ICdoc2wodmFyKC0tY2hhcnQtMikpJywKICAJCQkJJzMnOiAnaHNsKHZhcigtLWNoYXJ0LTMpKScsCiAgCQkJCSc0JzogJ2hzbCh2YXIoLS1jaGFydC00KSknLAogIAkJCQknNSc6ICdoc2wodmFyKC0tY2hhcnQtNSkpJwogIAkJCX0sCiAgCQkJc2lkZWJhcjogewogIAkJCQlERUZBVUxUOiAnaHNsKHZhcigtLXNpZGViYXItYmFja2dyb3VuZCkpJywKICAJCQkJZm9yZWdyb3VuZDogJ2hzbCh2YXIoLS1zaWRlYmFyLWZvcmVncm91bmQpKScsCiAgCQkJCXByaW1hcnk6ICdoc2wodmFyKC0tc2lkZWJhci1wcmltYXJ5KSknLAogIAkJCQkncHJpbWFyeS1mb3JlZ3JvdW5kJzogJ2hzbCh2YXIoLS1zaWRlYmFyLXByaW1hcnktZm9yZWdyb3VuZCkpJywKICAJCQkJYWNjZW50OiAnaHNsKHZhcigtLXNpZGViYXItYWNjZW50KSknLAogIAkJCQknYWNjZW50LWZvcmVncm91bmQnOiAnaHNsKHZhcigtLXNpZGViYXItYWNjZW50LWZvcmVncm91bmQpKScsCiAgCQkJCWJvcmRlcjogJ2hzbCh2YXIoLS1zaWRlYmFyLWJvcmRlcikpJywKICAJCQkJcmluZzogJ2hzbCh2YXIoLS1zaWRlYmFyLXJpbmcpKScKICAJCQl9CiAgCQl9LAogIAkJZm9udEZhbWlseTogewogIAkJCWhlYWRpbmc6IFsndmFyKC0tZm9udC1oZWFkaW5nKSddLAogIAkJCWJvZHk6IFsndmFyKC0tZm9udC1ib2R5KSddLAogIAkJCWRpc3BsYXk6IFsndmFyKC0tZm9udC1kaXNwbGF5KSddLAogIAkJCW1vbm86IFsndmFyKC0tZm9udC1tb25vKSddCiAgCQl9LAogIAkJa2V5ZnJhbWVzOiB7CiAgCQkJJ2FjY29yZGlvbi1kb3duJzogewogIAkJCQlmcm9tOiB7CiAgCQkJCQloZWlnaHQ6ICcwJwogIAkJCQl9LAogIAkJCQl0bzogewogIAkJCQkJaGVpZ2h0OiAndmFyKC0tcmFkaXgtYWNjb3JkaW9uLWNvbnRlbnQtaGVpZ2h0KScKICAJCQkJfQogIAkJCX0sCiAgCQkJJ2FjY29yZGlvbi11cCc6IHsKICAJCQkJZnJvbTogewogIAkJCQkJaGVpZ2h0OiAndmFyKC0tcmFkaXgtYWNjb3JkaW9uLWNvbnRlbnQtaGVpZ2h0KScKICAJCQkJfSwKICAJCQkJdG86IHsKICAJCQkJCWhlaWdodDogJzAnCiAgCQkJCX0KICAJCQl9CiAgCQl9LAogIAkJYW5pbWF0aW9uOiB7CiAgCQkJJ2FjY29yZGlvbi1kb3duJzogJ2FjY29yZGlvbi1kb3duIDAuMnMgZWFzZS1vdXQnLAogIAkJCSdhY2NvcmRpb24tdXAnOiAnYWNjb3JkaW9uLXVwIDAuMnMgZWFzZS1vdXQnCiAgCQl9CiAgCX0KICB9LAogIHBsdWdpbnM6IFtyZXF1aXJlKCJ0YWlsd2luZGNzcy1hbmltYXRlIildLAp9Cg==
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    darkMode: ["class"],
+    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  theme: {
+  	extend: {
+  		opacity: Object.fromEntries(Array.from({ length: 101 }, (_, i) => [i, `${i / 100}`])),
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		colors: {
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			},
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
+  			}
+  		},
+  		fontFamily: {
+  			heading: ['var(--font-heading)'],
+  			body: ['var(--font-body)'],
+  			display: ['var(--font-display)'],
+  			mono: ['var(--font-mono)']
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
+  	}
+  },
+  plugins: [require("tailwindcss-animate")],
+}

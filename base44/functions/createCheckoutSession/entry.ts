@@ -1,1 +1,90 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QgfSBmcm9tICJucG06QGJhc2U0NC9zZGtAMC44LjQ0IjsKaW1wb3J0IHsKICBQVUJMSVNIQUJMRV9LRVksCiAgY3JlYXRlQ2xpZW50U2VjcmV0LAogIHZlcmlmeUNsaWVudFNlY3JldCwKICBleHRyYWN0QmVhcmVyLAogIGdlblNlc3Npb25JZCwKICBub3JtQ3VycmVuY3ksCiAgbm9ybVRleHQsCiAgcmVzb2x2ZUFwaUtleSwKfSBmcm9tICIuLi8uLi9zaGFyZWQvY2hlY2tvdXQudHMiOwoKLy8gTmV4YVBheSBjaGVja291dCBzZXNzaW9uIEFQSS4KLy8gIC0gQ3JlYXRlIG1vZGUgKG1lcmNoYW50KTogUE9TVCB3aXRoIEF1dGhvcml6YXRpb246IEJlYXJlciA8QVBJX0tFWT4gYW5kIHsgYW1vdW50LCBjdXJyZW5jeSwgb3JkZXJfaWQsIHdlYmhvb2tfdXJsIH0KLy8gICAgLT4gcmV0dXJucyB7IHNlc3Npb25faWQsIGNsaWVudF9zZWNyZXQsIGNoZWNrb3V0X3VybCwgYW1vdW50LCBjdXJyZW5jeSwgb3JkZXJfaWQgfQovLyAgLSBSZXRyaWV2ZSBtb2RlIChpZnJhbWUpOiBQT1NUIHsgY2xpZW50X3NlY3JldCB9IChubyBtZXJjaGFudCBrZXkpIC0+IHJldHVybnMgc2Vzc2lvbiBkZXRhaWxzIChhbW91bnQgZmFsbGJhY2spLgoKZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKHJlcSkgewogIGNvbnN0IGJhc2U0NCA9IGNyZWF0ZUNsaWVudEZyb21SZXF1ZXN0KHJlcSk7CiAgdHJ5IHsKICAgIGNvbnN0IGJvZHkgPSBhd2FpdCByZXEuanNvbigpLmNhdGNoKCgpID0+ICh7fSkpOwogICAgY29uc3QgYmVhcmVyID0gZXh0cmFjdEJlYXJlcihyZXEpOwoKICAgIC8vIFJldHJpZXZlIG1vZGU6IHRoZSBlbWJlZGRlZCBpZnJhbWUgZmV0Y2hlcyB0aGUgYW1vdW50IHdoZW4gaXQgaXMgbm90IGluIHRoZSBVUkwuCiAgICBpZiAoYm9keS5jbGllbnRfc2VjcmV0ICYmICEoYmVhcmVyICYmIChhd2FpdCByZXNvbHZlQXBpS2V5KGJhc2U0NCwgYmVhcmVyKSk/LnR5cGUgPT09ICJzZWNyZXQiKSkgewogICAgICBjb25zdCBzZXNzaW9uID0gYXdhaXQgdmVyaWZ5Q2xpZW50U2VjcmV0KGJvZHkuY2xpZW50X3NlY3JldCk7CiAgICAgIGlmICghc2Vzc2lvbikgewogICAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJJbnZhbGlkIGNsaWVudF9zZWNyZXQuIiB9LCB7IHN0YXR1czogNDAxIH0pOwogICAgICB9CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsKICAgICAgICBzZXNzaW9uX2lkOiBzZXNzaW9uLnNlc3Npb25faWQsCiAgICAgICAgYW1vdW50OiBzZXNzaW9uLmFtb3VudCwKICAgICAgICBjdXJyZW5jeTogc2Vzc2lvbi5jdXJyZW5jeSwKICAgICAgICBvcmRlcl9pZDogc2Vzc2lvbi5vcmRlcl9pZCwKICAgICAgfSk7CiAgICB9CgogICAgLy8gQ3JlYXRlIG1vZGU6IG1lcmNoYW50IGF1dGhlbnRpY2F0ZXMgd2l0aCBhIHNlY3JldCBBUEkga2V5IChEQi1iYWNrZWQgb3IgbGVnYWN5IGRldiBrZXkpLgogICAgY29uc3QgYXV0aCA9IGJlYXJlciA/IGF3YWl0IHJlc29sdmVBcGlLZXkoYmFzZTQ0LCBiZWFyZXIpIDogbnVsbDsKICAgIGlmICghYXV0aCB8fCBhdXRoLnR5cGUgIT09ICJzZWNyZXQiKSB7CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJVbmF1dGhvcml6ZWQ6IG1pc3Npbmcgb3IgaW52YWxpZCBBUEkga2V5LiIgfSwgeyBzdGF0dXM6IDQwMSB9KTsKICAgIH0KICAgIGNvbnN0IHB1Ymxpc2hhYmxlID0gYXV0aC5yZWNvcmQ/LnB1Ymxpc2hhYmxlX2tleSB8fCBQVUJMSVNIQUJMRV9LRVk7CiAgICBpZiAoYXV0aC5yZWNvcmQpIHsKICAgICAgYmFzZTQ0LmFzU2VydmljZVJvbGUuZW50aXRpZXMuQXBpS2V5LnVwZGF0ZShhdXRoLnJlY29yZC5pZCwgeyBsYXN0X3VzZWQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSB9KS5jYXRjaCgoKSA9PiB7fSk7CiAgICB9CgogICAgY29uc3QgYW1vdW50ID0gTnVtYmVyKGJvZHkuYW1vdW50KTsKICAgIGNvbnN0IGN1cnJlbmN5ID0gbm9ybUN1cnJlbmN5KGJvZHkuY3VycmVuY3kpOwogICAgY29uc3Qgb3JkZXJfaWQgPSBub3JtVGV4dChib2R5Lm9yZGVyX2lkKTsKICAgIGNvbnN0IHdlYmhvb2tfdXJsID0gbm9ybVRleHQoYm9keS53ZWJob29rX3VybCk7CgogICAgaWYgKCFOdW1iZXIuaXNGaW5pdGUoYW1vdW50KSB8fCBhbW91bnQgPD0gMCkgewogICAgICByZXR1cm4gUmVzcG9uc2UuanNvbih7IGVycm9yOiAiYW1vdW50IG11c3QgYmUgYSBwb3NpdGl2ZSBudW1iZXIuIiB9LCB7IHN0YXR1czogNDAwIH0pOwogICAgfQoKICAgIGNvbnN0IHNlc3Npb25faWQgPSBnZW5TZXNzaW9uSWQoKTsKICAgIGNvbnN0IGNsaWVudF9zZWNyZXQgPSBhd2FpdCBjcmVhdGVDbGllbnRTZWNyZXQoewogICAgICBzZXNzaW9uX2lkLAogICAgICBhbW91bnQsCiAgICAgIGN1cnJlbmN5LAogICAgICBvcmRlcl9pZCwKICAgICAgd2ViaG9va191cmwsCiAgICAgIGNyZWF0ZWQ6IERhdGUubm93KCksCiAgICB9KTsKCiAgICBjb25zdCBvcmlnaW4gPSBuZXcgVVJMKHJlcS51cmwpLm9yaWdpbjsKICAgIGNvbnN0IHBhcmFtcyA9IG5ldyBVUkxTZWFyY2hQYXJhbXMoewogICAgICBlbWJlZDogInRydWUiLAogICAgICBhbW91bnQ6IFN0cmluZyhhbW91bnQpLAogICAgICBjdXJyZW5jeSwKICAgICAgb3JkZXJfaWQsCiAgICAgIGNsaWVudF9zZWNyZXQsCiAgICAgIHB1Ymxpc2hhYmxlX2tleTogcHVibGlzaGFibGUsCiAgICB9KTsKICAgIGNvbnN0IGNoZWNrb3V0X3VybCA9IGAke29yaWdpbn0vcGF5bWVudHMvbmV3PyR7cGFyYW1zLnRvU3RyaW5nKCl9YDsKCiAgICByZXR1cm4gUmVzcG9uc2UuanNvbih7CiAgICAgIHNlc3Npb25faWQsCiAgICAgIGNsaWVudF9zZWNyZXQsCiAgICAgIGNoZWNrb3V0X3VybCwKICAgICAgcHVibGlzaGFibGVfa2V5OiBwdWJsaXNoYWJsZSwKICAgICAgYW1vdW50LAogICAgICBjdXJyZW5jeSwKICAgICAgb3JkZXJfaWQsCiAgICB9KTsKICB9IGNhdGNoIChlcnJvcikgewogICAgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwogIH0KfQ==
+import { createClientFromRequest } from "npm:@base44/sdk@0.8.44";
+import {
+  PUBLISHABLE_KEY,
+  createClientSecret,
+  verifyClientSecret,
+  extractBearer,
+  genSessionId,
+  normCurrency,
+  normText,
+  resolveApiKey,
+} from "../../shared/checkout.ts";
+
+// NexaPay checkout session API.
+//  - Create mode (merchant): POST with Authorization: Bearer <API_KEY> and { amount, currency, order_id, webhook_url }
+//    -> returns { session_id, client_secret, checkout_url, amount, currency, order_id }
+//  - Retrieve mode (iframe): POST { client_secret } (no merchant key) -> returns session details (amount fallback).
+
+export default async function (req) {
+  const base44 = createClientFromRequest(req);
+  try {
+    const body = await req.json().catch(() => ({}));
+    const bearer = extractBearer(req);
+
+    // Retrieve mode: the embedded iframe fetches the amount when it is not in the URL.
+    if (body.client_secret && !(bearer && (await resolveApiKey(base44, bearer))?.type === "secret")) {
+      const session = await verifyClientSecret(body.client_secret);
+      if (!session) {
+        return Response.json({ error: "Invalid client_secret." }, { status: 401 });
+      }
+      return Response.json({
+        session_id: session.session_id,
+        amount: session.amount,
+        currency: session.currency,
+        order_id: session.order_id,
+      });
+    }
+
+    // Create mode: merchant authenticates with a secret API key (DB-backed or legacy dev key).
+    const auth = bearer ? await resolveApiKey(base44, bearer) : null;
+    if (!auth || auth.type !== "secret") {
+      return Response.json({ error: "Unauthorized: missing or invalid API key." }, { status: 401 });
+    }
+    const publishable = auth.record?.publishable_key || PUBLISHABLE_KEY;
+    if (auth.record) {
+      base44.asServiceRole.entities.ApiKey.update(auth.record.id, { last_used: new Date().toISOString() }).catch(() => {});
+    }
+
+    const amount = Number(body.amount);
+    const currency = normCurrency(body.currency);
+    const order_id = normText(body.order_id);
+    const webhook_url = normText(body.webhook_url);
+
+    if (!Number.isFinite(amount) || amount <= 0) {
+      return Response.json({ error: "amount must be a positive number." }, { status: 400 });
+    }
+
+    const session_id = genSessionId();
+    const client_secret = await createClientSecret({
+      session_id,
+      amount,
+      currency,
+      order_id,
+      webhook_url,
+      created: Date.now(),
+    });
+
+    const origin = new URL(req.url).origin;
+    const params = new URLSearchParams({
+      embed: "true",
+      amount: String(amount),
+      currency,
+      order_id,
+      client_secret,
+      publishable_key: publishable,
+    });
+    const checkout_url = `${origin}/payments/new?${params.toString()}`;
+
+    return Response.json({
+      session_id,
+      client_secret,
+      checkout_url,
+      publishable_key: publishable,
+      amount,
+      currency,
+      order_id,
+    });
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
+}

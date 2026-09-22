@@ -1,1 +1,98 @@
-QGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9UG9wcGluczp3Z2h0QDQwMDs1MDA7NjAwOzcwMCZkaXNwbGF5PXN3YXAnKTsKCkB0YWlsd2luZCBiYXNlOwpAdGFpbHdpbmQgY29tcG9uZW50czsKQHRhaWx3aW5kIHV0aWxpdGllczsKCkBsYXllciBiYXNlIHsKICA6cm9vdCB7CiAgICAvKiBOZXhhUGF5IHBhbGV0dGUgYWxpZ25lZCB3aXRoIHRoZSBsYW5kaW5nIHBhZ2U6IG5hdnkgLyBncmVlbiAvIHdoaXRlICovCiAgICAtLWJhY2tncm91bmQ6IDAgMCUgMTAwJTsgICAgICAgICAgICAvKiAjRkZGRkZGICovCiAgICAtLWZvcmVncm91bmQ6IDIxOSA3NCUgMTIlOyAgICAgICAgIC8qICMwODE3MzUgbmF2eSAqLwogICAgLS1jYXJkOiAwIDAlIDEwMCU7CiAgICAtLWNhcmQtZm9yZWdyb3VuZDogMjE5IDc0JSAxMiU7CiAgICAtLXBvcG92ZXI6IDAgMCUgMTAwJTsKICAgIC0tcG9wb3Zlci1mb3JlZ3JvdW5kOiAyMTkgNzQlIDEyJTsKICAgIC0tcHJpbWFyeTogMTUyIDUxJSA0NyU7ICAgICAgICAgICAgLyogIzNCQjc3RSBncmVlbiAqLwogICAgLS1wcmltYXJ5LWZvcmVncm91bmQ6IDAgMCUgMTAwJTsKICAgIC0tc2Vjb25kYXJ5OiAyMTAgNDAlIDk2JTsgICAgICAgICAgLyogI0YxRjVGOSAqLwogICAgLS1zZWNvbmRhcnktZm9yZWdyb3VuZDogMjE5IDc0JSAxMiU7CiAgICAtLW11dGVkOiAyMTAgNDAlIDk2JTsKICAgIC0tbXV0ZWQtZm9yZWdyb3VuZDogMjIwIDE1JSA1MCU7ICAgLyogIzZEN0E5MiAqLwogICAgLS1hY2NlbnQ6IDE1MiA2MCUgOTglOyAgICAgICAgICAgICAgLyogI0Y5RkZGQiBsaWdodCBncmVlbiAqLwogICAgLS1hY2NlbnQtZm9yZWdyb3VuZDogMTQ3IDUzJSAzOSU7ICAvKiAjMmY5NzYyICovCiAgICAtLWRlc3RydWN0aXZlOiAwIDcyJSA1MSU7CiAgICAtLWRlc3RydWN0aXZlLWZvcmVncm91bmQ6IDAgMCUgOTglOwogICAgLS1ib3JkZXI6IDIxMCA0MCUgODklOyAgICAgICAgICAgICAvKiAjRTJFOEYwICovCiAgICAtLWlucHV0OiAyMTAgNDAlIDg5JTsKICAgIC0tcmluZzogMTUyIDUxJSA0NyU7CiAgICAtLWNoYXJ0LTE6IDE1MiA1MSUgNDclOwogICAgLS1jaGFydC0yOiAxOTkgOTMlIDQ4JTsKICAgIC0tY2hhcnQtMzogMjE5IDc0JSAxMiU7CiAgICAtLWNoYXJ0LTQ6IDQzIDc0JSA1NiU7CiAgICAtLWNoYXJ0LTU6IDAgNzIlIDUxJTsKICAgIC0tcmFkaXVzOiAwLjc1cmVtOwogICAgLS1mb250LWhlYWRpbmc6ICdQb3BwaW5zJywgdWktc2Fucy1zZXJpZiwgc3lzdGVtLXVpLCBzYW5zLXNlcmlmOwogICAgLS1mb250LWJvZHk6ICdQb3BwaW5zJywgdWktc2Fucy1zZXJpZiwgc3lzdGVtLXVpLCBzYW5zLXNlcmlmOwogICAgLS1mb250LWRpc3BsYXk6ICdQb3BwaW5zJywgdWktc2Fucy1zZXJpZiwgc3lzdGVtLXVpLCBzYW5zLXNlcmlmOwogICAgLS1mb250LW1vbm86IHVpLW1vbm9zcGFjZSwgU0ZNb25vLVJlZ3VsYXIsIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAiTGliZXJhdGlvbiBNb25vIiwgIkNvdXJpZXIgTmV3IiwgbW9ub3NwYWNlOwogICAgLS1zaWRlYmFyLWJhY2tncm91bmQ6IDAgMCUgMTAwJTsKICAgIC0tc2lkZWJhci1mb3JlZ3JvdW5kOiAyMTkgNzQlIDEyJTsKICAgIC0tc2lkZWJhci1wcmltYXJ5OiAxNTIgNTElIDQ3JTsKICAgIC0tc2lkZWJhci1wcmltYXJ5LWZvcmVncm91bmQ6IDAgMCUgMTAwJTsKICAgIC0tc2lkZWJhci1hY2NlbnQ6IDE1MiA2MCUgOTglOwogICAgLS1zaWRlYmFyLWFjY2VudC1mb3JlZ3JvdW5kOiAxNDcgNTMlIDM5JTsKICAgIC0tc2lkZWJhci1ib3JkZXI6IDIxMCA0MCUgODklOwogICAgLS1zaWRlYmFyLXJpbmc6IDE1MiA1MSUgNDclOwogIH0KCiAgLyogTmV4YVBheSBpcyBhIGxpZ2h0LXRoZW1lIHByb2R1Y3Qg4oCUIG1pcnJvciByb290IHNvIGFueSAuZGFyayBmbGFnIGlzIGEgbm8tb3AuICovCiAgLmRhcmsgewogICAgLS1iYWNrZ3JvdW5kOiAwIDAlIDEwMCU7CiAgICAtLWZvcmVncm91bmQ6IDIxOSA3NCUgMTIlOwogICAgLS1jYXJkOiAwIDAlIDEwMCU7CiAgICAtLWNhcmQtZm9yZWdyb3VuZDogMjE5IDc0JSAxMiU7CiAgICAtLXBvcG92ZXI6IDAgMCUgMTAwJTsKICAgIC0tcG9wb3Zlci1mb3JlZ3JvdW5kOiAyMTkgNzQlIDEyJTsKICAgIC0tcHJpbWFyeTogMTUyIDUxJSA0NyU7CiAgICAtLXByaW1hcnktZm9yZWdyb3VuZDogMCAwJSAxMDAlOwogICAgLS1zZWNvbmRhcnk6IDIxMCA0MCUgOTYlOwogICAgLS1zZWNvbmRhcnktZm9yZWdyb3VuZDogMjE5IDc0JSAxMiU7CiAgICAtLW11dGVkOiAyMTAgNDAlIDk2JTsKICAgIC0tbXV0ZWQtZm9yZWdyb3VuZDogMjIwIDE1JSA1MCU7CiAgICAtLWFjY2VudDogMTUyIDYwJSA5OCU7CiAgICAtLWFjY2VudC1mb3JlZ3JvdW5kOiAxNDcgNTMlIDM5JTsKICAgIC0tZGVzdHJ1Y3RpdmU6IDAgNzIlIDUxJTsKICAgIC0tZGVzdHJ1Y3RpdmUtZm9yZWdyb3VuZDogMCAwJSA5OCU7CiAgICAtLWJvcmRlcjogMjEwIDQwJSA4OSU7CiAgICAtLWlucHV0OiAyMTAgNDAlIDg5JTsKICAgIC0tcmluZzogMTUyIDUxJSA0NyU7CiAgICAtLWNoYXJ0LTE6IDE1MiA1MSUgNDclOwogICAgLS1jaGFydC0yOiAxOTkgOTMlIDQ4JTsKICAgIC0tY2hhcnQtMzogMjE5IDc0JSAxMiU7CiAgICAtLWNoYXJ0LTQ6IDQzIDc0JSA1NiU7CiAgICAtLWNoYXJ0LTU6IDAgNzIlIDUxJTsKICAgIC0tc2lkZWJhci1iYWNrZ3JvdW5kOiAwIDAlIDEwMCU7CiAgICAtLXNpZGViYXItZm9yZWdyb3VuZDogMjE5IDc0JSAxMiU7CiAgICAtLXNpZGViYXItcHJpbWFyeTogMTUyIDUxJSA0NyU7CiAgICAtLXNpZGViYXItcHJpbWFyeS1mb3JlZ3JvdW5kOiAwIDAlIDEwMCU7CiAgICAtLXNpZGViYXItYWNjZW50OiAxNTIgNjAlIDk4JTsKICAgIC0tc2lkZWJhci1hY2NlbnQtZm9yZWdyb3VuZDogMTQ3IDUzJSAzOSU7CiAgICAtLXNpZGViYXItYm9yZGVyOiAyMTAgNDAlIDg5JTsKICAgIC0tc2lkZWJhci1yaW5nOiAxNTIgNTElIDQ3JTsKICB9Cn0KCkBsYXllciBiYXNlIHsKICAqIHsKICAgIEBhcHBseSBib3JkZXItYm9yZGVyIG91dGxpbmUtcmluZy81MDsKICB9CgogIGh0bWwgewogICAgY29sb3Itc2NoZW1lOiBsaWdodDsKICB9CgogIGJvZHkgewogICAgQGFwcGx5IGJnLWJhY2tncm91bmQgdGV4dC1mb3JlZ3JvdW5kIGZvbnQtYm9keSBhbnRpYWxpYXNlZDsKICB9Cn0=
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* NexaPay palette aligned with the landing page: navy / green / white */
+    --background: 0 0% 100%;            /* #FFFFFF */
+    --foreground: 219 74% 12%;         /* #081735 navy */
+    --card: 0 0% 100%;
+    --card-foreground: 219 74% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 219 74% 12%;
+    --primary: 152 51% 47%;            /* #3BB77E green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;          /* #F1F5F9 */
+    --secondary-foreground: 219 74% 12%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 50%;   /* #6D7A92 */
+    --accent: 152 60% 98%;              /* #F9FFFB light green */
+    --accent-foreground: 147 53% 39%;  /* #2f9762 */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 89%;             /* #E2E8F0 */
+    --input: 210 40% 89%;
+    --ring: 152 51% 47%;
+    --chart-1: 152 51% 47%;
+    --chart-2: 199 93% 48%;
+    --chart-3: 219 74% 12%;
+    --chart-4: 43 74% 56%;
+    --chart-5: 0 72% 51%;
+    --radius: 0.75rem;
+    --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 219 74% 12%;
+    --sidebar-primary: 152 51% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 152 60% 98%;
+    --sidebar-accent-foreground: 147 53% 39%;
+    --sidebar-border: 210 40% 89%;
+    --sidebar-ring: 152 51% 47%;
+  }
+
+  /* NexaPay is a light-theme product — mirror root so any .dark flag is a no-op. */
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 219 74% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 219 74% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 219 74% 12%;
+    --primary: 152 51% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 219 74% 12%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 50%;
+    --accent: 152 60% 98%;
+    --accent-foreground: 147 53% 39%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 89%;
+    --input: 210 40% 89%;
+    --ring: 152 51% 47%;
+    --chart-1: 152 51% 47%;
+    --chart-2: 199 93% 48%;
+    --chart-3: 219 74% 12%;
+    --chart-4: 43 74% 56%;
+    --chart-5: 0 72% 51%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 219 74% 12%;
+    --sidebar-primary: 152 51% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 152 60% 98%;
+    --sidebar-accent-foreground: 147 53% 39%;
+    --sidebar-border: 210 40% 89%;
+    --sidebar-ring: 152 51% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}

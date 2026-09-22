@@ -1,1 +1,303 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlLCB1c2VSZWYsIHVzZUVmZmVjdCB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgdXNlTmF2aWdhdGUgfSBmcm9tICJyZWFjdC1yb3V0ZXItZG9tIjsKaW1wb3J0IHsgQXJyb3dMZWZ0LCBMb2FkZXIyLCBMb2NrLCBDaGVja0NpcmNsZTIsIFNlbmQsIENyZWRpdENhcmQsIFNtYXJ0cGhvbmUsIFNoaWVsZENoZWNrIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCB7IElucHV0IH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2lucHV0IjsKaW1wb3J0IHsgTGFiZWwgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvbGFiZWwiOwppbXBvcnQgeyBUYWJzLCBUYWJzTGlzdCwgVGFic1RyaWdnZXIsIFRhYnNDb250ZW50IH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL3RhYnMiOwppbXBvcnQgQ2FyZEZpZWxkcyBmcm9tICJAL2NvbXBvbmVudHMvY2hlY2tvdXQvQ2FyZEZpZWxkcyI7CmltcG9ydCBNb01vRmllbGRzIGZyb20gIkAvY29tcG9uZW50cy9jaGVja291dC9Nb01vRmllbGRzIjsKaW1wb3J0IFByb2Nlc3NpbmdPdmVybGF5IGZyb20gIkAvY29tcG9uZW50cy9jaGVja291dC9Qcm9jZXNzaW5nT3ZlcmxheSI7CmltcG9ydCB7IEltYWdlIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2ltYWdlIjsKaW1wb3J0IHsgYmFzZTQ0IH0gZnJvbSAiQC9hcGkvYmFzZTQ0Q2xpZW50IjsKCmNvbnN0IEZBTExCQUNLX1BLID0gIm5leGFfcGtfdGVzdF8xMjMiOwoKY29uc3QgSTE4TiA9IHsKICBGUjogewogICAgc2VjdXJlOiAiUGFpZW1lbnQgc8OpY3VyaXPDqSIsCiAgICBwb3dlcmVkQnk6ICJQYWllbWVudCBzw6ljdXJpc8OpIHBhciIsCiAgICBvcmRlcjogIkNvbW1hbmRlIiwKICAgIHBheTogIlBheWVyIiwKICAgIHByb2Nlc3Npbmc6ICJUcmFpdGVtZW504oCmIiwKICAgIGJhY2s6ICJSZXRvdXIgYXUgdGFibGVhdSBkZSBib3JkIiwKICAgIGVtYWlsOiAiRW1haWwgZGUgY29uZmlybWF0aW9uIiwKICAgIGVtYWlsUGg6ICJqZWFuLmR1cG9udEBlbWFpbC5jb20iLAogICAgY2FyZDogIkNhcnRlIGJhbmNhaXJlIiwKICAgIG1vbW86ICJNb2JpbGUgTW9uZXkiLAogICAgc3VjY2VzczogIlBhaWVtZW50IGNvbmZpcm3DqSIsCiAgICBzdWNjZXNzTXNnOiAiTWVyY2kgcG91ciB2b3RyZSBhY2hhdC4gVm90cmUgcGFpZW1lbnQgYSBiaWVuIMOpdMOpIHJlw6d1IHBhciBOZXhhUGF5LiIsCiAgICByZWY6ICJSw6lmw6lyZW5jZSIsCiAgICBhZ2FpbjogIk5vdXZlYXUgcGFpZW1lbnQiLAogICAgdXNkdDogIlVTRFQgbGl2csOpcyIsCiAgICBuZXQ6ICJSw6lzZWF1IiwKICAgIHByb3Y6ICJFeMOpY3V0ZXVyIiwKICAgIHR4aGFzaDogIkhhc2ggZGUgcsOoZ2xlbWVudCIsCiAgICBsaXZlQmFkZ2U6ICJFeMOpY3V0aW9uIHLDqWVsbGUiLAogICAgbW9ja0JhZGdlOiAiTW9kZSBkw6ltbyIsCiAgICBlcnJBbW91bnQ6ICJNb250YW50IGRlIGxhIGNvbW1hbmRlIGluZGlzcG9uaWJsZS4iLAogICAgZXJyRW1haWw6ICJWZXVpbGxleiBzYWlzaXIgdW4gZW1haWwgdmFsaWRlLiIsCiAgICBlcnJDYXJkOiAiTnVtw6lybyBkZSBjYXJ0ZSBpbnZhbGlkZS4iLAogICAgZXJyRXhwOiAiRGF0ZSBkJ2V4cGlyYXRpb24gaW52YWxpZGUuIiwKICAgIGVyckN2YzogIkNWQyBpbnZhbGlkZS4iLAogICAgZXJyTmFtZTogIk5vbSBkdSB0aXR1bGFpcmUgcmVxdWlzLiIsCiAgICBlcnJQcm92aWRlcjogIlZldWlsbGV6IGNob2lzaXIgdW4gb3DDqXJhdGV1ci4iLAogICAgZXJyUHJlZml4OiAiSW5kaWNhdGlmIHBheXMgcmVxdWlzLiIsCiAgICBlcnJQaG9uZTogIk51bcOpcm8gbW9iaWxlIG1vbmV5IHJlcXVpcy4iLAogICAgZXJyRmFpbDogIsOJY2hlYyBkdSBwYWllbWVudC4iLAogIH0sCiAgRU46IHsKICAgIHNlY3VyZTogIlNlY3VyZSBwYXltZW50IiwKICAgIHBvd2VyZWRCeTogIlNlY3VyZSBwYXltZW50IGJ5IiwKICAgIG9yZGVyOiAiT3JkZXIiLAogICAgcGF5OiAiUGF5IiwKICAgIHByb2Nlc3Npbmc6ICJQcm9jZXNzaW5n4oCmIiwKICAgIGJhY2s6ICJCYWNrIHRvIGRhc2hib2FyZCIsCiAgICBlbWFpbDogIkNvbmZpcm1hdGlvbiBlbWFpbCIsCiAgICBlbWFpbFBoOiAiam9obi5kb2VAZW1haWwuY29tIiwKICAgIGNhcmQ6ICJCYW5rIGNhcmQiLAogICAgbW9tbzogIk1vYmlsZSBNb25leSIsCiAgICBzdWNjZXNzOiAiUGF5bWVudCBjb25maXJtZWQiLAogICAgc3VjY2Vzc01zZzogIlRoYW5rIHlvdSBmb3IgeW91ciBwdXJjaGFzZS4gWW91ciBwYXltZW50IGhhcyBiZWVuIHJlY2VpdmVkIGJ5IE5leGFQYXkuIiwKICAgIHJlZjogIlJlZmVyZW5jZSIsCiAgICBhZ2FpbjogIk5ldyBwYXltZW50IiwKICAgIHVzZHQ6ICJVU0RUIGRlbGl2ZXJlZCIsCiAgICBuZXQ6ICJOZXR3b3JrIiwKICAgIHByb3Y6ICJFeGVjdXRvciIsCiAgICB0eGhhc2g6ICJTZXR0bGVtZW50IGhhc2giLAogICAgbGl2ZUJhZGdlOiAiTGl2ZSBleGVjdXRpb24iLAogICAgbW9ja0JhZGdlOiAiRGVtbyBtb2RlIiwKICAgIGVyckFtb3VudDogIk9yZGVyIGFtb3VudCB1bmF2YWlsYWJsZS4iLAogICAgZXJyRW1haWw6ICJQbGVhc2UgZW50ZXIgYSB2YWxpZCBlbWFpbC4iLAogICAgZXJyQ2FyZDogIkludmFsaWQgY2FyZCBudW1iZXIuIiwKICAgIGVyckV4cDogIkludmFsaWQgZXhwaXJhdGlvbiBkYXRlLiIsCiAgICBlcnJDdmM6ICJJbnZhbGlkIENWQy4iLAogICAgZXJyTmFtZTogIkNhcmRob2xkZXIgbmFtZSByZXF1aXJlZC4iLAogICAgZXJyUHJvdmlkZXI6ICJQbGVhc2UgY2hvb3NlIGFuIG9wZXJhdG9yLiIsCiAgICBlcnJQcmVmaXg6ICJDb3VudHJ5IGNvZGUgcmVxdWlyZWQuIiwKICAgIGVyclBob25lOiAiTW9iaWxlIG1vbmV5IG51bWJlciByZXF1aXJlZC4iLAogICAgZXJyRmFpbDogIlBheW1lbnQgZmFpbGVkLiIsCiAgfSwKfTsKCmNvbnN0IGZvcm1hdFRvdGFsID0gKGFtb3VudCwgY3VycmVuY3ksIGxhbmcpID0+IHsKICB0cnkgewogICAgcmV0dXJuIG5ldyBJbnRsLk51bWJlckZvcm1hdChsYW5nID09PSAiRU4iID8gImVuLVVTIiA6ICJmci1GUiIsIHsgc3R5bGU6ICJjdXJyZW5jeSIsIGN1cnJlbmN5OiBjdXJyZW5jeSB8fCAiRVVSIiB9KS5mb3JtYXQoTnVtYmVyKGFtb3VudCkgfHwgMCk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gYCR7YW1vdW50fSAke2N1cnJlbmN5fWA7CiAgfQp9OwoKY29uc3QgbHVoblZhbGlkID0gKG51bSkgPT4gewogIGNvbnN0IG4gPSAobnVtIHx8ICIiKS5yZXBsYWNlKC9cRC9nLCAiIik7CiAgaWYgKG4ubGVuZ3RoIDwgMTMpIHJldHVybiBmYWxzZTsKICBsZXQgcyA9IDAsIGFsdCA9IGZhbHNlOwogIGZvciAobGV0IGkgPSBuLmxlbmd0aCAtIDE7IGkgPj0gMDsgaS0tKSB7CiAgICBsZXQgZCA9ICtuW2ldOwogICAgaWYgKGFsdCkgeyBkICo9IDI7IGlmIChkID4gOSkgZCAtPSA5OyB9CiAgICBzICs9IGQ7IGFsdCA9ICFhbHQ7CiAgfQogIHJldHVybiBzICUgMTAgPT09IDA7Cn07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBOZXdUcmFuc2FjdGlvbigpIHsKICBjb25zdCBuYXZpZ2F0ZSA9IHVzZU5hdmlnYXRlKCk7CiAgY29uc3QgcGFyYW1zID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKTsKICBjb25zdCBpc0VtYmVkID0gcGFyYW1zLmdldCgiZW1iZWQiKSA9PT0gInRydWUiOwogIGNvbnN0IGNsaWVudFNlY3JldCA9IHBhcmFtcy5nZXQoImNsaWVudF9zZWNyZXQiKSB8fCAiIjsKICBjb25zdCBwdWJsaXNoYWJsZUtleSA9IHBhcmFtcy5nZXQoInB1Ymxpc2hhYmxlX2tleSIpIHx8IEZBTExCQUNLX1BLOwoKICBjb25zdCBbbGFuZywgc2V0TGFuZ10gPSB1c2VTdGF0ZSgiRlIiKTsKICBjb25zdCB0ID0gSTE4TltsYW5nXTsKCiAgY29uc3QgW2Ftb3VudF0gPSB1c2VTdGF0ZSgoKSA9PiBOdW1iZXIocGFyYW1zLmdldCgiYW1vdW50IikpIHx8IDUwKTsKICBjb25zdCBbY3VycmVuY3ldID0gdXNlU3RhdGUocGFyYW1zLmdldCgiY3VycmVuY3kiKSB8fCAiRVVSIik7CiAgY29uc3QgbmV0d29yayA9IHBhcmFtcy5nZXQoIm5ldHdvcmsiKSB8fCAiVFJDMjAiOwogIGNvbnN0IG9yZGVyUmVmID0gcGFyYW1zLmdldCgib3JkZXJfaWQiKSB8fCAiIjsKICBjb25zdCB3ZWJob29rVXJsID0gcGFyYW1zLmdldCgid2ViaG9va191cmwiKSB8fCAiIjsKCiAgY29uc3QgW21ldGhvZCwgc2V0TWV0aG9kXSA9IHVzZVN0YXRlKCJDQVJEIik7CiAgY29uc3QgW2NhcmQsIHNldENhcmRdID0gdXNlU3RhdGUoeyBudW1iZXI6ICIiLCBleHBpcnk6ICIiLCBjdmM6ICIiLCBuYW1lOiAiIiB9KTsKICBjb25zdCBbbW9tbywgc2V0TW9tb10gPSB1c2VTdGF0ZSh7IHByb3ZpZGVyOiAiIiwgcHJlZml4OiAiIiwgcGhvbmU6ICIiIH0pOwogIGNvbnN0IFtlbWFpbCwgc2V0RW1haWxdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IFtwcm9jZXNzaW5nLCBzZXRQcm9jZXNzaW5nXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCBbc3RlcCwgc2V0U3RlcF0gPSB1c2VTdGF0ZSgwKTsKICBjb25zdCBbc3VjY2Vzcywgc2V0U3VjY2Vzc10gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgW3Jlc3VsdCwgc2V0UmVzdWx0XSA9IHVzZVN0YXRlKG51bGwpOwogIGNvbnN0IFtlcnJvciwgc2V0RXJyb3JdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IHRpbWVycyA9IHVzZVJlZihbXSk7CiAgdXNlRWZmZWN0KCgpID0+ICgpID0+IHRpbWVycy5jdXJyZW50LmZvckVhY2goKGlkKSA9PiBjbGVhclRpbWVvdXQoaWQpKSwgW10pOwoKICBjb25zdCB0b3RhbCA9IGZvcm1hdFRvdGFsKGFtb3VudCwgY3VycmVuY3ksIGxhbmcpOwoKICBjb25zdCBoYW5kbGVTdWJtaXQgPSBhc3luYyAoZSkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgc2V0RXJyb3IoIiIpOwogICAgaWYgKCFhbW91bnQgfHwgYW1vdW50IDw9IDApIHJldHVybiBzZXRFcnJvcih0LmVyckFtb3VudCk7CiAgICBpZiAoIS9eW15cc0BdK0BbXlxzQF0rXC5bXlxzQF0rJC8udGVzdChlbWFpbC50cmltKCkpKSByZXR1cm4gc2V0RXJyb3IodC5lcnJFbWFpbCk7CiAgICBpZiAobWV0aG9kID09PSAiQ0FSRCIpIHsKICAgICAgaWYgKCFsdWhuVmFsaWQoY2FyZC5udW1iZXIpKSByZXR1cm4gc2V0RXJyb3IodC5lcnJDYXJkKTsKICAgICAgaWYgKCEvXlxkezJ9XC9cZHsyfSQvLnRlc3QoY2FyZC5leHBpcnkpKSByZXR1cm4gc2V0RXJyb3IodC5lcnJFeHApOwogICAgICBpZiAoIWNhcmQuY3ZjKSByZXR1cm4gc2V0RXJyb3IodC5lcnJDdmMpOwogICAgICBpZiAoIWNhcmQubmFtZS50cmltKCkpIHJldHVybiBzZXRFcnJvcih0LmVyck5hbWUpOwogICAgfSBlbHNlIHsKICAgICAgaWYgKCFtb21vLnByb3ZpZGVyKSByZXR1cm4gc2V0RXJyb3IodC5lcnJQcm92aWRlcik7CiAgICAgIGlmICghbW9tby5wcmVmaXgpIHJldHVybiBzZXRFcnJvcih0LmVyclByZWZpeCk7CiAgICAgIGlmICghbW9tby5waG9uZSkgcmV0dXJuIHNldEVycm9yKHQuZXJyUGhvbmUpOwogICAgfQoKICAgIGNvbnN0IHBheWxvYWQgPSB7CiAgICAgIGNsaWVudF9zZWNyZXQ6IGNsaWVudFNlY3JldCwKICAgICAgcGF5bWVudF9tZXRob2Q6IG1ldGhvZCwKICAgICAgb3JkZXJfaWQ6IG9yZGVyUmVmLAogICAgICB3ZWJob29rX3VybDogd2ViaG9va1VybCwKICAgICAgYW1vdW50OiBjbGllbnRTZWNyZXQgPyB1bmRlZmluZWQgOiBhbW91bnQsCiAgICAgIGN1cnJlbmN5OiBjbGllbnRTZWNyZXQgPyB1bmRlZmluZWQgOiBjdXJyZW5jeSwKICAgICAgbmV0d29yazogY2xpZW50U2VjcmV0ID8gdW5kZWZpbmVkIDogbmV0d29yaywKICAgICAgY2FyZDogbWV0aG9kID09PSAiQ0FSRCIgPyBjYXJkIDogdW5kZWZpbmVkLAogICAgICBtb21vOiBtZXRob2QgPT09ICJNT0JJTEVfTU9ORVkiID8gbW9tbyA6IHVuZGVmaW5lZCwKICAgICAgcGF5ZXI6IHsgZW1haWw6IGVtYWlsLnRyaW0oKSB9LAogICAgfTsKCiAgICBzZXRQcm9jZXNzaW5nKHRydWUpOwogICAgc2V0U3RlcCgwKTsKICAgIGNvbnN0IHQxID0gc2V0VGltZW91dCgoKSA9PiBzZXRTdGVwKDEpLCA5MDApOyB0aW1lcnMuY3VycmVudC5wdXNoKHQxKTsKICAgIGNvbnN0IHQyID0gc2V0VGltZW91dCgoKSA9PiBzZXRTdGVwKDIpLCAxODAwKTsgdGltZXJzLmN1cnJlbnQucHVzaCh0Mik7CiAgICB0cnkgewogICAgICBjb25zdCByZXMgPSBhd2FpdCBiYXNlNDQuZnVuY3Rpb25zLmludm9rZSgicHJvY2Vzc0NoZWNrb3V0UGF5bWVudCIsIHsgLi4ucGF5bG9hZCwga2V5OiBwdWJsaXNoYWJsZUtleSB9KTsKICAgICAgY29uc3QgZGF0YSA9IHJlcz8uZGF0YSB8fCByZXM7CiAgICAgIGlmIChkYXRhLnN0YXR1cyAhPT0gInN1Y2NlZWRlZCIpIHRocm93IG5ldyBFcnJvcihkYXRhLmVycm9yIHx8IHQuZXJyRmFpbCk7CiAgICAgIGNsZWFyVGltZW91dCh0MSk7CiAgICAgIGNsZWFyVGltZW91dCh0Mik7CiAgICAgIHNldFN0ZXAoMyk7CiAgICAgIGNvbnN0IHQzID0gc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgIHdpbmRvdy5wYXJlbnQucG9zdE1lc3NhZ2UoCiAgICAgICAgICAgIHsgc3RhdHVzOiAiUEFZTUVOVF9TVUNDRVNTIiwgdHJhbnNhY3Rpb25JZDogZGF0YS50cmFuc2FjdGlvbl9pZCwgY3J5cHRvVHhIYXNoOiBkYXRhLmNyeXB0b190eF9oYXNoIH0sCiAgICAgICAgICAgICIqIgogICAgICAgICAgKTsKICAgICAgICB9IGNhdGNoIChfKSB7fQogICAgICAgIHNldFByb2Nlc3NpbmcoZmFsc2UpOwogICAgICAgIHNldFJlc3VsdChkYXRhKTsKICAgICAgICBzZXRTdWNjZXNzKHRydWUpOwogICAgICB9LCA3MDApOwogICAgICB0aW1lcnMuY3VycmVudC5wdXNoKHQzKTsKICAgIH0gY2F0Y2ggKGVycikgewogICAgICBjbGVhclRpbWVvdXQodDEpOwogICAgICBjbGVhclRpbWVvdXQodDIpOwogICAgICBzZXRFcnJvcihlcnIubWVzc2FnZSB8fCB0LmVyckZhaWwpOwogICAgICBzZXRQcm9jZXNzaW5nKGZhbHNlKTsKICAgIH0KICB9OwoKICBjb25zdCByZXNldCA9ICgpID0+IHsgc2V0U3VjY2VzcyhmYWxzZSk7IHNldFJlc3VsdChudWxsKTsgc2V0RXJyb3IoIiIpOyBzZXRTdGVwKDApOyB9OwoKICBpZiAoc3VjY2VzcykgewogICAgcmV0dXJuICgKICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LW1kIHctZnVsbCBteC1hdXRvIHB4LTQgcHktOCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC03IHNoYWRvdy1zbSB0ZXh0LWNlbnRlciI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBoLTE0IHctMTQgbXgtYXV0byBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1mdWxsIGJnLWVtZXJhbGQtNTAgYm9yZGVyIGJvcmRlci1lbWVyYWxkLTIwMCI+CiAgICAgICAgICAgIDxDaGVja0NpcmNsZTIgY2xhc3NOYW1lPSJoLTcgdy03IHRleHQtZW1lcmFsZC02MDAiIC8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxJbWFnZQogICAgICAgICAgICBzcmM9Imh0dHBzOi8vbWVkaWEuYmFzZTQ0LmNvbS9pbWFnZXMvcHVibGljLzZhYjExMDRlNDdkNGY3NDAyMmM2OWQyNy8zZGI2MzMzNzlfZ2VuZXJhdGVkX2ltYWdlLnBuZyIKICAgICAgICAgICAgYWx0PSJOZXhhUGF5IgogICAgICAgICAgICBjbGFzc05hbWU9ImgtMTAgdy0xMCBteC1hdXRvIG10LTQgcm91bmRlZC14bCIKICAgICAgICAgICAgZml0dGluZ1R5cGU9ImZpbGwiCiAgICAgICAgICAvPgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQteGwgZm9udC1zZW1pYm9sZCBtdC0zIj57dC5zdWNjZXNzfTwvaDI+CiAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIG10LTEiPnt0LnN1Y2Nlc3NNc2d9PC9wPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTQgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1zZWNvbmRhcnkvNDAgcHgtNCBweS0zIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiB0ZXh0LXNtIj4KICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e3Qub3JkZXJ9PC9zcGFuPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IGZvbnQtc2VtaWJvbGQiPnt0b3RhbH08L3NwYW4+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICB7b3JkZXJSZWYgJiYgKAogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gdGV4dC14cyBtdC0yIHB0LTIgYm9yZGVyLXQgYm9yZGVyLWJvcmRlciI+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e3QucmVmfTwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1tb25vIj57b3JkZXJSZWZ9PC9zcGFuPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTQgdGV4dC1bMTFweF0gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj57dC5wb3dlcmVkQnl9IE5leGFQYXk8L3A+CiAgICAgICAgICA8QnV0dG9uIG9uQ2xpY2s9e3Jlc2V0fSB2YXJpYW50PSJvdXRsaW5lIiBjbGFzc05hbWU9InJvdW5kZWQtZnVsbCBtdC01Ij57dC5hZ2Fpbn08L0J1dHRvbj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICApOwogIH0KCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy1tZCB3LWZ1bGwgbXgtYXV0byBweC00IHB5LTgiPgogICAgICB7IWlzRW1iZWQgJiYgKAogICAgICAgIDxCdXR0b24gdHlwZT0iYnV0dG9uIiB2YXJpYW50PSJvdXRsaW5lIiBvbkNsaWNrPXsoKSA9PiBuYXZpZ2F0ZSgiLyIpfSBjbGFzc05hbWU9InJvdW5kZWQtZnVsbCBtYi02Ij4KICAgICAgICAgIDxBcnJvd0xlZnQgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTEuNSIgLz4ge3QuYmFja30KICAgICAgICA8L0J1dHRvbj4KICAgICAgKX0KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJyZWxhdGl2ZSByb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIHAtNiBtZDpwLTcgc2hhZG93LXNtIj4KICAgICAgICB7cHJvY2Vzc2luZyAmJiA8UHJvY2Vzc2luZ092ZXJsYXkgbGFuZz17bGFuZ30gc3RlcD17c3RlcH0gLz59CgogICAgICAgIHsvKiBNZXJjaGFudCBsb2NrdXAgKyBsYW5ndWFnZSB0b2dnbGUgKi99CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQganVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgIDxJbWFnZQogICAgICAgICAgICAgIHNyYz0iaHR0cHM6Ly9tZWRpYS5iYXNlNDQuY29tL2ltYWdlcy9wdWJsaWMvNmFiMTEwNGU0N2Q0Zjc0MDIyYzY5ZDI3LzNkYjYzMzM3OV9nZW5lcmF0ZWRfaW1hZ2UucG5nIgogICAgICAgICAgICAgIGFsdD0iTmV4YVBheSIKICAgICAgICAgICAgICBjbGFzc05hbWU9ImgtMTIgdy0xMiByb3VuZGVkLTJ4bCIKICAgICAgICAgICAgICBmaXR0aW5nVHlwZT0iZmlsbCIKICAgICAgICAgICAgLz4KICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC1sZyBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0IGxlYWRpbmctbm9uZSI+TmV4YVBheTwvaDE+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtdC0xIGZsZXggaXRlbXMtY2VudGVyIGdhcC0xIj48TG9jayBjbGFzc05hbWU9ImgtMyB3LTMiIC8+IHt0LnNlY3VyZX08L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLXNlY29uZGFyeS82MCBwLTAuNSB0ZXh0LXhzIGZvbnQtbWVkaXVtIj4KICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIG9uQ2xpY2s9eygpID0+IHNldExhbmcoIkZSIil9IGNsYXNzTmFtZT17YHB4LTIuNSBweS0xIHJvdW5kZWQtZnVsbCB0cmFuc2l0aW9uLWNvbG9ycyAke2xhbmcgPT09ICJGUiIgPyAiYmctY2FyZCB0ZXh0LWZvcmVncm91bmQgc2hhZG93LXNtIiA6ICJ0ZXh0LW11dGVkLWZvcmVncm91bmQifWB9PkZSPC9idXR0b24+CiAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBvbkNsaWNrPXsoKSA9PiBzZXRMYW5nKCJFTiIpfSBjbGFzc05hbWU9e2BweC0yLjUgcHktMSByb3VuZGVkLWZ1bGwgdHJhbnNpdGlvbi1jb2xvcnMgJHtsYW5nID09PSAiRU4iID8gImJnLWNhcmQgdGV4dC1mb3JlZ3JvdW5kIHNoYWRvdy1zbSIgOiAidGV4dC1tdXRlZC1mb3JlZ3JvdW5kIn1gfT5FTjwvYnV0dG9uPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CgogICAgICAgIHsvKiBPcmRlciBhbW91bnQg4oCUIGVxdWl2YWxlbnQgb2YgdGhlIHByb2R1Y3QgYW1vdW50IChyZWFkLW9ubHkpICovfQogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC01IHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctc2Vjb25kYXJ5LzQwIHB4LTQgcHktMy41Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj57dC5vcmRlcn08L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQtMnhsIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctdGlnaHQiPnt0b3RhbH08L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGZvcm0gb25TdWJtaXQ9e2hhbmRsZVN1Ym1pdH0gY2xhc3NOYW1lPSJzcGFjZS15LTQgbXQtNSI+CiAgICAgICAgICA8VGFicyB2YWx1ZT17bWV0aG9kfSBvblZhbHVlQ2hhbmdlPXtzZXRNZXRob2R9PgogICAgICAgICAgICA8VGFic0xpc3QgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIHctZnVsbCByb3VuZGVkLXhsIj4KICAgICAgICAgICAgICA8VGFic1RyaWdnZXIgdmFsdWU9IkNBUkQiIGNsYXNzTmFtZT0icm91bmRlZC14bCI+PENyZWRpdENhcmQgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTEuNSIgLz4ge3QuY2FyZH08L1RhYnNUcmlnZ2VyPgogICAgICAgICAgICAgIDxUYWJzVHJpZ2dlciB2YWx1ZT0iTU9CSUxFX01PTkVZIiBjbGFzc05hbWU9InJvdW5kZWQteGwiPjxTbWFydHBob25lIGNsYXNzTmFtZT0iaC00IHctNCBtci0xLjUiIC8+IHt0Lm1vbW99PC9UYWJzVHJpZ2dlcj4KICAgICAgICAgICAgPC9UYWJzTGlzdD4KICAgICAgICAgICAgPFRhYnNDb250ZW50IHZhbHVlPSJDQVJEIiBjbGFzc05hbWU9Im10LTQiPgogICAgICAgICAgICAgIDxDYXJkRmllbGRzIGxhbmc9e2xhbmd9IHZhbHVlPXtjYXJkfSBvbkNoYW5nZT17KGssIHYpID0+IHNldENhcmQoKGMpID0+ICh7IC4uLmMsIFtrXTogdiB9KSl9IC8+CiAgICAgICAgICAgIDwvVGFic0NvbnRlbnQ+CiAgICAgICAgICAgIDxUYWJzQ29udGVudCB2YWx1ZT0iTU9CSUxFX01PTkVZIiBjbGFzc05hbWU9Im10LTQiPgogICAgICAgICAgICAgIDxNb01vRmllbGRzIGxhbmc9e2xhbmd9IHZhbHVlPXttb21vfSBvbkNoYW5nZT17KGssIHYpID0+IHNldE1vbW8oKG0pID0+ICh7IC4uLm0sIFtrXTogdiB9KSl9IC8+CiAgICAgICAgICAgIDwvVGFic0NvbnRlbnQ+CiAgICAgICAgICA8L1RhYnM+CgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICAgIDxMYWJlbCBodG1sRm9yPSJlbWFpbCI+e3QuZW1haWx9PC9MYWJlbD4KICAgICAgICAgICAgPElucHV0IGlkPSJlbWFpbCIgdHlwZT0iZW1haWwiIHZhbHVlPXtlbWFpbH0gb25DaGFuZ2U9eyhlKSA9PiBzZXRFbWFpbChlLnRhcmdldC52YWx1ZSl9IHBsYWNlaG9sZGVyPXt0LmVtYWlsUGh9IGNsYXNzTmFtZT0icm91bmRlZC14bCIgLz4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIHtlcnJvciAmJiA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLXJlZC0yMDAgYmctcmVkLTUwIHB4LTMgcHktMiB0ZXh0LXNtIHRleHQtcmVkLTYwMCI+e2Vycm9yfTwvZGl2Pn0KCiAgICAgICAgICA8QnV0dG9uIHR5cGU9InN1Ym1pdCIgZGlzYWJsZWQ9e3Byb2Nlc3Npbmd9IGNsYXNzTmFtZT0idy1mdWxsIHJvdW5kZWQtZnVsbCBiZy1wcmltYXJ5IHRleHQtcHJpbWFyeS1mb3JlZ3JvdW5kIGZvbnQtc2VtaWJvbGQgc2hhZG93LXNtIGhvdmVyOnNoYWRvdy1tZCB0cmFuc2l0aW9uLXNoYWRvdyBoLTExIj4KICAgICAgICAgICAge3Byb2Nlc3NpbmcgPyA8PjxMb2FkZXIyIGNsYXNzTmFtZT0iaC00IHctNCBtci0yIGFuaW1hdGUtc3BpbiIgLz4ge3QucHJvY2Vzc2luZ308Lz4KICAgICAgICAgICAgICA6IDw+PFNlbmQgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTIiIC8+IHt0LnBheX0ge3RvdGFsfTwvPn0KICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgIDwvZm9ybT4KCiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTUgcHQtNCBib3JkZXItdCBib3JkZXItYm9yZGVyIHRleHQtY2VudGVyIj4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTEuNSB0ZXh0LVsxMXB4XSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICA8U2hpZWxkQ2hlY2sgY2xhc3NOYW1lPSJoLTMuNSB3LTMuNSIgLz4ge3QucG93ZXJlZEJ5fSBOZXhhUGF5CiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft, Loader2, Lock, CheckCircle2, Send, CreditCard, Smartphone, ShieldCheck } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import CardFields from "@/components/checkout/CardFields";
+import MoMoFields from "@/components/checkout/MoMoFields";
+import ProcessingOverlay from "@/components/checkout/ProcessingOverlay";
+import { Image } from "@/components/ui/image";
+import { base44 } from "@/api/base44Client";
+
+const FALLBACK_PK = "nexa_pk_test_123";
+
+const I18N = {
+  FR: {
+    secure: "Paiement sécurisé",
+    poweredBy: "Paiement sécurisé par",
+    order: "Commande",
+    pay: "Payer",
+    processing: "Traitement…",
+    back: "Retour au tableau de bord",
+    email: "Email de confirmation",
+    emailPh: "jean.dupont@email.com",
+    card: "Carte bancaire",
+    momo: "Mobile Money",
+    success: "Paiement confirmé",
+    successMsg: "Merci pour votre achat. Votre paiement a bien été reçu par NexaPay.",
+    ref: "Référence",
+    again: "Nouveau paiement",
+    usdt: "USDT livrés",
+    net: "Réseau",
+    prov: "Exécuteur",
+    txhash: "Hash de règlement",
+    liveBadge: "Exécution réelle",
+    mockBadge: "Mode démo",
+    errAmount: "Montant de la commande indisponible.",
+    errEmail: "Veuillez saisir un email valide.",
+    errCard: "Numéro de carte invalide.",
+    errExp: "Date d'expiration invalide.",
+    errCvc: "CVC invalide.",
+    errName: "Nom du titulaire requis.",
+    errProvider: "Veuillez choisir un opérateur.",
+    errPrefix: "Indicatif pays requis.",
+    errPhone: "Numéro mobile money requis.",
+    errFail: "Échec du paiement.",
+  },
+  EN: {
+    secure: "Secure payment",
+    poweredBy: "Secure payment by",
+    order: "Order",
+    pay: "Pay",
+    processing: "Processing…",
+    back: "Back to dashboard",
+    email: "Confirmation email",
+    emailPh: "john.doe@email.com",
+    card: "Bank card",
+    momo: "Mobile Money",
+    success: "Payment confirmed",
+    successMsg: "Thank you for your purchase. Your payment has been received by NexaPay.",
+    ref: "Reference",
+    again: "New payment",
+    usdt: "USDT delivered",
+    net: "Network",
+    prov: "Executor",
+    txhash: "Settlement hash",
+    liveBadge: "Live execution",
+    mockBadge: "Demo mode",
+    errAmount: "Order amount unavailable.",
+    errEmail: "Please enter a valid email.",
+    errCard: "Invalid card number.",
+    errExp: "Invalid expiration date.",
+    errCvc: "Invalid CVC.",
+    errName: "Cardholder name required.",
+    errProvider: "Please choose an operator.",
+    errPrefix: "Country code required.",
+    errPhone: "Mobile money number required.",
+    errFail: "Payment failed.",
+  },
+};
+
+const formatTotal = (amount, currency, lang) => {
+  try {
+    return new Intl.NumberFormat(lang === "EN" ? "en-US" : "fr-FR", { style: "currency", currency: currency || "EUR" }).format(Number(amount) || 0);
+  } catch {
+    return `${amount} ${currency}`;
+  }
+};
+
+const luhnValid = (num) => {
+  const n = (num || "").replace(/\D/g, "");
+  if (n.length < 13) return false;
+  let s = 0, alt = false;
+  for (let i = n.length - 1; i >= 0; i--) {
+    let d = +n[i];
+    if (alt) { d *= 2; if (d > 9) d -= 9; }
+    s += d; alt = !alt;
+  }
+  return s % 10 === 0;
+};
+
+export default function NewTransaction() {
+  const navigate = useNavigate();
+  const params = new URLSearchParams(window.location.search);
+  const isEmbed = params.get("embed") === "true";
+  const clientSecret = params.get("client_secret") || "";
+  const publishableKey = params.get("publishable_key") || FALLBACK_PK;
+
+  const [lang, setLang] = useState("FR");
+  const t = I18N[lang];
+
+  const [amount] = useState(() => Number(params.get("amount")) || 50);
+  const [currency] = useState(params.get("currency") || "EUR");
+  const network = params.get("network") || "TRC20";
+  const orderRef = params.get("order_id") || "";
+  const webhookUrl = params.get("webhook_url") || "";
+
+  const [method, setMethod] = useState("CARD");
+  const [card, setCard] = useState({ number: "", expiry: "", cvc: "", name: "" });
+  const [momo, setMomo] = useState({ provider: "", prefix: "", phone: "" });
+  const [email, setEmail] = useState("");
+  const [processing, setProcessing] = useState(false);
+  const [step, setStep] = useState(0);
+  const [success, setSuccess] = useState(false);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach((id) => clearTimeout(id)), []);
+
+  const total = formatTotal(amount, currency, lang);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    if (!amount || amount <= 0) return setError(t.errAmount);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return setError(t.errEmail);
+    if (method === "CARD") {
+      if (!luhnValid(card.number)) return setError(t.errCard);
+      if (!/^\d{2}\/\d{2}$/.test(card.expiry)) return setError(t.errExp);
+      if (!card.cvc) return setError(t.errCvc);
+      if (!card.name.trim()) return setError(t.errName);
+    } else {
+      if (!momo.provider) return setError(t.errProvider);
+      if (!momo.prefix) return setError(t.errPrefix);
+      if (!momo.phone) return setError(t.errPhone);
+    }
+
+    const payload = {
+      client_secret: clientSecret,
+      payment_method: method,
+      order_id: orderRef,
+      webhook_url: webhookUrl,
+      amount: clientSecret ? undefined : amount,
+      currency: clientSecret ? undefined : currency,
+      network: clientSecret ? undefined : network,
+      card: method === "CARD" ? card : undefined,
+      momo: method === "MOBILE_MONEY" ? momo : undefined,
+      payer: { email: email.trim() },
+    };
+
+    setProcessing(true);
+    setStep(0);
+    const t1 = setTimeout(() => setStep(1), 900); timers.current.push(t1);
+    const t2 = setTimeout(() => setStep(2), 1800); timers.current.push(t2);
+    try {
+      const res = await base44.functions.invoke("processCheckoutPayment", { ...payload, key: publishableKey });
+      const data = res?.data || res;
+      if (data.status !== "succeeded") throw new Error(data.error || t.errFail);
+      clearTimeout(t1);
+      clearTimeout(t2);
+      setStep(3);
+      const t3 = setTimeout(() => {
+        try {
+          window.parent.postMessage(
+            { status: "PAYMENT_SUCCESS", transactionId: data.transaction_id, cryptoTxHash: data.crypto_tx_hash },
+            "*"
+          );
+        } catch (_) {}
+        setProcessing(false);
+        setResult(data);
+        setSuccess(true);
+      }, 700);
+      timers.current.push(t3);
+    } catch (err) {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      setError(err.message || t.errFail);
+      setProcessing(false);
+    }
+  };
+
+  const reset = () => { setSuccess(false); setResult(null); setError(""); setStep(0); };
+
+  if (success) {
+    return (
+      <div className="max-w-md w-full mx-auto px-4 py-8">
+        <div className="rounded-2xl border border-border bg-card p-7 shadow-sm text-center">
+          <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-emerald-50 border border-emerald-200">
+            <CheckCircle2 className="h-7 w-7 text-emerald-600" />
+          </div>
+          <Image
+            src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png"
+            alt="NexaPay"
+            className="h-10 w-10 mx-auto mt-4 rounded-xl"
+            fittingType="fill"
+          />
+          <h2 className="font-display text-xl font-semibold mt-3">{t.success}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t.successMsg}</p>
+          <div className="mt-4 rounded-xl border border-border bg-secondary/40 px-4 py-3">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-muted-foreground">{t.order}</span>
+              <span className="font-display font-semibold">{total}</span>
+            </div>
+            {orderRef && (
+              <div className="flex items-center justify-between text-xs mt-2 pt-2 border-t border-border">
+                <span className="text-muted-foreground">{t.ref}</span>
+                <span className="font-mono">{orderRef}</span>
+              </div>
+            )}
+          </div>
+          <p className="mt-4 text-[11px] text-muted-foreground">{t.poweredBy} NexaPay</p>
+          <Button onClick={reset} variant="outline" className="rounded-full mt-5">{t.again}</Button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-md w-full mx-auto px-4 py-8">
+      {!isEmbed && (
+        <Button type="button" variant="outline" onClick={() => navigate("/dashboard")} className="rounded-full mb-6">
+          <ArrowLeft className="h-4 w-4 mr-1.5" /> {t.back}
+        </Button>
+      )}
+
+      <div className="relative rounded-2xl border border-border bg-card p-6 md:p-7 shadow-sm">
+        {processing && <ProcessingOverlay lang={lang} step={step} />}
+
+        {/* Merchant lockup + language toggle */}
+        <div className="flex items-start justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png"
+              alt="NexaPay"
+              className="h-12 w-12 rounded-2xl"
+              fittingType="fill"
+            />
+            <div>
+              <h1 className="font-display text-lg font-semibold tracking-tight leading-none">NexaPay</h1>
+              <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1"><Lock className="h-3 w-3" /> {t.secure}</p>
+            </div>
+          </div>
+          <div className="flex items-center rounded-full border border-border bg-secondary/60 p-0.5 text-xs font-medium">
+            <button type="button" onClick={() => setLang("FR")} className={`px-2.5 py-1 rounded-full transition-colors ${lang === "FR" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"}`}>FR</button>
+            <button type="button" onClick={() => setLang("EN")} className={`px-2.5 py-1 rounded-full transition-colors ${lang === "EN" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"}`}>EN</button>
+          </div>
+        </div>
+
+        {/* Order amount — equivalent of the product amount (read-only) */}
+        <div className="mt-5 rounded-xl border border-border bg-secondary/40 px-4 py-3.5">
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-muted-foreground">{t.order}</span>
+            <span className="font-display text-2xl font-semibold tracking-tight">{total}</span>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4 mt-5">
+          <Tabs value={method} onValueChange={setMethod}>
+            <TabsList className="grid grid-cols-2 w-full rounded-xl">
+              <TabsTrigger value="CARD" className="rounded-xl"><CreditCard className="h-4 w-4 mr-1.5" /> {t.card}</TabsTrigger>
+              <TabsTrigger value="MOBILE_MONEY" className="rounded-xl"><Smartphone className="h-4 w-4 mr-1.5" /> {t.momo}</TabsTrigger>
+            </TabsList>
+            <TabsContent value="CARD" className="mt-4">
+              <CardFields lang={lang} value={card} onChange={(k, v) => setCard((c) => ({ ...c, [k]: v }))} />
+            </TabsContent>
+            <TabsContent value="MOBILE_MONEY" className="mt-4">
+              <MoMoFields lang={lang} value={momo} onChange={(k, v) => setMomo((m) => ({ ...m, [k]: v }))} />
+            </TabsContent>
+          </Tabs>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">{t.email}</Label>
+            <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t.emailPh} className="rounded-xl" />
+          </div>
+
+          {error && <div className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-600">{error}</div>}
+
+          <Button type="submit" disabled={processing} className="w-full rounded-full bg-primary text-primary-foreground font-semibold shadow-sm hover:shadow-md transition-shadow h-11">
+            {processing ? <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> {t.processing}</>
+              : <><Send className="h-4 w-4 mr-2" /> {t.pay} {total}</>}
+          </Button>
+        </form>
+
+        <div className="mt-5 pt-4 border-t border-border text-center">
+          <p className="flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
+            <ShieldCheck className="h-3.5 w-3.5" /> {t.poweredBy} NexaPay
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

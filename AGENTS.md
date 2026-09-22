@@ -1,1 +1,34 @@
-IyBBR0VOVFMubWQKCiMjIFByb2plY3QgQ29udGV4dAoKVGhpcyBpcyBhIEJhc2U0NCBhcHAgcmVwb3NpdG9yeS4gVHJlYXQgaXQgYXMgdXNlci1vd25lZCBhcHBsaWNhdGlvbiBjb2RlLCBrZWVwIGNoYW5nZXMgZm9jdXNlZCBvbiB0aGUgdXNlcidzIHJlcXVlc3QsIGFuZCBwcmVzZXJ2ZSBleGlzdGluZyBwcm9qZWN0IGNvbnZlbnRpb25zLgoKU3RhcnQgd2l0aCBgUkVBRE1FLm1kYCBmb3IgbG9jYWwgc2V0dXAsIGVudmlyb25tZW50IHZhcmlhYmxlcywgYW5kIHB1Ymxpc2ggd29ya2Zsb3cuCgojIyBCYXNlNDQgUmVmZXJlbmNlcwoKLSBDTEkgb3ZlcnZpZXc6IGh0dHBzOi8vZG9jcy5iYXNlNDQuY29tL2RldmVsb3BlcnMvcmVmZXJlbmNlcy9jbGkvZ2V0LXN0YXJ0ZWQvb3ZlcnZpZXcubWQKLSBBZ2VudCBza2lsbHM6IGh0dHBzOi8vZG9jcy5iYXNlNDQuY29tL2RldmVsb3BlcnMvYmFja2VuZC9vdmVydmlldy9za2lsbHMubWQKCklmIHlvdXIgYWdlbnQgc3VwcG9ydHMgQWdlbnQgU2tpbGxzLCBpbnN0YWxsIG9yIHVwZGF0ZSBCYXNlNDQgc2tpbGxzIGJlZm9yZSBCYXNlNDQtc3BlY2lmaWMgd29yazoKCmBgYGJhc2gKbnB4IHNraWxscyBhZGQgYmFzZTQ0L3NraWxscwpgYGAKCiMjIEtleSBGaWxlcwoKLSBgc3JjL2A6IGZyb250ZW5kIGFwcGxpY2F0aW9uIHNvdXJjZS4KLSBgc3JjL2FwaS9iYXNlNDRDbGllbnQuanNgOiBmcm9udGVuZCBCYXNlNDQgU0RLIGNsaWVudC4KLSBgdml0ZS5jb25maWcuanNgOiBWaXRlIGNvbmZpZyBhbmQgQmFzZTQ0IFZpdGUgcGx1Z2luIHNldHVwLgotIGAuZW52LmxvY2FsYDogbG9jYWwtb25seSBlbnZpcm9ubWVudCB2YWx1ZXM7IG5ldmVyIGNvbW1pdCBzZWNyZXRzLgoKIyMgV29ya2luZyBOb3RlcwoKLSBVc2UgYGJhc2U0NCBkZXZgIGFzIHRoZSBkZWZhdWx0IGxvY2FsIGRldmVsb3BtZW50IGNvbW1hbmQgd2hlbiB5b3UgbmVlZCB0aGUgbG9jYWwgQmFzZTQ0IGJhY2tlbmQuIEl0IGNhbiBydW4gdGhlIGJhY2tlbmQgYW5kIGZyb250ZW5kIHRvZ2V0aGVyLgotIFdoZW4gZG9jcyBvciBjb2RlIG1lbnRpb24gdGhlIGZyb250ZW5kIGJlaW5nIHN0YXJ0ZWQgYXV0b21hdGljYWxseSwgdGhhdCB1c3VhbGx5IG1lYW5zIHRoZSBCYXNlNDQgcHJvamVjdCBjb25maWcgaW5jbHVkZXMgYHNpdGUuc2VydmVDb21tYW5kYCwgZm9yIGV4YW1wbGUgYCJzZXJ2ZUNvbW1hbmQiOiAibnBtIHJ1biBkZXYiYCBpbiBgYmFzZTQ0L2NvbmZpZy5qc29uY2AuCi0gVXNlIGBucG0gcnVuIGRldmAgb25seSBmb3IgZnJvbnRlbmQtb25seSB3b3JrIGFnYWluc3QgdGhlIGhvc3RlZCBCYXNlNDQgYmFja2VuZC4KLSBQcmVmZXIgdGhlIGV4aXN0aW5nIEJhc2U0NCBDTEkgd29ya2Zsb3cgb3ZlciBhZGRpbmcgbmV3IG5wbSBzY3JpcHRzIGZvciBCYXNlNDQtc3BlY2lmaWMgdGFza3MuCi0gUmV1c2UgdGhlIGV4aXN0aW5nIFNESyBjbGllbnQgYW5kIFZpdGUgcGx1Z2luIHBhdHRlcm5zIGJlZm9yZSBhZGRpbmcgbmV3IEJhc2U0NCBpbnRlZ3JhdGlvbiBwYXRocy4KLSBSdW4gdGhlIHJlbGV2YW50IGNoZWNrcyBmcm9tIGBwYWNrYWdlLmpzb25gIGJlZm9yZSBmaW5pc2hpbmcgY29kZSBjaGFuZ2VzLgo=
+# AGENTS.md
+
+## Project Context
+
+This is a Base44 app repository. Treat it as user-owned application code, keep changes focused on the user's request, and preserve existing project conventions.
+
+Start with `README.md` for local setup, environment variables, and publish workflow.
+
+## Base44 References
+
+- CLI overview: https://docs.base44.com/developers/references/cli/get-started/overview.md
+- Agent skills: https://docs.base44.com/developers/backend/overview/skills.md
+
+If your agent supports Agent Skills, install or update Base44 skills before Base44-specific work:
+
+```bash
+npx skills add base44/skills
+```
+
+## Key Files
+
+- `src/`: frontend application source.
+- `src/api/base44Client.js`: frontend Base44 SDK client.
+- `vite.config.js`: Vite config and Base44 Vite plugin setup.
+- `.env.local`: local-only environment values; never commit secrets.
+
+## Working Notes
+
+- Use `base44 dev` as the default local development command when you need the local Base44 backend. It can run the backend and frontend together.
+- When docs or code mention the frontend being started automatically, that usually means the Base44 project config includes `site.serveCommand`, for example `"serveCommand": "npm run dev"` in `base44/config.jsonc`.
+- Use `npm run dev` only for frontend-only work against the hosted Base44 backend.
+- Prefer the existing Base44 CLI workflow over adding new npm scripts for Base44-specific tasks.
+- Reuse the existing SDK client and Vite plugin patterns before adding new Base44 integration paths.
+- Run the relevant checks from `package.json` before finishing code changes.

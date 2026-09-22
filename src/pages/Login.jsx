@@ -1,1 +1,132 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBMaW5rIH0gZnJvbSAicmVhY3Qtcm91dGVyLWRvbSI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCB7IEJ1dHRvbiB9IGZyb20gIkAvY29tcG9uZW50cy91aS9idXR0b24iOwppbXBvcnQgeyBJbnB1dCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9pbnB1dCI7CmltcG9ydCB7IExhYmVsIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2xhYmVsIjsKaW1wb3J0IHsgTG9nSW4sIE1haWwsIExvY2ssIExvYWRlcjIgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwppbXBvcnQgQXV0aExheW91dCBmcm9tICJAL2NvbXBvbmVudHMvQXV0aExheW91dCI7CmltcG9ydCBHb29nbGVJY29uIGZyb20gIkAvY29tcG9uZW50cy9Hb29nbGVJY29uIjsKaW1wb3J0IHsgc2FmZVJldHVyblRvIH0gZnJvbSAiQC9saWIvYXV0aFJldHVyblRvIjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIExvZ2luKCkgewogIGNvbnN0IFtlbWFpbCwgc2V0RW1haWxdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IFtwYXNzd29yZCwgc2V0UGFzc3dvcmRdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IFtlcnJvciwgc2V0RXJyb3JdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKGZhbHNlKTsKICAvLyBQb3N0LWxvZ2luIGRlc3RpbmF0aW9uIChlLmcuIHRoZSBNQ1AgT0F1dGggY29uc2VudCBwYWdlIHNlbmRzIHVzZXJzIGhlcmUKICAvLyB3aXRoIHJldHVyblRvIHNvIHRoZSBncmFudCBmbG93IGNhbiByZXN1bWUpLiBTYW1lLW9yaWdpbiBwYXRocyBvbmx5LgogIGNvbnN0IHJldHVyblRvID0gc2FmZVJldHVyblRvKCk7CgogIGNvbnN0IGhhbmRsZVN1Ym1pdCA9IGFzeW5jIChlKSA9PiB7CiAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICBzZXRFcnJvcigiIik7CiAgICBzZXRMb2FkaW5nKHRydWUpOwogICAgdHJ5IHsKICAgICAgYXdhaXQgYmFzZTQ0LmF1dGgubG9naW5WaWFFbWFpbFBhc3N3b3JkKGVtYWlsLCBwYXNzd29yZCk7CiAgICAgIHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gcmV0dXJuVG87CiAgICB9IGNhdGNoIChlcnIpIHsKICAgICAgc2V0RXJyb3IoZXJyLm1lc3NhZ2UgfHwgIkludmFsaWQgZW1haWwgb3IgcGFzc3dvcmQiKTsKICAgIH0gZmluYWxseSB7CiAgICAgIHNldExvYWRpbmcoZmFsc2UpOwogICAgfQogIH07CgogIGNvbnN0IGhhbmRsZUdvb2dsZSA9ICgpID0+IHsKICAgIGJhc2U0NC5hdXRoLmxvZ2luV2l0aFByb3ZpZGVyKCJnb29nbGUiLCByZXR1cm5Ubyk7CiAgfTsKCiAgcmV0dXJuICgKICAgIDxBdXRoTGF5b3V0CiAgICAgIGljb249e0xvZ0lufQogICAgICB0aXRsZT0iV2VsY29tZSBiYWNrIgogICAgICBzdWJ0aXRsZT0iTG9nIGluIHRvIHlvdXIgYWNjb3VudCIKICAgICAgZm9vdGVyPXsKICAgICAgICA8PgogICAgICAgICAgRG9uJ3QgaGF2ZSBhbiBhY2NvdW50P3siICJ9CiAgICAgICAgICA8TGluawogICAgICAgICAgICB0bz17Ii9yZWdpc3RlciIgKyAocmV0dXJuVG8gIT09ICIvIiA/ICI/cmV0dXJuVG89IiArIGVuY29kZVVSSUNvbXBvbmVudChyZXR1cm5UbykgOiAiIil9CiAgICAgICAgICAgIGNsYXNzTmFtZT0idGV4dC1wcmltYXJ5IGZvbnQtbWVkaXVtIGhvdmVyOnVuZGVybGluZSIKICAgICAgICAgID4KICAgICAgICAgICAgQ3JlYXRlIG9uZQogICAgICAgICAgPC9MaW5rPgogICAgICAgIDwvPgogICAgICB9CiAgICA+CiAgICAgIDxCdXR0b24KICAgICAgICB2YXJpYW50PSJvdXRsaW5lIgogICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGgtMTIgdGV4dC1zbSBmb250LW1lZGl1bSBtYi02IgogICAgICAgIG9uQ2xpY2s9e2hhbmRsZUdvb2dsZX0KICAgICAgPgogICAgICAgIDxHb29nbGVJY29uIGNsYXNzTmFtZT0idy01IGgtNSBtci0yIiAvPgogICAgICAgIENvbnRpbnVlIHdpdGggR29vZ2xlCiAgICAgIDwvQnV0dG9uPgoKICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIG1iLTYiPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhYnNvbHV0ZSBpbnNldC0wIGZsZXggaXRlbXMtY2VudGVyIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ3LWZ1bGwgYm9yZGVyLXQgYm9yZGVyLWJvcmRlciIgLz4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUgZmxleCBqdXN0aWZ5LWNlbnRlciB0ZXh0LXhzIHVwcGVyY2FzZSI+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImJnLWNhcmQgcHgtMyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPm9yPC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KCiAgICAgIHtlcnJvciAmJiAoCiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1iLTQgcC0zIHJvdW5kZWQtbGcgYmctZGVzdHJ1Y3RpdmUvMTAgdGV4dC1kZXN0cnVjdGl2ZSB0ZXh0LXNtIj4KICAgICAgICAgIHtlcnJvcn0KICAgICAgICA8L2Rpdj4KICAgICAgKX0KCiAgICAgIDxmb3JtIG9uU3VibWl0PXtoYW5kbGVTdWJtaXR9IGNsYXNzTmFtZT0ic3BhY2UteS00Ij4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICAgIDxMYWJlbCBodG1sRm9yPSJlbWFpbCI+RW1haWw8L0xhYmVsPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIj4KICAgICAgICAgICAgPE1haWwgY2xhc3NOYW1lPSJhYnNvbHV0ZSBsZWZ0LTMgdG9wLTEvMiAtdHJhbnNsYXRlLXktMS8yIHctNCBoLTQgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiBhcmlhLWhpZGRlbj0idHJ1ZSIgLz4KICAgICAgICAgICAgPElucHV0CiAgICAgICAgICAgICAgaWQ9ImVtYWlsIgogICAgICAgICAgICAgIHR5cGU9ImVtYWlsIgogICAgICAgICAgICAgIGF1dG9Db21wbGV0ZT0iZW1haWwiCiAgICAgICAgICAgICAgYXV0b0ZvY3VzCiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9InlvdUBleGFtcGxlLmNvbSIKICAgICAgICAgICAgICB2YWx1ZT17ZW1haWx9CiAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRFbWFpbChlLnRhcmdldC52YWx1ZSl9CiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJwbC0xMCBoLTEyIgogICAgICAgICAgICAgIHJlcXVpcmVkCiAgICAgICAgICAgIC8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgICAgICA8TGFiZWwgaHRtbEZvcj0icGFzc3dvcmQiPlBhc3N3b3JkPC9MYWJlbD4KICAgICAgICAgICAgPExpbmsgdG89Ii9mb3Jnb3QtcGFzc3dvcmQiIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LXByaW1hcnkgaG92ZXI6dW5kZXJsaW5lIj4KICAgICAgICAgICAgICBGb3Jnb3QgcGFzc3dvcmQ/CiAgICAgICAgICAgIDwvTGluaz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIj4KICAgICAgICAgICAgPExvY2sgY2xhc3NOYW1lPSJhYnNvbHV0ZSBsZWZ0LTMgdG9wLTEvMiAtdHJhbnNsYXRlLXktMS8yIHctNCBoLTQgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiBhcmlhLWhpZGRlbj0idHJ1ZSIgLz4KICAgICAgICAgICAgPElucHV0CiAgICAgICAgICAgICAgaWQ9InBhc3N3b3JkIgogICAgICAgICAgICAgIHR5cGU9InBhc3N3b3JkIgogICAgICAgICAgICAgIGF1dG9Db21wbGV0ZT0iY3VycmVudC1wYXNzd29yZCIKICAgICAgICAgICAgICBwbGFjZWhvbGRlcj0i4oCi4oCi4oCi4oCi4oCi4oCi4oCi4oCiIgogICAgICAgICAgICAgIHZhbHVlPXtwYXNzd29yZH0KICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldFBhc3N3b3JkKGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgICBjbGFzc05hbWU9InBsLTEwIGgtMTIiCiAgICAgICAgICAgICAgcmVxdWlyZWQKICAgICAgICAgICAgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICAgIDxCdXR0b24gdHlwZT0ic3VibWl0IiBjbGFzc05hbWU9InctZnVsbCBoLTEyIGZvbnQtbWVkaXVtIiBkaXNhYmxlZD17bG9hZGluZ30+CiAgICAgICAgICB7bG9hZGluZyA/ICgKICAgICAgICAgICAgPD4KICAgICAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9InctNCBoLTQgbXItMiBhbmltYXRlLXNwaW4iIC8+CiAgICAgICAgICAgICAgTG9nZ2luZyBpbi4uLgogICAgICAgICAgICA8Lz4KICAgICAgICAgICkgOiAoCiAgICAgICAgICAgICJMb2cgaW4iCiAgICAgICAgICApfQogICAgICAgIDwvQnV0dG9uPgogICAgICA8L2Zvcm0+CiAgICA8L0F1dGhMYXlvdXQ+CiAgKTsKfQo=
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { LogIn, Mail, Lock, Loader2 } from "lucide-react";
+import AuthLayout from "@/components/AuthLayout";
+import GoogleIcon from "@/components/GoogleIcon";
+import { safeReturnTo } from "@/lib/authReturnTo";
+
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  // Post-login destination (e.g. the MCP OAuth consent page sends users here
+  // with returnTo so the grant flow can resume). Same-origin paths only.
+  const returnTo = safeReturnTo();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    try {
+      await base44.auth.loginViaEmailPassword(email, password);
+      window.location.href = returnTo;
+    } catch (err) {
+      setError(err.message || "Invalid email or password");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogle = () => {
+    base44.auth.loginWithProvider("google", returnTo);
+  };
+
+  return (
+    <AuthLayout
+      icon={LogIn}
+      title="Welcome back"
+      subtitle="Log in to your account"
+      footer={
+        <>
+          Don't have an account?{" "}
+          <Link
+            to={"/register" + (returnTo !== "/" ? "?returnTo=" + encodeURIComponent(returnTo) : "")}
+            className="text-primary font-medium hover:underline"
+          >
+            Create one
+          </Link>
+        </>
+      }
+    >
+      <Button
+        variant="outline"
+        className="w-full h-12 text-sm font-medium mb-6"
+        onClick={handleGoogle}
+      >
+        <GoogleIcon className="w-5 h-5 mr-2" />
+        Continue with Google
+      </Button>
+
+      <div className="relative mb-6">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-border" />
+        </div>
+        <div className="relative flex justify-center text-xs uppercase">
+          <span className="bg-card px-3 text-muted-foreground">or</span>
+        </div>
+      </div>
+
+      {error && (
+        <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+          {error}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <div className="relative">
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="email"
+              autoFocus
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="pl-10 h-12"
+              required
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <Label htmlFor="password">Password</Label>
+            <Link to="/forgot-password" className="text-xs text-primary hover:underline">
+              Forgot password?
+            </Link>
+          </div>
+          <div className="relative">
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="password"
+              type="password"
+              autoComplete="current-password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="pl-10 h-12"
+              required
+            />
+          </div>
+        </div>
+        <Button type="submit" className="w-full h-12 font-medium" disabled={loading}>
+          {loading ? (
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Logging in...
+            </>
+          ) : (
+            "Log in"
+          )}
+        </Button>
+      </form>
+    </AuthLayout>
+  );
+}

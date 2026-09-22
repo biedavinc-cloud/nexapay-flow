@@ -1,0 +1,51 @@
+{
+  "name": "SuperadminAuditLog",
+  "type": "object",
+  "properties": {
+    "admin_id": {
+      "type": "string",
+      "description": "Admin user id"
+    },
+    "admin_email": {
+      "type": "string",
+      "description": "Admin email (snapshot)"
+    },
+    "action": {
+      "type": "string",
+      "description": "Action performed"
+    },
+    "target_tenant_id": {
+      "type": "string",
+      "description": "Affected tenant"
+    },
+    "details": {
+      "type": "string",
+      "description": "JSON details"
+    }
+  },
+  "required": [
+    "action"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

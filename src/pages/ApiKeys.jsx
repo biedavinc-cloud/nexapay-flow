@@ -1,1 +1,28 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IEtleVJvdW5kIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCmNvbnN0IHJhbmQgPSAoKSA9PiBNYXRoLnJhbmRvbSgpLnRvU3RyaW5nKDM2KS5zbGljZSgyLCAxMik7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBcGlLZXlzKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy01eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IkNsw6lzIEFQSSIKICAgICAgICBkZXNjcmlwdGlvbj0iR8OpbsOpcmV6IGxlcyBjbMOpcyAoc2VjcsOodGUgKyBwdWJsaXF1ZSkgcG91ciBjb25uZWN0ZXIgdm90cmUgbWFya2V0cGxhY2UuIgogICAgICAgIGljb249e0tleVJvdW5kfQogICAgICAvPgogICAgICA8Q29uZmlnTWFuYWdlcgogICAgICAgIGVudGl0eT0iQXBpS2V5IgogICAgICAgIGFkZExhYmVsPSJHw6luw6lyZXIgdW5lIHBhaXJlIGRlIGNsw6lzIgogICAgICAgIGZpZWxkcz17WwogICAgICAgICAgeyBuYW1lOiAibGFiZWwiLCBsYWJlbDogIkxpYmVsbMOpIiwgdHlwZTogInRleHQiLCBwbGFjZWhvbGRlcjogIk1hcmtldHBsYWNlIHByb2R1Y3Rpb24iLCBzcGFuOiAiZnVsbCIgfSwKICAgICAgICAgIHsgbmFtZTogInNlY3JldF9rZXkiLCBsYWJlbDogIkNsw6kgc2VjcsOodGUiLCB0eXBlOiAicGFzc3dvcmQiLCBoaWRkZW46IHRydWUsIGdlbmVyYXRlOiAoKSA9PiBgbmV4YV9za19saXZlXyR7cmFuZCgpfWAgfSwKICAgICAgICAgIHsgbmFtZTogInB1Ymxpc2hhYmxlX2tleSIsIGxhYmVsOiAiQ2zDqSBwdWJsaXF1ZSIsIHR5cGU6ICJ0ZXh0IiwgaGlkZGVuOiB0cnVlLCBnZW5lcmF0ZTogKCkgPT4gYG5leGFfcGtfbGl2ZV8ke3JhbmQoKX1gIH0sCiAgICAgICAgICB7IG5hbWU6ICJhY3RpdmUiLCBsYWJlbDogIkFjdGl2ZSIsIHR5cGU6ICJib29sZWFuIiwgZGVmYXVsdDogdHJ1ZSB9LAogICAgICAgIF19CiAgICAgIC8+CiAgICA8L2Rpdj4KICApOwp9
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { KeyRound } from "lucide-react";
+
+const rand = () => Math.random().toString(36).slice(2, 12);
+
+export default function ApiKeys() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Clés API"
+        description="Générez les clés (secrète + publique) pour connecter votre marketplace."
+        icon={KeyRound}
+      />
+      <ConfigManager
+        entity="ApiKey"
+        addLabel="Générer une paire de clés"
+        fields={[
+          { name: "label", label: "Libellé", type: "text", placeholder: "Marketplace production", span: "full" },
+          { name: "secret_key", label: "Clé secrète", type: "password", hidden: true, generate: () => `nexa_sk_live_${rand()}` },
+          { name: "publishable_key", label: "Clé publique", type: "text", hidden: true, generate: () => `nexa_pk_live_${rand()}` },
+          { name: "active", label: "Active", type: "boolean", default: true },
+        ]}
+      />
+    </div>
+  );
+}

@@ -1,1 +1,29 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IENvaW5zIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEN1cnJlbmN5TWFuYWdlbWVudCgpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctNXhsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJHZXN0aW9uIGRlcyBkZXZpc2VzIgogICAgICAgIGRlc2NyaXB0aW9uPSJEw6lmaW5pc3NleiBsZXMgZGV2aXNlcyBmaWF0IHN1cHBvcnTDqWVzIGV0IGxlcyBzZXVpbHMgZGUgY29udmVyc2lvbiBhdXRvbWF0aXF1ZSB2ZXJzIFVTRFQuIgogICAgICAgIGljb249e0NvaW5zfQogICAgICAvPgogICAgICA8Q29uZmlnTWFuYWdlcgogICAgICAgIGVudGl0eT0iQ3VycmVuY3lDb25maWciCiAgICAgICAgYWRkTGFiZWw9IkFqb3V0ZXIgdW5lIGRldmlzZSIKICAgICAgICBmaWVsZHM9e1sKICAgICAgICAgIHsgbmFtZTogImNvZGUiLCBsYWJlbDogIkNvZGUgSVNPIiwgdHlwZTogInRleHQiLCBwbGFjZWhvbGRlcjogIkVVUiIsIHNwYW46ICJmdWxsIiB9LAogICAgICAgICAgeyBuYW1lOiAibGFiZWwiLCBsYWJlbDogIkxpYmVsbMOpIiwgdHlwZTogInRleHQiLCBwbGFjZWhvbGRlcjogIkV1cm8iIH0sCiAgICAgICAgICB7IG5hbWU6ICJzeW1ib2wiLCBsYWJlbDogIlN5bWJvbGUiLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAi4oKsIiB9LAogICAgICAgICAgeyBuYW1lOiAiZW5hYmxlZCIsIGxhYmVsOiAiQWNjZXB0w6llIiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiB0cnVlIH0sCiAgICAgICAgICB7IG5hbWU6ICJhdXRvX2NvbnZlcnQiLCBsYWJlbDogIkNvbnZlcnNpb24gYXV0byBVU0RUIiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiB0cnVlIH0sCiAgICAgICAgICB7IG5hbWU6ICJtaW5fdGhyZXNob2xkIiwgbGFiZWw6ICJTZXVpbCBtaW4uIChmaWF0KSIsIHR5cGU6ICJudW1iZXIiLCBkZWZhdWx0OiAwIH0sCiAgICAgICAgICB7IG5hbWU6ICJtYXJnaW5fcGN0IiwgbGFiZWw6ICJNYXJnZSAoJSkiLCB0eXBlOiAibnVtYmVyIiwgZGVmYXVsdDogMCB9LAogICAgICAgIF19CiAgICAgIC8+CiAgICA8L2Rpdj4KICApOwp9
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { Coins } from "lucide-react";
+
+export default function CurrencyManagement() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Gestion des devises"
+        description="Définissez les devises fiat supportées et les seuils de conversion automatique vers USDT."
+        icon={Coins}
+      />
+      <ConfigManager
+        entity="CurrencyConfig"
+        addLabel="Ajouter une devise"
+        fields={[
+          { name: "code", label: "Code ISO", type: "text", placeholder: "EUR", span: "full" },
+          { name: "label", label: "Libellé", type: "text", placeholder: "Euro" },
+          { name: "symbol", label: "Symbole", type: "text", placeholder: "€" },
+          { name: "enabled", label: "Acceptée", type: "boolean", default: true },
+          { name: "auto_convert", label: "Conversion auto USDT", type: "boolean", default: true },
+          { name: "min_threshold", label: "Seuil min. (fiat)", type: "number", default: 0 },
+          { name: "margin_pct", label: "Marge (%)", type: "number", default: 0 },
+        ]}
+      />
+    </div>
+  );
+}

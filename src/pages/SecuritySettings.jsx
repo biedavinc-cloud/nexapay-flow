@@ -1,1 +1,33 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IFNoaWVsZEFsZXJ0LCBMb2NrIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFNlY3VyaXR5U2V0dGluZ3MoKSB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJwLTYgbWQ6cC04IG1heC13LTV4bCBteC1hdXRvIj4KICAgICAgPFBhZ2VIZWFkZXIKICAgICAgICB0aXRsZT0iU8OpY3VyaXTDqSAmIFdoaXRlbGlzdCBJUCIKICAgICAgICBkZXNjcmlwdGlvbj0iQWRyZXNzZXMgSVAgYXV0b3Jpc8OpZXMgw6AgYXBwZWxlciB2b3MgQVBJIGV0IGNsw6kgZGUgc8OpY3VyaXTDqSBzZXJ2ZXVyLiIKICAgICAgICBpY29uPXtTaGllbGRBbGVydH0KICAgICAgLz4KICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1hbWJlci0yMDAgYmctYW1iZXItNTAgcHgtNCBweS0zIG1iLTUgZmxleCBpdGVtcy1zdGFydCBnYXAtMiB0ZXh0LXNtIHRleHQtYW1iZXItNzAwIj4KICAgICAgICA8TG9jayBjbGFzc05hbWU9ImgtNCB3LTQgbXQtMC41IHNocmluay0wIiAvPgogICAgICAgIDxzcGFuPgogICAgICAgICAgTGEgY2zDqSBkZSBzw6ljdXJpdMOpIHNlcnZldXIgKHNpZ25hdHVyZSB3ZWJob29rIDxjb2RlPndoc2VjXzwvY29kZT4pIHNlIGNvbmZpZ3VyZSBkYW5zIGxhIHBhZ2UKICAgICAgICAgIDxzdHJvbmc+IFNlY3JldHM8L3N0cm9uZz4gZHUgdGFibGVhdSBkZSBib3JkLiBDZXR0ZSBwYWdlIGfDqHJlIGxhIHdoaXRlbGlzdCBJUC4KICAgICAgICA8L3NwYW4+CiAgICAgIDwvZGl2PgogICAgICA8Q29uZmlnTWFuYWdlcgogICAgICAgIGVudGl0eT0iU2VjdXJpdHlJcCIKICAgICAgICBhZGRMYWJlbD0iQXV0b3Jpc2VyIHVuZSBJUCIKICAgICAgICBmaWVsZHM9e1sKICAgICAgICAgIHsgbmFtZTogImlwIiwgbGFiZWw6ICJBZHJlc3NlIElQIC8gQ0lEUiIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICIxOTIuMTY4LjEuMSBvdSAxMC4wLjAuMC8yNCIgfSwKICAgICAgICAgIHsgbmFtZTogImxhYmVsIiwgbGFiZWw6ICJMaWJlbGzDqSIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICJTZXJ2ZXVyIG1hcmtldHBsYWNlIiB9LAogICAgICAgICAgeyBuYW1lOiAiYWN0aXZlIiwgbGFiZWw6ICJBY3RpdmUiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IHRydWUgfSwKICAgICAgICAgIHsgbmFtZTogImV4cGlyZXNfYXQiLCBsYWJlbDogIkV4cGlyZSBsZSIsIHR5cGU6ICJkYXRlIiB9LAogICAgICAgIF19CiAgICAgIC8+CiAgICA8L2Rpdj4KICApOwp9
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { ShieldAlert, Lock } from "lucide-react";
+
+export default function SecuritySettings() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Sécurité & Whitelist IP"
+        description="Adresses IP autorisées à appeler vos API et clé de sécurité serveur."
+        icon={ShieldAlert}
+      />
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 mb-5 flex items-start gap-2 text-sm text-amber-700">
+        <Lock className="h-4 w-4 mt-0.5 shrink-0" />
+        <span>
+          La clé de sécurité serveur (signature webhook <code>whsec_</code>) se configure dans la page
+          <strong> Secrets</strong> du tableau de bord. Cette page gère la whitelist IP.
+        </span>
+      </div>
+      <ConfigManager
+        entity="SecurityIp"
+        addLabel="Autoriser une IP"
+        fields={[
+          { name: "ip", label: "Adresse IP / CIDR", type: "text", placeholder: "192.168.1.1 ou 10.0.0.0/24" },
+          { name: "label", label: "Libellé", type: "text", placeholder: "Serveur marketplace" },
+          { name: "active", label: "Active", type: "boolean", default: true },
+          { name: "expires_at", label: "Expire le", type: "date" },
+        ]}
+      />
+    </div>
+  );
+}

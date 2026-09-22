@@ -1,1 +1,20 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QgfSBmcm9tICJucG06QGJhc2U0NC9zZGtAMC44LjQ0IjsKaW1wb3J0IHsgc3luY0FsbFRvTmVvbiwgbmVvblBpbmcgfSBmcm9tICIuLi8uLi9zaGFyZWQvbmVvbi50cyI7CgovLyBBZG1pbi1vbmx5OiBtaXJyb3JzIGV2ZXJ5IEJhc2U0NCBlbnRpdHkgaW50byB0aGUgY29ubmVjdGVkIE5lb24gUG9zdGdyZXMKLy8gZGF0YWJhc2UgKGZ1bGwgc25hcHNob3QpLiBSZS1ydW4gYWZ0ZXIgY29uZmlnIGNoYW5nZXMgdG8ga2VlcCBOZW9uIGNvbXBsZXRlLgoKZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKHJlcSkgewogIHRyeSB7CiAgICBjb25zdCBiYXNlNDQgPSBjcmVhdGVDbGllbnRGcm9tUmVxdWVzdChyZXEpOwogICAgY29uc3QgdXNlciA9IGF3YWl0IGJhc2U0NC5hdXRoLm1lKCk7CiAgICBpZiAoIXVzZXIpIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJVbmF1dGhvcml6ZWQiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CiAgICBpZiAodXNlci5yb2xlICE9PSAiYWRtaW4iKSByZXR1cm4gUmVzcG9uc2UuanNvbih7IGVycm9yOiAiRm9yYmlkZGVuIiB9LCB7IHN0YXR1czogNDAzIH0pOwoKICAgIGNvbnN0IHZlcnNpb24gPSBhd2FpdCBuZW9uUGluZygpOwogICAgY29uc3QgY291bnRzID0gYXdhaXQgc3luY0FsbFRvTmVvbihiYXNlNDQpOwogICAgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBvazogdHJ1ZSwgdmVyc2lvbiwgY291bnRzIH0pOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICByZXR1cm4gUmVzcG9uc2UuanNvbih7IGVycm9yOiBlcnJvci5tZXNzYWdlIH0sIHsgc3RhdHVzOiA1MDAgfSk7CiAgfQp9
+import { createClientFromRequest } from "npm:@base44/sdk@0.8.44";
+import { syncAllToNeon, neonPing } from "../../shared/neon.ts";
+
+// Admin-only: mirrors every Base44 entity into the connected Neon Postgres
+// database (full snapshot). Re-run after config changes to keep Neon complete.
+
+export default async function (req) {
+  try {
+    const base44 = createClientFromRequest(req);
+    const user = await base44.auth.me();
+    if (!user) return Response.json({ error: "Unauthorized" }, { status: 401 });
+    if (user.role !== "admin") return Response.json({ error: "Forbidden" }, { status: 403 });
+
+    const version = await neonPing();
+    const counts = await syncAllToNeon(base44);
+    return Response.json({ ok: true, version, counts });
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
+}

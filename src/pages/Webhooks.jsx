@@ -1,1 +1,29 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IExpbmsgYXMgTGlua0ljb24gfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKY29uc3QgcmFuZCA9ICgpID0+IE1hdGgucmFuZG9tKCkudG9TdHJpbmcoMzYpLnNsaWNlKDIsIDE2KTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFdlYmhvb2tzKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy01eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IldlYmhvb2tzIgogICAgICAgIGRlc2NyaXB0aW9uPSJEw6lmaW5pc3NleiBsJ1VSTCBjaWJsZSBldCBsZSBzZWNyZXQgZGUgc2lnbmF0dXJlIHBvdXIgcmVjZXZvaXIgbGVzIG5vdGlmaWNhdGlvbnMuIgogICAgICAgIGljb249e0xpbmtJY29ufQogICAgICAvPgogICAgICA8Q29uZmlnTWFuYWdlcgogICAgICAgIGVudGl0eT0iV2ViaG9va0VuZHBvaW50IgogICAgICAgIGFkZExhYmVsPSJBam91dGVyIHVuIGVuZHBvaW50IgogICAgICAgIGZpZWxkcz17WwogICAgICAgICAgeyBuYW1lOiAibGFiZWwiLCBsYWJlbDogIkxpYmVsbMOpIiwgdHlwZTogInRleHQiLCBwbGFjZWhvbGRlcjogIk1hcmtldHBsYWNlIHByb2QiIH0sCiAgICAgICAgICB7IG5hbWU6ICJ1cmwiLCBsYWJlbDogIlVSTCBjaWJsZSIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICJodHRwczovL21hcmNoZS5jb20vd2ViaG9va3MvbmV4YXBheSIsIHNwYW46ICJmdWxsIiB9LAogICAgICAgICAgeyBuYW1lOiAic2lnbmluZ19zZWNyZXQiLCBsYWJlbDogIlNlY3JldCBkZSBzaWduYXR1cmUiLCB0eXBlOiAicGFzc3dvcmQiLCBnZW5lcmF0ZTogKCkgPT4gYHdoc2VjXyR7cmFuZCgpfWAgfSwKICAgICAgICAgIHsgbmFtZTogImV2ZW50cyIsIGxhYmVsOiAiw4l2w6luZW1lbnRzIiwgdHlwZTogInRleHQiLCBkZWZhdWx0OiAicGF5bWVudC5zdWNjZWVkZWQscGF5bWVudC5mYWlsZWQiLCBzcGFuOiAiZnVsbCIgfSwKICAgICAgICAgIHsgbmFtZTogImFjdGl2ZSIsIGxhYmVsOiAiQWN0aWYiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IHRydWUgfSwKICAgICAgICBdfQogICAgICAvPgogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { Link as LinkIcon } from "lucide-react";
+
+const rand = () => Math.random().toString(36).slice(2, 16);
+
+export default function Webhooks() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Webhooks"
+        description="Définissez l'URL cible et le secret de signature pour recevoir les notifications."
+        icon={LinkIcon}
+      />
+      <ConfigManager
+        entity="WebhookEndpoint"
+        addLabel="Ajouter un endpoint"
+        fields={[
+          { name: "label", label: "Libellé", type: "text", placeholder: "Marketplace prod" },
+          { name: "url", label: "URL cible", type: "text", placeholder: "https://marche.com/webhooks/nexapay", span: "full" },
+          { name: "signing_secret", label: "Secret de signature", type: "password", generate: () => `whsec_${rand()}` },
+          { name: "events", label: "Événements", type: "text", default: "payment.succeeded,payment.failed", span: "full" },
+          { name: "active", label: "Actif", type: "boolean", default: true },
+        ]}
+      />
+    </div>
+  );
+}

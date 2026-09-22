@@ -1,1 +1,8 @@
-ewogICJ0eXBlIjogImdpdGh1YiIsCiAgInNjb3BlcyI6IFsKICAgICJyZWFkOnVzZXIiLAogICAgInJlYWQ6b3JnIiwKICAgICJyZXBvIgogIF0KfQ==
+{
+  "type": "github",
+  "scopes": [
+    "read:user",
+    "read:org",
+    "repo"
+  ]
+}

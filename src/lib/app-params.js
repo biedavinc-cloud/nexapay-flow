@@ -1,1 +1,28 @@
-aW1wb3J0IHsgZ2V0QWNjZXNzVG9rZW4gfSBmcm9tICdAYmFzZTQ0L3Nkayc7Cgpjb25zdCBpc05vZGUgPSB0eXBlb2Ygd2luZG93ID09PSAndW5kZWZpbmVkJzsKCmNvbnN0IGlzQ2xlYXJBY2Nlc3NUb2tlblJlcXVlc3RlZCA9ICgpID0+CgkhaXNOb2RlICYmIG5ldyBVUkxTZWFyY2hQYXJhbXMod2luZG93LmxvY2F0aW9uLnNlYXJjaCkuZ2V0KCJjbGVhcl9hY2Nlc3NfdG9rZW4iKSA9PT0gJ3RydWUnOwoKY29uc3QgY2xlYXJTdG9yZWRBY2Nlc3NUb2tlbiA9ICgpID0+IHsKCXdpbmRvdy5sb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnYmFzZTQ0X2FjY2Vzc190b2tlbicpOwoJd2luZG93LmxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwp9Cgpjb25zdCBnZXRBcHBQYXJhbXMgPSAoKSA9PiB7CglpZiAoaXNDbGVhckFjY2Vzc1Rva2VuUmVxdWVzdGVkKCkpIHsKCQljbGVhclN0b3JlZEFjY2Vzc1Rva2VuKCk7Cgl9CglyZXR1cm4gewoJCWFwcElkOiBpbXBvcnQubWV0YS5lbnYuVklURV9CQVNFNDRfQVBQX0lELAoJCXRva2VuOiBnZXRBY2Nlc3NUb2tlbigpLAoJCWZ1bmN0aW9uc1ZlcnNpb246IGltcG9ydC5tZXRhLmVudi5WSVRFX0JBU0U0NF9GVU5DVElPTlNfVkVSU0lPTiwKCQlhcHBCYXNlVXJsOiBpbXBvcnQubWV0YS5lbnYuVklURV9CQVNFNDRfQVBQX0JBU0VfVVJMLAoJfQp9CgoKZXhwb3J0IGNvbnN0IGFwcFBhcmFtcyA9IHsKCS4uLmdldEFwcFBhcmFtcygpCn0K
+import { getAccessToken } from '@base44/sdk';
+
+const isNode = typeof window === 'undefined';
+
+const isClearAccessTokenRequested = () =>
+	!isNode && new URLSearchParams(window.location.search).get("clear_access_token") === 'true';
+
+const clearStoredAccessToken = () => {
+	window.localStorage.removeItem('base44_access_token');
+	window.localStorage.removeItem('token');
+}
+
+const getAppParams = () => {
+	if (isClearAccessTokenRequested()) {
+		clearStoredAccessToken();
+	}
+	return {
+		appId: import.meta.env.VITE_BASE44_APP_ID,
+		token: getAccessToken(),
+		functionsVersion: import.meta.env.VITE_BASE44_FUNCTIONS_VERSION,
+		appBaseUrl: import.meta.env.VITE_BASE44_APP_BASE_URL,
+	}
+}
+
+
+export const appParams = {
+	...getAppParams()
+}

@@ -1,1 +1,102 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgQmFkZ2UgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvYmFkZ2UiOwppbXBvcnQgeyBTY3JvbGxUZXh0LCBMb2FkZXIyLCBSZWZyZXNoQ3cgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwppbXBvcnQgeyBCdXR0b24gfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvYnV0dG9uIjsKCmNvbnN0IFNUQVRVU19TVFlMRSA9IHsKICBTVUNDRVNTOiAiYmctZW1lcmFsZC01MCB0ZXh0LWVtZXJhbGQtNzAwIGJvcmRlci1lbWVyYWxkLTIwMCIsCiAgRkFJTEVEOiAiYmctcmVkLTUwIHRleHQtcmVkLTcwMCBib3JkZXItcmVkLTIwMCIsCiAgUkVUUllJTkc6ICJiZy1hbWJlci01MCB0ZXh0LWFtYmVyLTcwMCBib3JkZXItYW1iZXItMjAwIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFdlYmhvb2tBdWRpdCgpIHsKICBjb25zdCBbbG9ncywgc2V0TG9nc10gPSB1c2VTdGF0ZShbXSk7CiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7CiAgY29uc3QgW2ZpbHRlciwgc2V0RmlsdGVyXSA9IHVzZVN0YXRlKCJBTEwiKTsKCiAgY29uc3QgbG9hZCA9IGFzeW5jICgpID0+IHsKICAgIHNldExvYWRpbmcodHJ1ZSk7CiAgICB0cnkgewogICAgICBjb25zdCBkYXRhID0gYXdhaXQgYmFzZTQ0LmVudGl0aWVzLldlYmhvb2tMb2cubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDIwMCk7CiAgICAgIHNldExvZ3MoZGF0YSk7CiAgICB9IGNhdGNoIHsKICAgICAgc2V0TG9ncyhbXSk7CiAgICB9CiAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICB9OwogIHVzZUVmZmVjdCgoKSA9PiB7IGxvYWQoKTsgfSwgW10pOwoKICBjb25zdCBmaWx0ZXJlZCA9IGZpbHRlciA9PT0gIkFMTCIgPyBsb2dzIDogbG9ncy5maWx0ZXIoKGwpID0+IGwuc3RhdHVzID09PSBmaWx0ZXIpOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctNnhsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJBdWRpdCBkZXMgV2ViaG9va3MiCiAgICAgICAgZGVzY3JpcHRpb249Ikhpc3RvcmlxdWUgZGVzIG5vdGlmaWNhdGlvbnMgZW52b3nDqWVzIGF1eCBwbGF0ZWZvcm1lcyBwYXJ0ZW5haXJlcywgc3RhdHV0cyBIVFRQIGV0IHRlbnRhdGl2ZXMgZGUgcsOpZXNzYWkuIgogICAgICAgIGljb249e1Njcm9sbFRleHR9CiAgICAgIC8+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgbWItNCI+CiAgICAgICAge1siQUxMIiwgIlNVQ0NFU1MiLCAiRkFJTEVEIiwgIlJFVFJZSU5HIl0ubWFwKChzKSA9PiAoCiAgICAgICAgICA8QnV0dG9uCiAgICAgICAgICAgIGtleT17c30KICAgICAgICAgICAgdmFyaWFudD17ZmlsdGVyID09PSBzID8gImRlZmF1bHQiIDogIm91dGxpbmUifQogICAgICAgICAgICBzaXplPSJzbSIKICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwiCiAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEZpbHRlcihzKX0KICAgICAgICAgID4KICAgICAgICAgICAge3MgPT09ICJBTEwiID8gIlRvdXMiIDogcyA9PT0gIlNVQ0NFU1MiID8gIlN1Y2PDqHMiIDogcyA9PT0gIkZBSUxFRCIgPyAiw4ljaGVjcyIgOiAiUsOpZXNzYWlzIn0KICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICkpfQogICAgICAgIDxCdXR0b24gdmFyaWFudD0iZ2hvc3QiIHNpemU9InNtIiBjbGFzc05hbWU9InJvdW5kZWQtZnVsbCBtbC1hdXRvIiBvbkNsaWNrPXtsb2FkfT4KICAgICAgICAgIDxSZWZyZXNoQ3cgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTEuNSIgLz4gQWN0dWFsaXNlcgogICAgICAgIDwvQnV0dG9uPgogICAgICA8L2Rpdj4KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgb3ZlcmZsb3ctaGlkZGVuIj4KICAgICAgICB7bG9hZGluZyA/ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTEwIGZsZXgganVzdGlmeS1jZW50ZXIiPjxMb2FkZXIyIGNsYXNzTmFtZT0iaC01IHctNSBhbmltYXRlLXNwaW4gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiAvPjwvZGl2PgogICAgICAgICkgOiBmaWx0ZXJlZC5sZW5ndGggPT09IDAgPyAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC0xMCB0ZXh0LWNlbnRlciB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+QXVjdW4gd2ViaG9vayBlbnZvecOpIHBvdXIgbGUgbW9tZW50LjwvZGl2PgogICAgICAgICkgOiAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ib3ZlcmZsb3cteC1hdXRvIj4KICAgICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT0idy1mdWxsIHRleHQtc20iPgogICAgICAgICAgICAgIDx0aGVhZCBjbGFzc05hbWU9ImJnLW11dGVkLzUwIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+CiAgICAgICAgICAgICAgICA8dHIgY2xhc3NOYW1lPSJ0ZXh0LWxlZnQiPgogICAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPkRhdGU8L3RoPgogICAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPsOJdsOpbmVtZW50PC90aD4KICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj5FbmRwb2ludDwvdGg+CiAgICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LW1lZGl1bSI+U3RhdHV0PC90aD4KICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj5IVFRQPC90aD4KICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj5UZW50YXRpdmVzPC90aD4KICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj5Db21tYW5kZTwvdGg+CiAgICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LW1lZGl1bSI+UsOpcG9uc2U8L3RoPgogICAgICAgICAgICAgICAgPC90cj4KICAgICAgICAgICAgICA8L3RoZWFkPgogICAgICAgICAgICAgIDx0Ym9keSBjbGFzc05hbWU9ImRpdmlkZS15IGRpdmlkZS1ib3JkZXIiPgogICAgICAgICAgICAgICAge2ZpbHRlcmVkLm1hcCgobCkgPT4gKAogICAgICAgICAgICAgICAgICA8dHIga2V5PXtsLmlkfT4KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIHdoaXRlc3BhY2Utbm93cmFwIj4KICAgICAgICAgICAgICAgICAgICAgIHtuZXcgRGF0ZShsLmNyZWF0ZWRfZGF0ZSkudG9Mb2NhbGVTdHJpbmcoImZyLUZSIil9CiAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPntsLmV2ZW50fTwvdGQ+CiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYXgtdy1bMjIwcHhdIHRydW5jYXRlIj57bC5lbmRwb2ludF91cmx9PC90ZD4KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMiPgogICAgICAgICAgICAgICAgICAgICAgPEJhZGdlIHZhcmlhbnQ9Im91dGxpbmUiIGNsYXNzTmFtZT17U1RBVFVTX1NUWUxFW2wuc3RhdHVzXSB8fCAiIn0+e2wuc3RhdHVzfTwvQmFkZ2U+CiAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tb25vIj57bC5odHRwX3N0YXR1cyA/PyAi4oCUIn08L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyI+e2wuYXR0ZW1wdHMgPz8gMX08L3RkPgogICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyB0ZXh0LW11dGVkLWZvcmVncm91bmQgZm9udC1tb25vIHRleHQteHMiPntsLm9yZGVyX2lkIHx8ICLigJQifTwvdGQ+CiAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYXgtdy1bMjYwcHhdIHRydW5jYXRlIj57bC5yZXNwb25zZV9zbmlwcGV0IHx8ICLigJQifTwvdGQ+CiAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICA8L3Rib2R5PgogICAgICAgICAgICA8L3RhYmxlPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgKX0KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { Badge } from "@/components/ui/badge";
+import { ScrollText, Loader2, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const STATUS_STYLE = {
+  SUCCESS: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  FAILED: "bg-red-50 text-red-700 border-red-200",
+  RETRYING: "bg-amber-50 text-amber-700 border-amber-200",
+};
+
+export default function WebhookAudit() {
+  const [logs, setLogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState("ALL");
+
+  const load = async () => {
+    setLoading(true);
+    try {
+      const data = await base44.entities.WebhookLog.list("-created_date", 200);
+      setLogs(data);
+    } catch {
+      setLogs([]);
+    }
+    setLoading(false);
+  };
+  useEffect(() => { load(); }, []);
+
+  const filtered = filter === "ALL" ? logs : logs.filter((l) => l.status === filter);
+
+  return (
+    <div className="p-6 md:p-8 max-w-6xl mx-auto">
+      <PageHeader
+        title="Audit des Webhooks"
+        description="Historique des notifications envoyées aux plateformes partenaires, statuts HTTP et tentatives de réessai."
+        icon={ScrollText}
+      />
+
+      <div className="flex items-center gap-2 mb-4">
+        {["ALL", "SUCCESS", "FAILED", "RETRYING"].map((s) => (
+          <Button
+            key={s}
+            variant={filter === s ? "default" : "outline"}
+            size="sm"
+            className="rounded-full"
+            onClick={() => setFilter(s)}
+          >
+            {s === "ALL" ? "Tous" : s === "SUCCESS" ? "Succès" : s === "FAILED" ? "Échecs" : "Réessais"}
+          </Button>
+        ))}
+        <Button variant="ghost" size="sm" className="rounded-full ml-auto" onClick={load}>
+          <RefreshCw className="h-4 w-4 mr-1.5" /> Actualiser
+        </Button>
+      </div>
+
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-10 flex justify-center"><Loader2 className="h-5 w-5 animate-spin text-muted-foreground" /></div>
+        ) : filtered.length === 0 ? (
+          <div className="p-10 text-center text-sm text-muted-foreground">Aucun webhook envoyé pour le moment.</div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead className="bg-muted/50 text-muted-foreground">
+                <tr className="text-left">
+                  <th className="px-4 py-3 font-medium">Date</th>
+                  <th className="px-4 py-3 font-medium">Événement</th>
+                  <th className="px-4 py-3 font-medium">Endpoint</th>
+                  <th className="px-4 py-3 font-medium">Statut</th>
+                  <th className="px-4 py-3 font-medium">HTTP</th>
+                  <th className="px-4 py-3 font-medium">Tentatives</th>
+                  <th className="px-4 py-3 font-medium">Commande</th>
+                  <th className="px-4 py-3 font-medium">Réponse</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {filtered.map((l) => (
+                  <tr key={l.id}>
+                    <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">
+                      {new Date(l.created_date).toLocaleString("fr-FR")}
+                    </td>
+                    <td className="px-4 py-3 font-medium">{l.event}</td>
+                    <td className="px-4 py-3 text-muted-foreground max-w-[220px] truncate">{l.endpoint_url}</td>
+                    <td className="px-4 py-3">
+                      <Badge variant="outline" className={STATUS_STYLE[l.status] || ""}>{l.status}</Badge>
+                    </td>
+                    <td className="px-4 py-3 font-mono">{l.http_status ?? "—"}</td>
+                    <td className="px-4 py-3">{l.attempts ?? 1}</td>
+                    <td className="px-4 py-3 text-muted-foreground font-mono text-xs">{l.order_id || "—"}</td>
+                    <td className="px-4 py-3 text-muted-foreground max-w-[260px] truncate">{l.response_snippet || "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

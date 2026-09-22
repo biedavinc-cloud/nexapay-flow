@@ -1,1 +1,57 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IFNlcnZlciwgTG9jayB9IGZyb20gImx1Y2lkZS1yZWFjdCI7Cgpjb25zdCBQUk9WSURFUlMgPSBbCiAgeyB2YWx1ZTogIktVQ09JTiIsIGxhYmVsOiAiS3VDb2luIiB9LAogIHsgdmFsdWU6ICJCSU5BTkNFIiwgbGFiZWw6ICJCaW5hbmNlIiB9LAogIHsgdmFsdWU6ICJCSU5HWCIsIGxhYmVsOiAiQmluZ1giIH0sCiAgeyB2YWx1ZTogIkNPSU5CQVNFIiwgbGFiZWw6ICJDb2luYmFzZSIgfSwKICB7IHZhbHVlOiAiV0VCM19ESVJFQ1QiLCBsYWJlbDogIldlYjMgRGlyZWN0IiB9LApdOwpjb25zdCBTVEFUVVNFUyA9IFsKICB7IHZhbHVlOiAiT1BFUkFUSU9OQUwiLCBsYWJlbDogIk9ww6lyYXRpb25uZWwiIH0sCiAgeyB2YWx1ZTogIkRFR1JBREVEIiwgbGFiZWw6ICJEw6lncmFkw6kiIH0sCiAgeyB2YWx1ZTogIkRPV04iLCBsYWJlbDogIkhvcnMgc2VydmljZSIgfSwKICB7IHZhbHVlOiAiRElTQUJMRUQiLCBsYWJlbDogIkTDqXNhY3RpdsOpIiB9LApdOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gTWFuYWdlUHJvdmlkZXJzKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy01eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IkZvdXJuaXNzZXVycyBjcnlwdG8iCiAgICAgICAgZGVzY3JpcHRpb249IkNvbmZpZ3VyZXogbGVzIGV4Y2hhbmdlcyBldCBhY3RpdmV6L2TDqXNhY3RpdmV6IGxlcyByZXRyYWl0cy4iCiAgICAgICAgaWNvbj17U2VydmVyfQogICAgICAvPgogICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWFtYmVyLTIwMCBiZy1hbWJlci01MCBweC00IHB5LTMgbWItNSBmbGV4IGl0ZW1zLXN0YXJ0IGdhcC0yIHRleHQtc20gdGV4dC1hbWJlci03MDAiPgogICAgICAgIDxMb2NrIGNsYXNzTmFtZT0iaC00IHctNCBtdC0wLjUgc2hyaW5rLTAiIC8+CiAgICAgICAgPHNwYW4+CiAgICAgICAgICBMZXMgY2zDqXMgQVBJIHNlY3LDqHRlcyBkZXMgZXhjaGFuZ2VzIHNlIGNvbmZpZ3VyZW50IGRhbnMgbGEgcGFnZSA8c3Ryb25nPlNlY3JldHM8L3N0cm9uZz4gZHUgdGFibGVhdSBkZSBib3JkCiAgICAgICAgICAoS1VDT0lOX0FQSV9LRVkgLyBLVUNPSU5fQVBJX1NFQ1JFVCAvIEtVQ09JTl9QQVNTUEhSQVNFLCBCSU5BTkNFX0FQSV9LRVkgLyBCSU5BTkNFX0FQSV9TRUNSRVQsCiAgICAgICAgICBCSU5HWF9BUElfS0VZIC8gQklOR1hfQVBJX1NFQ1JFVCwgQ09JTkJBU0VfQVBJX0tFWSAvIENPSU5CQVNFX0FQSV9TRUNSRVQpLgogICAgICAgICAgTGUgcG9ydGVmZXVpbGxlIGRlIHLDqWNlcHRpb24gVVNEVCBzZSBjb25maWd1cmUgZGFucyBsYSBwYWdlIDxzdHJvbmc+UG9ydGVmZXVpbGxlcyBjcnlwdG88L3N0cm9uZz4uCiAgICAgICAgICBDZXR0ZSBwYWdlIGfDqHJlIGwnYWN0aXZhdGlvbiBkZXMgcmV0cmFpdHMgZXQgbGVzIG3DqXRhZG9ubsOpZXMuCiAgICAgICAgPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPENvbmZpZ01hbmFnZXIKICAgICAgICBlbnRpdHk9IlByb3ZpZGVyQ29uZmlnIgogICAgICAgIGFkZExhYmVsPSJBam91dGVyIHVuIGV4Y2hhbmdlIgogICAgICAgIGZpZWxkcz17WwogICAgICAgICAgeyBuYW1lOiAicHJvdmlkZXIiLCBsYWJlbDogIkV4Y2hhbmdlIiwgdHlwZTogInNlbGVjdCIsIG9wdGlvbnM6IFBST1ZJREVSUywgZGVmYXVsdDogIktVQ09JTiIgfSwKICAgICAgICAgIHsgbmFtZTogImxhYmVsIiwgbGFiZWw6ICJMaWJlbGzDqSIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICJLdUNvaW4gcHJvZHVjdGlvbiIgfSwKICAgICAgICAgIHsgbmFtZTogInN0YXR1cyIsIGxhYmVsOiAiU3RhdHV0IiwgdHlwZTogInNlbGVjdCIsIG9wdGlvbnM6IFNUQVRVU0VTLCBkZWZhdWx0OiAiT1BFUkFUSU9OQUwiIH0sCiAgICAgICAgICB7IG5hbWU6ICJzdWNjZXNzX3JhdGUiLCBsYWJlbDogIlRhdXggZGUgc3VjY8OocyAoJSkiLCB0eXBlOiAibnVtYmVyIiwgZGVmYXVsdDogOTAgfSwKICAgICAgICAgIHsgbmFtZTogImVuYWJsZWQiLCBsYWJlbDogIkFjdGl2w6kiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IHRydWUgfSwKICAgICAgICAgIHsgbmFtZTogIndpdGhkcmF3YWxzX2VuYWJsZWQiLCBsYWJlbDogIlJldHJhaXRzIGFjdGl2w6lzIiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiBmYWxzZSB9LAogICAgICAgICAgeyBuYW1lOiAiaXNfZGVmYXVsdCIsIGxhYmVsOiAiUGFyIGTDqWZhdXQiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IGZhbHNlIH0sCiAgICAgICAgICB7IG5hbWU6ICJhcGlfa2V5X2xhYmVsIiwgbGFiZWw6ICJMaWJlbGzDqSBjbMOpIEFQSSIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICJuZXhhLWt1Y29pbi1wcm9kIiwgc3BhbjogImZ1bGwiIH0sCiAgICAgICAgICB7IG5hbWU6ICJoYXNfYXBpX3NlY3JldCIsIGxhYmVsOiAiQVBJIHNlY3JldCBjb25maWd1csOpIiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiBmYWxzZSB9LAogICAgICAgICAgeyBuYW1lOiAiaGFzX3Bhc3NwaHJhc2UiLCBsYWJlbDogIlBhc3NwaHJhc2UgY29uZmlndXLDqWUiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IGZhbHNlIH0sCiAgICAgICAgICB7IG5hbWU6ICJub3RlcyIsIGxhYmVsOiAiTm90ZXMiLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAiTm90ZXMgaW50ZXJuZXMiLCBzcGFuOiAiZnVsbCIgfSwKICAgICAgICBdfQogICAgICAvPgogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { Server, Lock } from "lucide-react";
+
+const PROVIDERS = [
+  { value: "KUCOIN", label: "KuCoin" },
+  { value: "BINANCE", label: "Binance" },
+  { value: "BINGX", label: "BingX" },
+  { value: "COINBASE", label: "Coinbase" },
+  { value: "WEB3_DIRECT", label: "Web3 Direct" },
+];
+const STATUSES = [
+  { value: "OPERATIONAL", label: "Opérationnel" },
+  { value: "DEGRADED", label: "Dégradé" },
+  { value: "DOWN", label: "Hors service" },
+  { value: "DISABLED", label: "Désactivé" },
+];
+
+export default function ManageProviders() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Fournisseurs crypto"
+        description="Configurez les exchanges et activez/désactivez les retraits."
+        icon={Server}
+      />
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 mb-5 flex items-start gap-2 text-sm text-amber-700">
+        <Lock className="h-4 w-4 mt-0.5 shrink-0" />
+        <span>
+          Les clés API secrètes des exchanges se configurent dans la page <strong>Secrets</strong> du tableau de bord
+          (KUCOIN_API_KEY / KUCOIN_API_SECRET / KUCOIN_PASSPHRASE, BINANCE_API_KEY / BINANCE_API_SECRET,
+          BINGX_API_KEY / BINGX_API_SECRET, COINBASE_API_KEY / COINBASE_API_SECRET).
+          Le portefeuille de réception USDT se configure dans la page <strong>Portefeuilles crypto</strong>.
+          Cette page gère l'activation des retraits et les métadonnées.
+        </span>
+      </div>
+      <ConfigManager
+        entity="ProviderConfig"
+        addLabel="Ajouter un exchange"
+        fields={[
+          { name: "provider", label: "Exchange", type: "select", options: PROVIDERS, default: "KUCOIN" },
+          { name: "label", label: "Libellé", type: "text", placeholder: "KuCoin production" },
+          { name: "status", label: "Statut", type: "select", options: STATUSES, default: "OPERATIONAL" },
+          { name: "success_rate", label: "Taux de succès (%)", type: "number", default: 90 },
+          { name: "enabled", label: "Activé", type: "boolean", default: true },
+          { name: "withdrawals_enabled", label: "Retraits activés", type: "boolean", default: false },
+          { name: "is_default", label: "Par défaut", type: "boolean", default: false },
+          { name: "api_key_label", label: "Libellé clé API", type: "text", placeholder: "nexa-kucoin-prod", span: "full" },
+          { name: "has_api_secret", label: "API secret configuré", type: "boolean", default: false },
+          { name: "has_passphrase", label: "Passphrase configurée", type: "boolean", default: false },
+          { name: "notes", label: "Notes", type: "text", placeholder: "Notes internes", span: "full" },
+        ]}
+      />
+    </div>
+  );
+}

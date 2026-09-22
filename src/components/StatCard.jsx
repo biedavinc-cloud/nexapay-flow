@@ -1,1 +1,14 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFN0YXRDYXJkKHsgbGFiZWwsIHZhbHVlLCBzdWIsIGljb246IEljb24sIGFjY2VudCA9ICJ0ZXh0LXByaW1hcnkiIH0pIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTUgdHJhbnNpdGlvbi1jb2xvcnMgaG92ZXI6Ym9yZGVyLXByaW1hcnkvMzAiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1zdGFydCBqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyBmb250LW1lZGl1bSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj57bGFiZWx9PC9wPgogICAgICAgIHtJY29uICYmIDxJY29uIGNsYXNzTmFtZT17YGgtNC41IHctNC41ICR7YWNjZW50fWB9IC8+fQogICAgICA8L2Rpdj4KICAgICAgPHAgY2xhc3NOYW1lPSJtdC0zIGZvbnQtZGlzcGxheSB0ZXh0LTJ4bCBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0IHRleHQtZm9yZWdyb3VuZCI+e3ZhbHVlfTwvcD4KICAgICAge3N1YiAmJiA8cCBjbGFzc05hbWU9Im10LTEgdGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntzdWJ9PC9wPn0KICAgIDwvZGl2PgogICk7Cn0=
+import React from "react";
+
+export default function StatCard({ label, value, sub, icon: Icon, accent = "text-primary" }) {
+  return (
+    <div className="rounded-xl border border-border bg-card p-5 transition-colors hover:border-primary/30">
+      <div className="flex items-start justify-between">
+        <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{label}</p>
+        {Icon && <Icon className={`h-4.5 w-4.5 ${accent}`} />}
+      </div>
+      <p className="mt-3 font-display text-2xl font-semibold tracking-tight text-foreground">{value}</p>
+      {sub && <p className="mt-1 text-xs text-muted-foreground">{sub}</p>}
+    </div>
+  );
+}

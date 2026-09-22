@@ -1,1 +1,111 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCB7IFJlc3BvbnNpdmVJbWFnZSB9IGZyb20gIi4vcmVzcG9uc2l2ZS1pbWFnZSIKaW1wb3J0IHsKICBnZXRPcmlnaW5hbEltYWdlVXJsLAogIElNQUdFX0xPQURfTU9ERSwKICBuZXh0SW1hZ2VMb2FkTW9kZSwKICBwYXJzZVdpeE1lZGlhVXJsLAp9IGZyb20gIi4vaW1hZ2UtaGVscGVycyIKCmNvbnN0IEZBTExCQUNLX0lNQUdFX1VSTCA9CiAgImh0dHBzOi8vc3RhdGljLndpeHN0YXRpYy5jb20vbWVkaWEvMTJkMzY3XzRmMjZjY2QxN2Y4ZjRlM2E4OTU4MzA2ZWEwOGMyMzMyfm12Mi5wbmciCgovKioKICogSW1hZ2Ugd2l0aCBidWlsdC1pbiBXaXggTWVkaWEgUGxhdGZvcm0gc3VwcG9ydDogY2Fub25pY2FsIHB1YmxpYyBpbWFnZXMgb24KICogbWVkaWEuYmFzZTQ0LmNvbSBhbmQgc3RhdGljLndpeHN0YXRpYy5jb20vbWVkaWEgYXJlIHJlc2l6ZWQgdG8gdGhlIHJlbmRlcmVkCiAqIGNvbnRhaW5lciBwZXIgZGV2aWNlIHBpeGVsIHJhdGlvIGFuZCByZS1lbmNvZGVkIHRvIFdlYlA7IGBmaXR0aW5nVHlwZT0iZmlsbCJgCiAqIGNyb3BzIHNlcnZlci1zaWRlLCBvcHRpb25hbGx5IGFuY2hvcmVkIGF0IGEgZm9jYWwgcG9pbnQuIE90aGVyIFVSTHMgcmVuZGVyCiAqIGFzIGEgcGxhaW4gPGltZz4uIEZhaWxlZCB0cmFuc2Zvcm1zIHJldHJ5IHRoZSBvcmlnaW5hbCBVUkw7IG9ubHkgYSBicm9rZW4KICogb3JpZ2luYWwgc3dhcHMgdG8gdGhlIGdlbmVyaWMgZmFsbGJhY2sgaW1hZ2UuCiAqLwpjb25zdCBJbWFnZSA9IFJlYWN0LmZvcndhcmRSZWYoCiAgKAogICAgewogICAgICBzcmM6IHNvdXJjZSwKICAgICAgZml0dGluZ1R5cGUgPSAiZmlsbCIsCiAgICAgIG9yaWdpbldpZHRoLAogICAgICBvcmlnaW5IZWlnaHQsCiAgICAgIGZvY2FsUG9pbnRYLAogICAgICBmb2NhbFBvaW50WSwKICAgICAgcXVhbGl0eSA9IDkwLAogICAgICBvbkVycm9yLAogICAgICAuLi5wcm9wcwogICAgfSwKICAgIHJlZgogICkgPT4gewogICAgY29uc3QgW3ByZXZpZXdTb3VyY2UsIHNldFByZXZpZXdTb3VyY2VdID0gUmVhY3QudXNlU3RhdGUobnVsbCkKICAgIGNvbnN0IHByZXZpZXcgPSBwcmV2aWV3U291cmNlPy5zb3VyY2UgPT09IHNvdXJjZSA/IHByZXZpZXdTb3VyY2UgOiBudWxsCiAgICBjb25zdCBzcmMgPSBwcmV2aWV3ID8gcHJldmlldy52YWx1ZSA6IHNvdXJjZQogICAgY29uc3QgcmVwbGFjZVNvdXJjZSA9ICh2YWx1ZSwgY2xhc3NOYW1lKSA9PiBzZXRQcmV2aWV3U291cmNlKHsKICAgICAgc291cmNlLCB2YWx1ZSwgY2xhc3NOYW1lLCBzb3VyY2VDbGFzc05hbWU6IHByb3BzLmNsYXNzTmFtZSwKICAgIH0pCiAgICBSZWFjdC51c2VFZmZlY3QoKCkgPT4gc2V0UHJldmlld1NvdXJjZShudWxsKSwgW3NvdXJjZV0pCiAgICBjb25zdCBwYXJzZWRTb3VyY2UgPSBzcmMgJiYgc3JjICE9PSBGQUxMQkFDS19JTUFHRV9VUkwgPyBwYXJzZVdpeE1lZGlhVXJsKHNyYykgOiBudWxsCiAgICBjb25zdCBpbml0aWFsTW9kZSA9IHBhcnNlZFNvdXJjZSA/IElNQUdFX0xPQURfTU9ERS5PUFRJTUlaRUQgOiBJTUFHRV9MT0FEX01PREUuT1JJR0lOQUwKICAgIGNvbnN0IFtsb2FkU3RhdGUsIHNldExvYWRTdGF0ZV0gPSBSZWFjdC51c2VTdGF0ZSh7IHNyYywgbW9kZTogaW5pdGlhbE1vZGUgfSkKICAgIGNvbnN0IG1vZGUgPSBsb2FkU3RhdGUuc3JjID09PSBzcmMgPyBsb2FkU3RhdGUubW9kZSA6IGluaXRpYWxNb2RlCgogICAgUmVhY3QudXNlRWZmZWN0KCgpID0+IHsKICAgICAgc2V0TG9hZFN0YXRlKHsgc3JjLCBtb2RlOiBpbml0aWFsTW9kZSB9KQogICAgfSwgW3NyYywgaW5pdGlhbE1vZGVdKQoKICAgIGNvbnN0IGhhbmRsZUVycm9yID0gKGV2ZW50KSA9PiB7CiAgICAgIGlmIChtb2RlID09PSBJTUFHRV9MT0FEX01PREUuRkFMTEJBQ0spIHJldHVybgogICAgICBjb25zdCBuZXh0TW9kZSA9IG5leHRJbWFnZUxvYWRNb2RlKG1vZGUpCiAgICAgIHNldExvYWRTdGF0ZSh7IHNyYywgbW9kZTogbmV4dE1vZGUgfSkKICAgICAgaWYgKG5leHRNb2RlID09PSBJTUFHRV9MT0FEX01PREUuRkFMTEJBQ0spIG9uRXJyb3I/LihldmVudCkKICAgIH0KCiAgICBjb25zdCBpbWFnZVByb3BzID0gewogICAgICAuLi5wcm9wcywKICAgICAgY2xhc3NOYW1lOiBwcmV2aWV3ICYmIHByZXZpZXcuc291cmNlQ2xhc3NOYW1lID09PSBwcm9wcy5jbGFzc05hbWUgPyBwcmV2aWV3LmNsYXNzTmFtZSA6IHByb3BzLmNsYXNzTmFtZSwKICAgICAgb25FcnJvcjogaGFuZGxlRXJyb3IsCiAgICB9CgogICAgaWYgKCFzcmMpIHsKICAgICAgLy8gUmVuZGVycyBhcyBhIHJlYWwgPGltZz4gKG5vdCBhIDxkaXY+KSDigJQgdGhlIHZpc3VhbCBlZGl0b3IncwogICAgICAvLyBjbGljay10by1lZGl0IHRvb2xiYXIga2V5cyBpdHMgIlJlcGxhY2UgSW1hZ2UiIGFjdGlvbiBvZmYgdGhlIERPTQogICAgICAvLyB0YWcgYmVpbmcgYGltZ2AsIHNvIGEgcGxhY2Vob2xkZXIgZGl2IHdvdWxkIGJlIHVucmVjb3ZlcmFibGUgaW4gdGhlCiAgICAgIC8vIGVkaXRvci4gRkFMTEJBQ0tfSU1BR0VfVVJMIGRvdWJsZXMgYXMgdGhlICJubyBpbWFnZSBjaG9zZW4iIGdyYXBoaWMuCiAgICAgIHJldHVybiA8aW1nIHJlZj17cmVmfSBzcmM9e0ZBTExCQUNLX0lNQUdFX1VSTH0gey4uLmltYWdlUHJvcHN9IGRhdGEtZW1wdHktaW1hZ2UgLz4KICAgIH0KCiAgICAvLyBBIGZhaWxlZCB0cmFuc2Zvcm0gcmV0cmllcyB0aGUgdW5kZXJseWluZyBvcmlnaW5hbCBhcyBhIHBsYWluIGltYWdlLgogICAgLy8gT25seSBhIGZhaWx1cmUgb2YgdGhhdCBvcmlnaW5hbCBhZHZhbmNlcyB0byB0aGUgZ2VuZXJpYyBmYWxsYmFjay4KICAgIGNvbnN0IHBhcnNlZCA9IG1vZGUgPT09IElNQUdFX0xPQURfTU9ERS5PUFRJTUlaRUQgPyBwYXJzZWRTb3VyY2UgOiBudWxsCgogICAgaWYgKCFwYXJzZWQpIHsKICAgICAgY29uc3QgaXNFcnJvck1vZGUgPSBtb2RlID09PSBJTUFHRV9MT0FEX01PREUuRkFMTEJBQ0sKICAgICAgY29uc3QgaW1hZ2VTcmMgPSBpc0Vycm9yTW9kZSA/IEZBTExCQUNLX0lNQUdFX1VSTCA6IGdldE9yaWdpbmFsSW1hZ2VVcmwoc3JjLCBwYXJzZWRTb3VyY2UpCiAgICAgIHJldHVybiAoCiAgICAgICAgPGltZyByZWY9e3JlZn0gc3JjPXtpbWFnZVNyY30gey4uLmltYWdlUHJvcHN9IGRhdGEtZXJyb3ItaW1hZ2U9e2lzRXJyb3JNb2RlIHx8IHVuZGVmaW5lZH0gLz4KICAgICAgKQogICAgfQoKICAgIGNvbnN0IGZvY2FsUG9pbnQgPQogICAgICB0eXBlb2YgZm9jYWxQb2ludFggPT09ICJudW1iZXIiICYmIHR5cGVvZiBmb2NhbFBvaW50WSA9PT0gIm51bWJlciIKICAgICAgICA/IHsgeDogZm9jYWxQb2ludFgsIHk6IGZvY2FsUG9pbnRZIH0KICAgICAgICA6IHVuZGVmaW5lZAogICAgLy8gT3JpZ2luIGRpbWVuc2lvbnMgYXJlIG9wdGlvbmFsIOKAlCB3aGVuIGtub3duIHRoZXkgc3RhYmlsaXplIGxheW91dCB2aWEKICAgIC8vIHRoZSB3cmFwcGVyJ3MgYXNwZWN0LXJhdGlvIGJlZm9yZSB0aGUgaW1hZ2UgbG9hZHMuCiAgICBjb25zdCBhc3BlY3RSYXRpbyA9CiAgICAgIG9yaWdpbldpZHRoICYmIG9yaWdpbkhlaWdodCA/IGAke29yaWdpbldpZHRofSAvICR7b3JpZ2luSGVpZ2h0fWAgOiB1bmRlZmluZWQKCiAgICByZXR1cm4gKAogICAgICA8UmVzcG9uc2l2ZUltYWdlCiAgICAgICAgcmVmPXtyZWZ9CiAgICAgICAgc3JjPXtzcmN9CiAgICAgICAgcGFyc2VkPXtwYXJzZWR9CiAgICAgICAgb25Tb3VyY2VDaGFuZ2U9e3JlcGxhY2VTb3VyY2V9CiAgICAgICAgZml0dGluZ1R5cGU9e2ZpdHRpbmdUeXBlfQogICAgICAgIGZvY2FsUG9pbnQ9e2ZvY2FsUG9pbnR9CiAgICAgICAgcXVhbGl0eT17cXVhbGl0eX0KICAgICAgICBhc3BlY3RSYXRpbz17YXNwZWN0UmF0aW99CiAgICAgICAgey4uLmltYWdlUHJvcHN9CiAgICAgIC8+CiAgICApCiAgfQopCkltYWdlLmRpc3BsYXlOYW1lID0gIkltYWdlIgoKZXhwb3J0IHsgSW1hZ2UgfQo=
+import * as React from "react"
+import { ResponsiveImage } from "./responsive-image"
+import {
+  getOriginalImageUrl,
+  IMAGE_LOAD_MODE,
+  nextImageLoadMode,
+  parseWixMediaUrl,
+} from "./image-helpers"
+
+const FALLBACK_IMAGE_URL =
+  "https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png"
+
+/**
+ * Image with built-in Wix Media Platform support: canonical public images on
+ * media.base44.com and static.wixstatic.com/media are resized to the rendered
+ * container per device pixel ratio and re-encoded to WebP; `fittingType="fill"`
+ * crops server-side, optionally anchored at a focal point. Other URLs render
+ * as a plain <img>. Failed transforms retry the original URL; only a broken
+ * original swaps to the generic fallback image.
+ */
+const Image = React.forwardRef(
+  (
+    {
+      src: source,
+      fittingType = "fill",
+      originWidth,
+      originHeight,
+      focalPointX,
+      focalPointY,
+      quality = 90,
+      onError,
+      ...props
+    },
+    ref
+  ) => {
+    const [previewSource, setPreviewSource] = React.useState(null)
+    const preview = previewSource?.source === source ? previewSource : null
+    const src = preview ? preview.value : source
+    const replaceSource = (value, className) => setPreviewSource({
+      source, value, className, sourceClassName: props.className,
+    })
+    React.useEffect(() => setPreviewSource(null), [source])
+    const parsedSource = src && src !== FALLBACK_IMAGE_URL ? parseWixMediaUrl(src) : null
+    const initialMode = parsedSource ? IMAGE_LOAD_MODE.OPTIMIZED : IMAGE_LOAD_MODE.ORIGINAL
+    const [loadState, setLoadState] = React.useState({ src, mode: initialMode })
+    const mode = loadState.src === src ? loadState.mode : initialMode
+
+    React.useEffect(() => {
+      setLoadState({ src, mode: initialMode })
+    }, [src, initialMode])
+
+    const handleError = (event) => {
+      if (mode === IMAGE_LOAD_MODE.FALLBACK) return
+      const nextMode = nextImageLoadMode(mode)
+      setLoadState({ src, mode: nextMode })
+      if (nextMode === IMAGE_LOAD_MODE.FALLBACK) onError?.(event)
+    }
+
+    const imageProps = {
+      ...props,
+      className: preview && preview.sourceClassName === props.className ? preview.className : props.className,
+      onError: handleError,
+    }
+
+    if (!src) {
+      // Renders as a real <img> (not a <div>) — the visual editor's
+      // click-to-edit toolbar keys its "Replace Image" action off the DOM
+      // tag being `img`, so a placeholder div would be unrecoverable in the
+      // editor. FALLBACK_IMAGE_URL doubles as the "no image chosen" graphic.
+      return <img ref={ref} src={FALLBACK_IMAGE_URL} {...imageProps} data-empty-image />
+    }
+
+    // A failed transform retries the underlying original as a plain image.
+    // Only a failure of that original advances to the generic fallback.
+    const parsed = mode === IMAGE_LOAD_MODE.OPTIMIZED ? parsedSource : null
+
+    if (!parsed) {
+      const isErrorMode = mode === IMAGE_LOAD_MODE.FALLBACK
+      const imageSrc = isErrorMode ? FALLBACK_IMAGE_URL : getOriginalImageUrl(src, parsedSource)
+      return (
+        <img ref={ref} src={imageSrc} {...imageProps} data-error-image={isErrorMode || undefined} />
+      )
+    }
+
+    const focalPoint =
+      typeof focalPointX === "number" && typeof focalPointY === "number"
+        ? { x: focalPointX, y: focalPointY }
+        : undefined
+    // Origin dimensions are optional — when known they stabilize layout via
+    // the wrapper's aspect-ratio before the image loads.
+    const aspectRatio =
+      originWidth && originHeight ? `${originWidth} / ${originHeight}` : undefined
+
+    return (
+      <ResponsiveImage
+        ref={ref}
+        src={src}
+        parsed={parsed}
+        onSourceChange={replaceSource}
+        fittingType={fittingType}
+        focalPoint={focalPoint}
+        quality={quality}
+        aspectRatio={aspectRatio}
+        {...imageProps}
+      />
+    )
+  }
+)
+Image.displayName = "Image"
+
+export { Image }

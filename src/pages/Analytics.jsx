@@ -1,1 +1,105 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgQmFyQ2hhcnQzLCBMb2FkZXIyIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsKICBCYXJDaGFydCwKICBCYXIsCiAgUGllQ2hhcnQsCiAgUGllLAogIENlbGwsCiAgWEF4aXMsCiAgWUF4aXMsCiAgVG9vbHRpcCwKICBSZXNwb25zaXZlQ29udGFpbmVyLAogIExlZ2VuZCwKfSBmcm9tICJyZWNoYXJ0cyI7Cgpjb25zdCBQSUVfQ09MT1JTID0gWyIjMjU2M2ViIiwgIiMxMGI5ODEiLCAiI2Y1OWUwYiIsICIjZWY0NDQ0IiwgIiMwNmI2ZDQiLCAiIzhiNWNmNiJdOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQW5hbHl0aWNzKCkgewogIGNvbnN0IFt0eHMsIHNldFR4c10gPSB1c2VTdGF0ZShbXSk7CiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICAoYXN5bmMgKCkgPT4gewogICAgICBjb25zdCBkYXRhID0gYXdhaXQgYmFzZTQ0LmVudGl0aWVzLlRyYW5zYWN0aW9uLmxpc3QoIi1jcmVhdGVkX2RhdGUiLCA1MDApOwogICAgICBzZXRUeHMoZGF0YSk7CiAgICAgIHNldExvYWRpbmcoZmFsc2UpOwogICAgfSkoKTsKICB9LCBbXSk7CgogIGNvbnN0IHRvdGFsVm9sdW1lID0gdHhzLnJlZHVjZSgocywgdCkgPT4gcyArICh0LmFtb3VudF9maWF0IHx8IDApLCAwKTsKICBjb25zdCB1c2R0Vm9sdW1lID0gdHhzLnJlZHVjZSgocywgdCkgPT4gcyArICh0LnVzZHRfYW1vdW50IHx8IDApLCAwKTsKICBjb25zdCBzdWNjZXNzQ291bnQgPSB0eHMuZmlsdGVyKCh0KSA9PiB0LnN0YXR1cyA9PT0gIkNPTVBMRVRFRCIpLmxlbmd0aDsKICBjb25zdCBzdWNjZXNzUmF0ZSA9IHR4cy5sZW5ndGggPyBNYXRoLnJvdW5kKChzdWNjZXNzQ291bnQgLyB0eHMubGVuZ3RoKSAqIDEwMCkgOiAwOwoKICBjb25zdCBieUN1cnJlbmN5ID0ge307CiAgdHhzLmZvckVhY2goKHQpID0+IHsKICAgIGNvbnN0IGMgPSB0LmN1cnJlbmN5X2ZpYXQgfHwgIkVVUiI7CiAgICBieUN1cnJlbmN5W2NdID0gKGJ5Q3VycmVuY3lbY10gfHwgMCkgKyAodC5hbW91bnRfZmlhdCB8fCAwKTsKICB9KTsKICBjb25zdCBjdXJyZW5jeURhdGEgPSBPYmplY3QuZW50cmllcyhieUN1cnJlbmN5KS5tYXAoKFtuYW1lLCB2YWx1ZV0pID0+ICh7IG5hbWUsIHZhbHVlOiBNYXRoLnJvdW5kKHZhbHVlKSB9KSk7CgogIGNvbnN0IGJ5U3RhdHVzID0ge307CiAgdHhzLmZvckVhY2goKHQpID0+IHsKICAgIGJ5U3RhdHVzW3Quc3RhdHVzXSA9IChieVN0YXR1c1t0LnN0YXR1c10gfHwgMCkgKyAxOwogIH0pOwogIGNvbnN0IHN0YXR1c0RhdGEgPSBPYmplY3QuZW50cmllcyhieVN0YXR1cykubWFwKChbbmFtZSwgdmFsdWVdKSA9PiAoeyBuYW1lLCB2YWx1ZSB9KSk7CgogIGNvbnN0IHN0YXRzID0gWwogICAgeyBsYWJlbDogIlZvbHVtZSB0cmFpdMOpIiwgdmFsdWU6IHRvdGFsVm9sdW1lLnRvTG9jYWxlU3RyaW5nKCJmci1GUiIpIH0sCiAgICB7IGxhYmVsOiAiVHJhbnNhY3Rpb25zIiwgdmFsdWU6IHR4cy5sZW5ndGggfSwKICAgIHsgbGFiZWw6ICJUYXV4IGRlIHN1Y2PDqHMiLCB2YWx1ZTogYCR7c3VjY2Vzc1JhdGV9JWAgfSwKICAgIHsgbGFiZWw6ICJVU0RUIGxpdnLDqSIsIHZhbHVlOiB1c2R0Vm9sdW1lLnRvTG9jYWxlU3RyaW5nKCJmci1GUiIsIHsgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiAyIH0pIH0sCiAgXTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJwLTYgbWQ6cC04IG1heC13LTZ4bCBteC1hdXRvIj4KICAgICAgPFBhZ2VIZWFkZXIgdGl0bGU9IkFuYWx5dGljcyIgZGVzY3JpcHRpb249IlZvbHVtZSB0cmFpdMOpLCB0YXV4IGRlIHN1Y2PDqHMgZXQgcsOpcGFydGl0aW9uIHBhciBkZXZpc2UuIiBpY29uPXtCYXJDaGFydDN9IC8+CiAgICAgIHtsb2FkaW5nID8gKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggZmxleCBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNSB3LTUgYW5pbWF0ZS1zcGluIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCIgLz4KICAgICAgICA8L2Rpdj4KICAgICAgKSA6ICgKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS02Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIG1kOmdyaWQtY29scy00IGdhcC0zIj4KICAgICAgICAgICAge3N0YXRzLm1hcCgocykgPT4gKAogICAgICAgICAgICAgIDxkaXYga2V5PXtzLmxhYmVsfSBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTQiPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e3MubGFiZWx9PC9wPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC0yeGwgZm9udC1zZW1pYm9sZCBtdC0xIj57cy52YWx1ZX08L3A+CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICkpfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMSBsZzpncmlkLWNvbHMtMiBnYXAtNCI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC00Ij4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gZm9udC1tZWRpdW0gbWItMyI+Vm9sdW1lIHBhciBkZXZpc2U8L3A+CiAgICAgICAgICAgICAgPFJlc3BvbnNpdmVDb250YWluZXIgd2lkdGg9IjEwMCUiIGhlaWdodD17MjQwfT4KICAgICAgICAgICAgICAgIDxCYXJDaGFydCBkYXRhPXtjdXJyZW5jeURhdGF9PgogICAgICAgICAgICAgICAgICA8WEF4aXMgZGF0YUtleT0ibmFtZSIgZm9udFNpemU9ezEyfSAvPgogICAgICAgICAgICAgICAgICA8WUF4aXMgZm9udFNpemU9ezEyfSAvPgogICAgICAgICAgICAgICAgICA8VG9vbHRpcCAvPgogICAgICAgICAgICAgICAgICA8QmFyIGRhdGFLZXk9InZhbHVlIiBmaWxsPSIjMjU2M2ViIiByYWRpdXM9e1s2LCA2LCAwLCAwXX0gLz4KICAgICAgICAgICAgICAgIDwvQmFyQ2hhcnQ+CiAgICAgICAgICAgICAgPC9SZXNwb25zaXZlQ29udGFpbmVyPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTQiPgogICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbSBmb250LW1lZGl1bSBtYi0zIj5Sw6lwYXJ0aXRpb24gcGFyIHN0YXR1dDwvcD4KICAgICAgICAgICAgICA8UmVzcG9uc2l2ZUNvbnRhaW5lciB3aWR0aD0iMTAwJSIgaGVpZ2h0PXsyNDB9PgogICAgICAgICAgICAgICAgPFBpZUNoYXJ0PgogICAgICAgICAgICAgICAgICA8UGllIGRhdGE9e3N0YXR1c0RhdGF9IGRhdGFLZXk9InZhbHVlIiBuYW1lS2V5PSJuYW1lIiBjeD0iNTAlIiBjeT0iNTAlIiBvdXRlclJhZGl1cz17ODB9IGxhYmVsPgogICAgICAgICAgICAgICAgICAgIHtzdGF0dXNEYXRhLm1hcCgoXywgaSkgPT4gKAogICAgICAgICAgICAgICAgICAgICAgPENlbGwga2V5PXtpfSBmaWxsPXtQSUVfQ09MT1JTW2kgJSBQSUVfQ09MT1JTLmxlbmd0aF19IC8+CiAgICAgICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgICAgIDwvUGllPgogICAgICAgICAgICAgICAgICA8VG9vbHRpcCAvPgogICAgICAgICAgICAgICAgICA8TGVnZW5kIC8+CiAgICAgICAgICAgICAgICA8L1BpZUNoYXJ0PgogICAgICAgICAgICAgIDwvUmVzcG9uc2l2ZUNvbnRhaW5lcj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgKX0KICAgIDwvZGl2PgogICk7Cn0=
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { BarChart3, Loader2 } from "lucide-react";
+import {
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
+  Cell,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
+
+const PIE_COLORS = ["#2563eb", "#10b981", "#f59e0b", "#ef4444", "#06b6d4", "#8b5cf6"];
+
+export default function Analytics() {
+  const [txs, setTxs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const data = await base44.entities.Transaction.list("-created_date", 500);
+      setTxs(data);
+      setLoading(false);
+    })();
+  }, []);
+
+  const totalVolume = txs.reduce((s, t) => s + (t.amount_fiat || 0), 0);
+  const usdtVolume = txs.reduce((s, t) => s + (t.usdt_amount || 0), 0);
+  const successCount = txs.filter((t) => t.status === "COMPLETED").length;
+  const successRate = txs.length ? Math.round((successCount / txs.length) * 100) : 0;
+
+  const byCurrency = {};
+  txs.forEach((t) => {
+    const c = t.currency_fiat || "EUR";
+    byCurrency[c] = (byCurrency[c] || 0) + (t.amount_fiat || 0);
+  });
+  const currencyData = Object.entries(byCurrency).map(([name, value]) => ({ name, value: Math.round(value) }));
+
+  const byStatus = {};
+  txs.forEach((t) => {
+    byStatus[t.status] = (byStatus[t.status] || 0) + 1;
+  });
+  const statusData = Object.entries(byStatus).map(([name, value]) => ({ name, value }));
+
+  const stats = [
+    { label: "Volume traité", value: totalVolume.toLocaleString("fr-FR") },
+    { label: "Transactions", value: txs.length },
+    { label: "Taux de succès", value: `${successRate}%` },
+    { label: "USDT livré", value: usdtVolume.toLocaleString("fr-FR", { maximumFractionDigits: 2 }) },
+  ];
+
+  return (
+    <div className="p-6 md:p-8 max-w-6xl mx-auto">
+      <PageHeader title="Analytics" description="Volume traité, taux de succès et répartition par devise." icon={BarChart3} />
+      {loading ? (
+        <div className="p-8 flex justify-center">
+          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+        </div>
+      ) : (
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {stats.map((s) => (
+              <div key={s.label} className="rounded-xl border border-border bg-card p-4">
+                <p className="text-xs text-muted-foreground">{s.label}</p>
+                <p className="font-display text-2xl font-semibold mt-1">{s.value}</p>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="rounded-xl border border-border bg-card p-4">
+              <p className="text-sm font-medium mb-3">Volume par devise</p>
+              <ResponsiveContainer width="100%" height={240}>
+                <BarChart data={currencyData}>
+                  <XAxis dataKey="name" fontSize={12} />
+                  <YAxis fontSize={12} />
+                  <Tooltip />
+                  <Bar dataKey="value" fill="#2563eb" radius={[6, 6, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-4">
+              <p className="text-sm font-medium mb-3">Répartition par statut</p>
+              <ResponsiveContainer width="100%" height={240}>
+                <PieChart>
+                  <Pie data={statusData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} label>
+                    {statusData.map((_, i) => (
+                      <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

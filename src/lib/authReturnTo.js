@@ -1,1 +1,29 @@
-Ly8gU2hhcmVkIGJ5IHRoZSBhdXRoIHBhZ2VzIChMb2dpbiwgUmVnaXN0ZXIsIGFuZCBhbnkgcGFnZSB0aGF0IHJlc3VtZXMgYSBmbG93Ci8vIGFmdGVyIHNpZ24taW4sIGUuZy4gdGhlIE1DUCBPQXV0aCBjb25zZW50IHBhZ2UpLiBLZWVwIHRoZSByZWRpcmVjdAovLyB2YWxpZGF0aW9uIGluIG9uZSBwbGFjZSDigJQgaXQgaXMgc2VjdXJpdHktc2Vuc2l0aXZlIGFuZCBlYXN5IHRvIGRyaWZ0LgoKLy8gUmVzb2x2ZSA/cmV0dXJuVG89IHRvIGEgc2FmZSBzYW1lLW9yaWdpbiBwYXRoLCBlbHNlICIvIi4KLy8KLy8gVGhlIHNhbWUtb3JpZ2luIGNoZWNrIGFsb25lIGlzIG5vdCBlbm91Z2g6IGEgdmFsdWUgbGlrZSAvLi8vZXZpbC5jb20gb3IKLy8gL1xldmlsLmNvbSBwYXJzZXMgc2FtZS1vcmlnaW4gYnV0IG5vcm1hbGl6ZXMgdG8gYSBwcm90b2NvbC1yZWxhdGl2ZQovLyAvL2V2aWwuY29tIHdoZW4gYXNzaWduZWQgdG8gbG9jYXRpb24uaHJlZiDigJQgYW4gb3BlbiByZWRpcmVjdC4gU28gcmVxdWlyZSB0aGUKLy8gcmVzb2x2ZWQgcGF0aCB0byBiZSBleGFjdGx5IG9uZSBsZWFkaW5nIHNsYXNoIChubyAiLy8iIHByZWZpeCwgbm8gYmFja3NsYXNoKS4KZXhwb3J0IGZ1bmN0aW9uIHNhZmVSZXR1cm5UbygpIHsKICBjb25zdCByYXcgPSBuZXcgVVJMU2VhcmNoUGFyYW1zKHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gpLmdldCgicmV0dXJuVG8iKTsKICBpZiAoIXJhdykgcmV0dXJuICIvZGFzaGJvYXJkIjsKICB0cnkgewogICAgY29uc3QgdXJsID0gbmV3IFVSTChyYXcsIHdpbmRvdy5sb2NhdGlvbi5vcmlnaW4pOwogICAgaWYgKHVybC5vcmlnaW4gIT09IHdpbmRvdy5sb2NhdGlvbi5vcmlnaW4pIHJldHVybiAiL2Rhc2hib2FyZCI7CiAgICAvLyBPbmx5IGFjY2Vzc190b2tlbi9jbGVhcl9hY2Nlc3NfdG9rZW4gYXJlIHN0aWxsIFVSTC1yZWFkIGJ5IGFwcC1wYXJhbXMuanMsIGJ1dCB0aGUKICAgIC8vIHdob2xlIGJvb3RzdHJhcCBzZXQgc3RheXMgc3RyaXBwZWQ6IG9uZSBnb2luZyBiYWNrIHRvIGEgVVJMIHJlYWQgbXVzdCBub3Qgc2lsZW50bHkKICAgIC8vIGJlY29tZSBpbmplY3RhYmxlIGFnYWluLiBOb3JtYWwgYXBwLWZsb3cgcGFyYW1zIChlLmcuIHRoZSBPQXV0aCBjb25zZW50IGN0eCkgYXJlIGtlcHQuCiAgICBmb3IgKGNvbnN0IHAgb2YgWyJhY2Nlc3NfdG9rZW4iLCAiY2xlYXJfYWNjZXNzX3Rva2VuIiwgImFwcF9pZCIsICJhcHBfYmFzZV91cmwiLCAiZnVuY3Rpb25zX3ZlcnNpb24iLCAiZnJvbV91cmwiXSkgewogICAgICB1cmwuc2VhcmNoUGFyYW1zLmRlbGV0ZShwKTsKICAgIH0KICAgIGNvbnN0IHBhdGggPSB1cmwucGF0aG5hbWUgKyB1cmwuc2VhcmNoOwogICAgaWYgKCFwYXRoLnN0YXJ0c1dpdGgoIi8iKSB8fCBwYXRoLnN0YXJ0c1dpdGgoIi8vIikgfHwgcGF0aC5pbmNsdWRlcygiXFwiKSkgcmV0dXJuICIvZGFzaGJvYXJkIjsKICAgIHJldHVybiBwYXRoOwogIH0gY2F0Y2ggewogICAgcmV0dXJuICIvZGFzaGJvYXJkIjsKICB9Cn0=
+// Shared by the auth pages (Login, Register, and any page that resumes a flow
+// after sign-in, e.g. the MCP OAuth consent page). Keep the redirect
+// validation in one place — it is security-sensitive and easy to drift.
+
+// Resolve ?returnTo= to a safe same-origin path, else "/".
+//
+// The same-origin check alone is not enough: a value like /.//evil.com or
+// /\evil.com parses same-origin but normalizes to a protocol-relative
+// //evil.com when assigned to location.href — an open redirect. So require the
+// resolved path to be exactly one leading slash (no "//" prefix, no backslash).
+export function safeReturnTo() {
+  const raw = new URLSearchParams(window.location.search).get("returnTo");
+  if (!raw) return "/dashboard";
+  try {
+    const url = new URL(raw, window.location.origin);
+    if (url.origin !== window.location.origin) return "/dashboard";
+    // Only access_token/clear_access_token are still URL-read by app-params.js, but the
+    // whole bootstrap set stays stripped: one going back to a URL read must not silently
+    // become injectable again. Normal app-flow params (e.g. the OAuth consent ctx) are kept.
+    for (const p of ["access_token", "clear_access_token", "app_id", "app_base_url", "functions_version", "from_url"]) {
+      url.searchParams.delete(p);
+    }
+    const path = url.pathname + url.search;
+    if (!path.startsWith("/") || path.startsWith("//") || path.includes("\\")) return "/dashboard";
+    return path;
+  } catch {
+    return "/dashboard";
+  }
+}

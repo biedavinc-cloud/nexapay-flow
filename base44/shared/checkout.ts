@@ -1,1 +1,187 @@
-Ly8gTmV4YVBheSBjaGVja291dCBzaGFyZWQgaGVscGVycyDigJQgU3RyaXBlLXN0eWxlIGtleSBtb2RlbCAoc2VjcmV0IC8gcHVibGlzaGFibGUgLyB3ZWJob29rKSwKLy8gc2lnbmVkIGNsaWVudF9zZWNyZXQsIHNpZ25lZCB3ZWJob29rLCBMSVZFIGZpYXQtPlVTRFQgcmF0ZSAoQ29pbkdlY2tvKS4KLy8gVGhlIGNyeXB0byBleGVjdXRpb24gZW5naW5lIGxpdmVzIGluIGNyeXB0by50cyAoc2luZ2xlIHNvdXJjZSBvZiB0cnV0aCkuCgovLyAtLS0gS2V5cyAocHJpdmF0ZSBQU1AsIHNpbmdsZSBtYXJrZXRwbGFjZSkgLS0tCmV4cG9ydCBjb25zdCBTRUNSRVRfS0VZID0gIm5leGFfc2tfdGVzdF8xMjMiOyAgICAgICAvLyBzZXJ2ZXItc2lkZSBvbmx5IChtYXJrZXRwbGFjZSBiYWNrZW5kKQpleHBvcnQgY29uc3QgUFVCTElTSEFCTEVfS0VZID0gIm5leGFfcGtfdGVzdF8xMjMiOyAgLy8gc2FmZSB0byBleHBvc2UgaW4gdGhlIGNsaWVudC9pZnJhbWUKZXhwb3J0IGNvbnN0IFdFQkhPT0tfU0VDUkVUID0gIm5leGFfd2hzZWNfdGVzdF8xMjMiOyAvLyBtYXJrZXRwbGFjZSB2ZXJpZmllcyB3ZWJob29rIHNpZ25hdHVyZXMgd2l0aCB0aGlzCgpjb25zdCBlbmMgPSBuZXcgVGV4dEVuY29kZXIoKTsKCmZ1bmN0aW9uIGI2NHVybChpbnB1dCkgewogIHJldHVybiBidG9hKGlucHV0KS5yZXBsYWNlKC9cKy9nLCAiLSIpLnJlcGxhY2UoL1wvL2csICJfIikucmVwbGFjZSgvPSskLywgIiIpOwp9CgpmdW5jdGlvbiBiNjR1cmxEZWNvZGUoaW5wdXQpIHsKICBsZXQgcyA9IGlucHV0LnJlcGxhY2UoLy0vZywgIisiKS5yZXBsYWNlKC9fL2csICIvIik7CiAgd2hpbGUgKHMubGVuZ3RoICUgNCkgcyArPSAiPSI7CiAgcmV0dXJuIGF0b2Iocyk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGhtYWNCNjQoa2V5LCBtc2cpIHsKICBjb25zdCBjcnlwdG9LZXkgPSBhd2FpdCBjcnlwdG8uc3VidGxlLmltcG9ydEtleSgicmF3IiwgZW5jLmVuY29kZShrZXkpLCB7IG5hbWU6ICJITUFDIiwgaGFzaDogIlNIQS0yNTYiIH0sIGZhbHNlLCBbInNpZ24iXSk7CiAgY29uc3Qgc2lnID0gYXdhaXQgY3J5cHRvLnN1YnRsZS5zaWduKCJITUFDIiwgY3J5cHRvS2V5LCBlbmMuZW5jb2RlKG1zZykpOwogIHJldHVybiBiNjR1cmwoU3RyaW5nLmZyb21DaGFyQ29kZSguLi5uZXcgVWludDhBcnJheShzaWcpKSk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGhtYWNIZXgoa2V5LCBtc2cpIHsKICBjb25zdCBjcnlwdG9LZXkgPSBhd2FpdCBjcnlwdG8uc3VidGxlLmltcG9ydEtleSgicmF3IiwgZW5jLmVuY29kZShrZXkpLCB7IG5hbWU6ICJITUFDIiwgaGFzaDogIlNIQS0yNTYiIH0sIGZhbHNlLCBbInNpZ24iXSk7CiAgY29uc3Qgc2lnID0gYXdhaXQgY3J5cHRvLnN1YnRsZS5zaWduKCJITUFDIiwgY3J5cHRvS2V5LCBlbmMuZW5jb2RlKG1zZykpOwogIHJldHVybiBBcnJheS5mcm9tKG5ldyBVaW50OEFycmF5KHNpZykpLm1hcCgoYikgPT4gYi50b1N0cmluZygxNikucGFkU3RhcnQoMiwgIjAiKSkuam9pbigiIik7Cn0KCi8vIC0tLSBjbGllbnRfc2VjcmV0IChzaWduZWQgc2Vzc2lvbiB0b2tlbiwgYm91bmQgdG8gdGhlIG9yZGVyKSAtLS0KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNyZWF0ZUNsaWVudFNlY3JldChwYXlsb2FkKSB7CiAgY29uc3QgYm9keSA9IGI2NHVybChKU09OLnN0cmluZ2lmeShwYXlsb2FkKSk7CiAgY29uc3Qgc2lnID0gYXdhaXQgaG1hY0I2NChTRUNSRVRfS0VZLCBib2R5KTsKICByZXR1cm4gYCR7Ym9keX0uJHtzaWd9YDsKfQoKZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHZlcmlmeUNsaWVudFNlY3JldChzZWNyZXQpIHsKICBpZiAoIXNlY3JldCkgcmV0dXJuIG51bGw7CiAgY29uc3QgW2JvZHksIHNpZ10gPSBzZWNyZXQuc3BsaXQoIi4iKTsKICBpZiAoIWJvZHkgfHwgIXNpZykgcmV0dXJuIG51bGw7CiAgY29uc3QgZXhwZWN0ZWQgPSBhd2FpdCBobWFjQjY0KFNFQ1JFVF9LRVksIGJvZHkpOwogIGlmIChleHBlY3RlZCAhPT0gc2lnKSByZXR1cm4gbnVsbDsKICB0cnkgewogICAgcmV0dXJuIEpTT04ucGFyc2UoYjY0dXJsRGVjb2RlKGJvZHkpKTsKICB9IGNhdGNoIHsKICAgIHJldHVybiBudWxsOwogIH0KfQoKLy8gLS0tIFdlYmhvb2sgc2lnbmluZyAoU3RyaXBlLVNpZ25hdHVyZSBzdHlsZTogdD08dHM+LHYxPTxoZXgtaG1hYz4pIC0tLQpleHBvcnQgYXN5bmMgZnVuY3Rpb24gc2lnbldlYmhvb2socGF5bG9hZCwgc2VjcmV0ID0gV0VCSE9PS19TRUNSRVQpIHsKICBjb25zdCByYXcgPSBKU09OLnN0cmluZ2lmeShwYXlsb2FkKTsKICBjb25zdCB0ID0gTWF0aC5mbG9vcihEYXRlLm5vdygpIC8gMTAwMCk7CiAgY29uc3QgdjEgPSBhd2FpdCBobWFjSGV4KHNlY3JldCwgYCR7dH0uJHtyYXd9YCk7CiAgcmV0dXJuIHsgcmF3LCBoZWFkZXI6IGB0PSR7dH0sdjE9JHt2MX1gIH07Cn0KCmV4cG9ydCBhc3luYyBmdW5jdGlvbiB2ZXJpZnlXZWJob29rKHJhd0JvZHksIHNpZ25hdHVyZUhlYWRlciwgc2VjcmV0ID0gV0VCSE9PS19TRUNSRVQpIHsKICBpZiAoIXNpZ25hdHVyZUhlYWRlcikgcmV0dXJuIGZhbHNlOwogIGNvbnN0IHBhcnRzID0gT2JqZWN0LmZyb21FbnRyaWVzKFN0cmluZyhzaWduYXR1cmVIZWFkZXIpLnNwbGl0KCIsIikubWFwKChrdikgPT4ga3Yuc3BsaXQoIj0iKSkpOwogIGNvbnN0IHQgPSBwYXJ0cy50OwogIGNvbnN0IHYxID0gcGFydHMudjE7CiAgaWYgKCF0IHx8ICF2MSkgcmV0dXJuIGZhbHNlOwogIGNvbnN0IGV4cGVjdGVkID0gYXdhaXQgaG1hY0hleChzZWNyZXQsIGAke3R9LiR7cmF3Qm9keX1gKTsKICByZXR1cm4gZXhwZWN0ZWQgPT09IHYxOwp9CgovLyAtLS0gREItYmFja2VkIEFQSSBrZXkgcmVzb2x1dGlvbiAocmVhbCBrZXlzIGNyZWF0ZWQgaW4gdGhlIGRhc2hib2FyZCkgLS0tCi8vIFJldHVybnMgeyB0eXBlOiAic2VjcmV0InwicHVibGlzaGFibGUiLCByZWNvcmQsIGxlZ2FjeSB9IG9yIG51bGwuCi8vIExlZ2FjeSBoYXJkY29kZWQgdGVzdCBrZXlzIGFyZSBzdGlsbCBhY2NlcHRlZCBmb3IgZGV2L2JhY2t3YXJkIGNvbXBhdGliaWxpdHkuCmV4cG9ydCBhc3luYyBmdW5jdGlvbiByZXNvbHZlQXBpS2V5KGJhc2U0NCwgYmVhcmVyKSB7CiAgaWYgKCFiZWFyZXIpIHJldHVybiBudWxsOwogIGlmIChiZWFyZXIgPT09IFNFQ1JFVF9LRVkpIHJldHVybiB7IHR5cGU6ICJzZWNyZXQiLCByZWNvcmQ6IG51bGwsIGxlZ2FjeTogdHJ1ZSB9OwogIGlmIChiZWFyZXIgPT09IFBVQkxJU0hBQkxFX0tFWSkgcmV0dXJuIHsgdHlwZTogInB1Ymxpc2hhYmxlIiwgcmVjb3JkOiBudWxsLCBsZWdhY3k6IHRydWUgfTsKICB0cnkgewogICAgY29uc3Qga2V5cyA9IGF3YWl0IGJhc2U0NC5hc1NlcnZpY2VSb2xlLmVudGl0aWVzLkFwaUtleS5saXN0KCItY3JlYXRlZF9kYXRlIiwgMTAwKTsKICAgIGNvbnN0IHJlYyA9IGtleXMuZmluZCgoaykgPT4gay5hY3RpdmUgJiYgKGsuc2VjcmV0X2tleSA9PT0gYmVhcmVyIHx8IGsucHVibGlzaGFibGVfa2V5ID09PSBiZWFyZXIpKTsKICAgIGlmICghcmVjKSByZXR1cm4gbnVsbDsKICAgIHJldHVybiB7IHR5cGU6IHJlYy5zZWNyZXRfa2V5ID09PSBiZWFyZXIgPyAic2VjcmV0IiA6ICJwdWJsaXNoYWJsZSIsIHJlY29yZDogcmVjLCBsZWdhY3k6IGZhbHNlIH07CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gbnVsbDsKICB9Cn0KCi8vIFJlc29sdmVzIHRoZSBzaWduaW5nIHNlY3JldCBmb3IgYSB3ZWJob29rIHRhcmdldCBVUkwgZnJvbSB0aGUgV2ViaG9va0VuZHBvaW50IGNvbmZpZy4KLy8gRmFsbHMgYmFjayB0byB0aGUgZ2xvYmFsIFdFQkhPT0tfU0VDUkVUIHdoZW4gbm8gbWF0Y2hpbmcgZW5kcG9pbnQgaXMgcmVnaXN0ZXJlZC4KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlc29sdmVXZWJob29rU2VjcmV0KGJhc2U0NCwgdXJsKSB7CiAgaWYgKCF1cmwpIHJldHVybiBXRUJIT09LX1NFQ1JFVDsKICB0cnkgewogICAgY29uc3QgZW5kcG9pbnRzID0gYXdhaXQgYmFzZTQ0LmFzU2VydmljZVJvbGUuZW50aXRpZXMuV2ViaG9va0VuZHBvaW50Lmxpc3QoIi1jcmVhdGVkX2RhdGUiLCAxMDApOwogICAgY29uc3QgZXAgPSBlbmRwb2ludHMuZmluZCgoZSkgPT4gZS5hY3RpdmUgJiYgZS51cmwgPT09IHVybCk7CiAgICByZXR1cm4gKGVwICYmIGVwLnNpZ25pbmdfc2VjcmV0KSB8fCBXRUJIT09LX1NFQ1JFVDsKICB9IGNhdGNoIHsKICAgIHJldHVybiBXRUJIT09LX1NFQ1JFVDsKICB9Cn0KCi8vIC0tLSBJRHMgLS0tCmV4cG9ydCBmdW5jdGlvbiBnZW5TZXNzaW9uSWQoKSB7CiAgY29uc3Qgc3RhbXAgPSBEYXRlLm5vdygpLnRvU3RyaW5nKDM2KS50b1VwcGVyQ2FzZSgpOwogIGNvbnN0IHJhbmQgPSBNYXRoLnJhbmRvbSgpLnRvU3RyaW5nKDM2KS5zbGljZSgyLCA4KS50b1VwcGVyQ2FzZSgpOwogIHJldHVybiBgY3NfJHtzdGFtcH0ke3JhbmR9YDsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdlblRyYW5zYWN0aW9uSWQoKSB7CiAgY29uc3QgcmFuZCA9IE1hdGgucmFuZG9tKCkudG9TdHJpbmcoMzYpLnNsaWNlKDIsIDgpLnRvVXBwZXJDYXNlKCk7CiAgcmV0dXJuIGBOWC0yMDI2LSR7cmFuZH1gOwp9CgpleHBvcnQgZnVuY3Rpb24gZ2VuUmVmZXJlbmNlKCkgewogIGNvbnN0IHN0YW1wID0gRGF0ZS5ub3coKS50b1N0cmluZygzNikudG9VcHBlckNhc2UoKTsKICBjb25zdCByYW5kID0gTWF0aC5yYW5kb20oKS50b1N0cmluZygzNikuc2xpY2UoMiwgOCkudG9VcHBlckNhc2UoKTsKICByZXR1cm4gYE5YUC0ke3N0YW1wfS0ke3JhbmR9YDsKfQoKLy8gLS0tIExJVkUgVVNEVCByYXRlIChDb2luR2Vja28gcHVibGljIEFQSSwgbm8ga2V5IHJlcXVpcmVkKSAtLS0KLy8gUmV0dXJucyBVU0RUIHBlciAxIHVuaXQgb2YgYGN1cnJlbmN5YCAoaS5lLiBtdWx0aXBseSBmaWF0IGFtb3VudCBieSB0aGlzIHRvIGdldCBVU0RUKS4KZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGZldGNoTGl2ZVVzZHRSYXRlKGN1cnJlbmN5KSB7CiAgY29uc3QgY3VyID0gKGN1cnJlbmN5IHx8ICJVU0QiKS50b0xvd2VyQ2FzZSgpOwogIHRyeSB7CiAgICBjb25zdCByID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vYXBpLmNvaW5nZWNrby5jb20vYXBpL3YzL3NpbXBsZS9wcmljZT9pZHM9dGV0aGVyJnZzX2N1cnJlbmNpZXM9JHtjdXJ9YCk7CiAgICBpZiAoIXIub2spIHRocm93IG5ldyBFcnJvcigicmF0ZSBhcGkiKTsKICAgIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICAgIGNvbnN0IHByaWNlID0gZD8udGV0aGVyPy5bY3VyXTsgLy8gcHJpY2Ugb2YgMSBVU0RUIGluIHRoZSBmaWF0IGN1cnJlbmN5CiAgICBpZiAoIXByaWNlIHx8IHByaWNlIDw9IDApIHJldHVybiBudWxsOwogICAgcmV0dXJuIDEgLyBwcmljZTsKICB9IGNhdGNoIHsKICAgIHJldHVybiBudWxsOwogIH0KfQoKLy8gT2ZmbGluZSBmYWxsYmFjayBxdW90ZSAodXNlZCBpZiB0aGUgbGl2ZSBBUEkgaXMgdW5yZWFjaGFibGUpLgpleHBvcnQgZnVuY3Rpb24gcXVvdGVSYXRlKGN1cnJlbmN5KSB7CiAgY29uc3QgYmFzZSA9IGN1cnJlbmN5ID09PSAiRVVSIiA/IDEuMDgyNSA6IGN1cnJlbmN5ID09PSAiVVNEIiA/IDEuMCA6IDEuMDgyNTsKICBjb25zdCB2YXJpYW5jZSA9IDEgKyAoTWF0aC5yYW5kb20oKSAqIDAuMDA0IC0gMC4wMDIpOwogIHJldHVybiBNYXRoLnJvdW5kKGJhc2UgKiB2YXJpYW5jZSAqIDEwMDAwKSAvIDEwMDAwOwp9CgovLyBSZXNvbHZlIHRoZSBiZXN0IHJhdGU6IGxpdmUgZmlyc3QsIGZhbGxiYWNrIHRvIHF1b3RlLgpleHBvcnQgYXN5bmMgZnVuY3Rpb24gcmVzb2x2ZVJhdGUoY3VycmVuY3kpIHsKICBjb25zdCBsaXZlID0gYXdhaXQgZmV0Y2hMaXZlVXNkdFJhdGUoY3VycmVuY3kpOwogIGlmIChsaXZlICYmIE51bWJlci5pc0Zpbml0ZShsaXZlKSAmJiBsaXZlID4gMCkgewogICAgcmV0dXJuIHsgcmF0ZTogTWF0aC5yb3VuZChsaXZlICogMWU2KSAvIDFlNiwgbGl2ZTogdHJ1ZSB9OwogIH0KICByZXR1cm4geyByYXRlOiBxdW90ZVJhdGUoY3VycmVuY3kpLCBsaXZlOiBmYWxzZSB9Owp9CgpleHBvcnQgZnVuY3Rpb24gZW5jb2RlUGF5bG9hZChvYmopIHsKICB0cnkgewogICAgcmV0dXJuIGJ0b2EodW5lc2NhcGUoZW5jb2RlVVJJQ29tcG9uZW50KEpTT04uc3RyaW5naWZ5KG9iaikpKSk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gIiI7CiAgfQp9CgpleHBvcnQgZnVuY3Rpb24gZXh0cmFjdEJlYXJlcihyZXEpIHsKICBjb25zdCBoID0gcmVxLmhlYWRlcnMuZ2V0KCJBdXRob3JpemF0aW9uIikgfHwgcmVxLmhlYWRlcnMuZ2V0KCJhdXRob3JpemF0aW9uIikgfHwgIiI7CiAgY29uc3QgbSA9IGgubWF0Y2goL15CZWFyZXJccysoLispJC9pKTsKICByZXR1cm4gbSA/IG1bMV0udHJpbSgpIDogIiI7Cn0KCmV4cG9ydCBmdW5jdGlvbiBub3JtQ3VycmVuY3kodmFsdWUpIHsKICByZXR1cm4gKHZhbHVlIHx8ICJFVVIiKS50b1N0cmluZygpLnRvVXBwZXJDYXNlKCk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBub3JtVGV4dCh2YWx1ZSkgewogIHJldHVybiAodmFsdWUgfHwgIiIpLnRvU3RyaW5nKCk7Cn0KCi8vIC0tLSBmb3JtYXR0aW5nIC0tLQpleHBvcnQgY29uc3QgWkVST19ERUNJTUFMX0NVUlJFTkNJRVMgPSBbIlhBRiIsICJYT0YiLCAiSlBZIiwgIktSVyIsICJDTFAiLCAiVlVWIiwgIlhQRiJdOwoKZXhwb3J0IGZ1bmN0aW9uIGZvcm1hdFRvdGFsKGFtb3VudCwgY3VycmVuY3kpIHsKICBjb25zdCBjb2RlID0gKGN1cnJlbmN5IHx8ICJFVVIiKS50b1VwcGVyQ2FzZSgpOwogIGNvbnN0IHplcm8gPSBaRVJPX0RFQ0lNQUxfQ1VSUkVOQ0lFUy5pbmNsdWRlcyhjb2RlKTsKICBjb25zdCB2YWx1ZSA9IHplcm8gPyBNYXRoLnJvdW5kKGFtb3VudCkgOiBhbW91bnQ7CiAgY29uc3QgbnVtID0gbmV3IEludGwuTnVtYmVyRm9ybWF0KCJmci1GUiIsIHsKICAgIG1pbmltdW1GcmFjdGlvbkRpZ2l0czogemVybyA/IDAgOiAyLAogICAgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiB6ZXJvID8gMCA6IDIsCiAgfSkuZm9ybWF0KHZhbHVlKTsKICBjb25zdCBzeW1ib2xzID0geyBFVVI6ICLigqwiLCBVU0Q6ICIkIiB9OwogIHJldHVybiBgJHtudW19ICR7c3ltYm9sc1tjb2RlXSB8fCBjb2RlfWA7Cn0=
+// NexaPay checkout shared helpers — Stripe-style key model (secret / publishable / webhook),
+// signed client_secret, signed webhook, LIVE fiat->USDT rate (CoinGecko).
+// The crypto execution engine lives in crypto.ts (single source of truth).
+
+// --- Keys (private PSP, single marketplace) ---
+export const SECRET_KEY = "nexa_sk_test_123";       // server-side only (marketplace backend)
+export const PUBLISHABLE_KEY = "nexa_pk_test_123";  // safe to expose in the client/iframe
+export const WEBHOOK_SECRET = "nexa_whsec_test_123"; // marketplace verifies webhook signatures with this
+
+const enc = new TextEncoder();
+
+function b64url(input) {
+  return btoa(input).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function b64urlDecode(input) {
+  let s = input.replace(/-/g, "+").replace(/_/g, "/");
+  while (s.length % 4) s += "=";
+  return atob(s);
+}
+
+async function hmacB64(key, msg) {
+  const cryptoKey = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", cryptoKey, enc.encode(msg));
+  return b64url(String.fromCharCode(...new Uint8Array(sig)));
+}
+
+async function hmacHex(key, msg) {
+  const cryptoKey = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", cryptoKey, enc.encode(msg));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+// --- client_secret (signed session token, bound to the order) ---
+export async function createClientSecret(payload) {
+  const body = b64url(JSON.stringify(payload));
+  const sig = await hmacB64(SECRET_KEY, body);
+  return `${body}.${sig}`;
+}
+
+export async function verifyClientSecret(secret) {
+  if (!secret) return null;
+  const [body, sig] = secret.split(".");
+  if (!body || !sig) return null;
+  const expected = await hmacB64(SECRET_KEY, body);
+  if (expected !== sig) return null;
+  try {
+    return JSON.parse(b64urlDecode(body));
+  } catch {
+    return null;
+  }
+}
+
+// --- Webhook signing (Stripe-Signature style: t=<ts>,v1=<hex-hmac>) ---
+export async function signWebhook(payload, secret = WEBHOOK_SECRET) {
+  const raw = JSON.stringify(payload);
+  const t = Math.floor(Date.now() / 1000);
+  const v1 = await hmacHex(secret, `${t}.${raw}`);
+  return { raw, header: `t=${t},v1=${v1}` };
+}
+
+export async function verifyWebhook(rawBody, signatureHeader, secret = WEBHOOK_SECRET) {
+  if (!signatureHeader) return false;
+  const parts = Object.fromEntries(String(signatureHeader).split(",").map((kv) => kv.split("=")));
+  const t = parts.t;
+  const v1 = parts.v1;
+  if (!t || !v1) return false;
+  const expected = await hmacHex(secret, `${t}.${rawBody}`);
+  return expected === v1;
+}
+
+// --- DB-backed API key resolution (real keys created in the dashboard) ---
+// Returns { type: "secret"|"publishable", record, legacy } or null.
+// Legacy hardcoded test keys are still accepted for dev/backward compatibility.
+export async function resolveApiKey(base44, bearer) {
+  if (!bearer) return null;
+  if (bearer === SECRET_KEY) return { type: "secret", record: null, legacy: true };
+  if (bearer === PUBLISHABLE_KEY) return { type: "publishable", record: null, legacy: true };
+  try {
+    const keys = await base44.asServiceRole.entities.ApiKey.list("-created_date", 100);
+    const rec = keys.find((k) => k.active && (k.secret_key === bearer || k.publishable_key === bearer));
+    if (!rec) return null;
+    return { type: rec.secret_key === bearer ? "secret" : "publishable", record: rec, legacy: false };
+  } catch {
+    return null;
+  }
+}
+
+// Resolves the signing secret for a webhook target URL from the WebhookEndpoint config.
+// Falls back to the global WEBHOOK_SECRET when no matching endpoint is registered.
+export async function resolveWebhookSecret(base44, url) {
+  if (!url) return WEBHOOK_SECRET;
+  try {
+    const endpoints = await base44.asServiceRole.entities.WebhookEndpoint.list("-created_date", 100);
+    const ep = endpoints.find((e) => e.active && e.url === url);
+    return (ep && ep.signing_secret) || WEBHOOK_SECRET;
+  } catch {
+    return WEBHOOK_SECRET;
+  }
+}
+
+// --- IDs ---
+export function genSessionId() {
+  const stamp = Date.now().toString(36).toUpperCase();
+  const rand = Math.random().toString(36).slice(2, 8).toUpperCase();
+  return `cs_${stamp}${rand}`;
+}
+
+export function genTransactionId() {
+  const rand = Math.random().toString(36).slice(2, 8).toUpperCase();
+  return `NX-2026-${rand}`;
+}
+
+export function genReference() {
+  const stamp = Date.now().toString(36).toUpperCase();
+  const rand = Math.random().toString(36).slice(2, 8).toUpperCase();
+  return `NXP-${stamp}-${rand}`;
+}
+
+// --- LIVE USDT rate (CoinGecko public API, no key required) ---
+// Returns USDT per 1 unit of `currency` (i.e. multiply fiat amount by this to get USDT).
+export async function fetchLiveUsdtRate(currency) {
+  const cur = (currency || "USD").toLowerCase();
+  try {
+    const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=tether&vs_currencies=${cur}`);
+    if (!r.ok) throw new Error("rate api");
+    const d = await r.json();
+    const price = d?.tether?.[cur]; // price of 1 USDT in the fiat currency
+    if (!price || price <= 0) return null;
+    return 1 / price;
+  } catch {
+    return null;
+  }
+}
+
+// Offline fallback quote (used if the live API is unreachable).
+export function quoteRate(currency) {
+  const base = currency === "EUR" ? 1.0825 : currency === "USD" ? 1.0 : 1.0825;
+  const variance = 1 + (Math.random() * 0.004 - 0.002);
+  return Math.round(base * variance * 10000) / 10000;
+}
+
+// Resolve the best rate: live first, fallback to quote.
+export async function resolveRate(currency) {
+  const live = await fetchLiveUsdtRate(currency);
+  if (live && Number.isFinite(live) && live > 0) {
+    return { rate: Math.round(live * 1e6) / 1e6, live: true };
+  }
+  return { rate: quoteRate(currency), live: false };
+}
+
+export function encodePayload(obj) {
+  try {
+    return btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+  } catch {
+    return "";
+  }
+}
+
+export function extractBearer(req) {
+  const h = req.headers.get("Authorization") || req.headers.get("authorization") || "";
+  const m = h.match(/^Bearer\s+(.+)$/i);
+  return m ? m[1].trim() : "";
+}
+
+export function normCurrency(value) {
+  return (value || "EUR").toString().toUpperCase();
+}
+
+export function normText(value) {
+  return (value || "").toString();
+}
+
+// --- formatting ---
+export const ZERO_DECIMAL_CURRENCIES = ["XAF", "XOF", "JPY", "KRW", "CLP", "VUV", "XPF"];
+
+export function formatTotal(amount, currency) {
+  const code = (currency || "EUR").toUpperCase();
+  const zero = ZERO_DECIMAL_CURRENCIES.includes(code);
+  const value = zero ? Math.round(amount) : amount;
+  const num = new Intl.NumberFormat("fr-FR", {
+    minimumFractionDigits: zero ? 0 : 2,
+    maximumFractionDigits: zero ? 0 : 2,
+  }).format(value);
+  const symbols = { EUR: "€", USD: "$" };
+  return `${num} ${symbols[code] || code}`;
+}

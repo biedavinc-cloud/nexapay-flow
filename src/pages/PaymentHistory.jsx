@@ -1,1 +1,79 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IFN0YXR1c1BpbGwgZnJvbSAiQC9jb21wb25lbnRzL1N0YXR1c1BpbGwiOwppbXBvcnQgeyBIaXN0b3J5LCBMb2FkZXIyLCBFeHRlcm5hbExpbmsgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKZnVuY3Rpb24gZXhwbG9yZXJVcmwoaGFzaCkgewogIGlmICghaGFzaCkgcmV0dXJuICIiOwogIGlmICgvXjB4L2kudGVzdChoYXNoKSkgcmV0dXJuIGBodHRwczovL2V0aGVyc2Nhbi5pby90eC8ke2hhc2h9YDsKICByZXR1cm4gYGh0dHBzOi8vdHJvbnNjYW4ub3JnLyMvdHJhbnNhY3Rpb24vJHtoYXNofWA7Cn0KCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBheW1lbnRIaXN0b3J5KCkgewogIGNvbnN0IFtyb3dzLCBzZXRSb3dzXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIChhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBiYXNlNDQuZW50aXRpZXMuVHJhbnNhY3Rpb24ubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDIwMCk7CiAgICAgIHNldFJvd3MoZGF0YSk7CiAgICAgIHNldExvYWRpbmcoZmFsc2UpOwogICAgfSkoKTsKICB9LCBbXSk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy03eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IkpvdXJuYWwgZGVzIHBhaWVtZW50cyIKICAgICAgICBkZXNjcmlwdGlvbj0iU3VpdmkgZMOpdGFpbGzDqSA6IG9yZHJlIOKGkiBhY2hhdCBjcnlwdG8g4oaSIHN0YXR1dCB3ZWJob29rLiIKICAgICAgICBpY29uPXtIaXN0b3J5fQogICAgICAvPgogICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgICAge2xvYWRpbmcgPyAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC04IGZsZXgganVzdGlmeS1jZW50ZXIiPjxMb2FkZXIyIGNsYXNzTmFtZT0iaC01IHctNSBhbmltYXRlLXNwaW4gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIiAvPjwvZGl2PgogICAgICAgICkgOiByb3dzLmxlbmd0aCA9PT0gMCA/ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggdGV4dC1jZW50ZXIgdGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkF1Y3VuZSB0cmFuc2FjdGlvbi48L2Rpdj4KICAgICAgICApIDogKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im92ZXJmbG93LXgtYXV0byI+CiAgICAgICAgICAgIDx0YWJsZSBjbGFzc05hbWU9InctZnVsbCB0ZXh0LXNtIj4KICAgICAgICAgICAgICA8dGhlYWQ+CiAgICAgICAgICAgICAgICA8dHIgY2xhc3NOYW1lPSJib3JkZXItYiBib3JkZXItYm9yZGVyIHRleHQtbGVmdCB0ZXh0LXhzIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPlLDqWbDqXJlbmNlPC90aD4KICAgICAgICAgICAgICAgICAgPHRoIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj5PcmRyZTwvdGg+CiAgICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LW1lZGl1bSI+UsOpc2VhdTwvdGg+CiAgICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LW1lZGl1bSI+RXhjaGFuZ2U8L3RoPgogICAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPlR4IGhhc2g8L3RoPgogICAgICAgICAgICAgICAgICA8dGggY2xhc3NOYW1lPSJweC00IHB5LTMgZm9udC1tZWRpdW0iPlN0YXR1dDwvdGg+CiAgICAgICAgICAgICAgICAgIDx0aCBjbGFzc05hbWU9InB4LTQgcHktMyBmb250LW1lZGl1bSI+RGF0ZTwvdGg+CiAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgIDwvdGhlYWQ+CiAgICAgICAgICAgICAgPHRib2R5PgogICAgICAgICAgICAgICAge3Jvd3MubWFwKCh0KSA9PiB7CiAgICAgICAgICAgICAgICAgIGNvbnN0IHVybCA9IGV4cGxvcmVyVXJsKHQudHhfaGFzaF9jcnlwdG8pOwogICAgICAgICAgICAgICAgICByZXR1cm4gKAogICAgICAgICAgICAgICAgICAgIDx0ciBrZXk9e3QuaWR9IGNsYXNzTmFtZT0iYm9yZGVyLWIgYm9yZGVyLWJvcmRlci82MCBob3ZlcjpiZy1hY2NlbnQvNDAiPgogICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbW9ubyB0ZXh0LXhzIj57dC5yZWZlcmVuY2VfZmlhdH08L3RkPgogICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIGZvbnQtbWVkaXVtIj57TnVtYmVyKHQuYW1vdW50X2ZpYXQpfSB7dC5jdXJyZW5jeV9maWF0IHx8IHQuYXNzZXR9PC90ZD4KICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPnt0Lm5ldHdvcmsgfHwgIuKAlCJ9PC90ZD4KICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9InB4LTQgcHktMyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPnt0LmNyeXB0b19wcm92aWRlcn08L3RkPgogICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj4KICAgICAgICAgICAgICAgICAgICAgICAge3QudHhfaGFzaF9jcnlwdG8gPyAoCiAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj17dXJsfSB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub3JlZmVycmVyIiBjbGFzc05hbWU9ImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSBmb250LW1vbm8gdGV4dC14cyB0ZXh0LXByaW1hcnkgaG92ZXI6dW5kZXJsaW5lIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0LnR4X2hhc2hfY3J5cHRvLnNsaWNlKDAsIDEwKX3igKYgPEV4dGVybmFsTGluayBjbGFzc05hbWU9ImgtMyB3LTMiIC8+CiAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICApIDogPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LW11dGVkLWZvcmVncm91bmQiPuKAlDwvc3Bhbj59CiAgICAgICAgICAgICAgICAgICAgICA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT0icHgtNCBweS0zIj48U3RhdHVzUGlsbCBzdGF0dXM9e3Quc3RhdHVzfSAvPjwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPSJweC00IHB5LTMgdGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntuZXcgRGF0ZSh0LmNyZWF0ZWRfZGF0ZSkudG9Mb2NhbGVTdHJpbmcoImZyLUZSIil9PC90ZD4KICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfSl9CiAgICAgICAgICAgICAgPC90Ym9keT4KICAgICAgICAgICAgPC90YWJsZT4KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import StatusPill from "@/components/StatusPill";
+import { History, Loader2, ExternalLink } from "lucide-react";
+
+function explorerUrl(hash) {
+  if (!hash) return "";
+  if (/^0x/i.test(hash)) return `https://etherscan.io/tx/${hash}`;
+  return `https://tronscan.org/#/transaction/${hash}`;
+}
+
+export default function PaymentHistory() {
+  const [rows, setRows] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const data = await base44.entities.Transaction.list("-created_date", 200);
+      setRows(data);
+      setLoading(false);
+    })();
+  }, []);
+
+  return (
+    <div className="p-6 md:p-8 max-w-7xl mx-auto">
+      <PageHeader
+        title="Journal des paiements"
+        description="Suivi détaillé : ordre → achat crypto → statut webhook."
+        icon={History}
+      />
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-8 flex justify-center"><Loader2 className="h-5 w-5 animate-spin text-muted-foreground" /></div>
+        ) : rows.length === 0 ? (
+          <div className="p-8 text-center text-sm text-muted-foreground">Aucune transaction.</div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border text-left text-xs uppercase tracking-wider text-muted-foreground">
+                  <th className="px-4 py-3 font-medium">Référence</th>
+                  <th className="px-4 py-3 font-medium">Ordre</th>
+                  <th className="px-4 py-3 font-medium">Réseau</th>
+                  <th className="px-4 py-3 font-medium">Exchange</th>
+                  <th className="px-4 py-3 font-medium">Tx hash</th>
+                  <th className="px-4 py-3 font-medium">Statut</th>
+                  <th className="px-4 py-3 font-medium">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((t) => {
+                  const url = explorerUrl(t.tx_hash_crypto);
+                  return (
+                    <tr key={t.id} className="border-b border-border/60 hover:bg-accent/40">
+                      <td className="px-4 py-3 font-mono text-xs">{t.reference_fiat}</td>
+                      <td className="px-4 py-3 font-medium">{Number(t.amount_fiat)} {t.currency_fiat || t.asset}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{t.network || "—"}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{t.crypto_provider}</td>
+                      <td className="px-4 py-3">
+                        {t.tx_hash_crypto ? (
+                          <a href={url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 font-mono text-xs text-primary hover:underline">
+                            {t.tx_hash_crypto.slice(0, 10)}… <ExternalLink className="h-3 w-3" />
+                          </a>
+                        ) : <span className="text-muted-foreground">—</span>}
+                      </td>
+                      <td className="px-4 py-3"><StatusPill status={t.status} /></td>
+                      <td className="px-4 py-3 text-xs text-muted-foreground">{new Date(t.created_date).toLocaleString("fr-FR")}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

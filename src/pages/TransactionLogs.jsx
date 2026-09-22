@@ -1,1 +1,73 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IFN0YXR1c1BpbGwgZnJvbSAiQC9jb21wb25lbnRzL1N0YXR1c1BpbGwiOwppbXBvcnQgeyBTY3JvbGxUZXh0LCBMb2FkZXIyIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgU2VsZWN0LCBTZWxlY3RDb250ZW50LCBTZWxlY3RJdGVtLCBTZWxlY3RUcmlnZ2VyLCBTZWxlY3RWYWx1ZSB9IGZyb20gIkAvY29tcG9uZW50cy91aS9zZWxlY3QiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gVHJhbnNhY3Rpb25Mb2dzKCkgewogIGNvbnN0IFtsb2dzLCBzZXRMb2dzXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKICBjb25zdCBbbGV2ZWwsIHNldExldmVsXSA9IHVzZVN0YXRlKCJBTEwiKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIChhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBiYXNlNDQuZW50aXRpZXMuVHJhbnNhY3Rpb25Mb2cubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDIwMCk7CiAgICAgIHNldExvZ3MoZGF0YSk7CiAgICAgIHNldExvYWRpbmcoZmFsc2UpOwogICAgfSkoKTsKICB9LCBbXSk7CgogIGNvbnN0IGZpbHRlcmVkID0gbGV2ZWwgPT09ICJBTEwiID8gbG9ncyA6IGxvZ3MuZmlsdGVyKChsKSA9PiBsLmxldmVsID09PSBsZXZlbCk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy02eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IkpvdXJuYWwgZGVzIHRyYW5zYWN0aW9ucyIKICAgICAgICBkZXNjcmlwdGlvbj0iUGlzdGUgZCdhdWRpdCA6IGNoYW5nZW1lbnRzIGRlIHN0YXR1dCBldCBlcnJldXJzIHN5c3TDqG1lLiIKICAgICAgICBpY29uPXtTY3JvbGxUZXh0fQogICAgICAgIGFjdGlvbj17CiAgICAgICAgICA8U2VsZWN0IHZhbHVlPXtsZXZlbH0gb25WYWx1ZUNoYW5nZT17c2V0TGV2ZWx9PgogICAgICAgICAgICA8U2VsZWN0VHJpZ2dlciBjbGFzc05hbWU9InctNDAgcm91bmRlZC14bCI+CiAgICAgICAgICAgICAgPFNlbGVjdFZhbHVlIC8+CiAgICAgICAgICAgIDwvU2VsZWN0VHJpZ2dlcj4KICAgICAgICAgICAgPFNlbGVjdENvbnRlbnQ+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IkFMTCI+VG91cyBuaXZlYXV4PC9TZWxlY3RJdGVtPgogICAgICAgICAgICAgIDxTZWxlY3RJdGVtIHZhbHVlPSJJTkZPIj5JTkZPPC9TZWxlY3RJdGVtPgogICAgICAgICAgICAgIDxTZWxlY3RJdGVtIHZhbHVlPSJXQVJOIj5XQVJOPC9TZWxlY3RJdGVtPgogICAgICAgICAgICAgIDxTZWxlY3RJdGVtIHZhbHVlPSJFUlJPUiI+RVJST1I8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD4KICAgICAgICAgIDwvU2VsZWN0PgogICAgICAgIH0KICAgICAgLz4KICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBvdmVyZmxvdy1oaWRkZW4iPgogICAgICAgIHtsb2FkaW5nID8gKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InAtOCBmbGV4IGp1c3RpZnktY2VudGVyIj4KICAgICAgICAgICAgPExvYWRlcjIgY2xhc3NOYW1lPSJoLTUgdy01IGFuaW1hdGUtc3BpbiB0ZXh0LW11dGVkLWZvcmVncm91bmQiIC8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICApIDogZmlsdGVyZWQubGVuZ3RoID09PSAwID8gKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InAtOCB0ZXh0LWNlbnRlciB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+QXVjdW4gbG9nLjwvZGl2PgogICAgICAgICkgOiAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZGl2aWRlLXkgZGl2aWRlLWJvcmRlciI+CiAgICAgICAgICAgIHtmaWx0ZXJlZC5tYXAoKGwpID0+ICgKICAgICAgICAgICAgICA8ZGl2IGtleT17bC5pZH0gY2xhc3NOYW1lPSJwLTQgZmxleCBmbGV4LWNvbCBtZDpmbGV4LXJvdyBtZDppdGVtcy1jZW50ZXIgZ2FwLTIgbWQ6Z2FwLTQiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHctNTYgc2hyaW5rLTAiPgogICAgICAgICAgICAgICAgICA8U3RhdHVzUGlsbCBzdGF0dXM9e2wubGV2ZWx9IC8+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICAgICAgICAgIHtuZXcgRGF0ZShsLmNyZWF0ZWRfZGF0ZSkudG9Mb2NhbGVTdHJpbmcoImZyLUZSIil9CiAgICAgICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXgtMSBtaW4tdy0wIj4KICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIHRydW5jYXRlIj57bC5tZXNzYWdlfTwvcD4KICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+CiAgICAgICAgICAgICAgICAgICAge2wucmVmZXJlbmNlX2ZpYXQgfHwgbC50cmFuc2FjdGlvbl9pZH0gwrcge2wuZnJvbV9zdGF0dXMgfHwgIuKAlCJ9IOKGkiB7bC50b19zdGF0dXN9IMK3IHtsLmFjdG9yfQogICAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICApfQogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0=
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import StatusPill from "@/components/StatusPill";
+import { ScrollText, Loader2 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+export default function TransactionLogs() {
+  const [logs, setLogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [level, setLevel] = useState("ALL");
+
+  useEffect(() => {
+    (async () => {
+      const data = await base44.entities.TransactionLog.list("-created_date", 200);
+      setLogs(data);
+      setLoading(false);
+    })();
+  }, []);
+
+  const filtered = level === "ALL" ? logs : logs.filter((l) => l.level === level);
+
+  return (
+    <div className="p-6 md:p-8 max-w-6xl mx-auto">
+      <PageHeader
+        title="Journal des transactions"
+        description="Piste d'audit : changements de statut et erreurs système."
+        icon={ScrollText}
+        action={
+          <Select value={level} onValueChange={setLevel}>
+            <SelectTrigger className="w-40 rounded-xl">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="ALL">Tous niveaux</SelectItem>
+              <SelectItem value="INFO">INFO</SelectItem>
+              <SelectItem value="WARN">WARN</SelectItem>
+              <SelectItem value="ERROR">ERROR</SelectItem>
+            </SelectContent>
+          </Select>
+        }
+      />
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-8 flex justify-center">
+            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+          </div>
+        ) : filtered.length === 0 ? (
+          <div className="p-8 text-center text-sm text-muted-foreground">Aucun log.</div>
+        ) : (
+          <div className="divide-y divide-border">
+            {filtered.map((l) => (
+              <div key={l.id} className="p-4 flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <div className="flex items-center gap-2 w-56 shrink-0">
+                  <StatusPill status={l.level} />
+                  <span className="text-xs text-muted-foreground">
+                    {new Date(l.created_date).toLocaleString("fr-FR")}
+                  </span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium truncate">{l.message}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {l.reference_fiat || l.transaction_id} · {l.from_status || "—"} → {l.to_status} · {l.actor}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

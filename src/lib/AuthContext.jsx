@@ -1,1 +1,148 @@
-aW1wb3J0IFJlYWN0LCB7IGNyZWF0ZUNvbnRleHQsIHVzZVN0YXRlLCB1c2VDb250ZXh0LCB1c2VFZmZlY3QgfSBmcm9tICdyZWFjdCc7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gJ0AvYXBpL2Jhc2U0NENsaWVudCc7CmltcG9ydCB7IGFwcFBhcmFtcyB9IGZyb20gJ0AvbGliL2FwcC1wYXJhbXMnOwoKY29uc3QgQXV0aENvbnRleHQgPSBjcmVhdGVDb250ZXh0KCk7CgpleHBvcnQgY29uc3QgQXV0aFByb3ZpZGVyID0gKHsgY2hpbGRyZW4gfSkgPT4gewogIGNvbnN0IFt1c2VyLCBzZXRVc2VyXSA9IHVzZVN0YXRlKG51bGwpOwogIGNvbnN0IFtpc0F1dGhlbnRpY2F0ZWQsIHNldElzQXV0aGVudGljYXRlZF0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgW2lzTG9hZGluZ0F1dGgsIHNldElzTG9hZGluZ0F1dGhdID0gdXNlU3RhdGUodHJ1ZSk7CiAgY29uc3QgW2lzTG9hZGluZ1B1YmxpY1NldHRpbmdzLCBzZXRJc0xvYWRpbmdQdWJsaWNTZXR0aW5nc10gPSB1c2VTdGF0ZSh0cnVlKTsKICBjb25zdCBbYXV0aEVycm9yLCBzZXRBdXRoRXJyb3JdID0gdXNlU3RhdGUobnVsbCk7CiAgY29uc3QgW2F1dGhDaGVja2VkLCBzZXRBdXRoQ2hlY2tlZF0gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgW2FwcFB1YmxpY1NldHRpbmdzLCBzZXRBcHBQdWJsaWNTZXR0aW5nc10gPSB1c2VTdGF0ZShudWxsKTsgLy8gQ29udGFpbnMgb25seSB7IGlkLCBwdWJsaWNfc2V0dGluZ3MgfQoKICB1c2VFZmZlY3QoKCkgPT4gewogICAgY2hlY2tBcHBTdGF0ZSgpOwogIH0sIFtdKTsKCiAgY29uc3QgY2hlY2tBcHBTdGF0ZSA9IGFzeW5jICgpID0+IHsKICAgIHRyeSB7CiAgICAgIHNldElzTG9hZGluZ1B1YmxpY1NldHRpbmdzKHRydWUpOwogICAgICBzZXRBdXRoRXJyb3IobnVsbCk7CiAgICAgIAogICAgICB0cnkgewogICAgICAgIGNvbnN0IHB1YmxpY1NldHRpbmdzID0gYXdhaXQgYmFzZTQ0LmFwcC5nZXRQdWJsaWNTZXR0aW5ncygpOwogICAgICAgIHNldEFwcFB1YmxpY1NldHRpbmdzKHB1YmxpY1NldHRpbmdzKTsKICAgICAgICAKICAgICAgICAvLyBJZiB3ZSBnb3QgdGhlIGFwcCBwdWJsaWMgc2V0dGluZ3Mgc3VjY2Vzc2Z1bGx5LCBjaGVjayBpZiB1c2VyIGlzIGF1dGhlbnRpY2F0ZWQKICAgICAgICBpZiAoYXBwUGFyYW1zLnRva2VuKSB7CiAgICAgICAgICBhd2FpdCBjaGVja1VzZXJBdXRoKCk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgIHNldElzTG9hZGluZ0F1dGgoZmFsc2UpOwogICAgICAgICAgc2V0SXNBdXRoZW50aWNhdGVkKGZhbHNlKTsKICAgICAgICAgIHNldEF1dGhDaGVja2VkKHRydWUpOwogICAgICAgIH0KICAgICAgICBzZXRJc0xvYWRpbmdQdWJsaWNTZXR0aW5ncyhmYWxzZSk7CiAgICAgIH0gY2F0Y2ggKGFwcEVycm9yKSB7CiAgICAgICAgY29uc29sZS5lcnJvcignQXBwIHN0YXRlIGNoZWNrIGZhaWxlZDonLCBhcHBFcnJvcik7CiAgICAgICAgCiAgICAgICAgLy8gSGFuZGxlIGFwcC1sZXZlbCBlcnJvcnMKICAgICAgICBpZiAoYXBwRXJyb3Iuc3RhdHVzID09PSA0MDMgJiYgYXBwRXJyb3IuZGF0YT8uZXh0cmFfZGF0YT8ucmVhc29uKSB7CiAgICAgICAgICBjb25zdCByZWFzb24gPSBhcHBFcnJvci5kYXRhLmV4dHJhX2RhdGEucmVhc29uOwogICAgICAgICAgaWYgKHJlYXNvbiA9PT0gJ2F1dGhfcmVxdWlyZWQnKSB7CiAgICAgICAgICAgIHNldEF1dGhFcnJvcih7CiAgICAgICAgICAgICAgdHlwZTogJ2F1dGhfcmVxdWlyZWQnLAogICAgICAgICAgICAgIG1lc3NhZ2U6ICdBdXRoZW50aWNhdGlvbiByZXF1aXJlZCcKICAgICAgICAgICAgfSk7CiAgICAgICAgICB9IGVsc2UgaWYgKHJlYXNvbiA9PT0gJ3VzZXJfbm90X3JlZ2lzdGVyZWQnKSB7CiAgICAgICAgICAgIHNldEF1dGhFcnJvcih7CiAgICAgICAgICAgICAgdHlwZTogJ3VzZXJfbm90X3JlZ2lzdGVyZWQnLAogICAgICAgICAgICAgIG1lc3NhZ2U6ICdVc2VyIG5vdCByZWdpc3RlcmVkIGZvciB0aGlzIGFwcCcKICAgICAgICAgICAgfSk7CiAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICBzZXRBdXRoRXJyb3IoewogICAgICAgICAgICAgIHR5cGU6IHJlYXNvbiwKICAgICAgICAgICAgICBtZXNzYWdlOiBhcHBFcnJvci5tZXNzYWdlCiAgICAgICAgICAgIH0pOwogICAgICAgICAgfQogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICBzZXRBdXRoRXJyb3IoewogICAgICAgICAgICB0eXBlOiAndW5rbm93bicsCiAgICAgICAgICAgIG1lc3NhZ2U6IGFwcEVycm9yLm1lc3NhZ2UgfHwgJ0ZhaWxlZCB0byBsb2FkIGFwcCcKICAgICAgICAgIH0pOwogICAgICAgIH0KICAgICAgICBzZXRJc0xvYWRpbmdQdWJsaWNTZXR0aW5ncyhmYWxzZSk7CiAgICAgICAgc2V0SXNMb2FkaW5nQXV0aChmYWxzZSk7CiAgICAgIH0KICAgIH0gY2F0Y2ggKGVycm9yKSB7CiAgICAgIGNvbnNvbGUuZXJyb3IoJ1VuZXhwZWN0ZWQgZXJyb3I6JywgZXJyb3IpOwogICAgICBzZXRBdXRoRXJyb3IoewogICAgICAgIHR5cGU6ICd1bmtub3duJywKICAgICAgICBtZXNzYWdlOiBlcnJvci5tZXNzYWdlIHx8ICdBbiB1bmV4cGVjdGVkIGVycm9yIG9jY3VycmVkJwogICAgICB9KTsKICAgICAgc2V0SXNMb2FkaW5nUHVibGljU2V0dGluZ3MoZmFsc2UpOwogICAgICBzZXRJc0xvYWRpbmdBdXRoKGZhbHNlKTsKICAgIH0KICB9OwoKICBjb25zdCBjaGVja1VzZXJBdXRoID0gYXN5bmMgKCkgPT4gewogICAgdHJ5IHsKICAgICAgLy8gTm93IGNoZWNrIGlmIHRoZSB1c2VyIGlzIGF1dGhlbnRpY2F0ZWQKICAgICAgc2V0SXNMb2FkaW5nQXV0aCh0cnVlKTsKICAgICAgY29uc3QgY3VycmVudFVzZXIgPSBhd2FpdCBiYXNlNDQuYXV0aC5tZSgpOwogICAgICBzZXRVc2VyKGN1cnJlbnRVc2VyKTsKICAgICAgc2V0SXNBdXRoZW50aWNhdGVkKHRydWUpOwogICAgICBzZXRJc0xvYWRpbmdBdXRoKGZhbHNlKTsKICAgICAgc2V0QXV0aENoZWNrZWQodHJ1ZSk7CiAgICB9IGNhdGNoIChlcnJvcikgewogICAgICBjb25zb2xlLmVycm9yKCdVc2VyIGF1dGggY2hlY2sgZmFpbGVkOicsIGVycm9yKTsKICAgICAgc2V0SXNMb2FkaW5nQXV0aChmYWxzZSk7CiAgICAgIHNldElzQXV0aGVudGljYXRlZChmYWxzZSk7CiAgICAgIHNldEF1dGhDaGVja2VkKHRydWUpOwogICAgICAKICAgICAgLy8gSWYgdXNlciBhdXRoIGZhaWxzLCBpdCBtaWdodCBiZSBhbiBleHBpcmVkIHRva2VuCiAgICAgIGlmIChlcnJvci5zdGF0dXMgPT09IDQwMSB8fCBlcnJvci5zdGF0dXMgPT09IDQwMykgewogICAgICAgIHNldEF1dGhFcnJvcih7CiAgICAgICAgICB0eXBlOiAnYXV0aF9yZXF1aXJlZCcsCiAgICAgICAgICBtZXNzYWdlOiAnQXV0aGVudGljYXRpb24gcmVxdWlyZWQnCiAgICAgICAgfSk7CiAgICAgIH0KICAgIH0KICB9OwoKICBjb25zdCBsb2dvdXQgPSAoc2hvdWxkUmVkaXJlY3QgPSB0cnVlKSA9PiB7CiAgICBzZXRVc2VyKG51bGwpOwogICAgc2V0SXNBdXRoZW50aWNhdGVkKGZhbHNlKTsKICAgIAogICAgaWYgKHNob3VsZFJlZGlyZWN0KSB7CiAgICAgIC8vIFVzZSB0aGUgU0RLJ3MgbG9nb3V0IG1ldGhvZCB3aGljaCBoYW5kbGVzIHRva2VuIGNsZWFudXAgYW5kIHJlZGlyZWN0CiAgICAgIGJhc2U0NC5hdXRoLmxvZ291dCh3aW5kb3cubG9jYXRpb24uaHJlZik7CiAgICB9IGVsc2UgewogICAgICAvLyBKdXN0IHJlbW92ZSB0aGUgdG9rZW4gd2l0aG91dCByZWRpcmVjdAogICAgICBiYXNlNDQuYXV0aC5sb2dvdXQoKTsKICAgIH0KICB9OwoKICBjb25zdCBuYXZpZ2F0ZVRvTG9naW4gPSAoKSA9PiB7CiAgICAvLyBVc2UgdGhlIFNESydzIHJlZGlyZWN0VG9Mb2dpbiBtZXRob2QKICAgIGJhc2U0NC5hdXRoLnJlZGlyZWN0VG9Mb2dpbih3aW5kb3cubG9jYXRpb24uaHJlZik7CiAgfTsKCiAgcmV0dXJuICgKICAgIDxBdXRoQ29udGV4dC5Qcm92aWRlciB2YWx1ZT17eyAKICAgICAgdXNlciwgCiAgICAgIGlzQXV0aGVudGljYXRlZCwgCiAgICAgIGlzTG9hZGluZ0F1dGgsCiAgICAgIGlzTG9hZGluZ1B1YmxpY1NldHRpbmdzLAogICAgICBhdXRoRXJyb3IsCiAgICAgIGFwcFB1YmxpY1NldHRpbmdzLAogICAgICBhdXRoQ2hlY2tlZCwKICAgICAgbG9nb3V0LAogICAgICBuYXZpZ2F0ZVRvTG9naW4sCiAgICAgIGNoZWNrVXNlckF1dGgsCiAgICAgIGNoZWNrQXBwU3RhdGUKICAgIH19PgogICAgICB7Y2hpbGRyZW59CiAgICA8L0F1dGhDb250ZXh0LlByb3ZpZGVyPgogICk7Cn07CgpleHBvcnQgY29uc3QgdXNlQXV0aCA9ICgpID0+IHsKICBjb25zdCBjb250ZXh0ID0gdXNlQ29udGV4dChBdXRoQ29udGV4dCk7CiAgaWYgKCFjb250ZXh0KSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoJ3VzZUF1dGggbXVzdCBiZSB1c2VkIHdpdGhpbiBhbiBBdXRoUHJvdmlkZXInKTsKICB9CiAgcmV0dXJuIGNvbnRleHQ7Cn07Cg==
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { base44 } from '@/api/base44Client';
+import { appParams } from '@/lib/app-params';
+
+const AuthContext = createContext();
+
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoadingAuth, setIsLoadingAuth] = useState(true);
+  const [isLoadingPublicSettings, setIsLoadingPublicSettings] = useState(true);
+  const [authError, setAuthError] = useState(null);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [appPublicSettings, setAppPublicSettings] = useState(null); // Contains only { id, public_settings }
+
+  useEffect(() => {
+    checkAppState();
+  }, []);
+
+  const checkAppState = async () => {
+    try {
+      setIsLoadingPublicSettings(true);
+      setAuthError(null);
+      
+      try {
+        const publicSettings = await base44.app.getPublicSettings();
+        setAppPublicSettings(publicSettings);
+        
+        // If we got the app public settings successfully, check if user is authenticated
+        if (appParams.token) {
+          await checkUserAuth();
+        } else {
+          setIsLoadingAuth(false);
+          setIsAuthenticated(false);
+          setAuthChecked(true);
+        }
+        setIsLoadingPublicSettings(false);
+      } catch (appError) {
+        console.error('App state check failed:', appError);
+        
+        // Handle app-level errors
+        if (appError.status === 403 && appError.data?.extra_data?.reason) {
+          const reason = appError.data.extra_data.reason;
+          if (reason === 'auth_required') {
+            setAuthError({
+              type: 'auth_required',
+              message: 'Authentication required'
+            });
+          } else if (reason === 'user_not_registered') {
+            setAuthError({
+              type: 'user_not_registered',
+              message: 'User not registered for this app'
+            });
+          } else {
+            setAuthError({
+              type: reason,
+              message: appError.message
+            });
+          }
+        } else {
+          setAuthError({
+            type: 'unknown',
+            message: appError.message || 'Failed to load app'
+          });
+        }
+        setIsLoadingPublicSettings(false);
+        setIsLoadingAuth(false);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      setAuthError({
+        type: 'unknown',
+        message: error.message || 'An unexpected error occurred'
+      });
+      setIsLoadingPublicSettings(false);
+      setIsLoadingAuth(false);
+    }
+  };
+
+  const checkUserAuth = async () => {
+    try {
+      // Now check if the user is authenticated
+      setIsLoadingAuth(true);
+      const currentUser = await base44.auth.me();
+      setUser(currentUser);
+      setIsAuthenticated(true);
+      setIsLoadingAuth(false);
+      setAuthChecked(true);
+    } catch (error) {
+      console.error('User auth check failed:', error);
+      setIsLoadingAuth(false);
+      setIsAuthenticated(false);
+      setAuthChecked(true);
+      
+      // If user auth fails, it might be an expired token
+      if (error.status === 401 || error.status === 403) {
+        setAuthError({
+          type: 'auth_required',
+          message: 'Authentication required'
+        });
+      }
+    }
+  };
+
+  const logout = (shouldRedirect = true) => {
+    setUser(null);
+    setIsAuthenticated(false);
+    
+    if (shouldRedirect) {
+      // Use the SDK's logout method which handles token cleanup and redirect
+      base44.auth.logout(window.location.href);
+    } else {
+      // Just remove the token without redirect
+      base44.auth.logout();
+    }
+  };
+
+  const navigateToLogin = () => {
+    // Use the SDK's redirectToLogin method
+    base44.auth.redirectToLogin(window.location.href);
+  };
+
+  return (
+    <AuthContext.Provider value={{ 
+      user, 
+      isAuthenticated, 
+      isLoadingAuth,
+      isLoadingPublicSettings,
+      authError,
+      appPublicSettings,
+      authChecked,
+      logout,
+      navigateToLogin,
+      checkUserAuth,
+      checkAppState
+    }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+};

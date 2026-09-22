@@ -1,1 +1,54 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgUGVyY2VudCwgTG9hZGVyMiwgU2F2ZSB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CmltcG9ydCB7IEJ1dHRvbiB9IGZyb20gIkAvY29tcG9uZW50cy91aS9idXR0b24iOwppbXBvcnQgeyBMYWJlbCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9sYWJlbCI7CmltcG9ydCB7IElucHV0IH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2lucHV0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJhdGVNYW5hZ2VtZW50KCkgewogIGNvbnN0IFttYXJnaW4sIHNldE1hcmdpbl0gPSB1c2VTdGF0ZSgxLjUpOwogIGNvbnN0IFtzYXZpbmcsIHNldFNhdmluZ10gPSB1c2VTdGF0ZShmYWxzZSk7CiAgY29uc3QgW3NhdmVkLCBzZXRTYXZlZF0gPSB1c2VTdGF0ZShmYWxzZSk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICAoYXN5bmMgKCkgPT4gewogICAgICBjb25zdCBhbGwgPSBhd2FpdCBiYXNlNDQuZW50aXRpZXMuQXBwU2V0dGluZy5saXN0KCItY3JlYXRlZF9kYXRlIiwgMTAwKTsKICAgICAgY29uc3QgbSA9IGFsbC5maW5kKChzKSA9PiBzLmtleSA9PT0gIm1hcmdpbl9wY3QiKTsKICAgICAgaWYgKG0pIHNldE1hcmdpbihOdW1iZXIobS52YWx1ZSkpOwogICAgfSkoKTsKICB9LCBbXSk7CgogIGNvbnN0IHNhdmUgPSBhc3luYyAoZSkgPT4gewogICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgc2V0U2F2aW5nKHRydWUpOwogICAgY29uc3QgYWxsID0gYXdhaXQgYmFzZTQ0LmVudGl0aWVzLkFwcFNldHRpbmcubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDEwMCk7CiAgICBjb25zdCBleGlzdGluZyA9IGFsbC5maW5kKChzKSA9PiBzLmtleSA9PT0gIm1hcmdpbl9wY3QiKTsKICAgIGlmIChleGlzdGluZykgYXdhaXQgYmFzZTQ0LmVudGl0aWVzLkFwcFNldHRpbmcudXBkYXRlKGV4aXN0aW5nLmlkLCB7IHZhbHVlOiBTdHJpbmcobWFyZ2luKSB9KTsKICAgIGVsc2UgYXdhaXQgYmFzZTQ0LmVudGl0aWVzLkFwcFNldHRpbmcuY3JlYXRlKHsga2V5OiAibWFyZ2luX3BjdCIsIHZhbHVlOiBTdHJpbmcobWFyZ2luKSB9KTsKICAgIHNldFNhdmluZyhmYWxzZSk7CiAgICBzZXRTYXZlZCh0cnVlKTsKICAgIHNldFRpbWVvdXQoKCkgPT4gc2V0U2F2ZWQoZmFsc2UpLCAyMDAwKTsKICB9OwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctM3hsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJUYXV4ICYgbWFyZ2VzIgogICAgICAgIGRlc2NyaXB0aW9uPSJNYXJnZSBhcHBsaXF1w6llIHN1ciBsZSB0YXV4IGRlIGNoYW5nZSBGaWF0L1VTRFQgKGV4LiArMSw1ICUpLiIKICAgICAgICBpY29uPXtQZXJjZW50fQogICAgICAvPgogICAgICA8Zm9ybSBvblN1Ym1pdD17c2F2ZX0gY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC02IHNwYWNlLXktNCBtYXgtdy1tZCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICA8TGFiZWwgaHRtbEZvcj0ibWFyZ2luIj5NYXJnZSAoJSk8L0xhYmVsPgogICAgICAgICAgPElucHV0IGlkPSJtYXJnaW4iIHR5cGU9Im51bWJlciIgc3RlcD0iMC4wMSIgdmFsdWU9e21hcmdpbn0gb25DaGFuZ2U9eyhlKSA9PiBzZXRNYXJnaW4oTnVtYmVyKGUudGFyZ2V0LnZhbHVlKSl9IGNsYXNzTmFtZT0icm91bmRlZC14bCIgLz4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkFwcGxpcXXDqWUgYXUgY2/Du3QgYWZmaWNow6kgYXUgY2xpZW50IGxvcnMgZGUgbCdhY2hhdCBjcnlwdG8uPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxCdXR0b24gdHlwZT0ic3VibWl0IiBkaXNhYmxlZD17c2F2aW5nfSBjbGFzc05hbWU9InJvdW5kZWQtZnVsbCI+CiAgICAgICAgICB7c2F2aW5nID8gPExvYWRlcjIgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTIgYW5pbWF0ZS1zcGluIiAvPiA6IDxTYXZlIGNsYXNzTmFtZT0iaC00IHctNCBtci0yIiAvPn0gRW5yZWdpc3RyZXIKICAgICAgICA8L0J1dHRvbj4KICAgICAgICB7c2F2ZWQgJiYgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtZW1lcmFsZC02MDAiPk1hcmdlIGVucmVnaXN0csOpZS48L3A+fQogICAgICA8L2Zvcm0+CiAgICA8L2Rpdj4KICApOwp9
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { Percent, Loader2, Save } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+
+export default function RateManagement() {
+  const [margin, setMargin] = useState(1.5);
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const all = await base44.entities.AppSetting.list("-created_date", 100);
+      const m = all.find((s) => s.key === "margin_pct");
+      if (m) setMargin(Number(m.value));
+    })();
+  }, []);
+
+  const save = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    const all = await base44.entities.AppSetting.list("-created_date", 100);
+    const existing = all.find((s) => s.key === "margin_pct");
+    if (existing) await base44.entities.AppSetting.update(existing.id, { value: String(margin) });
+    else await base44.entities.AppSetting.create({ key: "margin_pct", value: String(margin) });
+    setSaving(false);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
+
+  return (
+    <div className="p-6 md:p-8 max-w-3xl mx-auto">
+      <PageHeader
+        title="Taux & marges"
+        description="Marge appliquée sur le taux de change Fiat/USDT (ex. +1,5 %)."
+        icon={Percent}
+      />
+      <form onSubmit={save} className="rounded-xl border border-border bg-card p-6 space-y-4 max-w-md">
+        <div className="space-y-2">
+          <Label htmlFor="margin">Marge (%)</Label>
+          <Input id="margin" type="number" step="0.01" value={margin} onChange={(e) => setMargin(Number(e.target.value))} className="rounded-xl" />
+          <p className="text-xs text-muted-foreground">Appliquée au coût affiché au client lors de l'achat crypto.</p>
+        </div>
+        <Button type="submit" disabled={saving} className="rounded-full">
+          {saving ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <Save className="h-4 w-4 mr-2" />} Enregistrer
+        </Button>
+        {saved && <p className="text-sm text-emerald-600">Marge enregistrée.</p>}
+      </form>
+    </div>
+  );
+}

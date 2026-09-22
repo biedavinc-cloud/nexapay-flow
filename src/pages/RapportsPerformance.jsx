@@ -1,1 +1,92 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgVHJlbmRpbmdVcCwgTG9hZGVyMiB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CmltcG9ydCB7IEJhckNoYXJ0LCBCYXIsIFhBeGlzLCBZQXhpcywgVG9vbHRpcCwgUmVzcG9uc2l2ZUNvbnRhaW5lciwgQ2VsbCB9IGZyb20gInJlY2hhcnRzIjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFJhcHBvcnRzUGVyZm9ybWFuY2UoKSB7CiAgY29uc3QgW3R4cywgc2V0VHhzXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIChhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IGRhdGEgPSBhd2FpdCBiYXNlNDQuZW50aXRpZXMuVHJhbnNhY3Rpb24ubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDUwMCk7CiAgICAgIHNldFR4cyhkYXRhKTsKICAgICAgc2V0TG9hZGluZyhmYWxzZSk7CiAgICB9KSgpOwogIH0sIFtdKTsKCiAgY29uc3QgYWdncmVnYXRlID0gKGZpZWxkKSA9PiB7CiAgICBjb25zdCBtYXAgPSB7fTsKICAgIHR4cy5mb3JFYWNoKCh0KSA9PiB7CiAgICAgIGNvbnN0IGsgPSB0W2ZpZWxkXSB8fCAi4oCUIjsKICAgICAgaWYgKCFtYXBba10pIG1hcFtrXSA9IHsgdG90YWw6IDAsIHN1Y2Nlc3M6IDAgfTsKICAgICAgbWFwW2tdLnRvdGFsKys7CiAgICAgIGlmICh0LnN0YXR1cyA9PT0gIkNPTVBMRVRFRCIpIG1hcFtrXS5zdWNjZXNzKys7CiAgICB9KTsKICAgIHJldHVybiBPYmplY3QuZW50cmllcyhtYXApLm1hcCgoW25hbWUsIHZdKSA9PiAoewogICAgICBuYW1lLAogICAgICB0b3RhbDogdi50b3RhbCwKICAgICAgcmF0ZTogdi50b3RhbCA/IE1hdGgucm91bmQoKHYuc3VjY2VzcyAvIHYudG90YWwpICogMTAwKSA6IDAsCiAgICB9KSk7CiAgfTsKICBjb25zdCBieVByb3ZpZGVyID0gYWdncmVnYXRlKCJjcnlwdG9fcHJvdmlkZXIiKTsKICBjb25zdCBieU1ldGhvZCA9IGFnZ3JlZ2F0ZSgicGF5bWVudF9tZXRob2QiKTsKCiAgY29uc3QgVGFibGUgPSAoeyByb3dzIH0pID0+ICgKICAgIDxkaXYgY2xhc3NOYW1lPSJvdmVyZmxvdy1oaWRkZW4gcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWJvcmRlciI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0zIGJnLXNlY29uZGFyeS81MCB0ZXh0LXhzIGZvbnQtbWVkaXVtIHB4LTMgcHktMiI+CiAgICAgICAgPHNwYW4+TGliZWxsw6k8L3NwYW4+CiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXJpZ2h0Ij5UcmFuc2FjdGlvbnM8L3NwYW4+CiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0ZXh0LXJpZ2h0Ij5UYXV4PC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAge3Jvd3MubWFwKChyKSA9PiAoCiAgICAgICAgPGRpdiBrZXk9e3IubmFtZX0gY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0zIHB4LTMgcHktMiB0ZXh0LXNtIGJvcmRlci10IGJvcmRlci1ib3JkZXIiPgogICAgICAgICAgPHNwYW4+e3IubmFtZX08L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtcmlnaHQiPntyLnRvdGFsfTwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1yaWdodCBmb250LW1lZGl1bSI+e3IucmF0ZX0lPC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICApKX0KICAgIDwvZGl2PgogICk7CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy02eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IlJhcHBvcnRzIGRlIHBlcmZvcm1hbmNlIgogICAgICAgIGRlc2NyaXB0aW9uPSJUYXV4IGRlIHN1Y2PDqHMgcGFyIGZvdXJuaXNzZXVyIGNyeXB0byBldCBwYXIgbcOpdGhvZGUgZGUgcGFpZW1lbnQuIgogICAgICAgIGljb249e1RyZW5kaW5nVXB9CiAgICAgIC8+CiAgICAgIHtsb2FkaW5nID8gKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTggZmxleCBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNSB3LTUgYW5pbWF0ZS1zcGluIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCIgLz4KICAgICAgICA8L2Rpdj4KICAgICAgKSA6ICgKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS02Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC00Ij4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIG1iLTMiPlRhdXggZGUgc3VjY8OocyBwYXIgZm91cm5pc3NldXIgY3J5cHRvPC9wPgogICAgICAgICAgICA8UmVzcG9uc2l2ZUNvbnRhaW5lciB3aWR0aD0iMTAwJSIgaGVpZ2h0PXsyNjB9PgogICAgICAgICAgICAgIDxCYXJDaGFydCBkYXRhPXtieVByb3ZpZGVyfT4KICAgICAgICAgICAgICAgIDxYQXhpcyBkYXRhS2V5PSJuYW1lIiBmb250U2l6ZT17MTJ9IC8+CiAgICAgICAgICAgICAgICA8WUF4aXMgZm9udFNpemU9ezEyfSBkb21haW49e1swLCAxMDBdfSAvPgogICAgICAgICAgICAgICAgPFRvb2x0aXAgLz4KICAgICAgICAgICAgICAgIDxCYXIgZGF0YUtleT0icmF0ZSIgbmFtZT0iVGF1eCAlIiByYWRpdXM9e1s2LCA2LCAwLCAwXX0+CiAgICAgICAgICAgICAgICAgIHtieVByb3ZpZGVyLm1hcCgoXywgaSkgPT4gKAogICAgICAgICAgICAgICAgICAgIDxDZWxsIGtleT17aX0gZmlsbD0iIzEwYjk4MSIgLz4KICAgICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgICA8L0Jhcj4KICAgICAgICAgICAgICA8L0JhckNoYXJ0PgogICAgICAgICAgICA8L1Jlc3BvbnNpdmVDb250YWluZXI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC00Ij4KICAgICAgICAgICAgICA8VGFibGUgcm93cz17YnlQcm92aWRlcn0gLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC00Ij4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIGZvbnQtbWVkaXVtIG1iLTMiPlRhdXggZGUgc3VjY8OocyBwYXIgbcOpdGhvZGUgZGUgcGFpZW1lbnQ8L3A+CiAgICAgICAgICAgIDxUYWJsZSByb3dzPXtieU1ldGhvZH0gLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICApfQogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { TrendingUp, Loader2 } from "lucide-react";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
+
+export default function RapportsPerformance() {
+  const [txs, setTxs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const data = await base44.entities.Transaction.list("-created_date", 500);
+      setTxs(data);
+      setLoading(false);
+    })();
+  }, []);
+
+  const aggregate = (field) => {
+    const map = {};
+    txs.forEach((t) => {
+      const k = t[field] || "—";
+      if (!map[k]) map[k] = { total: 0, success: 0 };
+      map[k].total++;
+      if (t.status === "COMPLETED") map[k].success++;
+    });
+    return Object.entries(map).map(([name, v]) => ({
+      name,
+      total: v.total,
+      rate: v.total ? Math.round((v.success / v.total) * 100) : 0,
+    }));
+  };
+  const byProvider = aggregate("crypto_provider");
+  const byMethod = aggregate("payment_method");
+
+  const Table = ({ rows }) => (
+    <div className="overflow-hidden rounded-lg border border-border">
+      <div className="grid grid-cols-3 bg-secondary/50 text-xs font-medium px-3 py-2">
+        <span>Libellé</span>
+        <span className="text-right">Transactions</span>
+        <span className="text-right">Taux</span>
+      </div>
+      {rows.map((r) => (
+        <div key={r.name} className="grid grid-cols-3 px-3 py-2 text-sm border-t border-border">
+          <span>{r.name}</span>
+          <span className="text-right">{r.total}</span>
+          <span className="text-right font-medium">{r.rate}%</span>
+        </div>
+      ))}
+    </div>
+  );
+
+  return (
+    <div className="p-6 md:p-8 max-w-6xl mx-auto">
+      <PageHeader
+        title="Rapports de performance"
+        description="Taux de succès par fournisseur crypto et par méthode de paiement."
+        icon={TrendingUp}
+      />
+      {loading ? (
+        <div className="p-8 flex justify-center">
+          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+        </div>
+      ) : (
+        <div className="space-y-6">
+          <div className="rounded-xl border border-border bg-card p-4">
+            <p className="text-sm font-medium mb-3">Taux de succès par fournisseur crypto</p>
+            <ResponsiveContainer width="100%" height={260}>
+              <BarChart data={byProvider}>
+                <XAxis dataKey="name" fontSize={12} />
+                <YAxis fontSize={12} domain={[0, 100]} />
+                <Tooltip />
+                <Bar dataKey="rate" name="Taux %" radius={[6, 6, 0, 0]}>
+                  {byProvider.map((_, i) => (
+                    <Cell key={i} fill="#10b981" />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+            <div className="mt-4">
+              <Table rows={byProvider} />
+            </div>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-4">
+            <p className="text-sm font-medium mb-3">Taux de succès par méthode de paiement</p>
+            <Table rows={byMethod} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

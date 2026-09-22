@@ -1,1 +1,168 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QgfSBmcm9tICducG06QGJhc2U0NC9zZGtAMC44LjQ0JzsKaW1wb3J0IHsgd2FpdFVudGlsIH0gZnJvbSAiYmFzZTQ0OnJ1bnRpbWUiOwppbXBvcnQgewogIGdlblJlZmVyZW5jZSwKICBnZW5UcmFuc2FjdGlvbklkLAogIHJlc29sdmVSYXRlLAogIGVuY29kZVBheWxvYWQsCiAgbm9ybVRleHQsCiAgc2lnbldlYmhvb2ssCiAgcmVzb2x2ZVdlYmhvb2tTZWNyZXQsCn0gZnJvbSAiLi4vLi4vc2hhcmVkL2NoZWNrb3V0LnRzIjsKaW1wb3J0IHsgZXhlY3V0ZUNyeXB0b09yZGVyIH0gZnJvbSAiLi4vLi4vc2hhcmVkL2NyeXB0by50cyI7CmltcG9ydCB7IG1pcnJvclRyYW5zYWN0aW9uLCBtaXJyb3JMb2cgfSBmcm9tICIuLi8uLi9zaGFyZWQvbmVvbi50cyI7CgovLyBOZXhhUGF5IGZpYXQgLT4gY3J5cHRvIHJvdXRlciAoaW50ZXJuYWwvZGFzaGJvYXJkKS4KLy8gUXVvdGVzIFVTRFQgYXQgdGhlIGxpdmUgQ29pbkdlY2tvIHJhdGUsIGV4ZWN1dGVzIGEgUkVBTCBkaXJlY3QgY3J5cHRvIHB1cmNoYXNlICsgd2l0aGRyYXdhbAovLyB2aWEgZXhlY3V0ZUNyeXB0b09yZGVyIChLdUNvaW4vQmluYW5jZS9CaW5nWC9Db2luYmFzZSB3aXRoIGF1dG9tYXRpYyBmYWxsYmFjayksIGRyaXZlcyB0aGUKLy8gdHJhbnNhY3Rpb24gdGhyb3VnaCBQRU5ESU5HIC0+IEZJQVRfQVBQUk9WRUQgLT4gUFJPQ0VTU0lOR19DUllQVE8gLT4gQ09NUExFVEVEL0ZBSUxFRCwKLy8gd3JpdGVzIGEgZnVsbCBUcmFuc2FjdGlvbkxvZyBhdWRpdCB0cmFpbCwgYW5kIGZpcmVzIGEgc2lnbmVkIHdlYmhvb2sgd2hlbiBhIHRhcmdldCBpcyBzZXQuCgpjb25zdCBWQUxJRF9NRVRIT0RTID0gbmV3IFNldChbIk1PQklMRV9NT05FWSIsICJDQVJEIiwgIkJBTktfVFJBTlNGRVIiLCAiRElSRUNUX0NSWVBUTyJdKTsKCmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uKHJlcSkgewogIHRyeSB7CiAgICBjb25zdCBiYXNlNDQgPSBjcmVhdGVDbGllbnRGcm9tUmVxdWVzdChyZXEpOwogICAgY29uc3QgdXNlciA9IGF3YWl0IGJhc2U0NC5hdXRoLm1lKCk7CiAgICBpZiAoIXVzZXIpIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJVbmF1dGhvcml6ZWQiIH0sIHsgc3RhdHVzOiA0MDEgfSk7CgogICAgY29uc3QgYm9keSA9IGF3YWl0IHJlcS5qc29uKCkuY2F0Y2goKCkgPT4gKHt9KSk7CiAgICBjb25zdCBjbGllbnRfbmFtZSA9IG5vcm1UZXh0KGJvZHkuY2xpZW50X25hbWUpLnRyaW0oKTsKICAgIGNvbnN0IGFtb3VudF9maWF0ID0gTnVtYmVyKGJvZHkuYW1vdW50X2ZpYXQpOwogICAgY29uc3QgY3VycmVuY3lfZmlhdCA9IChib2R5LmN1cnJlbmN5X2ZpYXQgfHwgIkVVUiIpLnRvU3RyaW5nKCkudG9VcHBlckNhc2UoKTsKICAgIGNvbnN0IHBheW1lbnRfbWV0aG9kID0gKGJvZHkucGF5bWVudF9tZXRob2QgfHwgIiIpLnRvU3RyaW5nKCkudG9VcHBlckNhc2UoKTsKICAgIGNvbnN0IGRlc3RpbmF0aW9uX3dhbGxldCA9IG5vcm1UZXh0KGJvZHkuZGVzdGluYXRpb25fd2FsbGV0KS50cmltKCk7CiAgICBjb25zdCBuZXR3b3JrID0gKGJvZHkubmV0d29yayB8fCAiVFJDMjAiKS50b1N0cmluZygpLnRvVXBwZXJDYXNlKCk7CiAgICBjb25zdCB3ZWJob29rX3VybCA9IG5vcm1UZXh0KGJvZHkud2ViaG9va191cmwpOwoKICAgIGlmICghTnVtYmVyLmlzRmluaXRlKGFtb3VudF9maWF0KSB8fCBhbW91bnRfZmlhdCA8PSAwKSB7CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJhbW91bnRfZmlhdCBtdXN0IGJlIGEgcG9zaXRpdmUgbnVtYmVyLiIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICAgIH0KICAgIGlmICghVkFMSURfTUVUSE9EUy5oYXMocGF5bWVudF9tZXRob2QpKSB7CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJwYXltZW50X21ldGhvZCBtdXN0IGJlIE1PQklMRV9NT05FWSwgQ0FSRCwgQkFOS19UUkFOU0ZFUiBvciBESVJFQ1RfQ1JZUFRPLiIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICAgIH0KICAgIGlmICghZGVzdGluYXRpb25fd2FsbGV0IHx8IGRlc3RpbmF0aW9uX3dhbGxldC5sZW5ndGggPCA2KSB7CiAgICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6ICJkZXN0aW5hdGlvbl93YWxsZXQgaXMgcmVxdWlyZWQuIiB9LCB7IHN0YXR1czogNDAwIH0pOwogICAgfQoKICAgIGNvbnN0IHJlZmVyZW5jZV9maWF0ID0gZ2VuUmVmZXJlbmNlKCk7CiAgICBjb25zdCB0cmFuc2FjdGlvbl9pZCA9IGdlblRyYW5zYWN0aW9uSWQoKTsKICAgIGNvbnN0IHsgcmF0ZSwgbGl2ZSB9ID0gYXdhaXQgcmVzb2x2ZVJhdGUoY3VycmVuY3lfZmlhdCk7CiAgICBjb25zdCB1c2R0X2Ftb3VudCA9IE1hdGgucm91bmQoYW1vdW50X2ZpYXQgKiByYXRlICogMWU2KSAvIDFlNjsKCiAgICBjb25zdCBsb2cgPSBhc3luYyAoZnJvbSwgdG8sIG1lc3NhZ2UsIGxldmVsID0gIklORk8iLCBhY3RvciA9ICJzeXN0ZW0iKSA9PiB7CiAgICAgIGNvbnN0IHJlYyA9IGF3YWl0IGJhc2U0NC5hc1NlcnZpY2VSb2xlLmVudGl0aWVzLlRyYW5zYWN0aW9uTG9nLmNyZWF0ZSh7CiAgICAgICAgdHJhbnNhY3Rpb25faWQsIHJlZmVyZW5jZV9maWF0LCBmcm9tX3N0YXR1czogZnJvbSB8fCAiIiwgdG9fc3RhdHVzOiB0bywgbGV2ZWwsIG1lc3NhZ2UsIGFjdG9yLAogICAgICB9KTsKICAgICAgd2FpdFVudGlsKG1pcnJvckxvZyhyZWMpLmNhdGNoKCgpID0+IHt9KSk7CiAgICAgIHJldHVybiByZWM7CiAgICB9OwoKICAgIGxldCB0eCA9IGF3YWl0IGJhc2U0NC5hc1NlcnZpY2VSb2xlLmVudGl0aWVzLlRyYW5zYWN0aW9uLmNyZWF0ZSh7CiAgICAgIHJlZmVyZW5jZV9maWF0LAogICAgICBjbGllbnRfbmFtZSwKICAgICAgYW1vdW50X2ZpYXQsCiAgICAgIGN1cnJlbmN5X2ZpYXQsCiAgICAgIHVzZHRfYW1vdW50LAogICAgICBleGNoYW5nZV9yYXRlOiByYXRlLAogICAgICBwYXltZW50X21ldGhvZCwKICAgICAgY3J5cHRvX3Byb3ZpZGVyOiAiS1VDT0lOIiwKICAgICAgZGVzdGluYXRpb25fd2FsbGV0LAogICAgICBzdGF0dXM6ICJQRU5ESU5HIiwKICAgICAgcGF5bG9hZF9iYXNlNjQ6IGVuY29kZVBheWxvYWQoeyBjbGllbnRfbmFtZSwgYW1vdW50X2ZpYXQsIGN1cnJlbmN5X2ZpYXQsIHBheW1lbnRfbWV0aG9kLCB0cmFuc2FjdGlvbl9pZCB9KSwKICAgICAgYXNzZXQ6ICJVU0RUIiwKICAgICAgbmV0d29yaywKICAgIH0pOwogICAgYXdhaXQgbG9nKCIiLCAiUEVORElORyIsIGBQYWllbWVudCAke3BheW1lbnRfbWV0aG9kfSAke2Ftb3VudF9maWF0fSAke2N1cnJlbmN5X2ZpYXR9IGluaXRpw6lgLCAiSU5GTyIsIHVzZXIuZnVsbF9uYW1lIHx8IHVzZXIuZW1haWwgfHwgImFkbWluIik7CgogICAgdHggPSBhd2FpdCBiYXNlNDQuYXNTZXJ2aWNlUm9sZS5lbnRpdGllcy5UcmFuc2FjdGlvbi51cGRhdGUodHguaWQsIHsgc3RhdHVzOiAiRklBVF9BUFBST1ZFRCIgfSk7CiAgICBhd2FpdCBsb2coIlBFTkRJTkciLCAiRklBVF9BUFBST1ZFRCIsIGBFbmNhaXNzZW1lbnQgdmFsaWTDqS4gQ2libGU6ICR7dXNkdF9hbW91bnR9IFVTRFQgc3VyICR7bmV0d29ya31gLCAiSU5GTyIsICJmaWF0Q2FwdHVyZSIpOwoKICAgIHR4ID0gYXdhaXQgYmFzZTQ0LmFzU2VydmljZVJvbGUuZW50aXRpZXMuVHJhbnNhY3Rpb24udXBkYXRlKHR4LmlkLCB7IHN0YXR1czogIlBST0NFU1NJTkdfQ1JZUFRPIiB9KTsKICAgIGF3YWl0IGxvZygiRklBVF9BUFBST1ZFRCIsICJQUk9DRVNTSU5HX0NSWVBUTyIsIGBBY2hhdCAke3VzZHRfYW1vdW50fSBVU0RUIC0+IHJldHJhaXQgdmVycyAke2Rlc3RpbmF0aW9uX3dhbGxldH1gLCAiSU5GTyIsICJjcnlwdG9FbmdpbmUiKTsKCiAgICBjb25zdCBwdXJjaGFzZSA9IGF3YWl0IGV4ZWN1dGVDcnlwdG9PcmRlcih7CiAgICAgIGFtb3VudDogdXNkdF9hbW91bnQsCiAgICAgIGFzc2V0OiAiVVNEVCIsCiAgICAgIG5ldHdvcmssCiAgICAgIHdhbGxldDogZGVzdGluYXRpb25fd2FsbGV0LAogICAgICBmaWF0QW1vdW50OiBhbW91bnRfZmlhdCwKICAgICAgZmlhdEN1cnJlbmN5OiBjdXJyZW5jeV9maWF0LAogICAgfSk7CgogICAgbGV0IHJlc3BvbnNlOwogICAgbGV0IHdlYmhvb2tQYXlsb2FkOwogICAgaWYgKHB1cmNoYXNlLnByb3ZpZGVyKSB7CiAgICAgIHR4ID0gYXdhaXQgYmFzZTQ0LmFzU2VydmljZVJvbGUuZW50aXRpZXMuVHJhbnNhY3Rpb24udXBkYXRlKHR4LmlkLCB7CiAgICAgICAgc3RhdHVzOiAiQ09NUExFVEVEIiwKICAgICAgICBjcnlwdG9fcHJvdmlkZXI6IHB1cmNoYXNlLnByb3ZpZGVyLAogICAgICAgIHR4X2hhc2hfY3J5cHRvOiBwdXJjaGFzZS50eF9oYXNoLAogICAgICB9KTsKICAgICAgYXdhaXQgbG9nKCJQUk9DRVNTSU5HX0NSWVBUTyIsICJDT01QTEVURUQiLCBgJHt1c2R0X2Ftb3VudH0gVVNEVCBsaXZyZSB2aWEgJHtwdXJjaGFzZS5wcm92aWRlcn0ke3B1cmNoYXNlLmxpdmUgPyAiIChMSVZFKSIgOiAiIChtb2NrIGRldikifSAtICR7cHVyY2hhc2UudHhfaGFzaH1gKTsKICAgICAgd2ViaG9va1BheWxvYWQgPSB7CiAgICAgICAgZXZlbnQ6ICJwYXltZW50LnN1Y2NlZWRlZCIsCiAgICAgICAgdHJhbnNhY3Rpb25faWQsCiAgICAgICAgYW1vdW50OiBhbW91bnRfZmlhdCwKICAgICAgICBjdXJyZW5jeTogY3VycmVuY3lfZmlhdCwKICAgICAgICB1c2R0OiB1c2R0X2Ftb3VudCwKICAgICAgICBuZXR3b3JrLAogICAgICAgIGNyeXB0b19wcm92aWRlcjogcHVyY2hhc2UucHJvdmlkZXIsCiAgICAgICAgY3J5cHRvX3R4X2hhc2g6IHB1cmNoYXNlLnR4X2hhc2gsCiAgICAgICAgbGl2ZTogISFwdXJjaGFzZS5saXZlLAogICAgICAgIHJhdGVfbGl2ZTogbGl2ZSwKICAgICAgfTsKICAgICAgcmVzcG9uc2UgPSB7IHN0YXR1czogIkNPTVBMRVRFRCIsIHRyYW5zYWN0aW9uX2lkLCBjcnlwdG9fcHJvdmlkZXI6IHB1cmNoYXNlLnByb3ZpZGVyLCBjcnlwdG9fdHhfaGFzaDogcHVyY2hhc2UudHhfaGFzaCwgdXNkdF9hbW91bnQsIGxpdmU6ICEhcHVyY2hhc2UubGl2ZSwgcmF0ZV9saXZlOiBsaXZlIH07CiAgICB9IGVsc2UgewogICAgICB0eCA9IGF3YWl0IGJhc2U0NC5hc1NlcnZpY2VSb2xlLmVudGl0aWVzLlRyYW5zYWN0aW9uLnVwZGF0ZSh0eC5pZCwgewogICAgICAgIHN0YXR1czogIkZBSUxFRCIsCiAgICAgICAgZXJyb3JfbWVzc2FnZTogcHVyY2hhc2UuZXJyb3IsCiAgICAgIH0pOwogICAgICBhd2FpdCBsb2coIlBST0NFU1NJTkdfQ1JZUFRPIiwgIkZBSUxFRCIsIHB1cmNoYXNlLmVycm9yLCAiRVJST1IiLCAiY3J5cHRvRW5naW5lIik7CiAgICAgIHdlYmhvb2tQYXlsb2FkID0gewogICAgICAgIGV2ZW50OiAicGF5bWVudC5mYWlsZWQiLAogICAgICAgIHRyYW5zYWN0aW9uX2lkLAogICAgICAgIGFtb3VudDogYW1vdW50X2ZpYXQsCiAgICAgICAgY3VycmVuY3k6IGN1cnJlbmN5X2ZpYXQsCiAgICAgICAgdXNkdDogdXNkdF9hbW91bnQsCiAgICAgICAgZXJyb3I6IHB1cmNoYXNlLmVycm9yLAogICAgICB9OwogICAgICByZXNwb25zZSA9IHsgc3RhdHVzOiAiRkFJTEVEIiwgdHJhbnNhY3Rpb25faWQsIGVycm9yOiBwdXJjaGFzZS5lcnJvciB9OwogICAgfQoKICAgIGlmICh3ZWJob29rX3VybCkgewogICAgICBjb25zdCB3aFNlY3JldCA9IGF3YWl0IHJlc29sdmVXZWJob29rU2VjcmV0KGJhc2U0NCwgd2ViaG9va191cmwpOwogICAgICBjb25zdCB7IHJhdywgaGVhZGVyIH0gPSBhd2FpdCBzaWduV2ViaG9vayh3ZWJob29rUGF5bG9hZCwgd2hTZWNyZXQpOwogICAgICB3YWl0VW50aWwoCiAgICAgICAgKGFzeW5jICgpID0+IHsKICAgICAgICAgIGxldCBodHRwU3RhdHVzID0gMDsKICAgICAgICAgIGxldCBkZWxpdmVyeVN0YXR1cyA9ICJGQUlMRUQiOwogICAgICAgICAgdHJ5IHsKICAgICAgICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2god2ViaG9va191cmwsIHsKICAgICAgICAgICAgICBtZXRob2Q6ICJQT1NUIiwKICAgICAgICAgICAgICBoZWFkZXJzOiB7ICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIsICJOZXhhUGF5LVNpZ25hdHVyZSI6IGhlYWRlciB9LAogICAgICAgICAgICAgIGJvZHk6IHJhdywKICAgICAgICAgICAgfSk7CiAgICAgICAgICAgIGh0dHBTdGF0dXMgPSByZXMuc3RhdHVzOwogICAgICAgICAgICBkZWxpdmVyeVN0YXR1cyA9IHJlcy5vayA/ICJTVUNDRVNTIiA6ICJGQUlMRUQiOwogICAgICAgICAgfSBjYXRjaCB7CiAgICAgICAgICAgIGRlbGl2ZXJ5U3RhdHVzID0gIlJFVFJZSU5HIjsKICAgICAgICAgIH0KICAgICAgICAgIGF3YWl0IGJhc2U0NC5hc1NlcnZpY2VSb2xlLmVudGl0aWVzLldlYmhvb2tMb2cuY3JlYXRlKHsKICAgICAgICAgICAgZW5kcG9pbnRfdXJsOiB3ZWJob29rX3VybCwKICAgICAgICAgICAgZXZlbnQ6IHdlYmhvb2tQYXlsb2FkLmV2ZW50LAogICAgICAgICAgICBvcmRlcl9pZDogdHJhbnNhY3Rpb25faWQsCiAgICAgICAgICAgIHN0YXR1czogZGVsaXZlcnlTdGF0dXMsCiAgICAgICAgICAgIGh0dHBfc3RhdHVzOiBodHRwU3RhdHVzLAogICAgICAgICAgICBhdHRlbXB0czogMSwKICAgICAgICAgICAgcmVzcG9uc2Vfc25pcHBldDogIiIsCiAgICAgICAgICB9KTsKICAgICAgICB9KSgpLmNhdGNoKCgpID0+IHt9KQogICAgICApOwogICAgfQoKICAgIHdhaXRVbnRpbChtaXJyb3JUcmFuc2FjdGlvbih0eCkuY2F0Y2goKCkgPT4ge30pKTsKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHJlc3BvbnNlKTsKICB9IGNhdGNoIChlcnJvcikgewogICAgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogZXJyb3IubWVzc2FnZSB9LCB7IHN0YXR1czogNTAwIH0pOwogIH0KfQ==
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.44';
+import { waitUntil } from "base44:runtime";
+import {
+  genReference,
+  genTransactionId,
+  resolveRate,
+  encodePayload,
+  normText,
+  signWebhook,
+  resolveWebhookSecret,
+} from "../../shared/checkout.ts";
+import { executeCryptoOrder } from "../../shared/crypto.ts";
+import { mirrorTransaction, mirrorLog } from "../../shared/neon.ts";
+
+// NexaPay fiat -> crypto router (internal/dashboard).
+// Quotes USDT at the live CoinGecko rate, executes a REAL direct crypto purchase + withdrawal
+// via executeCryptoOrder (KuCoin/Binance/BingX/Coinbase with automatic fallback), drives the
+// transaction through PENDING -> FIAT_APPROVED -> PROCESSING_CRYPTO -> COMPLETED/FAILED,
+// writes a full TransactionLog audit trail, and fires a signed webhook when a target is set.
+
+const VALID_METHODS = new Set(["MOBILE_MONEY", "CARD", "BANK_TRANSFER", "DIRECT_CRYPTO"]);
+
+export default async function(req) {
+  try {
+    const base44 = createClientFromRequest(req);
+    const user = await base44.auth.me();
+    if (!user) return Response.json({ error: "Unauthorized" }, { status: 401 });
+
+    const body = await req.json().catch(() => ({}));
+    const client_name = normText(body.client_name).trim();
+    const amount_fiat = Number(body.amount_fiat);
+    const currency_fiat = (body.currency_fiat || "EUR").toString().toUpperCase();
+    const payment_method = (body.payment_method || "").toString().toUpperCase();
+    const destination_wallet = normText(body.destination_wallet).trim();
+    const network = (body.network || "TRC20").toString().toUpperCase();
+    const webhook_url = normText(body.webhook_url);
+
+    if (!Number.isFinite(amount_fiat) || amount_fiat <= 0) {
+      return Response.json({ error: "amount_fiat must be a positive number." }, { status: 400 });
+    }
+    if (!VALID_METHODS.has(payment_method)) {
+      return Response.json({ error: "payment_method must be MOBILE_MONEY, CARD, BANK_TRANSFER or DIRECT_CRYPTO." }, { status: 400 });
+    }
+    if (!destination_wallet || destination_wallet.length < 6) {
+      return Response.json({ error: "destination_wallet is required." }, { status: 400 });
+    }
+
+    const reference_fiat = genReference();
+    const transaction_id = genTransactionId();
+    const { rate, live } = await resolveRate(currency_fiat);
+    const usdt_amount = Math.round(amount_fiat * rate * 1e6) / 1e6;
+
+    const log = async (from, to, message, level = "INFO", actor = "system") => {
+      const rec = await base44.asServiceRole.entities.TransactionLog.create({
+        transaction_id, reference_fiat, from_status: from || "", to_status: to, level, message, actor,
+      });
+      waitUntil(mirrorLog(rec).catch(() => {}));
+      return rec;
+    };
+
+    let tx = await base44.asServiceRole.entities.Transaction.create({
+      reference_fiat,
+      client_name,
+      amount_fiat,
+      currency_fiat,
+      usdt_amount,
+      exchange_rate: rate,
+      payment_method,
+      crypto_provider: "KUCOIN",
+      destination_wallet,
+      status: "PENDING",
+      payload_base64: encodePayload({ client_name, amount_fiat, currency_fiat, payment_method, transaction_id }),
+      asset: "USDT",
+      network,
+    });
+    await log("", "PENDING", `Paiement ${payment_method} ${amount_fiat} ${currency_fiat} initié`, "INFO", user.full_name || user.email || "admin");
+
+    tx = await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "FIAT_APPROVED" });
+    await log("PENDING", "FIAT_APPROVED", `Encaissement validé. Cible: ${usdt_amount} USDT sur ${network}`, "INFO", "fiatCapture");
+
+    tx = await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "PROCESSING_CRYPTO" });
+    await log("FIAT_APPROVED", "PROCESSING_CRYPTO", `Achat ${usdt_amount} USDT -> retrait vers ${destination_wallet}`, "INFO", "cryptoEngine");
+
+    const purchase = await executeCryptoOrder({
+      amount: usdt_amount,
+      asset: "USDT",
+      network,
+      wallet: destination_wallet,
+      fiatAmount: amount_fiat,
+      fiatCurrency: currency_fiat,
+    });
+
+    let response;
+    let webhookPayload;
+    if (purchase.provider) {
+      tx = await base44.asServiceRole.entities.Transaction.update(tx.id, {
+        status: "COMPLETED",
+        crypto_provider: purchase.provider,
+        tx_hash_crypto: purchase.tx_hash,
+      });
+      await log("PROCESSING_CRYPTO", "COMPLETED", `${usdt_amount} USDT livre via ${purchase.provider}${purchase.live ? " (LIVE)" : " (mock dev)"} - ${purchase.tx_hash}`);
+      webhookPayload = {
+        event: "payment.succeeded",
+        transaction_id,
+        amount: amount_fiat,
+        currency: currency_fiat,
+        usdt: usdt_amount,
+        network,
+        crypto_provider: purchase.provider,
+        crypto_tx_hash: purchase.tx_hash,
+        live: !!purchase.live,
+        rate_live: live,
+      };
+      response = { status: "COMPLETED", transaction_id, crypto_provider: purchase.provider, crypto_tx_hash: purchase.tx_hash, usdt_amount, live: !!purchase.live, rate_live: live };
+    } else {
+      tx = await base44.asServiceRole.entities.Transaction.update(tx.id, {
+        status: "FAILED",
+        error_message: purchase.error,
+      });
+      await log("PROCESSING_CRYPTO", "FAILED", purchase.error, "ERROR", "cryptoEngine");
+      webhookPayload = {
+        event: "payment.failed",
+        transaction_id,
+        amount: amount_fiat,
+        currency: currency_fiat,
+        usdt: usdt_amount,
+        error: purchase.error,
+      };
+      response = { status: "FAILED", transaction_id, error: purchase.error };
+    }
+
+    if (webhook_url) {
+      const whSecret = await resolveWebhookSecret(base44, webhook_url);
+      const { raw, header } = await signWebhook(webhookPayload, whSecret);
+      waitUntil(
+        (async () => {
+          let httpStatus = 0;
+          let deliveryStatus = "FAILED";
+          try {
+            const res = await fetch(webhook_url, {
+              method: "POST",
+              headers: { "Content-Type": "application/json", "NexaPay-Signature": header },
+              body: raw,
+            });
+            httpStatus = res.status;
+            deliveryStatus = res.ok ? "SUCCESS" : "FAILED";
+          } catch {
+            deliveryStatus = "RETRYING";
+          }
+          await base44.asServiceRole.entities.WebhookLog.create({
+            endpoint_url: webhook_url,
+            event: webhookPayload.event,
+            order_id: transaction_id,
+            status: deliveryStatus,
+            http_status: httpStatus,
+            attempts: 1,
+            response_snippet: "",
+          });
+        })().catch(() => {})
+      );
+    }
+
+    waitUntil(mirrorTransaction(tx).catch(() => {}));
+    return Response.json(response);
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
+}

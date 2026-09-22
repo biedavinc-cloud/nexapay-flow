@@ -1,1 +1,63 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCi8vIElubGluZSBTVkcgYnJhbmQgbWFya3Mgc28gdGhlIGNoZWNrb3V0IHNob3dzIHJlYWwgY2FyZCBsb2dvcyBpbnN0ZWFkIG9mIHRleHQuCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIENhcmRCcmFuZExvZ28oeyBicmFuZCB9KSB7CiAgY29uc3QgYiA9IChicmFuZCB8fCAiIikudG9Mb3dlckNhc2UoKTsKICBjb25zdCBjbHMgPSAiaC02IjsKCiAgaWYgKGIgPT09ICJ2aXNhIikgewogICAgcmV0dXJuICgKICAgICAgPHN2ZyB2aWV3Qm94PSIwIDAgNjQgMjIiIGNsYXNzTmFtZT17Y2xzfSByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlZpc2EiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiPgogICAgICAgIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSIyMiIgcng9IjMiIGZpbGw9IiMxQTFGNzEiIC8+CiAgICAgICAgPHRleHQgeD0iMzIiIHk9IjE1IiB0ZXh0QW5jaG9yPSJtaWRkbGUiIGZvbnRGYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnRXZWlnaHQ9IjcwMCIgZm9udFN0eWxlPSJpdGFsaWMiIGZvbnRTaXplPSIxMSIgZmlsbD0iI0ZGRkZGRiIgbGV0dGVyU3BhY2luZz0iMC41Ij5WSVNBPC90ZXh0PgogICAgICA8L3N2Zz4KICAgICk7CiAgfQogIGlmIChiID09PSAibWFzdGVyY2FyZCIpIHsKICAgIHJldHVybiAoCiAgICAgIDxzdmcgdmlld0JveD0iMCAwIDY0IDIyIiBjbGFzc05hbWU9e2Nsc30gcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJNYXN0ZXJjYXJkIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KICAgICAgICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiAvPgogICAgICAgIDxjaXJjbGUgY3g9IjI3IiBjeT0iMTEiIHI9IjciIGZpbGw9IiNFQjAwMUIiIC8+CiAgICAgICAgPGNpcmNsZSBjeD0iMzciIGN5PSIxMSIgcj0iNyIgZmlsbD0iI0Y3OUUxQiIgb3BhY2l0eT0iMC45IiAvPgogICAgICA8L3N2Zz4KICAgICk7CiAgfQogIGlmIChiID09PSAiYW1leCIpIHsKICAgIHJldHVybiAoCiAgICAgIDxzdmcgdmlld0JveD0iMCAwIDY0IDIyIiBjbGFzc05hbWU9e2Nsc30gcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJBbWVyaWNhbiBFeHByZXNzIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KICAgICAgICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjMkU3N0JCIiAvPgogICAgICAgIDx0ZXh0IHg9IjMyIiB5PSIxNSIgdGV4dEFuY2hvcj0ibWlkZGxlIiBmb250RmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250V2VpZ2h0PSI3MDAiIGZvbnRTaXplPSI3LjUiIGZpbGw9IiNGRkZGRkYiIGxldHRlclNwYWNpbmc9IjAuNSI+QU1FWDwvdGV4dD4KICAgICAgPC9zdmc+CiAgICApOwogIH0KICBpZiAoYiA9PT0gImRpc2NvdmVyIikgewogICAgcmV0dXJuICgKICAgICAgPHN2ZyB2aWV3Qm94PSIwIDAgNjQgMjIiIGNsYXNzTmFtZT17Y2xzfSByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkRpc2NvdmVyIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KICAgICAgICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iMjIiIHJ4PSIzIiBmaWxsPSIjRkZGRkZGIiAvPgogICAgICAgIDxjaXJjbGUgY3g9IjQ4IiBjeT0iMTEiIHI9IjYiIGZpbGw9IiNGNzZCMUMiIG9wYWNpdHk9IjAuODUiIC8+CiAgICAgICAgPHRleHQgeD0iMzAiIHk9IjE1IiB0ZXh0QW5jaG9yPSJtaWRkbGUiIGZvbnRGYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnRXZWlnaHQ9IjcwMCIgZm9udFNpemU9IjciIGZpbGw9IiMxQTFBMUEiIGxldHRlclNwYWNpbmc9IjAuMyI+RElTQ09WRVI8L3RleHQ+CiAgICAgIDwvc3ZnPgogICAgKTsKICB9CiAgcmV0dXJuIG51bGw7Cn0=
+import React from "react";
+
+// Inline SVG brand marks so the checkout shows real card logos instead of text.
+export default function CardBrandLogo({ brand }) {
+  const b = (brand || "").toLowerCase();
+  const cls = "h-6";
+
+  if (b === "visa") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="Visa" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#1A1F71" />
+        <text x="32" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontStyle="italic" fontSize="11" fill="#FFFFFF" letterSpacing="0.5">VISA</text>
+      </svg>
+    );
+  }
+  if (b === "mastercard") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="Mastercard" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#FFFFFF" />
+        <circle cx="27" cy="11" r="7" fill="#EB001B" />
+        <circle cx="37" cy="11" r="7" fill="#F79E1B" opacity="0.9" />
+      </svg>
+    );
+  }
+  if (b === "amex") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="American Express" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#2E77BB" />
+        <text x="32" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="7.5" fill="#FFFFFF" letterSpacing="0.5">AMEX</text>
+      </svg>
+    );
+  }
+  if (b === "discover") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="Discover" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#FFFFFF" />
+        <circle cx="48" cy="11" r="6" fill="#F76B1C" opacity="0.85" />
+        <text x="30" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="6.5" fill="#1A1A1A" letterSpacing="0.3">DISCOVER</text>
+      </svg>
+    );
+  }
+  if (b === "diners") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="Diners Club" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#FFFFFF" />
+        <circle cx="32" cy="11" r="7.5" fill="#0079BE" />
+        <path d="M32 4 a7 7 0 0 0 0 14 z" fill="#FFFFFF" />
+        <text x="44" y="14" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="5" fill="#0079BE">DINERS</text>
+      </svg>
+    );
+  }
+  if (b === "jcb") {
+    return (
+      <svg viewBox="0 0 64 22" className={cls} role="img" aria-label="JCB" preserveAspectRatio="xMidYMid meet">
+        <rect width="64" height="22" rx="3" fill="#0E4C96" />
+        <text x="14" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="9" fill="#FFFFFF">J</text>
+        <text x="32" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="9" fill="#FFFFFF">C</text>
+        <text x="50" y="15" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="9" fill="#FFFFFF">B</text>
+      </svg>
+    );
+  }
+  return null;
+}

@@ -1,1 +1,93 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCB7IEJhZGdlIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2JhZGdlIjsKaW1wb3J0IHsgUGx1ZywgTG9hZGVyMiwgQ2hlY2tDaXJjbGUyLCBYQ2lyY2xlLCBaYXAgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQ29ubmVjdGlvblRlc3RlcigpIHsKICBjb25zdCBbcHJvdmlkZXJzLCBzZXRQcm92aWRlcnNdID0gdXNlU3RhdGUoW10pOwogIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKHRydWUpOwogIGNvbnN0IFtyZXN1bHRzLCBzZXRSZXN1bHRzXSA9IHVzZVN0YXRlKHt9KTsgLy8gcHJvdmlkZXIgLT4geyBvaywgbWVzc2FnZSwgdGVzdGluZyB9CgogIGNvbnN0IGxvYWQgPSBhc3luYyAoKSA9PiB7CiAgICBzZXRMb2FkaW5nKHRydWUpOwogICAgdHJ5IHsKICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IGJhc2U0NC5lbnRpdGllcy5Qcm92aWRlckNvbmZpZy5saXN0KCItY3JlYXRlZF9kYXRlIiwgNTApOwogICAgICBzZXRQcm92aWRlcnMoZGF0YSk7CiAgICB9IGNhdGNoIHsgc2V0UHJvdmlkZXJzKFtdKTsgfQogICAgc2V0TG9hZGluZyhmYWxzZSk7CiAgfTsKICB1c2VFZmZlY3QoKCkgPT4geyBsb2FkKCk7IH0sIFtdKTsKCiAgY29uc3QgdGVzdE9uZSA9IGFzeW5jIChuYW1lKSA9PiB7CiAgICBzZXRSZXN1bHRzKChyKSA9PiAoeyAuLi5yLCBbbmFtZV06IHsgdGVzdGluZzogdHJ1ZSB9IH0pKTsKICAgIHRyeSB7CiAgICAgIGNvbnN0IHJlcyA9IGF3YWl0IGJhc2U0NC5mdW5jdGlvbnMuaW52b2tlKCJ0ZXN0RXhjaGFuZ2VDb25uZWN0aW9uIiwgeyBwcm92aWRlcjogbmFtZSB9KTsKICAgICAgY29uc3QgaXRlbSA9IChyZXMuZGF0YT8ucmVzdWx0cyB8fCBbXSkuZmluZCgoeCkgPT4geC5wcm92aWRlciA9PT0gbmFtZSk7CiAgICAgIHNldFJlc3VsdHMoKHIpID0+ICh7IC4uLnIsIFtuYW1lXTogaXRlbSB8fCB7IG9rOiBmYWxzZSwgbWVzc2FnZTogIkF1Y3VuIHLDqXN1bHRhdCIgfSB9KSk7CiAgICB9IGNhdGNoIChlcnIpIHsKICAgICAgc2V0UmVzdWx0cygocikgPT4gKHsgLi4uciwgW25hbWVdOiB7IG9rOiBmYWxzZSwgbWVzc2FnZTogZXJyPy5tZXNzYWdlIHx8ICJFcnJldXIiIH0gfSkpOwogICAgfQogIH07CgogIGNvbnN0IHRlc3RBbGwgPSBhc3luYyAoKSA9PiB7CiAgICBmb3IgKGNvbnN0IHAgb2YgcHJvdmlkZXJzKSB7CiAgICAgIC8vIGVzbGludC1kaXNhYmxlLW5leHQtbGluZSBuby1hd2FpdC1pbi1sb29wCiAgICAgIGF3YWl0IHRlc3RPbmUocC5wcm92aWRlcik7CiAgICB9CiAgfTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJwLTYgbWQ6cC04IG1heC13LTR4bCBteC1hdXRvIj4KICAgICAgPFBhZ2VIZWFkZXIKICAgICAgICB0aXRsZT0iVGVzdCBkZSBjb25uZXhpb24iCiAgICAgICAgZGVzY3JpcHRpb249IlbDqXJpZmlleiBpbnN0YW50YW7DqW1lbnQgbGEgdmFsaWRpdMOpIGRlcyBjbMOpcyBBUEkgZGVzIGV4Y2hhbmdlcyBjb25maWd1csOpcy4iCiAgICAgICAgaWNvbj17UGx1Z30KICAgICAgLz4KCiAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGp1c3RpZnktZW5kIG1iLTQiPgogICAgICAgIDxCdXR0b24gdmFyaWFudD0ib3V0bGluZSIgY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwiIG9uQ2xpY2s9e3Rlc3RBbGx9IGRpc2FibGVkPXtsb2FkaW5nIHx8ICFwcm92aWRlcnMubGVuZ3RofT4KICAgICAgICAgIDxaYXAgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTEuNSIgLz4gVG91dCB0ZXN0ZXIKICAgICAgICA8L0J1dHRvbj4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgICAge2xvYWRpbmcgPyAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC0xMCBmbGV4IGp1c3RpZnktY2VudGVyIj48TG9hZGVyMiBjbGFzc05hbWU9ImgtNSB3LTUgYW5pbWF0ZS1zcGluIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCIgLz48L2Rpdj4KICAgICAgICApIDogcHJvdmlkZXJzLmxlbmd0aCA9PT0gMCA/ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTEwIHRleHQtY2VudGVyIHRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5BdWN1biBmb3Vybmlzc2V1ciBjb25maWd1csOpLiBBam91dGV6LWVuIGRhbnMgwqsgRm91cm5pc3NldXJzIGNyeXB0byDCuy48L2Rpdj4KICAgICAgICApIDogKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImRpdmlkZS15IGRpdmlkZS1ib3JkZXIiPgogICAgICAgICAgICB7cHJvdmlkZXJzLm1hcCgocCkgPT4gewogICAgICAgICAgICAgIGNvbnN0IHIgPSByZXN1bHRzW3AucHJvdmlkZXJdOwogICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICA8ZGl2IGtleT17cC5pZH0gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQgcC00Ij4KICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1pbi13LTAiPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQiPntwLnByb3ZpZGVyfTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgIHtwLmVuYWJsZWQKICAgICAgICAgICAgICAgICAgICAgICAgPyA8QmFkZ2UgdmFyaWFudD0ib3V0bGluZSIgY2xhc3NOYW1lPSJiZy1lbWVyYWxkLTUwIHRleHQtZW1lcmFsZC03MDAgYm9yZGVyLWVtZXJhbGQtMjAwIj5BY3RpdsOpPC9CYWRnZT4KICAgICAgICAgICAgICAgICAgICAgICAgOiA8QmFkZ2UgdmFyaWFudD0ib3V0bGluZSIgY2xhc3NOYW1lPSJiZy1tdXRlZCB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkTDqXNhY3RpdsOpPC9CYWRnZT59CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtdC0xIj57cC5sYWJlbCB8fCAi4oCUIn0gwrcgc3RhdHV0IHtwLnN0YXR1cyB8fCAi4oCUIn08L3A+CiAgICAgICAgICAgICAgICAgICAge3IgJiYgIXIudGVzdGluZyAmJiAoCiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e2B0ZXh0LXhzIG10LTEgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEuNSAke3Iub2sgPyAidGV4dC1lbWVyYWxkLTYwMCIgOiAidGV4dC1yZWQtNjAwIn1gfT4KICAgICAgICAgICAgICAgICAgICAgICAge3Iub2sgPyA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+IDogPFhDaXJjbGUgY2xhc3NOYW1lPSJoLTMuNSB3LTMuNSIgLz59CiAgICAgICAgICAgICAgICAgICAgICAgIHtyLm1lc3NhZ2V9CiAgICAgICAgICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgICAgICAgKX0KICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgIDxCdXR0b24gc2l6ZT0ic20iIHZhcmlhbnQ9Im91dGxpbmUiIGNsYXNzTmFtZT0icm91bmRlZC1mdWxsIiBvbkNsaWNrPXsoKSA9PiB0ZXN0T25lKHAucHJvdmlkZXIpfSBkaXNhYmxlZD17cj8udGVzdGluZ30+CiAgICAgICAgICAgICAgICAgICAge3I/LnRlc3RpbmcgPyA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNCB3LTQgbXItMS41IGFuaW1hdGUtc3BpbiIgLz4gOiA8UGx1ZyBjbGFzc05hbWU9ImgtNCB3LTQgbXItMS41IiAvPn0KICAgICAgICAgICAgICAgICAgICBUZXN0ZXIKICAgICAgICAgICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICApOwogICAgICAgICAgICB9KX0KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Plug, Loader2, CheckCircle2, XCircle, Zap } from "lucide-react";
+
+export default function ConnectionTester() {
+  const [providers, setProviders] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [results, setResults] = useState({}); // provider -> { ok, message, testing }
+
+  const load = async () => {
+    setLoading(true);
+    try {
+      const data = await base44.entities.ProviderConfig.list("-created_date", 50);
+      setProviders(data);
+    } catch { setProviders([]); }
+    setLoading(false);
+  };
+  useEffect(() => { load(); }, []);
+
+  const testOne = async (name) => {
+    setResults((r) => ({ ...r, [name]: { testing: true } }));
+    try {
+      const res = await base44.functions.invoke("testExchangeConnection", { provider: name });
+      const item = (res.data?.results || []).find((x) => x.provider === name);
+      setResults((r) => ({ ...r, [name]: item || { ok: false, message: "Aucun résultat" } }));
+    } catch (err) {
+      setResults((r) => ({ ...r, [name]: { ok: false, message: err?.message || "Erreur" } }));
+    }
+  };
+
+  const testAll = async () => {
+    for (const p of providers) {
+      // eslint-disable-next-line no-await-in-loop
+      await testOne(p.provider);
+    }
+  };
+
+  return (
+    <div className="p-6 md:p-8 max-w-4xl mx-auto">
+      <PageHeader
+        title="Test de connexion"
+        description="Vérifiez instantanément la validité des clés API des exchanges configurés."
+        icon={Plug}
+      />
+
+      <div className="flex justify-end mb-4">
+        <Button variant="outline" className="rounded-full" onClick={testAll} disabled={loading || !providers.length}>
+          <Zap className="h-4 w-4 mr-1.5" /> Tout tester
+        </Button>
+      </div>
+
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-10 flex justify-center"><Loader2 className="h-5 w-5 animate-spin text-muted-foreground" /></div>
+        ) : providers.length === 0 ? (
+          <div className="p-10 text-center text-sm text-muted-foreground">Aucun fournisseur configuré. Ajoutez-en dans « Fournisseurs crypto ».</div>
+        ) : (
+          <div className="divide-y divide-border">
+            {providers.map((p) => {
+              const r = results[p.provider];
+              return (
+                <div key={p.id} className="flex items-center justify-between gap-4 p-4">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold">{p.provider}</span>
+                      {p.enabled
+                        ? <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200">Activé</Badge>
+                        : <Badge variant="outline" className="bg-muted text-muted-foreground">Désactivé</Badge>}
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">{p.label || "—"} · statut {p.status || "—"}</p>
+                    {r && !r.testing && (
+                      <p className={`text-xs mt-1 flex items-center gap-1.5 ${r.ok ? "text-emerald-600" : "text-red-600"}`}>
+                        {r.ok ? <CheckCircle2 className="h-3.5 w-3.5" /> : <XCircle className="h-3.5 w-3.5" />}
+                        {r.message}
+                      </p>
+                    )}
+                  </div>
+                  <Button size="sm" variant="outline" className="rounded-full" onClick={() => testOne(p.provider)} disabled={r?.testing}>
+                    {r?.testing ? <Loader2 className="h-4 w-4 mr-1.5 animate-spin" /> : <Plug className="h-4 w-4 mr-1.5" />}
+                    Tester
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

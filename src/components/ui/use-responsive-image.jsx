@@ -1,1 +1,40 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCmltcG9ydCB7IHVzZVNpemUgfSBmcm9tICIuLi8uLi9ob29rcy91c2Utc2l6ZSIKaW1wb3J0IHsgY24gfSBmcm9tICIuLi8uLi9saWIvdXRpbHMiCmltcG9ydCB7IERFRkFVTFRfVFJBTlNGT1JNX1dJRFRILCBnZXRJbWFnZVByZXZpZXdDbGFzc05hbWUgfSBmcm9tICIuL2ltYWdlLWhlbHBlcnMiCgpleHBvcnQgZnVuY3Rpb24gdXNlUmVzcG9uc2l2ZUltYWdlKHsgcGFyc2VkLCBmaXR0aW5nVHlwZSwgZm9jYWxQb2ludCwgcXVhbGl0eSwgY2xhc3NOYW1lLCBvbkxvYWQsIG9uU291cmNlQ2hhbmdlIH0sIHBhcmVudFJlZikgewogIGNvbnN0IHdyYXBwZXJSZWYgPSBSZWFjdC51c2VSZWYobnVsbCkKICBjb25zdCBpbWdSZWYgPSBSZWFjdC51c2VSZWYobnVsbCkKICBjb25zdCBzaXplID0gdXNlU2l6ZSh3cmFwcGVyUmVmKQogIGNvbnN0IFtsb2FkZWQsIHNldExvYWRlZF0gPSBSZWFjdC51c2VTdGF0ZShmYWxzZSkKCiAgUmVhY3QudXNlSW1wZXJhdGl2ZUhhbmRsZShwYXJlbnRSZWYsICgpID0+IGltZ1JlZi5jdXJyZW50KQogIFJlYWN0LnVzZUVmZmVjdCgoKSA9PiBzZXRMb2FkZWQoZmFsc2UpLCBbcGFyc2VkLmJhc2VVcmxdKQogIFJlYWN0LnVzZUVmZmVjdCgoKSA9PiB7CiAgICBjb25zdCB3cmFwcGVyID0gd3JhcHBlclJlZi5jdXJyZW50CiAgICBjb25zdCByZXBsYWNlID0gKGV2ZW50KSA9PiBvblNvdXJjZUNoYW5nZSgKICAgICAgZXZlbnQuZGV0YWlsLnNyYywgZ2V0SW1hZ2VQcmV2aWV3Q2xhc3NOYW1lKGNsYXNzTmFtZSwgd3JhcHBlci5jbGFzc05hbWUsIGNuKCJpbmxpbmUtYmxvY2sgcmVsYXRpdmUiLCBjbGFzc05hbWUpKQogICAgKQogICAgd3JhcHBlci5hZGRFdmVudExpc3RlbmVyKCJiYXNlNDQ6aW1hZ2UtcmVwbGFjZSIsIHJlcGxhY2UpCiAgICByZXR1cm4gKCkgPT4gd3JhcHBlci5yZW1vdmVFdmVudExpc3RlbmVyKCJiYXNlNDQ6aW1hZ2UtcmVwbGFjZSIsIHJlcGxhY2UpCiAgfSwgW2NsYXNzTmFtZSwgb25Tb3VyY2VDaGFuZ2VdKQoKICBjb25zdCBjcm9wID0gZml0dGluZ1R5cGUgIT09ICJmaXQiCiAgLy8gV2FpdCBmb3IgdXNlU2l6ZSdzIHByZS1wYWludCBtZWFzdXJlbWVudCBiZWZvcmUgcmVxdWVzdGluZyBhIHRyYW5zZm9ybS4KICBjb25zdCBvcHRpb25zID0gc2l6ZSAmJiB7CiAgICB3aWR0aDogc2l6ZS53aWR0aCB8fCBERUZBVUxUX1RSQU5TRk9STV9XSURUSCwKICAgIGhlaWdodDogc2l6ZS5oZWlnaHQgfHwgdW5kZWZpbmVkLAogICAgY3JvcCwKICAgIGZvY2FsUG9pbnQ6IGNyb3AgPyBmb2NhbFBvaW50IDogdW5kZWZpbmVkLAogICAgcXVhbGl0eSwKICB9CgogIHJldHVybiB7CiAgICB3cmFwcGVyUmVmLCBpbWdSZWYsIGxvYWRlZCwgb3B0aW9ucywKICAgIGhhbmRsZUxvYWQ6IChldmVudCkgPT4gewogICAgICBzZXRMb2FkZWQodHJ1ZSkKICAgICAgb25Mb2FkPy4oZXZlbnQpCiAgICB9LAogIH0KfQo=
+import * as React from "react"
+import { useSize } from "../../hooks/use-size"
+import { cn } from "../../lib/utils"
+import { DEFAULT_TRANSFORM_WIDTH, getImagePreviewClassName } from "./image-helpers"
+
+export function useResponsiveImage({ parsed, fittingType, focalPoint, quality, className, onLoad, onSourceChange }, parentRef) {
+  const wrapperRef = React.useRef(null)
+  const imgRef = React.useRef(null)
+  const size = useSize(wrapperRef)
+  const [loaded, setLoaded] = React.useState(false)
+
+  React.useImperativeHandle(parentRef, () => imgRef.current)
+  React.useEffect(() => setLoaded(false), [parsed.baseUrl])
+  React.useEffect(() => {
+    const wrapper = wrapperRef.current
+    const replace = (event) => onSourceChange(
+      event.detail.src, getImagePreviewClassName(className, wrapper.className, cn("inline-block relative", className))
+    )
+    wrapper.addEventListener("base44:image-replace", replace)
+    return () => wrapper.removeEventListener("base44:image-replace", replace)
+  }, [className, onSourceChange])
+
+  const crop = fittingType !== "fit"
+  // Wait for useSize's pre-paint measurement before requesting a transform.
+  const options = size && {
+    width: size.width || DEFAULT_TRANSFORM_WIDTH,
+    height: size.height || undefined,
+    crop,
+    focalPoint: crop ? focalPoint : undefined,
+    quality,
+  }
+
+  return {
+    wrapperRef, imgRef, loaded, options,
+    handleLoad: (event) => {
+      setLoaded(true)
+      onLoad?.(event)
+    },
+  }
+}

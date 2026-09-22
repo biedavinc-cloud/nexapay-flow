@@ -1,1 +1,170 @@
-aW1wb3J0IHsgVG9hc3RlciB9IGZyb20gIkAvY29tcG9uZW50cy91aS90b2FzdGVyIgppbXBvcnQgeyBRdWVyeUNsaWVudFByb3ZpZGVyIH0gZnJvbSAnQHRhbnN0YWNrL3JlYWN0LXF1ZXJ5JwppbXBvcnQgeyBxdWVyeUNsaWVudEluc3RhbmNlIH0gZnJvbSAnQC9saWIvcXVlcnktY2xpZW50JwppbXBvcnQgeyBCcm93c2VyUm91dGVyIGFzIFJvdXRlciwgUm91dGUsIFJvdXRlcywgTmF2aWdhdGUgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJzsKaW1wb3J0IFBhZ2VOb3RGb3VuZCBmcm9tICcuL2xpYi9QYWdlTm90Rm91bmQnOwppbXBvcnQgeyBBdXRoUHJvdmlkZXIsIHVzZUF1dGggfSBmcm9tICdAL2xpYi9BdXRoQ29udGV4dCc7CmltcG9ydCBVc2VyTm90UmVnaXN0ZXJlZEVycm9yIGZyb20gJ0AvY29tcG9uZW50cy9Vc2VyTm90UmVnaXN0ZXJlZEVycm9yJzsKaW1wb3J0IFNjcm9sbFRvVG9wIGZyb20gJy4vY29tcG9uZW50cy9TY3JvbGxUb1RvcCc7Ci8vIEFkZCBwYWdlIGltcG9ydHMgaGVyZQppbXBvcnQgTGFuZGluZyBmcm9tICdAL3BhZ2VzL0xhbmRpbmcnOwppbXBvcnQgTG9naW4gZnJvbSAnQC9wYWdlcy9Mb2dpbic7CmltcG9ydCBSZWdpc3RlciBmcm9tICdAL3BhZ2VzL1JlZ2lzdGVyJzsKaW1wb3J0IEZvcmdvdFBhc3N3b3JkIGZyb20gJ0AvcGFnZXMvRm9yZ290UGFzc3dvcmQnOwppbXBvcnQgUmVzZXRQYXNzd29yZCBmcm9tICdAL3BhZ2VzL1Jlc2V0UGFzc3dvcmQnOwppbXBvcnQgUHJvdGVjdGVkUm91dGUgZnJvbSAnQC9jb21wb25lbnRzL1Byb3RlY3RlZFJvdXRlJzsKaW1wb3J0IExheW91dCBmcm9tICdAL2NvbXBvbmVudHMvTGF5b3V0JzsKaW1wb3J0IERhc2hib2FyZCBmcm9tICdAL3BhZ2VzL0Rhc2hib2FyZCc7CmltcG9ydCBOZXdUcmFuc2FjdGlvbiBmcm9tICdAL3BhZ2VzL05ld1RyYW5zYWN0aW9uJzsKaW1wb3J0IFRyYW5zYWN0aW9uRGV0YWlsIGZyb20gJ0AvcGFnZXMvVHJhbnNhY3Rpb25EZXRhaWwnOwppbXBvcnQgUHJvdmlkZXJTdGF0dXMgZnJvbSAnQC9wYWdlcy9Qcm92aWRlclN0YXR1cyc7CmltcG9ydCBUcmFuc2FjdGlvbkxvZ3MgZnJvbSAnQC9wYWdlcy9UcmFuc2FjdGlvbkxvZ3MnOwppbXBvcnQgQW5hbHl0aWNzIGZyb20gJ0AvcGFnZXMvQW5hbHl0aWNzJzsKaW1wb3J0IFNldHRpbmdzUGFnZSBmcm9tICdAL3BhZ2VzL1NldHRpbmdzJzsKaW1wb3J0IEFwaUtleXMgZnJvbSAnQC9wYWdlcy9BcGlLZXlzJzsKaW1wb3J0IFdlYmhvb2tzIGZyb20gJ0AvcGFnZXMvV2ViaG9va3MnOwppbXBvcnQgQ3J5cHRvV2FsbGV0cyBmcm9tICdAL3BhZ2VzL0NyeXB0b1dhbGxldHMnOwppbXBvcnQgU2VjdXJpdHkgZnJvbSAnQC9wYWdlcy9TZWN1cml0eSc7CmltcG9ydCBHZXN0aW9uUHJlc3RhdGFpcmVzIGZyb20gJ0AvcGFnZXMvR2VzdGlvblByZXN0YXRhaXJlcyc7CmltcG9ydCBKb3VybmFsV2ViaG9va3MgZnJvbSAnQC9wYWdlcy9Kb3VybmFsV2ViaG9va3MnOwppbXBvcnQgUGFyYW1ldHJlc1NlY3VyaXRlIGZyb20gJ0AvcGFnZXMvUGFyYW1ldHJlc1NlY3VyaXRlJzsKaW1wb3J0IFJhcHBvcnRzUGVyZm9ybWFuY2UgZnJvbSAnQC9wYWdlcy9SYXBwb3J0c1BlcmZvcm1hbmNlJzsKaW1wb3J0IE1hbmFnZVByb3ZpZGVycyBmcm9tICdAL3BhZ2VzL01hbmFnZVByb3ZpZGVycyc7CmltcG9ydCBXYWxsZXRzIGZyb20gJ0AvcGFnZXMvV2FsbGV0cyc7CmltcG9ydCBQYXltZW50SGlzdG9yeSBmcm9tICdAL3BhZ2VzL1BheW1lbnRIaXN0b3J5JzsKaW1wb3J0IFdlYmhvb2tDb25zb2xlIGZyb20gJ0AvcGFnZXMvV2ViaG9va0NvbnNvbGUnOwppbXBvcnQgUmF0ZU1hbmFnZW1lbnQgZnJvbSAnQC9wYWdlcy9SYXRlTWFuYWdlbWVudCc7CmltcG9ydCBTZWN1cml0eVNldHRpbmdzIGZyb20gJ0AvcGFnZXMvU2VjdXJpdHlTZXR0aW5ncyc7CmltcG9ydCBBcGlEb2NzIGZyb20gJ0AvcGFnZXMvQXBpRG9jcyc7CmltcG9ydCBXZWJob29rQXVkaXQgZnJvbSAnQC9wYWdlcy9XZWJob29rQXVkaXQnOwppbXBvcnQgQ3VycmVuY3lNYW5hZ2VtZW50IGZyb20gJ0AvcGFnZXMvQ3VycmVuY3lNYW5hZ2VtZW50JzsKaW1wb3J0IFdlYmhvb2tUZXN0ZXIgZnJvbSAnQC9wYWdlcy9XZWJob29rVGVzdGVyJzsKaW1wb3J0IENvbm5lY3Rpb25UZXN0ZXIgZnJvbSAnQC9wYWdlcy9Db25uZWN0aW9uVGVzdGVyJzsKCmNvbnN0IEF1dGhlbnRpY2F0ZWRBcHAgPSAoKSA9PiB7CiAgY29uc3QgeyBpc0xvYWRpbmdBdXRoLCBpc0xvYWRpbmdQdWJsaWNTZXR0aW5ncywgYXV0aEVycm9yLCBuYXZpZ2F0ZVRvTG9naW4gfSA9IHVzZUF1dGgoKTsKICBjb25zdCBpc0VtYmVkID0gbmV3IFVSTFNlYXJjaFBhcmFtcyh3aW5kb3cubG9jYXRpb24uc2VhcmNoKS5nZXQoImVtYmVkIikgPT09ICJ0cnVlIjsKCiAgLy8gRW1iZWRkZWQgY2hlY2tvdXQgKGlmcmFtZSBvbiBhIG1hcmtldHBsYWNlKSDigJQgcmVuZGVyIG9ubHkgdGhlIGJhcmUgY2hlY2tvdXQsIG5vIGF1dGgvc2lkZWJhci4KICBpZiAoaXNFbWJlZCkgewogICAgcmV0dXJuICgKICAgICAgPFJvdXRlcz4KICAgICAgICA8Um91dGUgcGF0aD0iL3BheW1lbnRzL25ldyIgZWxlbWVudD17PE5ld1RyYW5zYWN0aW9uIC8+fSAvPgogICAgICAgIDxSb3V0ZSBwYXRoPSIqIiBlbGVtZW50PXs8TmV3VHJhbnNhY3Rpb24gLz59IC8+CiAgICAgIDwvUm91dGVzPgogICAgKTsKICB9CgogIC8vIFNob3cgbG9hZGluZyBzcGlubmVyIHdoaWxlIGNoZWNraW5nIGFwcCBwdWJsaWMgc2V0dGluZ3Mgb3IgYXV0aAogIGlmIChpc0xvYWRpbmdQdWJsaWNTZXR0aW5ncyB8fCBpc0xvYWRpbmdBdXRoKSB7CiAgICByZXR1cm4gKAogICAgICA8ZGl2IGNsYXNzTmFtZT0iZml4ZWQgaW5zZXQtMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InctOCBoLTggYm9yZGVyLTQgYm9yZGVyLXNsYXRlLTIwMCBib3JkZXItdC1zbGF0ZS04MDAgcm91bmRlZC1mdWxsIGFuaW1hdGUtc3BpbiI+PC9kaXY+CiAgICAgIDwvZGl2PgogICAgKTsKICB9CgogIC8vIEhhbmRsZSBhdXRoZW50aWNhdGlvbiBlcnJvcnMKICBpZiAoYXV0aEVycm9yKSB7CiAgICBpZiAoYXV0aEVycm9yLnR5cGUgPT09ICd1c2VyX25vdF9yZWdpc3RlcmVkJykgewogICAgICByZXR1cm4gPFVzZXJOb3RSZWdpc3RlcmVkRXJyb3IgLz47CiAgICB9IGVsc2UgaWYgKGF1dGhFcnJvci50eXBlID09PSAnYXV0aF9yZXF1aXJlZCcpIHsKICAgICAgLy8gUmVkaXJlY3QgdG8gbG9naW4gYXV0b21hdGljYWxseQogICAgICBuYXZpZ2F0ZVRvTG9naW4oKTsKICAgICAgcmV0dXJuIG51bGw7CiAgICB9CiAgfQoKICAvLyBSZW5kZXIgdGhlIG1haW4gYXBwCiAgcmV0dXJuICgKICAgIDxSb3V0ZXM+CiAgICAgIDxSb3V0ZSBwYXRoPSIvIiBlbGVtZW50PXs8TGFuZGluZyAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9hcGktZG9jcyIgZWxlbWVudD17PEFwaURvY3MgLz59IC8+CiAgICAgIDxSb3V0ZSBwYXRoPSIvbG9naW4iIGVsZW1lbnQ9ezxMb2dpbiAvPn0gLz4KICAgICAgPFJvdXRlIHBhdGg9Ii9yZWdpc3RlciIgZWxlbWVudD17PFJlZ2lzdGVyIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL2ZvcmdvdC1wYXNzd29yZCIgZWxlbWVudD17PEZvcmdvdFBhc3N3b3JkIC8+fSAvPgogICAgICA8Um91dGUgcGF0aD0iL3Jlc2V0LXBhc3N3b3JkIiBlbGVtZW50PXs8UmVzZXRQYXNzd29yZCAvPn0gLz4KICAgICAgPFJvdXRlIGVsZW1lbnQ9ezxQcm90ZWN0ZWRSb3V0ZSB1bmF1dGhlbnRpY2F0ZWRFbGVtZW50PXs8TmF2aWdhdGUgdG89Ii9sb2dpbiIgcmVwbGFjZSAvPn0gLz59PgogICAgICAgIDxSb3V0ZSBlbGVtZW50PXs8TGF5b3V0IC8+fT4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvZGFzaGJvYXJkIiBlbGVtZW50PXs8RGFzaGJvYXJkIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9wYXltZW50cy9uZXciIGVsZW1lbnQ9ezxOZXdUcmFuc2FjdGlvbiAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvcGF5bWVudHMvOmlkIiBlbGVtZW50PXs8VHJhbnNhY3Rpb25EZXRhaWwgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3Byb3ZpZGVyLXN0YXR1cyIgZWxlbWVudD17PFByb3ZpZGVyU3RhdHVzIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii90cmFuc2FjdGlvbi1sb2dzIiBlbGVtZW50PXs8VHJhbnNhY3Rpb25Mb2dzIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9hbmFseXRpY3MiIGVsZW1lbnQ9ezxBbmFseXRpY3MgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3NldHRpbmdzIiBlbGVtZW50PXs8U2V0dGluZ3NQYWdlIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9hcGkta2V5cyIgZWxlbWVudD17PEFwaUtleXMgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3dlYmhvb2tzIiBlbGVtZW50PXs8V2ViaG9va3MgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL2NyeXB0by13YWxsZXRzIiBlbGVtZW50PXs8Q3J5cHRvV2FsbGV0cyAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvc2VjdXJpdHkiIGVsZW1lbnQ9ezxTZWN1cml0eSAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvZ2VzdGlvbi1wcmVzdGF0YWlyZXMiIGVsZW1lbnQ9ezxHZXN0aW9uUHJlc3RhdGFpcmVzIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9qb3VybmFsLXdlYmhvb2tzIiBlbGVtZW50PXs8Sm91cm5hbFdlYmhvb2tzIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9wYXJhbWV0cmVzLXNlY3VyaXRlIiBlbGVtZW50PXs8UGFyYW1ldHJlc1NlY3VyaXRlIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9yYXBwb3J0cy1wZXJmb3JtYW5jZSIgZWxlbWVudD17PFJhcHBvcnRzUGVyZm9ybWFuY2UgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL21hbmFnZS1wcm92aWRlcnMiIGVsZW1lbnQ9ezxNYW5hZ2VQcm92aWRlcnMgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3dhbGxldHMiIGVsZW1lbnQ9ezxXYWxsZXRzIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9wYXltZW50LWhpc3RvcnkiIGVsZW1lbnQ9ezxQYXltZW50SGlzdG9yeSAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvd2ViaG9vay1jb25zb2xlIiBlbGVtZW50PXs8V2ViaG9va0NvbnNvbGUgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3JhdGUtbWFuYWdlbWVudCIgZWxlbWVudD17PFJhdGVNYW5hZ2VtZW50IC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9zZWN1cml0eS1zZXR0aW5ncyIgZWxlbWVudD17PFNlY3VyaXR5U2V0dGluZ3MgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3dlYmhvb2stYXVkaXQiIGVsZW1lbnQ9ezxXZWJob29rQXVkaXQgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL2N1cnJlbmN5LW1hbmFnZW1lbnQiIGVsZW1lbnQ9ezxDdXJyZW5jeU1hbmFnZW1lbnQgLz59IC8+CiAgICAgICAgICA8Um91dGUgcGF0aD0iL3dlYmhvb2stdGVzdGVyIiBlbGVtZW50PXs8V2ViaG9va1Rlc3RlciAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvY29ubmVjdGlvbi10ZXN0ZXIiIGVsZW1lbnQ9ezxDb25uZWN0aW9uVGVzdGVyIC8+fSAvPgogICAgICAgIDwvUm91dGU+CiAgICAgIDwvUm91dGU+CiAgICAgIDxSb3V0ZSBwYXRoPSIqIiBlbGVtZW50PXs8UGFnZU5vdEZvdW5kIC8+fSAvPgogICAgPC9Sb3V0ZXM+CiAgKTsKfTsKCgpmdW5jdGlvbiBBcHAoKSB7CgogIHJldHVybiAoCiAgICA8QXV0aFByb3ZpZGVyPgogICAgICA8UXVlcnlDbGllbnRQcm92aWRlciBjbGllbnQ9e3F1ZXJ5Q2xpZW50SW5zdGFuY2V9PgogICAgICAgIDxSb3V0ZXI+CiAgICAgICAgICA8U2Nyb2xsVG9Ub3AgLz4KICAgICAgICAgIDxBdXRoZW50aWNhdGVkQXBwIC8+CiAgICAgICAgPC9Sb3V0ZXI+CiAgICAgICAgPFRvYXN0ZXIgLz4KICAgICAgPC9RdWVyeUNsaWVudFByb3ZpZGVyPgogICAgPC9BdXRoUHJvdmlkZXI+CiAgKQp9CgpleHBvcnQgZGVmYXVsdCBBcHA=
+import { Toaster } from "@/components/ui/toaster"
+import { QueryClientProvider } from '@tanstack/react-query'
+import { queryClientInstance } from '@/lib/query-client'
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import PageNotFound from './lib/PageNotFound';
+import { AuthProvider, useAuth } from '@/lib/AuthContext';
+import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ScrollToTop from './components/ScrollToTop';
+// Add page imports here
+import Landing from '@/pages/Landing';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import ForgotPassword from '@/pages/ForgotPassword';
+import ResetPassword from '@/pages/ResetPassword';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import Layout from '@/components/Layout';
+import Dashboard from '@/pages/Dashboard';
+import NewTransaction from '@/pages/NewTransaction';
+import TransactionDetail from '@/pages/TransactionDetail';
+import ProviderStatus from '@/pages/ProviderStatus';
+import TransactionLogs from '@/pages/TransactionLogs';
+import Analytics from '@/pages/Analytics';
+import SettingsPage from '@/pages/Settings';
+import ApiKeys from '@/pages/ApiKeys';
+import Webhooks from '@/pages/Webhooks';
+import CryptoWallets from '@/pages/CryptoWallets';
+import Security from '@/pages/Security';
+import GestionPrestataires from '@/pages/GestionPrestataires';
+import JournalWebhooks from '@/pages/JournalWebhooks';
+import ParametresSecurite from '@/pages/ParametresSecurite';
+import RapportsPerformance from '@/pages/RapportsPerformance';
+import ManageProviders from '@/pages/ManageProviders';
+import Wallets from '@/pages/Wallets';
+import PaymentHistory from '@/pages/PaymentHistory';
+import WebhookConsole from '@/pages/WebhookConsole';
+import RateManagement from '@/pages/RateManagement';
+import SecuritySettings from '@/pages/SecuritySettings';
+import ApiDocs from '@/pages/ApiDocs';
+import WebhookAudit from '@/pages/WebhookAudit';
+import CurrencyManagement from '@/pages/CurrencyManagement';
+import WebhookTester from '@/pages/WebhookTester';
+import ConnectionTester from '@/pages/ConnectionTester';
+import PaymentLinks from '@/pages/PaymentLinks';
+import PayLink from '@/pages/PayLink';
+import Onboarding from '@/pages/Onboarding';
+import MerchantSettings from '@/pages/MerchantSettings';
+import ApprovalPending from '@/pages/ApprovalPending';
+import Approvals from '@/pages/Approvals';
+import AdminLayout from '@/components/admin/AdminLayout';
+import AdminOverview from '@/pages/admin/Overview';
+import AdminTenants from '@/pages/admin/Tenants';
+import AdminTransactions from '@/pages/admin/Transactions';
+import AdminProviders from '@/pages/admin/Providers';
+import AdminRates from '@/pages/admin/Rates';
+import AdminSystemLogs from '@/pages/admin/SystemLogs';
+import AdminSecurity from '@/pages/admin/Security';
+import AdminRoles from '@/pages/admin/Roles';
+import AdminGitHubReviews from '@/pages/admin/GitHubReviews';
+
+const AuthenticatedApp = () => {
+  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const isEmbed = new URLSearchParams(window.location.search).get("embed") === "true";
+
+  // Embedded checkout (iframe on a marketplace) — render only the bare checkout, no auth/sidebar.
+  if (isEmbed) {
+    return (
+      <Routes>
+        <Route path="/payments/new" element={<NewTransaction />} />
+        <Route path="*" element={<NewTransaction />} />
+      </Routes>
+    );
+  }
+
+  // Show loading spinner while checking app public settings or auth
+  if (isLoadingPublicSettings || isLoadingAuth) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  // Handle authentication errors
+  if (authError) {
+    if (authError.type === 'user_not_registered') {
+      return <UserNotRegisteredError />;
+    } else if (authError.type === 'auth_required') {
+      // Redirect to login automatically
+      navigateToLogin();
+      return null;
+    }
+  }
+
+  // Render the main app
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/pay/:slug" element={<PayLink />} />
+      <Route path="/api-docs" element={<ApiDocs />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
+        <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/approval-pending" element={<ApprovalPending />} />
+        <Route element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/payment-links" element={<PaymentLinks />} />
+          <Route path="/payments/new" element={<NewTransaction />} />
+          <Route path="/payments/:id" element={<TransactionDetail />} />
+          <Route path="/provider-status" element={<ProviderStatus />} />
+          <Route path="/transaction-logs" element={<TransactionLogs />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/api-keys" element={<ApiKeys />} />
+          <Route path="/webhooks" element={<Webhooks />} />
+          <Route path="/crypto-wallets" element={<CryptoWallets />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/gestion-prestataires" element={<GestionPrestataires />} />
+          <Route path="/journal-webhooks" element={<JournalWebhooks />} />
+          <Route path="/parametres-securite" element={<ParametresSecurite />} />
+          <Route path="/rapports-performance" element={<RapportsPerformance />} />
+          <Route path="/manage-providers" element={<ManageProviders />} />
+          <Route path="/wallets" element={<Wallets />} />
+          <Route path="/payment-history" element={<PaymentHistory />} />
+          <Route path="/webhook-console" element={<WebhookConsole />} />
+          <Route path="/rate-management" element={<RateManagement />} />
+          <Route path="/security-settings" element={<SecuritySettings />} />
+          <Route path="/webhook-audit" element={<WebhookAudit />} />
+          <Route path="/currency-management" element={<CurrencyManagement />} />
+          <Route path="/webhook-tester" element={<WebhookTester />} />
+          <Route path="/connection-tester" element={<ConnectionTester />} />
+          <Route path="/approvals" element={<Approvals />} />
+          <Route path="/merchant-settings" element={<MerchantSettings />} />
+        </Route>
+        <Route path="/admin/superadmin" element={<AdminLayout />}>
+          <Route index element={<AdminOverview />} />
+          <Route path="tenants" element={<AdminTenants />} />
+          <Route path="transactions" element={<AdminTransactions />} />
+          <Route path="providers" element={<AdminProviders />} />
+          <Route path="rates" element={<AdminRates />} />
+          <Route path="roles" element={<AdminRoles />} />
+          <Route path="system-logs" element={<AdminSystemLogs />} />
+          <Route path="security" element={<AdminSecurity />} />
+          <Route path="github" element={<AdminGitHubReviews />} />
+        </Route>
+      </Route>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
+};
+
+
+function App() {
+
+  return (
+    <AuthProvider>
+      <QueryClientProvider client={queryClientInstance}>
+        <Router>
+          <ScrollToTop />
+          <AuthenticatedApp />
+        </Router>
+        <Toaster />
+      </QueryClientProvider>
+    </AuthProvider>
+  )
+}
+
+export default App

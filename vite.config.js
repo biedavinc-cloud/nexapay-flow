@@ -1,1 +1,25 @@
-aW1wb3J0IGJhc2U0NCBmcm9tICJAYmFzZTQ0L3ZpdGUtcGx1Z2luIgppbXBvcnQgcmVhY3QgZnJvbSAnQHZpdGVqcy9wbHVnaW4tcmVhY3QnCmltcG9ydCB7IGRlZmluZUNvbmZpZyB9IGZyb20gJ3ZpdGUnCgovLyBodHRwczovL3ZpdGUuZGV2L2NvbmZpZy8KZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHsKICAvLyBFbnN1cmUgYSBzaW5nbGUgUmVhY3QvUmVhY3RET00gaW5zdGFuY2UgYWNyb3NzIHRoZSBvcHRpbWl6ZWQgZGVwIGdyYXBoCiAgLy8gKHByZXZlbnRzICJDYW5ub3QgcmVhZCBwcm9wZXJ0aWVzIG9mIG51bGwgKHJlYWRpbmcgJ3VzZVN0YXRlJykiIGZyb20gYQogIC8vIGR1cGxpY2F0ZS9zdGFsZSBjb3B5IGFuZCBmb3JjZXMgYSBjbGVhbiByZS1vcHRpbWl6YXRpb24gb2YgdGhlIGRlcCBjYWNoZSkuCiAgcmVzb2x2ZTogewogICAgZGVkdXBlOiBbJ3JlYWN0JywgJ3JlYWN0LWRvbSddLAogIH0sCiAgcGx1Z2luczogWwogICAgYmFzZTQ0KHsKICAgICAgLy8gU3VwcG9ydCBmb3IgbGVnYWN5IGNvZGUgdGhhdCBpbXBvcnRzIHRoZSBiYXNlNDQgU0RLIHdpdGggQC9pbnRlZ3JhdGlvbnMsIEAvZW50aXRpZXMsIGV0Yy4KICAgICAgLy8gY2FuIGJlIHJlbW92ZWQgaWYgdGhlIGNvZGUgaGFzIGJlZW4gdXBkYXRlZCB0byB1c2UgdGhlIG5ldyBTREsgaW1wb3J0cyBmcm9tIEBiYXNlNDQvc2RrCiAgICAgIGxlZ2FjeVNES0ltcG9ydHM6IHByb2Nlc3MuZW52LkJBU0U0NF9MRUdBQ1lfU0RLX0lNUE9SVFMgPT09ICd0cnVlJywKICAgICAgaG1yTm90aWZpZXI6IHRydWUsCiAgICAgIG5hdmlnYXRpb25Ob3RpZmllcjogdHJ1ZSwKICAgICAgYW5hbHl0aWNzVHJhY2tlcjogdHJ1ZSwKICAgICAgdmlzdWFsRWRpdEFnZW50OiB0cnVlCiAgICB9KSwKICAgIHJlYWN0KCksCiAgXQp9KTs=
+import base44 from "@base44/vite-plugin"
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  // Ensure a single React/ReactDOM instance across the optimized dep graph
+  // (prevents "Cannot read properties of null (reading 'useState')" from a
+  // duplicate/stale copy and forces a clean re-optimization of the dep cache).
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
+  plugins: [
+    base44({
+      // Support for legacy code that imports the base44 SDK with @/integrations, @/entities, etc.
+      // can be removed if the code has been updated to use the new SDK imports from @base44/sdk
+      legacySDKImports: process.env.BASE44_LEGACY_SDK_IMPORTS === 'true',
+      hmrNotifier: true,
+      navigationNotifier: true,
+      analyticsTracker: true,
+      visualEditAgent: true
+    }),
+    react(),
+  ]
+});

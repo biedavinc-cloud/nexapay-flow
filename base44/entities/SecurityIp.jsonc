@@ -1,1 +1,29 @@
-ewogICJuYW1lIjogIlNlY3VyaXR5SXAiLAogICJ0eXBlIjogIm9iamVjdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAiaXAiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJBbGxvd2VkIElQIGFkZHJlc3Mgb3IgQ0lEUiIKICAgIH0sCiAgICAibGFiZWwiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJMYWJlbCBmb3IgdGhlIGFsbG93ZWQgSVAiCiAgICB9LAogICAgImFjdGl2ZSI6IHsKICAgICAgInR5cGUiOiAiYm9vbGVhbiIsCiAgICAgICJkZWZhdWx0IjogdHJ1ZSwKICAgICAgImRlc2NyaXB0aW9uIjogIldoZXRoZXIgdGhlIElQIGlzIGN1cnJlbnRseSBhbGxvd2VkIgogICAgfSwKICAgICJleHBpcmVzX2F0IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZm9ybWF0IjogImRhdGUtdGltZSIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJPcHRpb25hbCBleHBpcnkgdGltZXN0YW1wIgogICAgfQogIH0sCiAgInJlcXVpcmVkIjogWwogICAgImlwIiwKICAgICJsYWJlbCIsCiAgICAiYWN0aXZlIgogIF0KfQ==
+{
+  "name": "SecurityIp",
+  "type": "object",
+  "properties": {
+    "ip": {
+      "type": "string",
+      "description": "Allowed IP address or CIDR"
+    },
+    "label": {
+      "type": "string",
+      "description": "Label for the allowed IP"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the IP is currently allowed"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional expiry timestamp"
+    }
+  },
+  "required": [
+    "ip",
+    "label",
+    "active"
+  ]
+}

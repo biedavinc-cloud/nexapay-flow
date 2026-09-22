@@ -1,1 +1,38 @@
-ewogICJuYW1lIjogIkFwaUtleSIsCiAgInR5cGUiOiAib2JqZWN0IiwKICAicHJvcGVydGllcyI6IHsKICAgICJsYWJlbCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIktleSBwYWlyIGxhYmVsIgogICAgfSwKICAgICJzZWNyZXRfa2V5IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiU2VjcmV0IGtleSAoc2tfKSB1c2VkIHNlcnZlci1zaWRlIGJ5IHRoZSBtYXJrZXRwbGFjZSIKICAgIH0sCiAgICAicHVibGlzaGFibGVfa2V5IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiUHVibGlzaGFibGUga2V5IChwa18pIHVzZWQgY2xpZW50LXNpZGUiCiAgICB9LAogICAgImFjdGl2ZSI6IHsKICAgICAgInR5cGUiOiAiYm9vbGVhbiIsCiAgICAgICJkZWZhdWx0IjogdHJ1ZSwKICAgICAgImRlc2NyaXB0aW9uIjogIldoZXRoZXIgdGhlIGtleSBwYWlyIGlzIGFjdGl2ZSIKICAgIH0sCiAgICAibGFzdF91c2VkIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZm9ybWF0IjogImRhdGUtdGltZSIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJMYXN0IHRpbWUgdGhlIGtleSB3YXMgdXNlZCIKICAgIH0KICB9LAogICJyZXF1aXJlZCI6IFsKICAgICJsYWJlbCIsCiAgICAic2VjcmV0X2tleSIsCiAgICAicHVibGlzaGFibGVfa2V5IiwKICAgICJhY3RpdmUiCiAgXQp9
+{
+  "name": "ApiKey",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Key pair label"
+    },
+    "secret_key": {
+      "type": "string",
+      "description": "Secret key (sk_) used server-side by the marketplace"
+    },
+    "publishable_key": {
+      "type": "string",
+      "description": "Publishable key (pk_) used client-side"
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "Merchant tenant this key belongs to"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the key pair is active"
+    },
+    "last_used": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last time the key was used"
+    }
+  },
+  "required": [
+    "label",
+    "secret_key",
+    "publishable_key",
+    "active"
+  ]
+}

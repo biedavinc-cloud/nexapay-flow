@@ -1,1 +1,92 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IHVzZU5hdmlnYXRlIH0gZnJvbSAicmVhY3Qtcm91dGVyLWRvbSI7CmltcG9ydCB7IFBsdXNDaXJjbGUsIENoZWNrQ2lyY2xlMiwgQ2xvY2ssIFhDaXJjbGUsIEFjdGl2aXR5IH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgYmFzZTQ0IH0gZnJvbSAiQC9hcGkvYmFzZTQ0Q2xpZW50IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCBTdGF0Q2FyZCBmcm9tICJAL2NvbXBvbmVudHMvU3RhdENhcmQiOwppbXBvcnQgVHJhbnNhY3Rpb25UYWJsZSBmcm9tICJAL2NvbXBvbmVudHMvVHJhbnNhY3Rpb25UYWJsZSI7CmltcG9ydCB7IFNlbGVjdCwgU2VsZWN0Q29udGVudCwgU2VsZWN0SXRlbSwgU2VsZWN0VHJpZ2dlciwgU2VsZWN0VmFsdWUgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvc2VsZWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIERhc2hib2FyZCgpIHsKICBjb25zdCBuYXZpZ2F0ZSA9IHVzZU5hdmlnYXRlKCk7CiAgY29uc3QgW3RyYW5zYWN0aW9ucywgc2V0VHJhbnNhY3Rpb25zXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKICBjb25zdCBbc3RhdHVzRmlsdGVyLCBzZXRTdGF0dXNGaWx0ZXJdID0gdXNlU3RhdGUoIkFMTCIpOwogIGNvbnN0IFttZXRob2RGaWx0ZXIsIHNldE1ldGhvZEZpbHRlcl0gPSB1c2VTdGF0ZSgiQUxMIik7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBsZXQgYWN0aXZlID0gdHJ1ZTsKICAgIGJhc2U0NC5lbnRpdGllcy5UcmFuc2FjdGlvbgogICAgICAubGlzdCgiLWNyZWF0ZWRfZGF0ZSIsIDEwMCkKICAgICAgLnRoZW4oKHJvd3MpID0+IGFjdGl2ZSAmJiBzZXRUcmFuc2FjdGlvbnMocm93cykpCiAgICAgIC5maW5hbGx5KCgpID0+IGFjdGl2ZSAmJiBzZXRMb2FkaW5nKGZhbHNlKSk7CiAgICByZXR1cm4gKCkgPT4geyBhY3RpdmUgPSBmYWxzZTsgfTsKICB9LCBbXSk7CgogIGNvbnN0IGZpbHRlcmVkID0gdHJhbnNhY3Rpb25zLmZpbHRlcigodCkgPT4gewogICAgaWYgKHN0YXR1c0ZpbHRlciAhPT0gIkFMTCIgJiYgdC5zdGF0dXMgIT09IHN0YXR1c0ZpbHRlcikgcmV0dXJuIGZhbHNlOwogICAgaWYgKG1ldGhvZEZpbHRlciAhPT0gIkFMTCIgJiYgdC5wYXltZW50X21ldGhvZCAhPT0gbWV0aG9kRmlsdGVyKSByZXR1cm4gZmFsc2U7CiAgICByZXR1cm4gdHJ1ZTsKICB9KTsKCiAgY29uc3QgY29tcGxldGVkID0gdHJhbnNhY3Rpb25zLmZpbHRlcigodCkgPT4gdC5zdGF0dXMgPT09ICJDT01QTEVURUQiKTsKICBjb25zdCBwZW5kaW5nID0gdHJhbnNhY3Rpb25zLmZpbHRlcigodCkgPT4gWyJQRU5ESU5HIiwgIkZJQVRfQVBQUk9WRUQiLCAiUFJPQ0VTU0lOR19DUllQVE8iXS5pbmNsdWRlcyh0LnN0YXR1cykpOwogIGNvbnN0IGZhaWxlZCA9IHRyYW5zYWN0aW9ucy5maWx0ZXIoKHQpID0+IHQuc3RhdHVzID09PSAiRkFJTEVEIik7CiAgY29uc3Qgdm9sdW1lID0gY29tcGxldGVkLnJlZHVjZSgoc3VtLCB0KSA9PiBzdW0gKyBOdW1iZXIodC5hbW91bnRfZmlhdCB8fCAwKSwgMCk7CiAgY29uc3QgdXNkdFZvbHVtZSA9IGNvbXBsZXRlZC5yZWR1Y2UoKHN1bSwgdCkgPT4gc3VtICsgTnVtYmVyKHQudXNkdF9hbW91bnQgfHwgMCksIDApOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InB4LTQgbWQ6cHgtOCBweS02IG1kOnB5LTggbWF4LXctN3hsIG14LWF1dG8iPgogICAgICB7LyogSGVhZGVyICovfQogICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBzbTppdGVtcy1jZW50ZXIgc206anVzdGlmeS1iZXR3ZWVuIGdhcC00IG1iLTgiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC0yeGwgbWQ6dGV4dC0zeGwgZm9udC1zZW1pYm9sZCB0cmFja2luZy10aWdodCI+UGF5bWVudCBSb3V0ZXI8L2gxPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC0xIHRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5Nb25pdG9yIGZpYXQg4oaSIFVTRFQgZXhlY3V0aW9uIGFjcm9zcyBwcm92aWRlcnMgaW4gcmVhbCB0aW1lLjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgICA8QnV0dG9uCiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBuYXZpZ2F0ZSgiL3BheW1lbnRzL25ldyIpfQogICAgICAgICAgY2xhc3NOYW1lPSJiZy1wcmltYXJ5IGhvdmVyOmJnLXByaW1hcnkvOTAgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQgaG92ZXI6c2hhZG93LVswXzBfMjBweF9yZ2JhKDk5LDEwMiwyNDEsMC40KV0gdHJhbnNpdGlvbi1zaGFkb3ciCiAgICAgICAgPgogICAgICAgICAgPFBsdXNDaXJjbGUgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTIiIC8+CiAgICAgICAgICBOZXcgUGF5bWVudAogICAgICAgIDwvQnV0dG9uPgogICAgICA8L2Rpdj4KCiAgICAgIHsvKiBTdGF0cyAqL30KICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTQgZ2FwLTQgbWItOCI+CiAgICAgICAgPFN0YXRDYXJkIGxhYmVsPSJTZXR0bGVkIFZvbHVtZSIgdmFsdWU9e2Digqwke3ZvbHVtZS50b0xvY2FsZVN0cmluZyh1bmRlZmluZWQsIHsgbWluaW11bUZyYWN0aW9uRGlnaXRzOiAyLCBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IDIgfSl9YH0gc3ViPXtgJHt1c2R0Vm9sdW1lLnRvRml4ZWQoMil9IFVTRFQgZGVsaXZlcmVkYH0gaWNvbj17QWN0aXZpdHl9IGFjY2VudD0idGV4dC1lbWVyYWxkLTQwMCIgLz4KICAgICAgICA8U3RhdENhcmQgbGFiZWw9IkNvbXBsZXRlZCIgdmFsdWU9e2NvbXBsZXRlZC5sZW5ndGh9IHN1Yj0ic3VjY2Vzc2Z1bCBwYXlvdXRzIiBpY29uPXtDaGVja0NpcmNsZTJ9IGFjY2VudD0idGV4dC1lbWVyYWxkLTQwMCIgLz4KICAgICAgICA8U3RhdENhcmQgbGFiZWw9IkluIEZsaWdodCIgdmFsdWU9e3BlbmRpbmcubGVuZ3RofSBzdWI9ImF3YWl0aW5nIHNldHRsZW1lbnQiIGljb249e0Nsb2NrfSBhY2NlbnQ9InRleHQtc2t5LTQwMCIgLz4KICAgICAgICA8U3RhdENhcmQgbGFiZWw9IkZhaWxlZCIgdmFsdWU9e2ZhaWxlZC5sZW5ndGh9IHN1Yj0icmVxdWlyZXMgYXR0ZW50aW9uIiBpY29uPXtYQ2lyY2xlfSBhY2NlbnQ9InRleHQtcmVkLTQwMCIgLz4KICAgICAgPC9kaXY+CgogICAgICB7LyogVGFibGUgKyBmaWx0ZXJzICovfQogICAgICA8ZGl2IGNsYXNzTmFtZT0ibWItNCBmbGV4IGZsZXgtY29sIHNtOmZsZXgtcm93IHNtOml0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTMiPgogICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSB0ZXh0LWxnIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctdGlnaHQiPlJlY2VudCBUcmFuc2FjdGlvbnM8L2gyPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICA8U2VsZWN0IHZhbHVlPXtzdGF0dXNGaWx0ZXJ9IG9uVmFsdWVDaGFuZ2U9e3NldFN0YXR1c0ZpbHRlcn0+CiAgICAgICAgICAgIDxTZWxlY3RUcmlnZ2VyIGNsYXNzTmFtZT0idy0zNiByb3VuZGVkLXhsIGgtOSI+PFNlbGVjdFZhbHVlIC8+PC9TZWxlY3RUcmlnZ2VyPgogICAgICAgICAgICA8U2VsZWN0Q29udGVudD4KICAgICAgICAgICAgICA8U2VsZWN0SXRlbSB2YWx1ZT0iQUxMIj5Ub3VzIHN0YXR1dHM8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IlBFTkRJTkciPlBFTkRJTkc8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IkZJQVRfQVBQUk9WRUQiPkZJQVRfQVBQUk9WRUQ8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IlBST0NFU1NJTkdfQ1JZUFRPIj5QUk9DRVNTSU5HX0NSWVBUTzwvU2VsZWN0SXRlbT4KICAgICAgICAgICAgICA8U2VsZWN0SXRlbSB2YWx1ZT0iQ09NUExFVEVEIj5DT01QTEVURUQ8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IkZBSUxFRCI+RkFJTEVEPC9TZWxlY3RJdGVtPgogICAgICAgICAgICA8L1NlbGVjdENvbnRlbnQ+CiAgICAgICAgICA8L1NlbGVjdD4KICAgICAgICAgIDxTZWxlY3QgdmFsdWU9e21ldGhvZEZpbHRlcn0gb25WYWx1ZUNoYW5nZT17c2V0TWV0aG9kRmlsdGVyfT4KICAgICAgICAgICAgPFNlbGVjdFRyaWdnZXIgY2xhc3NOYW1lPSJ3LTQwIHJvdW5kZWQteGwgaC05Ij48U2VsZWN0VmFsdWUgLz48L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PgogICAgICAgICAgICAgIDxTZWxlY3RJdGVtIHZhbHVlPSJBTEwiPlRvdXRlcyBtw6l0aG9kZXM8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0gdmFsdWU9IkNBUkQiPkNhcnRlPC9TZWxlY3RJdGVtPgogICAgICAgICAgICAgIDxTZWxlY3RJdGVtIHZhbHVlPSJNT0JJTEVfTU9ORVkiPk1vYmlsZSBNb25leTwvU2VsZWN0SXRlbT4KICAgICAgICAgICAgICA8U2VsZWN0SXRlbSB2YWx1ZT0iQkFOS19UUkFOU0ZFUiI+VmlyZW1lbnQ8L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD4KICAgICAgICAgIDwvU2VsZWN0PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPFRyYW5zYWN0aW9uVGFibGUgdHJhbnNhY3Rpb25zPXtmaWx0ZXJlZH0gbG9hZGluZz17bG9hZGluZ30gLz4KICAgIDwvZGl2PgogICk7Cn0=
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { PlusCircle, CheckCircle2, Clock, XCircle, Activity } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import StatCard from "@/components/StatCard";
+import TransactionTable from "@/components/TransactionTable";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+export default function Dashboard() {
+  const navigate = useNavigate();
+  const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [statusFilter, setStatusFilter] = useState("ALL");
+  const [methodFilter, setMethodFilter] = useState("ALL");
+
+  useEffect(() => {
+    let active = true;
+    base44.entities.Transaction
+      .list("-created_date", 100)
+      .then((rows) => active && setTransactions(rows))
+      .finally(() => active && setLoading(false));
+    return () => { active = false; };
+  }, []);
+
+  const filtered = transactions.filter((t) => {
+    if (statusFilter !== "ALL" && t.status !== statusFilter) return false;
+    if (methodFilter !== "ALL" && t.payment_method !== methodFilter) return false;
+    return true;
+  });
+
+  const completed = transactions.filter((t) => t.status === "COMPLETED");
+  const pending = transactions.filter((t) => ["PENDING", "FIAT_APPROVED", "PROCESSING_CRYPTO"].includes(t.status));
+  const failed = transactions.filter((t) => t.status === "FAILED");
+  const volume = completed.reduce((sum, t) => sum + Number(t.amount_fiat || 0), 0);
+  const usdtVolume = completed.reduce((sum, t) => sum + Number(t.usdt_amount || 0), 0);
+
+  return (
+    <div className="px-4 md:px-8 py-6 md:py-8 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+        <div>
+          <h1 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">Payment Router</h1>
+          <p className="mt-1 text-sm text-muted-foreground">Monitor fiat → USDT execution across providers in real time.</p>
+        </div>
+        <Button
+          onClick={() => navigate("/payments/new")}
+          className="bg-primary hover:bg-primary/90 text-primary-foreground hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-shadow"
+        >
+          <PlusCircle className="h-4 w-4 mr-2" />
+          New Payment
+        </Button>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <StatCard label="Settled Volume" value={`${completed[0]?.currency_fiat || "EUR"} ${volume.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`} sub={`${usdtVolume.toFixed(2)} USDT delivered`} icon={Activity} accent="text-emerald-400" />
+        <StatCard label="Completed" value={completed.length} sub="successful payouts" icon={CheckCircle2} accent="text-emerald-400" />
+        <StatCard label="In Flight" value={pending.length} sub="awaiting settlement" icon={Clock} accent="text-sky-400" />
+        <StatCard label="Failed" value={failed.length} sub="requires attention" icon={XCircle} accent="text-red-400" />
+      </div>
+
+      {/* Table + filters */}
+      <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <h2 className="font-display text-lg font-semibold tracking-tight">Recent Transactions</h2>
+        <div className="flex items-center gap-2">
+          <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <SelectTrigger className="w-36 rounded-xl h-9"><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="ALL">Tous statuts</SelectItem>
+              <SelectItem value="PENDING">PENDING</SelectItem>
+              <SelectItem value="FIAT_APPROVED">FIAT_APPROVED</SelectItem>
+              <SelectItem value="PROCESSING_CRYPTO">PROCESSING_CRYPTO</SelectItem>
+              <SelectItem value="COMPLETED">COMPLETED</SelectItem>
+              <SelectItem value="FAILED">FAILED</SelectItem>
+            </SelectContent>
+          </Select>
+          <Select value={methodFilter} onValueChange={setMethodFilter}>
+            <SelectTrigger className="w-40 rounded-xl h-9"><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="ALL">Toutes méthodes</SelectItem>
+              <SelectItem value="CARD">Carte</SelectItem>
+              <SelectItem value="MOBILE_MONEY">Mobile Money</SelectItem>
+              <SelectItem value="BANK_TRANSFER">Virement</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+      <TransactionTable transactions={filtered} loading={loading} />
+    </div>
+  );
+}

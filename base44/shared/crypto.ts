@@ -1,1 +1,173 @@
-Ly8gTmV4YVBheSBkaXJlY3QgY3J5cHRvIGV4ZWN1dGlvbiBlbmdpbmUg4oCUIHJlYWwgc2lnbmVkIFJFU1QgY29ubmVjdG9ycyAoS3VDb2luLCBCaW5hbmNlLAovLyBCaW5nWCwgQ29pbmJhc2UpIHdpdGggYXV0b21hdGljIGZhbGxiYWNrLCBhbmQgYSBkZXYvbW9jayBtb2RlIHdoZW4gbm8gZXhjaGFuZ2Uga2V5cyBhcmUgY29uZmlndXJlZC4KLy8gU2VydmVyLW9ubHk6IGltcG9ydGVkIGJ5IGJhY2tlbmQgZnVuY3Rpb25zLCBuZXZlciBmcm9tIHRoZSBjbGllbnQgYnVuZGxlLgoKaW1wb3J0IHsgc2VjcmV0cyB9IGZyb20gImJhc2U0NDpydW50aW1lIjsKCmNvbnN0IGVuYyA9IG5ldyBUZXh0RW5jb2RlcigpOwoKZnVuY3Rpb24gc2FmZVNlY3JldChuYW1lKSB7CiAgdHJ5IHsKICAgIHJldHVybiBzZWNyZXRzLmdldChuYW1lKTsKICB9IGNhdGNoIHsKICAgIHJldHVybiB1bmRlZmluZWQ7CiAgfQp9CgpmdW5jdGlvbiBiNjRzdGQoYnl0ZXMpIHsKICByZXR1cm4gYnRvYShTdHJpbmcuZnJvbUNoYXJDb2RlKC4uLmJ5dGVzKSk7Cn0KCmFzeW5jIGZ1bmN0aW9uIGhtYWNTaGEyNTZIZXgoa2V5LCBtc2cpIHsKICBjb25zdCBjayA9IGF3YWl0IGNyeXB0by5zdWJ0bGUuaW1wb3J0S2V5KCJyYXciLCBlbmMuZW5jb2RlKGtleSksIHsgbmFtZTogIkhNQUMiLCBoYXNoOiAiU0hBLTI1NiIgfSwgZmFsc2UsIFsic2lnbiJdKTsKICBjb25zdCBzaWcgPSBhd2FpdCBjcnlwdG8uc3VidGxlLnNpZ24oIkhNQUMiLCBjaywgZW5jLmVuY29kZShtc2cpKTsKICByZXR1cm4gQXJyYXkuZnJvbShuZXcgVWludDhBcnJheShzaWcpKS5tYXAoKGIpID0+IGIudG9TdHJpbmcoMTYpLnBhZFN0YXJ0KDIsICIwIikpLmpvaW4oIiIpOwp9Cgphc3luYyBmdW5jdGlvbiBobWFjU2hhMjU2QjY0KGtleSwgbXNnKSB7CiAgY29uc3QgY2sgPSBhd2FpdCBjcnlwdG8uc3VidGxlLmltcG9ydEtleSgicmF3IiwgZW5jLmVuY29kZShrZXkpLCB7IG5hbWU6ICJITUFDIiwgaGFzaDogIlNIQS0yNTYiIH0sIGZhbHNlLCBbInNpZ24iXSk7CiAgY29uc3Qgc2lnID0gYXdhaXQgY3J5cHRvLnN1YnRsZS5zaWduKCJITUFDIiwgY2ssIGVuYy5lbmNvZGUobXNnKSk7CiAgcmV0dXJuIGI2NHN0ZChuZXcgVWludDhBcnJheShzaWcpKTsKfQoKZnVuY3Rpb24gZ2VuTW9ja0hhc2goKSB7CiAgY29uc3QgaGV4ID0gKCkgPT4gQXJyYXkuZnJvbSh7IGxlbmd0aDogMTYgfSwgKCkgPT4gIjAxMjM0NTY3ODlhYmNkZWYiW01hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDE2KV0pLmpvaW4oIiIpOwogIHJldHVybiBgJHtoZXgoKX0ke2hleCgpfSR7aGV4KCl9JHtoZXgoKX1gOwp9CgovLyAtLS0gS3VDb2luIC0tLQphc3luYyBmdW5jdGlvbiBrdWNvaW5SZXF1ZXN0KGNyZWRzLCBtZXRob2QsIHBhdGgsIGJvZHkpIHsKICBjb25zdCB0cyA9IERhdGUubm93KCkudG9TdHJpbmcoKTsKICBjb25zdCBzaWduID0gYXdhaXQgaG1hY1NoYTI1NkI2NChjcmVkcy5zZWNyZXQsIGAke3RzfSR7bWV0aG9kLnRvVXBwZXJDYXNlKCl9JHtwYXRofSR7Ym9keSB8fCAiIn1gKTsKICBjb25zdCByID0gYXdhaXQgZmV0Y2goImh0dHBzOi8vYXBpLmt1Y29pbi5jb20iICsgcGF0aCwgewogICAgbWV0aG9kLAogICAgaGVhZGVyczogewogICAgICAiS0MtQVBJLUtFWSI6IGNyZWRzLmtleSwKICAgICAgIktDLUFQSS1TSUdOIjogc2lnbiwKICAgICAgIktDLUFQSS1USU1FU1RBTVAiOiB0cywKICAgICAgIktDLUFQSS1QQVNTUEhSQVNFIjogY3JlZHMucGFzc3BocmFzZSwKICAgICAgIktDLUFQSS1LRVktVkVSU0lPTiI6ICIyIiwKICAgICAgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiwKICAgIH0sCiAgICBib2R5OiBib2R5IHx8IHVuZGVmaW5lZCwKICB9KTsKICBjb25zdCBkID0gYXdhaXQgci5qc29uKCk7CiAgaWYgKGQ/LmNvZGUgIT09ICIyMDAwMDAiKSB0aHJvdyBuZXcgRXJyb3IoZD8ubXNnIHx8ICJLdUNvaW4gQVBJIGVycm9yIik7CiAgcmV0dXJuIGQ7Cn0KCmFzeW5jIGZ1bmN0aW9uIGt1Y29pbkJ1eUFuZFdpdGhkcmF3KHsgYW1vdW50LCBhc3NldCwgbmV0d29yaywgd2FsbGV0LCBjcmVkcywgZmlhdEFtb3VudCwgZmlhdEN1cnJlbmN5IH0pIHsKICAvLyBCdXkgVVNEVCB3aXRoIHRoZSBjbGllbnQncyBmaWF0IGN1cnJlbmN5IChOZXhhUGF5J3MgZXhjaGFuZ2UgYWNjb3VudCBmdW5kcyB0aGUgdHJhZGUpIOKAlCBubyB0aGlyZCBwYXJ0eS4KICBpZiAoZmlhdEN1cnJlbmN5ICYmIGZpYXRDdXJyZW5jeSAhPT0gIlVTRFQiICYmIGZpYXRBbW91bnQgPiAwKSB7CiAgICBhd2FpdCBrdWNvaW5SZXF1ZXN0KGNyZWRzLCAiUE9TVCIsICIvYXBpL3YxL29yZGVycyIsIEpTT04uc3RyaW5naWZ5KHsKICAgICAgY2xpZW50T2lkOiBgbngtJHtEYXRlLm5vdygpfWAsCiAgICAgIHNpZGU6ICJidXkiLAogICAgICBzeW1ib2w6IGAke2Fzc2V0fS0ke2ZpYXRDdXJyZW5jeX1gLAogICAgICB0eXBlOiAibWFya2V0IiwKICAgICAgZnVuZHM6IFN0cmluZyhmaWF0QW1vdW50KSwKICAgIH0pKTsKICB9CiAgY29uc3QgZCA9IGF3YWl0IGt1Y29pblJlcXVlc3QoY3JlZHMsICJQT1NUIiwgIi9hcGkvdjEvd2l0aGRyYXdhbHMiLCBKU09OLnN0cmluZ2lmeSh7CiAgICBjdXJyZW5jeTogYXNzZXQsCiAgICBhbW91bnQ6IFN0cmluZyhhbW91bnQpLAogICAgYWRkcmVzczogd2FsbGV0LAogICAgY2hhaW46IG5ldHdvcmssCiAgfSkpOwogIHJldHVybiB7IHR4X2hhc2g6IGQ/LmRhdGE/LndpdGhkcmF3YWxJZCB8fCBkPy5kYXRhPy5pZCB8fCBga3Vjb2luLSR7RGF0ZS5ub3coKX1gIH07Cn0KCi8vIC0tLSBCaW5hbmNlIC0tLQphc3luYyBmdW5jdGlvbiBiaW5hbmNlUmVxdWVzdChjcmVkcywgbWV0aG9kLCBwYXRoLCBxdWVyeSkgewogIGNvbnN0IHRzID0gRGF0ZS5ub3coKTsKICBjb25zdCBxcyA9IGAke3F1ZXJ5fSR7cXVlcnkgPyAiJiIgOiAiIn10aW1lc3RhbXA9JHt0c31gOwogIGNvbnN0IHNpZyA9IGF3YWl0IGhtYWNTaGEyNTZIZXgoY3JlZHMuc2VjcmV0LCBxcyk7CiAgY29uc3QgciA9IGF3YWl0IGZldGNoKGBodHRwczovL2FwaS5iaW5hbmNlLmNvbSR7cGF0aH0/JHtxc30mc2lnbmF0dXJlPSR7c2lnfWAsIHsKICAgIG1ldGhvZCwKICAgIGhlYWRlcnM6IHsgIlgtTUJYLUFQSUtFWSI6IGNyZWRzLmtleSwgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiB9LAogIH0pOwogIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICBpZiAoZD8uY29kZSAmJiBkLmNvZGUgIT09IDIwMCkgdGhyb3cgbmV3IEVycm9yKGQ/Lm1zZyB8fCAiQmluYW5jZSBBUEkgZXJyb3IiKTsKICByZXR1cm4gZDsKfQoKYXN5bmMgZnVuY3Rpb24gYmluYW5jZUJ1eUFuZFdpdGhkcmF3KHsgYW1vdW50LCBhc3NldCwgbmV0d29yaywgd2FsbGV0LCBjcmVkcywgZmlhdEFtb3VudCwgZmlhdEN1cnJlbmN5IH0pIHsKICBjb25zdCBuZXRNYXAgPSB7IFRSQzIwOiAiVFJYIiwgRVJDMjA6ICJFVEgiLCBQT0xZR09OOiAiTUFUSUMiIH07CiAgaWYgKGZpYXRDdXJyZW5jeSAmJiBmaWF0Q3VycmVuY3kgIT09ICJVU0RUIiAmJiBmaWF0QW1vdW50ID4gMCkgewogICAgLy8gU2VsbCBmaWF0IChiYXNlKSBmb3IgVVNEVCAocXVvdGUpOiBjb252ZXJ0cyB0aGUgY2xpZW50J3MgZmlhdCBpbnRvIFVTRFQgb24gTmV4YVBheSdzIGFjY291bnQuCiAgICBhd2FpdCBiaW5hbmNlUmVxdWVzdChjcmVkcywgIlBPU1QiLCAiL2FwaS92My9vcmRlciIsIGBzeW1ib2w9JHtmaWF0Q3VycmVuY3l9JHthc3NldH0mc2lkZT1TRUxMJnR5cGU9TUFSS0VUJnF1YW50aXR5PSR7ZmlhdEFtb3VudH1gKTsKICB9CiAgY29uc3QgZCA9IGF3YWl0IGJpbmFuY2VSZXF1ZXN0KGNyZWRzLCAiUE9TVCIsICIvc2FwaS92MS9jYXBpdGFsL3dpdGhkcmF3L2FwcGx5IiwgYGNvaW49JHthc3NldH0mbmV0d29yaz0ke25ldE1hcFtuZXR3b3JrXSB8fCBuZXR3b3JrfSZhZGRyZXNzPSR7d2FsbGV0fSZhbW91bnQ9JHthbW91bnR9YCk7CiAgcmV0dXJuIHsgdHhfaGFzaDogZD8uaWQgfHwgYGJpbmFuY2UtJHtEYXRlLm5vdygpfWAgfTsKfQoKLy8gLS0tIEJpbmdYIChzaWduZWQsIGJlc3QtZWZmb3J0KSAtLS0KYXN5bmMgZnVuY3Rpb24gYmluZ3hSZXF1ZXN0KGNyZWRzLCBwYXRoLCBxdWVyeSkgewogIGNvbnN0IHRzID0gRGF0ZS5ub3coKS50b1N0cmluZygpOwogIGNvbnN0IHNpZ24gPSBhd2FpdCBobWFjU2hhMjU2SGV4KGNyZWRzLnNlY3JldCwgYCR7dHN9XG4ke3BhdGh9XG4ke3F1ZXJ5IHx8ICIifVxuYCk7CiAgY29uc3QgdXJsID0gYGh0dHBzOi8vb3Blbi1hcGkuYmluZ3guY29tJHtwYXRofSR7cXVlcnkgPyAiPyIgKyBxdWVyeSA6ICIifWA7CiAgY29uc3QgciA9IGF3YWl0IGZldGNoKHVybCwgewogICAgbWV0aG9kOiAiUE9TVCIsCiAgICBoZWFkZXJzOiB7ICJCSU5HWC1BUEktS0VZIjogY3JlZHMua2V5LCAiQklOR1gtU0lHTiI6IHNpZ24sICJCSU5HWC1USU1FU1RBTVAiOiB0cywgIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiB9LAogIH0pOwogIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICBpZiAoZD8uY29kZSAhPT0gMCkgdGhyb3cgbmV3IEVycm9yKGQ/Lm1zZyB8fCAiQmluZ1ggQVBJIGVycm9yIik7CiAgcmV0dXJuIGQ7Cn0KCmFzeW5jIGZ1bmN0aW9uIGJpbmd4QnV5QW5kV2l0aGRyYXcoeyBhbW91bnQsIGFzc2V0LCBuZXR3b3JrLCB3YWxsZXQsIGNyZWRzIH0pIHsKICBjb25zdCBkID0gYXdhaXQgYmluZ3hSZXF1ZXN0KGNyZWRzLCAiL29wZW5BcGkvc3BvdC92MS93aXRoZHJhdyIsIGBjb2luPSR7YXNzZXR9Jm5ldHdvcms9JHtuZXR3b3JrfSZhZGRyZXNzPSR7d2FsbGV0fSZhbW91bnQ9JHthbW91bnR9YCk7CiAgcmV0dXJuIHsgdHhfaGFzaDogZD8uZGF0YT8uaWQgfHwgYGJpbmd4LSR7RGF0ZS5ub3coKX1gIH07Cn0KCi8vIC0tLSBDb2luYmFzZSAoc2lnbmVkLCBiZXN0LWVmZm9ydCkgLS0tCmFzeW5jIGZ1bmN0aW9uIGNvaW5iYXNlUmVxdWVzdChjcmVkcywgbWV0aG9kLCBwYXRoLCBib2R5KSB7CiAgY29uc3QgdHMgPSBNYXRoLmZsb29yKERhdGUubm93KCkgLyAxMDAwKS50b1N0cmluZygpOwogIGNvbnN0IHNpZ24gPSBhd2FpdCBobWFjU2hhMjU2QjY0KGNyZWRzLnNlY3JldCwgYCR7dHN9JHttZXRob2QudG9VcHBlckNhc2UoKX0ke3BhdGh9JHtib2R5IHx8ICIifWApOwogIGNvbnN0IHIgPSBhd2FpdCBmZXRjaCgiaHR0cHM6Ly9hcGkuZXhjaGFuZ2UuY29pbmJhc2UuY29tIiArIHBhdGgsIHsKICAgIG1ldGhvZCwKICAgIGhlYWRlcnM6IHsgIkNCLUFDQ0VTUy1LRVkiOiBjcmVkcy5rZXksICJDQi1BQ0NFU1MtU0lHTiI6IHNpZ24sICJDQi1BQ0NFU1MtVElNRVNUQU1QIjogdHMsICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIgfSwKICAgIGJvZHk6IGJvZHkgfHwgdW5kZWZpbmVkLAogIH0pOwogIGNvbnN0IGQgPSBhd2FpdCByLmpzb24oKTsKICBpZiAoZD8ubWVzc2FnZSAmJiBkLm1lc3NhZ2UgIT09ICJzdWNjZXNzIikgdGhyb3cgbmV3IEVycm9yKGQ/Lm1lc3NhZ2UgfHwgIkNvaW5iYXNlIEFQSSBlcnJvciIpOwogIHJldHVybiBkOwp9Cgphc3luYyBmdW5jdGlvbiBjb2luYmFzZUJ1eUFuZFdpdGhkcmF3KHsgYW1vdW50LCBhc3NldCwgbmV0d29yaywgd2FsbGV0LCBjcmVkcyB9KSB7CiAgY29uc3QgZCA9IGF3YWl0IGNvaW5iYXNlUmVxdWVzdChjcmVkcywgIlBPU1QiLCAiL2FwaS92My9icm9rZXJhZ2Uvd2l0aGRyYXdhbHMvY3J5cHRvIiwgSlNPTi5zdHJpbmdpZnkoewogICAgYW1vdW50OiBTdHJpbmcoYW1vdW50KSwKICAgIGN1cnJlbmN5OiBhc3NldCwKICAgIGNyeXB0b19hZGRyZXNzOiB3YWxsZXQsCiAgICBuZXR3b3JrOiBuZXR3b3JrLAogIH0pKTsKICByZXR1cm4geyB0eF9oYXNoOiBkPy5pZCB8fCBgY29pbmJhc2UtJHtEYXRlLm5vdygpfWAgfTsKfQoKLy8gLS0tIEVuZ2luZTogdHJpZXMgZWFjaCBjb25maWd1cmVkIGV4Y2hhbmdlLCBmYWxscyBiYWNrIHRvIGRldi9tb2NrIHdoZW4gbm9uZSBhcmUgcmVhZHkgLS0tCmV4cG9ydCBhc3luYyBmdW5jdGlvbiBleGVjdXRlQ3J5cHRvT3JkZXIoeyBhbW91bnQsIGFzc2V0LCBuZXR3b3JrLCB3YWxsZXQsIGZpYXRBbW91bnQsIGZpYXRDdXJyZW5jeSB9KSB7CiAgY29uc3QgY2FuZGlkYXRlcyA9IFsKICAgIHsgbmFtZTogIktVQ09JTiIsIHJ1bjoga3Vjb2luQnV5QW5kV2l0aGRyYXcsIGNyZWRzOiB7IGtleTogc2FmZVNlY3JldCgiS1VDT0lOX0FQSV9LRVkiKSwgc2VjcmV0OiBzYWZlU2VjcmV0KCJLVUNPSU5fQVBJX1NFQ1JFVCIpLCBwYXNzcGhyYXNlOiBzYWZlU2VjcmV0KCJLVUNPSU5fUEFTU1BIUkFTRSIpIH0gfSwKICAgIHsgbmFtZTogIkJJTkFOQ0UiLCBydW46IGJpbmFuY2VCdXlBbmRXaXRoZHJhdywgY3JlZHM6IHsga2V5OiBzYWZlU2VjcmV0KCJCSU5BTkNFX0FQSV9LRVkiKSwgc2VjcmV0OiBzYWZlU2VjcmV0KCJCSU5BTkNFX0FQSV9TRUNSRVQiKSB9IH0sCiAgICB7IG5hbWU6ICJCSU5HWCIsIHJ1bjogYmluZ3hCdXlBbmRXaXRoZHJhdywgY3JlZHM6IHsga2V5OiBzYWZlU2VjcmV0KCJCSU5HWF9BUElfS0VZIiksIHNlY3JldDogc2FmZVNlY3JldCgiQklOR1hfQVBJX1NFQ1JFVCIpIH0gfSwKICAgIHsgbmFtZTogIkNPSU5CQVNFIiwgcnVuOiBjb2luYmFzZUJ1eUFuZFdpdGhkcmF3LCBjcmVkczogeyBrZXk6IHNhZmVTZWNyZXQoIkNPSU5CQVNFX0FQSV9LRVkiKSwgc2VjcmV0OiBzYWZlU2VjcmV0KCJDT0lOQkFTRV9BUElfU0VDUkVUIikgfSB9LAogIF07CgogIGxldCByZWFkeSA9IDA7CiAgbGV0IGxhc3RFcnJvciA9IG51bGw7CiAgZm9yIChjb25zdCBjIG9mIGNhbmRpZGF0ZXMpIHsKICAgIGNvbnN0IGlzUmVhZHkgPSBjLmNyZWRzLmtleSAmJiBjLmNyZWRzLnNlY3JldCAmJiB3YWxsZXQgJiYgKGMubmFtZSAhPT0gIktVQ09JTiIgfHwgYy5jcmVkcy5wYXNzcGhyYXNlKTsKICAgIGlmICghaXNSZWFkeSkgY29udGludWU7CiAgICByZWFkeSsrOwogICAgdHJ5IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgYy5ydW4oeyBhbW91bnQsIGFzc2V0LCBuZXR3b3JrLCB3YWxsZXQsIGNyZWRzOiBjLmNyZWRzLCBmaWF0QW1vdW50LCBmaWF0Q3VycmVuY3kgfSk7CiAgICAgIHJldHVybiB7IHByb3ZpZGVyOiBjLm5hbWUsIHR4X2hhc2g6IHJlcy50eF9oYXNoLCBsaXZlOiB0cnVlIH07CiAgICB9IGNhdGNoIChlKSB7CiAgICAgIGxhc3RFcnJvciA9IGUubWVzc2FnZTsKICAgIH0KICB9CgogIC8vIERldi9tb2NrIG1vZGU6IG5vIGV4Y2hhbmdlIGtleXMgY29uZmlndXJlZC4KICBpZiAocmVhZHkgPT09IDApIHsKICAgIHJldHVybiB7IHByb3ZpZGVyOiAiS1VDT0lOIiwgdHhfaGFzaDogZ2VuTW9ja0hhc2goKSwgbGl2ZTogZmFsc2UsIG5vdGU6ICJkZXYgbW9jayAobm8gZXhjaGFuZ2Uga2V5cyBjb25maWd1cmVkKSIgfTsKICB9CiAgcmV0dXJuIHsgZXJyb3I6IGBBbGwgY29uZmlndXJlZCBleGNoYW5nZXMgZmFpbGVkLiBMYXN0OiAke2xhc3RFcnJvcn0uYCB9Owp9CgpleHBvcnQgY29uc3QgU1VQUE9SVEVEX0VYQ0hBTkdFUyA9IFsiS1VDT0lOIiwgIkJJTkFOQ0UiLCAiQklOR1giLCAiQ09JTkJBU0UiXTs=
+// NexaPay direct crypto execution engine — real signed REST connectors (KuCoin, Binance,
+// BingX, Coinbase) with automatic fallback, and a dev/mock mode when no exchange keys are configured.
+// Server-only: imported by backend functions, never from the client bundle.
+
+import { secrets } from "base44:runtime";
+
+const enc = new TextEncoder();
+
+function safeSecret(name) {
+  try {
+    return secrets.get(name);
+  } catch {
+    return undefined;
+  }
+}
+
+function b64std(bytes) {
+  return btoa(String.fromCharCode(...bytes));
+}
+
+async function hmacSha256Hex(key, msg) {
+  const ck = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", ck, enc.encode(msg));
+  return Array.from(new Uint8Array(sig)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function hmacSha256B64(key, msg) {
+  const ck = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const sig = await crypto.subtle.sign("HMAC", ck, enc.encode(msg));
+  return b64std(new Uint8Array(sig));
+}
+
+function genMockHash() {
+  const hex = () => Array.from({ length: 16 }, () => "0123456789abcdef"[Math.floor(Math.random() * 16)]).join("");
+  return `${hex()}${hex()}${hex()}${hex()}`;
+}
+
+// --- KuCoin ---
+async function kucoinRequest(creds, method, path, body) {
+  const ts = Date.now().toString();
+  // KuCoin API key version 2 requires the passphrase HMAC-encrypted with the secret (base64).
+  const encPass = await hmacSha256B64(creds.secret, creds.passphrase);
+  const sign = await hmacSha256B64(creds.secret, `${ts}${method.toUpperCase()}${path}${body || ""}`);
+  const r = await fetch("https://api.kucoin.com" + path, {
+    method,
+    headers: {
+      "KC-API-KEY": creds.key,
+      "KC-API-SIGN": sign,
+      "KC-API-TIMESTAMP": ts,
+      "KC-API-PASSPHRASE": encPass,
+      "KC-API-KEY-VERSION": "2",
+      "Content-Type": "application/json",
+    },
+    body: body || undefined,
+  });
+  const d = await r.json();
+  if (d?.code !== "200000") throw new Error(d?.msg || "KuCoin API error");
+  return d;
+}
+
+async function kucoinBuyAndWithdraw({ amount, asset, network, wallet, creds }) {
+  // Real on-chain USDT withdrawal to the receiving wallet — no third-party PSP. NexaPay funds the
+  // USDT balance on its own exchange account; the client's payment is the trigger.
+  const d = await kucoinRequest(creds, "POST", "/api/v1/withdrawals", JSON.stringify({
+    currency: asset,
+    amount: String(amount),
+    address: wallet,
+    chain: network,
+  }));
+  return { tx_hash: d?.data?.withdrawalId || d?.data?.id || `kucoin-${Date.now()}` };
+}
+
+// --- Binance ---
+async function binanceRequest(creds, method, path, query) {
+  const ts = Date.now();
+  const qs = `${query}${query ? "&" : ""}timestamp=${ts}`;
+  const sig = await hmacSha256Hex(creds.secret, qs);
+  const r = await fetch(`https://api.binance.com${path}?${qs}&signature=${sig}`, {
+    method,
+    headers: { "X-MBX-APIKEY": creds.key, "Content-Type": "application/json" },
+  });
+  const d = await r.json();
+  if (d?.code && d.code !== 200) throw new Error(d?.msg || "Binance API error");
+  return d;
+}
+
+async function binanceBuyAndWithdraw({ amount, asset, network, wallet, creds }) {
+  const netMap = { TRC20: "TRX", ERC20: "ETH", POLYGON: "MATIC" };
+  // Real on-chain USDT withdrawal to the receiving wallet — no third-party PSP. NexaPay funds the
+  // USDT balance on its own exchange account; the client's payment is the trigger.
+  const d = await binanceRequest(creds, "POST", "/sapi/v1/capital/withdraw/apply", `coin=${asset}&network=${netMap[network] || network}&address=${wallet}&amount=${amount}`);
+  return { tx_hash: d?.id || `binance-${Date.now()}` };
+}
+
+// --- BingX (signed, best-effort) ---
+async function bingxRequest(creds, path, query) {
+  const ts = Date.now().toString();
+  const sign = await hmacSha256Hex(creds.secret, `${ts}\n${path}\n${query || ""}\n`);
+  const url = `https://open-api.bingx.com${path}${query ? "?" + query : ""}`;
+  const r = await fetch(url, {
+    method: "POST",
+    headers: { "BINGX-API-KEY": creds.key, "BINGX-SIGN": sign, "BINGX-TIMESTAMP": ts, "Content-Type": "application/json" },
+  });
+  const d = await r.json();
+  if (d?.code !== 0) throw new Error(d?.msg || "BingX API error");
+  return d;
+}
+
+async function bingxBuyAndWithdraw({ amount, asset, network, wallet, creds }) {
+  const d = await bingxRequest(creds, "/openApi/spot/v1/withdraw", `coin=${asset}&network=${network}&address=${wallet}&amount=${amount}`);
+  return { tx_hash: d?.data?.id || `bingx-${Date.now()}` };
+}
+
+// --- Coinbase (signed, best-effort) ---
+async function coinbaseRequest(creds, method, path, body) {
+  const ts = Math.floor(Date.now() / 1000).toString();
+  const sign = await hmacSha256B64(creds.secret, `${ts}${method.toUpperCase()}${path}${body || ""}`);
+  const r = await fetch("https://api.exchange.coinbase.com" + path, {
+    method,
+    headers: { "CB-ACCESS-KEY": creds.key, "CB-ACCESS-SIGN": sign, "CB-ACCESS-TIMESTAMP": ts, "Content-Type": "application/json" },
+    body: body || undefined,
+  });
+  const d = await r.json();
+  if (d?.message && d.message !== "success") throw new Error(d?.message || "Coinbase API error");
+  return d;
+}
+
+async function coinbaseBuyAndWithdraw({ amount, asset, network, wallet, creds }) {
+  const d = await coinbaseRequest(creds, "POST", "/api/v3/brokerage/withdrawals/crypto", JSON.stringify({
+    amount: String(amount),
+    currency: asset,
+    crypto_address: wallet,
+    network: network,
+  }));
+  return { tx_hash: d?.id || `coinbase-${Date.now()}` };
+}
+
+// --- Engine: tries each configured exchange, falls back to dev/mock when none are ready ---
+export async function executeCryptoOrder({ amount, asset, network, wallet, fiatAmount, fiatCurrency }) {
+  const candidates = [
+    { name: "KUCOIN", run: kucoinBuyAndWithdraw, creds: { key: safeSecret("KUCOIN_API_KEY"), secret: safeSecret("KUCOIN_API_SECRET"), passphrase: safeSecret("KUCOIN_PASSPHRASE") } },
+    { name: "BINANCE", run: binanceBuyAndWithdraw, creds: { key: safeSecret("BINANCE_API_KEY"), secret: safeSecret("BINANCE_API_SECRET") } },
+    { name: "BINGX", run: bingxBuyAndWithdraw, creds: { key: safeSecret("BINGX_API_KEY"), secret: safeSecret("BINGX_API_SECRET") } },
+    { name: "COINBASE", run: coinbaseBuyAndWithdraw, creds: { key: safeSecret("COINBASE_API_KEY"), secret: safeSecret("COINBASE_API_SECRET") } },
+  ];
+
+  let ready = 0;
+  let lastError = null;
+  let lastProvider = null;
+  for (const c of candidates) {
+    const isReady = c.creds.key && c.creds.secret && wallet && (c.name !== "KUCOIN" || c.creds.passphrase);
+    if (!isReady) continue;
+    ready++;
+    lastProvider = c.name;
+    try {
+      const res = await c.run({ amount, asset, network, wallet, creds: c.creds, fiatAmount, fiatCurrency });
+      return { provider: c.name, tx_hash: res.tx_hash, live: true };
+    } catch (e) {
+      lastError = e.message;
+    }
+  }
+
+  // Dev/mock mode: no exchange keys configured at all → complete in simulation so the flow works
+  // end-to-end without credentials. When keys ARE configured but a real withdrawal fails, surface
+  // the error (FAILED) so the merchant can retry — silently simulating a real payment would mask a
+  // genuine problem (invalid/non-whitelisted address, insufficient USDT balance, wrong chain...).
+  if (ready === 0) {
+    return { provider: "KUCOIN", tx_hash: genMockHash(), live: false, note: "dev mock (no exchange keys configured)" };
+  }
+  return { error: `Live withdrawal failed on all configured exchanges. Last: ${lastError}.` };
+}
+
+export const SUPPORTED_EXCHANGES = ["KUCOIN", "BINANCE", "BINGX", "COINBASE"];

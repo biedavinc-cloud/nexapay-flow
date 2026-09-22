@@ -1,1 +1,76 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBMaW5rIH0gZnJvbSAicmVhY3Qtcm91dGVyLWRvbSI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCB7IEJ1dHRvbiB9IGZyb20gIkAvY29tcG9uZW50cy91aS9idXR0b24iOwppbXBvcnQgeyBJbnB1dCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9pbnB1dCI7CmltcG9ydCB7IExhYmVsIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2xhYmVsIjsKaW1wb3J0IHsgTWFpbCwgQXJyb3dMZWZ0LCBMb2FkZXIyIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IEF1dGhMYXlvdXQgZnJvbSAiQC9jb21wb25lbnRzL0F1dGhMYXlvdXQiOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRm9yZ290UGFzc3dvcmQoKSB7CiAgY29uc3QgW2VtYWlsLCBzZXRFbWFpbF0gPSB1c2VTdGF0ZSgiIik7CiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUoZmFsc2UpOwogIGNvbnN0IFtzZW50LCBzZXRTZW50XSA9IHVzZVN0YXRlKGZhbHNlKTsKCiAgY29uc3QgaGFuZGxlU3VibWl0ID0gYXN5bmMgKGUpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNldExvYWRpbmcodHJ1ZSk7CiAgICB0cnkgewogICAgICBhd2FpdCBiYXNlNDQuYXV0aC5yZXNldFBhc3N3b3JkUmVxdWVzdChlbWFpbCk7CiAgICB9IGNhdGNoIHsKICAgICAgLy8gQWx3YXlzIHNob3cgc3VjY2VzcyByZWdhcmRsZXNzCiAgICB9IGZpbmFsbHkgewogICAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICAgICAgc2V0U2VudCh0cnVlKTsKICAgIH0KICB9OwoKICByZXR1cm4gKAogICAgPEF1dGhMYXlvdXQKICAgICAgaWNvbj17TWFpbH0KICAgICAgdGl0bGU9IlJlc2V0IHBhc3N3b3JkIgogICAgICBzdWJ0aXRsZT0iV2UnbGwgc2VuZCB5b3UgYSBsaW5rIHRvIHJlc2V0IGl0IgogICAgICBmb290ZXI9ewogICAgICAgIDxMaW5rIHRvPSIvbG9naW4iIGNsYXNzTmFtZT0idGV4dC1wcmltYXJ5IGZvbnQtbWVkaXVtIGhvdmVyOnVuZGVybGluZSI+CiAgICAgICAgICA8QXJyb3dMZWZ0IGNsYXNzTmFtZT0idy0zIGgtMyBpbmxpbmUgbXItMSIgLz5CYWNrIHRvIGxvZyBpbgogICAgICAgIDwvTGluaz4KICAgICAgfQogICAgPgogICAgICB7c2VudCA/ICgKICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtc20gdGV4dC1mb3JlZ3JvdW5kIHRleHQtY2VudGVyIj4KICAgICAgICAgIElmIGFuIGFjY291bnQgZXhpc3RzIHdpdGggdGhhdCBlbWFpbCwgeW91J2xsIHJlY2VpdmUgYSBwYXNzd29yZCByZXNldCBsaW5rIHNob3J0bHkuCiAgICAgICAgPC9wPgogICAgICApIDogKAogICAgICAgIDxmb3JtIG9uU3VibWl0PXtoYW5kbGVTdWJtaXR9IGNsYXNzTmFtZT0ic3BhY2UteS00Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgICA8TGFiZWwgaHRtbEZvcj0iZW1haWwiPkVtYWlsIGFkZHJlc3M8L0xhYmVsPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icmVsYXRpdmUiPgogICAgICAgICAgICAgIDxNYWlsIGNsYXNzTmFtZT0iYWJzb2x1dGUgbGVmdC0zIHRvcC0xLzIgLXRyYW5zbGF0ZS15LTEvMiB3LTQgaC00IHRleHQtbXV0ZWQtZm9yZWdyb3VuZCIgYXJpYS1oaWRkZW49InRydWUiIC8+CiAgICAgICAgICAgICAgPElucHV0CiAgICAgICAgICAgICAgICBpZD0iZW1haWwiCiAgICAgICAgICAgICAgICB0eXBlPSJlbWFpbCIKICAgICAgICAgICAgICAgIGF1dG9Db21wbGV0ZT0iZW1haWwiCiAgICAgICAgICAgICAgICBhdXRvRm9jdXMKICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPSJ5b3VAZXhhbXBsZS5jb20iCiAgICAgICAgICAgICAgICB2YWx1ZT17ZW1haWx9CiAgICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldEVtYWlsKGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icGwtMTAgaC0xMiIKICAgICAgICAgICAgICAgIHJlcXVpcmVkCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxCdXR0b24gdHlwZT0ic3VibWl0IiBjbGFzc05hbWU9InctZnVsbCBoLTEyIGZvbnQtbWVkaXVtIiBkaXNhYmxlZD17bG9hZGluZ30+CiAgICAgICAgICAgIHtsb2FkaW5nID8gKAogICAgICAgICAgICAgIDw+CiAgICAgICAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9InctNCBoLTQgbXItMiBhbmltYXRlLXNwaW4iIC8+CiAgICAgICAgICAgICAgICBTZW5kaW5nLi4uCiAgICAgICAgICAgICAgPC8+CiAgICAgICAgICAgICkgOiAoCiAgICAgICAgICAgICAgIlNlbmQgcmVzZXQgbGluayIKICAgICAgICAgICAgKX0KICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgIDwvZm9ybT4KICAgICAgKX0KICAgIDwvQXV0aExheW91dD4KICApOwp9Cg==
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Mail, ArrowLeft, Loader2 } from "lucide-react";
+import AuthLayout from "@/components/AuthLayout";
+
+export default function ForgotPassword() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await base44.auth.resetPasswordRequest(email);
+    } catch {
+      // Always show success regardless
+    } finally {
+      setLoading(false);
+      setSent(true);
+    }
+  };
+
+  return (
+    <AuthLayout
+      icon={Mail}
+      title="Reset password"
+      subtitle="We'll send you a link to reset it"
+      footer={
+        <Link to="/login" className="text-primary font-medium hover:underline">
+          <ArrowLeft className="w-3 h-3 inline mr-1" />Back to log in
+        </Link>
+      }
+    >
+      {sent ? (
+        <p className="text-sm text-foreground text-center">
+          If an account exists with that email, you'll receive a password reset link shortly.
+        </p>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="email">Email address</Label>
+            <div className="relative">
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+              <Input
+                id="email"
+                type="email"
+                autoComplete="email"
+                autoFocus
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="pl-10 h-12"
+                required
+              />
+            </div>
+          </div>
+          <Button type="submit" className="w-full h-12 font-medium" disabled={loading}>
+            {loading ? (
+              <>
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              "Send reset link"
+            )}
+          </Button>
+        </form>
+      )}
+    </AuthLayout>
+  );
+}

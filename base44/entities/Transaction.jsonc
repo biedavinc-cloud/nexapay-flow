@@ -1,1 +1,167 @@
-ewogICJuYW1lIjogIlRyYW5zYWN0aW9uIiwKICAidHlwZSI6ICJvYmplY3QiLAogICJwcm9wZXJ0aWVzIjogewogICAgInJlZmVyZW5jZV9maWF0IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiVW5pcXVlIHBheW1lbnQgcmVmZXJlbmNlIgogICAgfSwKICAgICJjbGllbnRfbmFtZSI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIlBheWVyIGRpc3BsYXkgbmFtZSIKICAgIH0sCiAgICAiYW1vdW50X2ZpYXQiOiB7CiAgICAgICJ0eXBlIjogIm51bWJlciIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJPcmRlciBhbW91bnQgKGNyeXB0byB1bml0cyB3aGVuIERJUkVDVF9DUllQVE8pIgogICAgfSwKICAgICJjdXJyZW5jeV9maWF0IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVmYXVsdCI6ICJVU0RUIiwKICAgICAgImRlc2NyaXB0aW9uIjogIkFzc2V0IGNvZGUgZm9yIGRpcmVjdCBjcnlwdG8gb3JkZXJzIgogICAgfSwKICAgICJhc3NldCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlZmF1bHQiOiAiVVNEVCIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJDcnlwdG8gYXNzZXQgcHVyY2hhc2VkIChVU0RULCBCVEMsIEVUSCkiCiAgICB9LAogICAgIm5ldHdvcmsiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJlbnVtIjogWwogICAgICAgICJUUkMyMCIsCiAgICAgICAgIkVSQzIwIiwKICAgICAgICAiUE9MWUdPTiIKICAgICAgXSwKICAgICAgImRlZmF1bHQiOiAiVFJDMjAiLAogICAgICAiZGVzY3JpcHRpb24iOiAiU2V0dGxlbWVudCBuZXR3b3JrIgogICAgfSwKICAgICJ1c2R0X2Ftb3VudCI6IHsKICAgICAgInR5cGUiOiAibnVtYmVyIiwKICAgICAgImRlc2NyaXB0aW9uIjogIlVTRFQgZGVsaXZlcmVkIgogICAgfSwKICAgICJleGNoYW5nZV9yYXRlIjogewogICAgICAidHlwZSI6ICJudW1iZXIiLAogICAgICAiZGVzY3JpcHRpb24iOiAiUmF0ZSB1c2VkIGF0IHF1b3RlIHRpbWUiCiAgICB9LAogICAgInBheW1lbnRfbWV0aG9kIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZW51bSI6IFsKICAgICAgICAiQ0FSRCIsCiAgICAgICAgIk1PQklMRV9NT05FWSIsCiAgICAgICAgIkJBTktfVFJBTlNGRVIiLAogICAgICAgICJESVJFQ1RfQ1JZUFRPIgogICAgICBdLAogICAgICAiZGVmYXVsdCI6ICJESVJFQ1RfQ1JZUFRPIiwKICAgICAgImRlc2NyaXB0aW9uIjogIkhvdyB0aGUgb3JkZXIgd2FzIGluaXRpYXRlZCIKICAgIH0sCiAgICAiY3J5cHRvX3Byb3ZpZGVyIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZW51bSI6IFsKICAgICAgICAiS1VDT0lOIiwKICAgICAgICAiQklOQU5DRSIsCiAgICAgICAgIkJJTkdYIiwKICAgICAgICAiQ09JTkJBU0UiLAogICAgICAgICJXRUIzX0RJUkVDVCIKICAgICAgXSwKICAgICAgImRlc2NyaXB0aW9uIjogIkV4Y2hhbmdlIHRoYXQgZXhlY3V0ZWQgdGhlIG9yZGVyIgogICAgfSwKICAgICJkZXN0aW5hdGlvbl93YWxsZXQiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJEZXN0aW5hdGlvbiB3YWxsZXQgYWRkcmVzcyIKICAgIH0sCiAgICAic3RhdHVzIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZW51bSI6IFsKICAgICAgICAiUEVORElORyIsCiAgICAgICAgIkZJQVRfQVBQUk9WRUQiLAogICAgICAgICJQUk9DRVNTSU5HX0NSWVBUTyIsCiAgICAgICAgIkNPTVBMRVRFRCIsCiAgICAgICAgIkZBSUxFRCIKICAgICAgXSwKICAgICAgImRlZmF1bHQiOiAiUEVORElORyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJDdXJyZW50IGV4ZWN1dGlvbiBzdGF0ZSIKICAgIH0sCiAgICAicGF5bG9hZF9iYXNlNjQiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJSYXcgcHJvdmlkZXIgcGF5bG9hZCAoYmFzZTY0KSIKICAgIH0sCiAgICAidHhfaGFzaF9jcnlwdG8iOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJPbi1jaGFpbi93aXRoZHJhd2FsIHR4IGhhc2ggb25jZSBjb21wbGV0ZWQiCiAgICB9LAogICAgImVycm9yX21lc3NhZ2UiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJGYWlsdXJlIHJlYXNvbiBpZiBGQUlMRUQiCiAgICB9CiAgfSwKICAicmVxdWlyZWQiOiBbCiAgICAicmVmZXJlbmNlX2ZpYXQiLAogICAgImFtb3VudF9maWF0IiwKICAgICJ1c2R0X2Ftb3VudCIsCiAgICAiZXhjaGFuZ2VfcmF0ZSIsCiAgICAicGF5bWVudF9tZXRob2QiLAogICAgImNyeXB0b19wcm92aWRlciIsCiAgICAiZGVzdGluYXRpb25fd2FsbGV0IiwKICAgICJzdGF0dXMiCiAgXQp9
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "description": "Merchant tenant id (multi-tenant isolation)"
+    },
+    "reference_fiat": {
+      "type": "string",
+      "description": "Unique payment reference"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Payer display name"
+    },
+    "amount_fiat": {
+      "type": "number",
+      "description": "Order amount (crypto units when DIRECT_CRYPTO)"
+    },
+    "currency_fiat": {
+      "type": "string",
+      "default": "USDT",
+      "description": "Asset code for direct crypto orders"
+    },
+    "gateway_fee": {
+      "type": "number",
+      "default": 0,
+      "description": "Fiat gateway fee"
+    },
+    "nexapay_commission": {
+      "type": "number",
+      "default": 0,
+      "description": "Platform commission (USDT) deducted at source"
+    },
+    "asset": {
+      "type": "string",
+      "default": "USDT",
+      "description": "Crypto asset purchased (USDT, BTC, ETH)"
+    },
+    "network": {
+      "type": "string",
+      "enum": [
+        "TRC20",
+        "ERC20",
+        "POLYGON"
+      ],
+      "default": "TRC20",
+      "description": "Settlement network"
+    },
+    "usdt_amount": {
+      "type": "number",
+      "description": "Gross USDT before commission"
+    },
+    "usdt_net_sent": {
+      "type": "number",
+      "description": "Net USDT sent to the merchant wallet"
+    },
+    "exchange_rate": {
+      "type": "number",
+      "description": "Rate used at quote time"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "CARD",
+        "MOBILE_MONEY",
+        "BANK_TRANSFER",
+        "DIRECT_CRYPTO"
+      ],
+      "default": "DIRECT_CRYPTO",
+      "description": "How the order was initiated"
+    },
+    "crypto_provider": {
+      "type": "string",
+      "enum": [
+        "KUCOIN",
+        "BINANCE",
+        "BINGX",
+        "COINBASE",
+        "WEB3_DIRECT"
+      ],
+      "description": "Exchange that executed the order"
+    },
+    "destination_wallet": {
+      "type": "string",
+      "description": "Destination wallet address"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "FIAT_APPROVED",
+        "PROCESSING_CRYPTO",
+        "COMPLETED",
+        "FAILED"
+      ],
+      "default": "PENDING",
+      "description": "Current execution state"
+    },
+    "payload_base64": {
+      "type": "string",
+      "description": "Raw provider payload (base64)"
+    },
+    "tx_hash_crypto": {
+      "type": "string",
+      "description": "On-chain/withdrawal tx hash once completed"
+    },
+    "error_message": {
+      "type": "string",
+      "description": "Failure reason if FAILED"
+    }
+  },
+  "required": [
+    "reference_fiat",
+    "amount_fiat",
+    "usdt_amount",
+    "exchange_rate",
+    "payment_method",
+    "crypto_provider",
+    "destination_wallet",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.tenant_id": "{{user.data.tenant_id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "$or": [
+        {
+          "data.tenant_id": "{{user.data.tenant_id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "data.tenant_id": "{{user.data.tenant_id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

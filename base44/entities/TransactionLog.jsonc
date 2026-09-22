@@ -1,1 +1,47 @@
-ewogICJuYW1lIjogIlRyYW5zYWN0aW9uTG9nIiwKICAidHlwZSI6ICJvYmplY3QiLAogICJwcm9wZXJ0aWVzIjogewogICAgInRyYW5zYWN0aW9uX2lkIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiUmVsYXRlZCB0cmFuc2FjdGlvbiBpZCIKICAgIH0sCiAgICAicmVmZXJlbmNlX2ZpYXQiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJGaWF0IHJlZmVyZW5jZSIKICAgIH0sCiAgICAiZnJvbV9zdGF0dXMiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJQcmV2aW91cyBzdGF0dXMiCiAgICB9LAogICAgInRvX3N0YXR1cyI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIk5ldyBzdGF0dXMiCiAgICB9LAogICAgImxldmVsIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZW51bSI6IFsKICAgICAgICAiSU5GTyIsCiAgICAgICAgIldBUk4iLAogICAgICAgICJFUlJPUiIKICAgICAgXSwKICAgICAgImRlZmF1bHQiOiAiSU5GTyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJMb2cgbGV2ZWwiCiAgICB9LAogICAgIm1lc3NhZ2UiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJIdW1hbi1yZWFkYWJsZSBsb2cgbWVzc2FnZSIKICAgIH0sCiAgICAiYWN0b3IiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZWZhdWx0IjogInN5c3RlbSIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJXaG8gdHJpZ2dlcmVkIHRoZSBjaGFuZ2UiCiAgICB9CiAgfSwKICAicmVxdWlyZWQiOiBbCiAgICAidHJhbnNhY3Rpb25faWQiLAogICAgInRvX3N0YXR1cyIsCiAgICAibGV2ZWwiLAogICAgIm1lc3NhZ2UiCiAgXQp9
+{
+  "name": "TransactionLog",
+  "type": "object",
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Related transaction id"
+    },
+    "reference_fiat": {
+      "type": "string",
+      "description": "Fiat reference"
+    },
+    "from_status": {
+      "type": "string",
+      "description": "Previous status"
+    },
+    "to_status": {
+      "type": "string",
+      "description": "New status"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "INFO",
+        "WARN",
+        "ERROR"
+      ],
+      "default": "INFO",
+      "description": "Log level"
+    },
+    "message": {
+      "type": "string",
+      "description": "Human-readable log message"
+    },
+    "actor": {
+      "type": "string",
+      "default": "system",
+      "description": "Who triggered the change"
+    }
+  },
+  "required": [
+    "transaction_id",
+    "to_status",
+    "level",
+    "message"
+  ]
+}

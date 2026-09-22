@@ -1,1 +1,26 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IFNoaWVsZEFsZXJ0IH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBhcmFtZXRyZXNTZWN1cml0ZSgpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InAtNiBtZDpwLTggbWF4LXctNXhsIG14LWF1dG8iPgogICAgICA8UGFnZUhlYWRlcgogICAgICAgIHRpdGxlPSJQYXJhbcOodHJlcyBkZSBzw6ljdXJpdMOpIgogICAgICAgIGRlc2NyaXB0aW9uPSJBZHJlc3NlcyBJUCBhdXRvcmlzw6llcyDDoCBhcHBlbGVyIHZvcyBBUEkgZXQgcMOpcmlvZGVzIGRlIHZhbGlkaXTDqSBkZXMgYWNjw6hzLiIKICAgICAgICBpY29uPXtTaGllbGRBbGVydH0KICAgICAgLz4KICAgICAgPENvbmZpZ01hbmFnZXIKICAgICAgICBlbnRpdHk9IlNlY3VyaXR5SXAiCiAgICAgICAgYWRkTGFiZWw9IkF1dG9yaXNlciB1bmUgSVAiCiAgICAgICAgZmllbGRzPXtbCiAgICAgICAgICB7IG5hbWU6ICJpcCIsIGxhYmVsOiAiQWRyZXNzZSBJUCAvIENJRFIiLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAiMTkyLjE2OC4xLjEgb3UgMTAuMC4wLjAvMjQiIH0sCiAgICAgICAgICB7IG5hbWU6ICJsYWJlbCIsIGxhYmVsOiAiTGliZWxsw6kiLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAiU2VydmV1ciBtYXJrZXRwbGFjZSIgfSwKICAgICAgICAgIHsgbmFtZTogImFjdGl2ZSIsIGxhYmVsOiAiQWN0aXZlIiwgdHlwZTogImJvb2xlYW4iLCBkZWZhdWx0OiB0cnVlIH0sCiAgICAgICAgICB7IG5hbWU6ICJleHBpcmVzX2F0IiwgbGFiZWw6ICJFeHBpcmUgbGUiLCB0eXBlOiAiZGF0ZSIgfSwKICAgICAgICBdfQogICAgICAvPgogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { ShieldAlert } from "lucide-react";
+
+export default function ParametresSecurite() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Paramètres de sécurité"
+        description="Adresses IP autorisées à appeler vos API et périodes de validité des accès."
+        icon={ShieldAlert}
+      />
+      <ConfigManager
+        entity="SecurityIp"
+        addLabel="Autoriser une IP"
+        fields={[
+          { name: "ip", label: "Adresse IP / CIDR", type: "text", placeholder: "192.168.1.1 ou 10.0.0.0/24" },
+          { name: "label", label: "Libellé", type: "text", placeholder: "Serveur marketplace" },
+          { name: "active", label: "Active", type: "boolean", default: true },
+          { name: "expires_at", label: "Expire le", type: "date" },
+        ]}
+      />
+    </div>
+  );
+}

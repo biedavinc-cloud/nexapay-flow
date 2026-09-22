@@ -1,0 +1,52 @@
+{
+  "name": "PaymentLink",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "Link label / product name"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Fixed amount to charge the client"
+    },
+    "currency": {
+      "type": "string",
+      "default": "EUR",
+      "description": "Fiat currency code (EUR, USD, XAF...)"
+    },
+    "network": {
+      "type": "string",
+      "enum": [
+        "TRC20",
+        "ERC20",
+        "POLYGON"
+      ],
+      "default": "TRC20",
+      "description": "Settlement network for the payout"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description shown to the client"
+    },
+    "slug": {
+      "type": "string",
+      "description": "Unique short id used in the shareable URL"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the link can still be paid"
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "Merchant tenant this link belongs to"
+    }
+  },
+  "required": [
+    "label",
+    "amount",
+    "slug",
+    "active"
+  ]
+}

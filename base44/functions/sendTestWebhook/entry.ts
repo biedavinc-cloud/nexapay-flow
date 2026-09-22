@@ -1,1 +1,68 @@
-aW1wb3J0IHsgY3JlYXRlQ2xpZW50RnJvbVJlcXVlc3QgfSBmcm9tICducG06QGJhc2U0NC9zZGtAMC44LjQ0JzsKaW1wb3J0IHsgc2lnbldlYmhvb2ssIHJlc29sdmVXZWJob29rU2VjcmV0LCBnZW5SZWZlcmVuY2UgfSBmcm9tICIuLi8uLi9zaGFyZWQvY2hlY2tvdXQudHMiOwoKLy8gU2ltdWxhdGUgc2VuZGluZyBhIHNpZ25lZCB3ZWJob29rIGV2ZW50IHRvIGFuIGV4dGVybmFsIG1hcmtldHBsYWNlIFVSTCwKLy8gdG8gdmVyaWZ5IHRoZSBwYXJ0bmVyIGVuZHBvaW50IGlzIHJlYWNoYWJsZSBhbmQgc2lnbmF0dXJlIHZlcmlmaWNhdGlvbiB3b3Jrcy4KLy8gQWRtaW4tb25seSAodGhlIHNpZ25pbmcgc2VjcmV0IG11c3QgbmV2ZXIgYmUgZXhwb3NhYmxlIHRvIHJlZ3VsYXIgdXNlcnMpLgpleHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAocmVxOiBSZXF1ZXN0KTogUHJvbWlzZTxSZXNwb25zZT4gewogIGNvbnN0IGJhc2U0NCA9IGNyZWF0ZUNsaWVudEZyb21SZXF1ZXN0KHJlcSk7CiAgdHJ5IHsKICAgIGNvbnN0IHVzZXIgPSBhd2FpdCBiYXNlNDQuYXV0aC5tZSgpOwogICAgaWYgKCF1c2VyKSByZXR1cm4gUmVzcG9uc2UuanNvbih7IGVycm9yOiAiVW5hdXRob3JpemVkIiB9LCB7IHN0YXR1czogNDAxIH0pOwogICAgaWYgKHVzZXIucm9sZSAhPT0gImFkbWluIikgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogIkZvcmJpZGRlbiIgfSwgeyBzdGF0dXM6IDQwMyB9KTsKCiAgICBjb25zdCBib2R5ID0gYXdhaXQgcmVxLmpzb24oKS5jYXRjaCgoKSA9PiAoe30pKTsKICAgIGNvbnN0IHVybCA9IChib2R5LnVybCB8fCAiIikudG9TdHJpbmcoKS50cmltKCk7CiAgICBjb25zdCBldmVudCA9IChib2R5LmV2ZW50IHx8ICJwYXltZW50LnN1Y2NlZWRlZCIpLnRvU3RyaW5nKCk7CiAgICBjb25zdCBvcmRlcklkID0gKGJvZHkub3JkZXJfaWQgfHwgZ2VuUmVmZXJlbmNlKCkpLnRvU3RyaW5nKCk7CiAgICBjb25zdCBhbW91bnQgPSBOdW1iZXIoYm9keS5hbW91bnQpIHx8IDA7CiAgICBjb25zdCBjdXJyZW5jeSA9IChib2R5LmN1cnJlbmN5IHx8ICJFVVIiKS50b1N0cmluZygpLnRvVXBwZXJDYXNlKCk7CiAgICBpZiAoIXVybCkgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogInVybCByZXF1aXJlZCIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKICAgIGlmICghL15odHRwcz86XC9cLy9pLnRlc3QodXJsKSkgcmV0dXJuIFJlc3BvbnNlLmpzb24oeyBlcnJvcjogInVybCBtdXN0IHN0YXJ0IHdpdGggaHR0cChzKTovLyIgfSwgeyBzdGF0dXM6IDQwMCB9KTsKCiAgICBjb25zdCBwYXlsb2FkID0gewogICAgICBpZDogYGV2dF8ke0RhdGUubm93KCkudG9TdHJpbmcoMzYpfWAsCiAgICAgIHR5cGU6IGV2ZW50LAogICAgICBjcmVhdGVkOiBNYXRoLmZsb29yKERhdGUubm93KCkgLyAxMDAwKSwKICAgICAgZGF0YTogewogICAgICAgIG9iamVjdDogewogICAgICAgICAgaWQ6IG9yZGVySWQsCiAgICAgICAgICBhbW91bnQsCiAgICAgICAgICBjdXJyZW5jeSwKICAgICAgICAgIHN0YXR1czogZXZlbnQgPT09ICJwYXltZW50LmZhaWxlZCIgPyAiZmFpbGVkIiA6ICJzdWNjZWVkZWQiLAogICAgICAgIH0sCiAgICAgIH0sCiAgICB9OwoKICAgIGNvbnN0IHNlY3JldCA9IGF3YWl0IHJlc29sdmVXZWJob29rU2VjcmV0KGJhc2U0NCwgdXJsKTsKICAgIGNvbnN0IHsgcmF3LCBoZWFkZXIgfSA9IGF3YWl0IHNpZ25XZWJob29rKHBheWxvYWQsIHNlY3JldCk7CgogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2godXJsLCB7CiAgICAgIG1ldGhvZDogIlBPU1QiLAogICAgICBoZWFkZXJzOiB7ICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIsICJOZXhhUGF5LVNpZ25hdHVyZSI6IGhlYWRlciB9LAogICAgICBib2R5OiByYXcsCiAgICB9KTsKICAgIGNvbnN0IHRleHQgPSBhd2FpdCByZXMudGV4dCgpOwogICAgY29uc3Qgc25pcHBldCA9IHRleHQuc2xpY2UoMCwgNTAwKTsKCiAgICBhd2FpdCBiYXNlNDQuYXNTZXJ2aWNlUm9sZS5lbnRpdGllcy5XZWJob29rTG9nLmNyZWF0ZSh7CiAgICAgIGVuZHBvaW50X3VybDogdXJsLAogICAgICBldmVudCwKICAgICAgb3JkZXJfaWQ6IG9yZGVySWQsCiAgICAgIHN0YXR1czogcmVzLm9rID8gIlNVQ0NFU1MiIDogIkZBSUxFRCIsCiAgICAgIGh0dHBfc3RhdHVzOiByZXMuc3RhdHVzLAogICAgICBhdHRlbXB0czogMSwKICAgICAgcmVzcG9uc2Vfc25pcHBldDogc25pcHBldCwKICAgIH0pOwoKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsKICAgICAgb2s6IHJlcy5vaywKICAgICAgaHR0cF9zdGF0dXM6IHJlcy5zdGF0dXMsCiAgICAgIHNpZ25hdHVyZV9oZWFkZXI6IGhlYWRlciwKICAgICAgcGF5bG9hZDogcmF3LAogICAgICByZXNwb25zZV9zbmlwcGV0OiBzbmlwcGV0LAogICAgfSk7CiAgfSBjYXRjaCAoZXJyb3IpIHsKICAgIHJldHVybiBSZXNwb25zZS5qc29uKHsgZXJyb3I6IGVycm9yLm1lc3NhZ2UgfSwgeyBzdGF0dXM6IDUwMCB9KTsKICB9Cn0=
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.44';
+import { signWebhook, resolveWebhookSecret, genReference } from "../../shared/checkout.ts";
+
+// Simulate sending a signed webhook event to an external marketplace URL,
+// to verify the partner endpoint is reachable and signature verification works.
+// Admin-only (the signing secret must never be exposable to regular users).
+export default async function (req: Request): Promise<Response> {
+  const base44 = createClientFromRequest(req);
+  try {
+    const user = await base44.auth.me();
+    if (!user) return Response.json({ error: "Unauthorized" }, { status: 401 });
+    if (user.role !== "admin") return Response.json({ error: "Forbidden" }, { status: 403 });
+
+    const body = await req.json().catch(() => ({}));
+    const url = (body.url || "").toString().trim();
+    const event = (body.event || "payment.succeeded").toString();
+    const orderId = (body.order_id || genReference()).toString();
+    const amount = Number(body.amount) || 0;
+    const currency = (body.currency || "EUR").toString().toUpperCase();
+    if (!url) return Response.json({ error: "url required" }, { status: 400 });
+    if (!/^https?:\/\//i.test(url)) return Response.json({ error: "url must start with http(s)://" }, { status: 400 });
+
+    const payload = {
+      id: `evt_${Date.now().toString(36)}`,
+      type: event,
+      created: Math.floor(Date.now() / 1000),
+      data: {
+        object: {
+          id: orderId,
+          amount,
+          currency,
+          status: event === "payment.failed" ? "failed" : "succeeded",
+        },
+      },
+    };
+
+    const secret = await resolveWebhookSecret(base44, url);
+    const { raw, header } = await signWebhook(payload, secret);
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "NexaPay-Signature": header },
+      body: raw,
+    });
+    const text = await res.text();
+    const snippet = text.slice(0, 500);
+
+    await base44.asServiceRole.entities.WebhookLog.create({
+      endpoint_url: url,
+      event,
+      order_id: orderId,
+      status: res.ok ? "SUCCESS" : "FAILED",
+      http_status: res.status,
+      attempts: 1,
+      response_snippet: snippet,
+    });
+
+    return Response.json({
+      ok: res.ok,
+      http_status: res.status,
+      signature_header: header,
+      payload: raw,
+      response_snippet: snippet,
+    });
+  } catch (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
+}

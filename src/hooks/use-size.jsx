@@ -1,1 +1,28 @@
-aW1wb3J0ICogYXMgUmVhY3QgZnJvbSAicmVhY3QiCgpleHBvcnQgZnVuY3Rpb24gdXNlU2l6ZShyZWYpIHsKICBjb25zdCBbc2l6ZSwgc2V0U2l6ZV0gPSBSZWFjdC51c2VTdGF0ZShudWxsKQoKICAvLyB1c2VMYXlvdXRFZmZlY3QgKG5vdCB1c2VFZmZlY3QpOiB0aGUgaW5pdGlhbCBtZWFzdXJlbWVudCBtdXN0IGxhbmQgYmVmb3JlCiAgLy8gdGhlIGJyb3dzZXIgcGFpbnRzLCBzbyBjb25zdW1lcnMgY2FuIHJlbmRlciB0aGVpciByZWFsIGNvbnRlbnQgb24gdGhlCiAgLy8gdmVyeSBmaXJzdCBwYWludGVkIGZyYW1lIGluc3RlYWQgb2YgYSBndWVzcy4gQSBSZXNpemVPYnNlcnZlcidzIGZpcnN0CiAgLy8gY2FsbGJhY2sgYXJyaXZlcyB0b28gbGF0ZSBmb3IgdGhhdCDigJQgYnkgdGhlbiBhbiA8aW1nPiBzcmMgZ3Vlc3MgaGFzCiAgLy8gYWxyZWFkeSBiZWVuIGRpc3BhdGNoZWQgdG8gdGhlIG5ldHdvcmsuCiAgUmVhY3QudXNlTGF5b3V0RWZmZWN0KCgpID0+IHsKICAgIGNvbnN0IGVsZW1lbnQgPSByZWYuY3VycmVudAogICAgaWYgKCFlbGVtZW50KSByZXR1cm4KCiAgICBjb25zdCByZWN0ID0gZWxlbWVudC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKQogICAgc2V0U2l6ZSh7IHdpZHRoOiByZWN0LndpZHRoLCBoZWlnaHQ6IHJlY3QuaGVpZ2h0IH0pCgogICAgY29uc3Qgb2JzZXJ2ZXIgPSBuZXcgUmVzaXplT2JzZXJ2ZXIoKFtlbnRyeV0pID0+IHsKICAgICAgY29uc3QgeyB3aWR0aCwgaGVpZ2h0IH0gPSBlbnRyeS5jb250ZW50UmVjdAogICAgICBzZXRTaXplKHsgd2lkdGgsIGhlaWdodCB9KQogICAgfSkKCiAgICBvYnNlcnZlci5vYnNlcnZlKGVsZW1lbnQpCiAgICByZXR1cm4gKCkgPT4gb2JzZXJ2ZXIuZGlzY29ubmVjdCgpCiAgfSwgW3JlZl0pCgogIHJldHVybiBzaXplCn0K
+import * as React from "react"
+
+export function useSize(ref) {
+  const [size, setSize] = React.useState(null)
+
+  // useLayoutEffect (not useEffect): the initial measurement must land before
+  // the browser paints, so consumers can render their real content on the
+  // very first painted frame instead of a guess. A ResizeObserver's first
+  // callback arrives too late for that — by then an <img> src guess has
+  // already been dispatched to the network.
+  React.useLayoutEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const rect = element.getBoundingClientRect()
+    setSize({ width: rect.width, height: rect.height })
+
+    const observer = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect
+      setSize({ width, height })
+    })
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [ref])
+
+  return size
+}

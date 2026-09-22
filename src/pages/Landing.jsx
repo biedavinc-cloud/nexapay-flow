@@ -1,1 +1,315 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyBMaW5rIH0gZnJvbSAicmVhY3Qtcm91dGVyLWRvbSI7CmltcG9ydCB7IFphcCwgQ2hlY2ssIFBsYXksIEFycm93UmlnaHQgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwppbXBvcnQgeyBCdXR0b24gfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvYnV0dG9uIjsKaW1wb3J0IHsgSW1hZ2UgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvaW1hZ2UiOwoKY29uc3QgSTE4TiA9IHsKICBGUjogewogICAgbmF2OiB7IHByb2R1Y3Q6ICJQcm9kdWl0IiwgZGV2ZWxvcGVyczogIkTDqXZlbG9wcGV1cnMiLCBjb21wYW55OiAiRW50cmVwcmlzZSIsIHByaWNpbmc6ICJUYXJpZnMiLCBsb2dpbjogIkNvbm5leGlvbiIsIHN0YXJ0OiAiQ3LDqWVyIHVuIGNvbXB0ZSBncmF0dWl0IiwgY29udGFjdDogIm91IENvbnRhY3Rlei1ub3VzIiB9LAogICAgaGVyb0JhZGdlOiAiUGFpZW1lbnRzIGZpYXQg4oaSIGNyeXB0byBpbnN0YW50YW7DqXMiLAogICAgaGVyb1RpdGxlOiAiUGFpZW1lbnRzIGVuIGxpZ25lIGV0IGhvcnMgbGlnbmUgbW9kZXJuZXMsIGxpdnLDqXMgZW4gY3J5cHRvIiwKICAgIGhlcm9TdWI6ICJOZXhhUGF5IGFpZGUgbGVzIGNvbW1lcsOnYW50cyDDoCBlbmNhaXNzZXIgcGFyIGNhcnRlIG91IE1vYmlsZSBNb25leSwgZXQgY3LDqWRpdGUgYXV0b21hdGlxdWVtZW50IGwnVVNEVCBkYW5zIHZvdHJlIHdhbGxldCDigJQgc2FucyBzb2xkZSDDoCBnw6lyZXIsIHNhbnMgZXhjaGFuZ2UgaW50ZXJtw6lkaWFpcmUuIiwKICAgIGN0YVN0YXJ0OiAiQ3LDqWVyIHVuIGNvbXB0ZSBncmF0dWl0IiwKICAgIGN0YUNvbnRhY3Q6ICJvdSBDb250YWN0ZXotbm91cyIsCiAgICB0cnVzdGVkOiAiQXBwcm91dsOpIHBhciBkZXMgY29tbWVyw6dhbnRzIGVuIEFmcmlxdWUgZXQgYXUtZGVsw6AiLAogICAgd2F0Y2g6ICJSZWdhcmRlciBub3RyZSBkaXJpZ2VhbnQgZXhwbGlxdWVyIGNvbW1lbnQgTmV4YVBheSBjb252ZXJ0aXQgY2hhcXVlIHBhaWVtZW50IGVuIFVTRFQgbGl2csOpIGRhbnMgdm90cmUgd2FsbGV0IiwKICAgIHMydGl0bGU6ICJEZXMgcGFpZW1lbnRzIHNpbXBsZXMgZXQgZmFjaWxlcyIsCiAgICBzMnN1YjogIkxhbmNlciB1bmUgYWN0aXZpdMOpIGVzdCBkaWZmaWNpbGUuIMOKdHJlIHBhecOpIG5lIGRldnJhaXQgcGFzIGwnw6p0cmUuIiwKICAgIHMyYTogIk9mZnJleiDDoCB2b3MgY2xpZW50cyB1bmUgZXhww6lyaWVuY2UgZGUgcGFpZW1lbnQgZmx1aWRlIiwKICAgIHMyYWQ6ICJBY2NlcHRleiB0b3VzIGxlcyBtb3llbnMgZGUgcGFpZW1lbnQgcG9wdWxhaXJlcywgZW4gbGlnbmUgY29tbWUgaG9ycyBsaWduZSwgc2FucyBqYW1haXMgZ8OpcmVyIGRlIHNvbGRlLiIsCiAgICBzMmI6ICJQcm9maXRleiBkZSB0YXV4IGRlIHLDqXVzc2l0ZSBleGNlcHRpb25uZWxzIiwKICAgIHMyYmQ6ICJOb3RyZSBtb3RldXIgZCdleMOpY3V0aW9uIGRpcmVjdGUgYWNow6h0ZSBsYSBjcnlwdG8gZXQgbGEgbGl2cmUgZW4gcXVlbHF1ZXMgc2Vjb25kZXMuIiwKICAgIHMybGluazogIlZvaXIgY29tbWVudCBub3VzIGF0dGVpZ25vbnMgY2VzIHRhdXggZGUgcsOpdXNzaXRlIiwKICAgIHMzdGl0bGU6ICJDb25zdHJ1aXNleiBkZXMgZXhww6lyaWVuY2VzIGRlIHBhaWVtZW50IHN1ciBtZXN1cmUgYXZlYyBkZXMgQVBJIGJpZW4gZG9jdW1lbnTDqWVzIiwKICAgIHMzdGV4dDogIk5vcyBBUEkgY2xhaXJlcyBldCBjb21wbMOodGVzIHZvdXMgcGVybWV0dGVudCBkZSBjb25zdHJ1aXJlIGF1c3NpIGJpZW4gdW4gcHJvamV0IGRlIHdlZWstZW5kIHF1J3VuIHByb2R1aXQgZmluYW5jaWVyIGRlc3NlcnZhbnQgZGVzIGNlbnRhaW5lcyBkZSBtaWxsaWVycyBkZSBjbGllbnRzLiBTaSB2b3VzIHBvdXZleiBsJ2ltYWdpbmVyLCB2b3VzIHBvdXZleiBsZSBjb25zdHJ1aXJlIGF2ZWMgTmV4YVBheS4iLAogICAgczNmMTogIkVuY2Fpc3NlciBkZXMgcGFpZW1lbnRzIHBvbmN0dWVscyBldCByw6ljdXJyZW50cyBwYXIgY2FydGUgb3UgTW9iaWxlIE1vbmV5IiwKICAgIHMzZjI6ICJEw6ljbGVuY2hlciBsJ2FjaGF0IGluc3RhbnRhbsOpIGQnVVNEVCDDoCBjaGFxdWUgcGFpZW1lbnQiLAogICAgczNmMzogIkNvbnN1bHRlciBsJ2hpc3RvcmlxdWUgY29tcGxldCBkZSB2b3MgdHJhbnNhY3Rpb25zIGV0IHZlcnNlbWVudHMiLAogICAgczNmNDogIlbDqXJpZmllciBsJ2lkZW50aXTDqSBkZSB2b3MgY2xpZW50cyIsCiAgICBzM2xpbms6ICJEw6ltYXJyZXIgYXZlYyBsJ0FQSSBOZXhhUGF5IiwKICAgIHM0dGl0bGU6ICJQcm90w6lnZXotdm91cyBldCB2b3MgY2xpZW50cyBncsOiY2Ugw6AgdW5lIGTDqXRlY3Rpb24gZGUgZnJhdWRlIGF2YW5jw6llIiwKICAgIHM0dGV4dDogIkxhIGNvbWJpbmFpc29uIGRlIHN5c3TDqG1lcyBhbnRpLWZyYXVkZSBhdXRvbWF0aXF1ZXMgZXQgbWFudWVscyBkZSBOZXhhUGF5IHZvdXMgcHJvdMOoZ2UgY29udHJlIGxlcyB0cmFuc2FjdGlvbnMgZnJhdWR1bGV1c2VzIGV0IGxlcyBjb250ZXN0YXRpb25zIGFzc29jacOpZXMuIiwKICAgIG5vQmFsYW5jZTogIlBhcyBkZSBzb2xkZS4gUGFzIGQnZXhjaGFuZ2UuIENoYXF1ZSBwYWllbWVudCBkZSB2b3RyZSBjbGllbnQgYWNow6h0ZSBsYSBjcnlwdG8gZXQgbGEgY3LDqWRpdGUgZGlyZWN0ZW1lbnQgZGFucyB2b3RyZSB3YWxsZXQuIiwKICAgIGZvb3RlcjogIlByb3ByacOpdMOpIHByaXbDqWUgZCd1biBpbnRlbGxlY3R1ZWwgZW4gSUEiLAogICAgZmVhdHVyZXM6IHsKICAgICAgYzE6IFsiQ2FydGUiLCAiQ29tcHRlIGJhbmNhaXJlIiwgIlZpcmVtZW50IiwgIlVTU0QiLCAiUE9TIl0sCiAgICAgIGMyOiBbIkFwcGxlIFBheSIsICJHb29nbGUgUGF5IiwgIlZpc2EgUVIiLCAiTW9iaWxlIE1vbmV5Il0sCiAgICB9LAogICAgZm9vdE5hdjogWyJQcm9kdWl0IiwgIkTDqXZlbG9wcGV1cnMiLCAiU8OpY3VyaXTDqSIsICJFbnRyZXByaXNlIiwgIlRhcmlmcyJdLAogIH0sCiAgRU46IHsKICAgIG5hdjogeyBwcm9kdWN0OiAiUHJvZHVjdCIsIGRldmVsb3BlcnM6ICJEZXZlbG9wZXJzIiwgY29tcGFueTogIkNvbXBhbnkiLCBwcmljaW5nOiAiUHJpY2luZyIsIGxvZ2luOiAiTG9nIGluIiwgc3RhcnQ6ICJDcmVhdGUgYSBmcmVlIGFjY291bnQiLCBjb250YWN0OiAib3IgQ29udGFjdCBTYWxlcyIgfSwKICAgIGhlcm9CYWRnZTogIkZpYXQg4oaSIGNyeXB0byBpbnN0YW50IHBheW1lbnRzIiwKICAgIGhlcm9UaXRsZTogIk1vZGVybiBvbmxpbmUgYW5kIG9mZmxpbmUgcGF5bWVudHMsIHNldHRsZWQgaW4gY3J5cHRvIiwKICAgIGhlcm9TdWI6ICJOZXhhUGF5IGhlbHBzIGJ1c2luZXNzZXMgZ2V0IHBhaWQgYnkgY2FyZCBvciBNb2JpbGUgTW9uZXksIGFuZCBhdXRvbWF0aWNhbGx5IGNyZWRpdHMgVVNEVCB0byB5b3VyIHdhbGxldCDigJQgbm8gYmFsYW5jZSB0byBtYW5hZ2UsIG5vIGludGVybWVkaWFyeSBleGNoYW5nZS4iLAogICAgY3RhU3RhcnQ6ICJDcmVhdGUgYSBmcmVlIGFjY291bnQiLAogICAgY3RhQ29udGFjdDogIm9yIENvbnRhY3QgU2FsZXMiLAogICAgdHJ1c3RlZDogIlRydXN0ZWQgYnkgYnVzaW5lc3NlcyBhY3Jvc3MgQWZyaWNhIGFuZCBiZXlvbmQiLAogICAgd2F0Y2g6ICJXYXRjaCBvdXIgbGVhZGVyc2hpcCBleHBsYWluIGhvdyBOZXhhUGF5IHR1cm5zIGV2ZXJ5IHBheW1lbnQgaW50byBVU0RUIGRlbGl2ZXJlZCB0byB5b3VyIHdhbGxldCIsCiAgICBzMnRpdGxlOiAiU2ltcGxlLCBlYXN5IHBheW1lbnRzIiwKICAgIHMyc3ViOiAiQnVpbGRpbmcgYSBidXNpbmVzcyBpcyBoYXJkLiBHZXR0aW5nIHBhaWQgc2hvdWxkbid0IGJlLiIsCiAgICBzMmE6ICJEZWxpZ2h0IGN1c3RvbWVycyB3aXRoIGEgc2VhbWxlc3MgcGF5bWVudHMgZXhwZXJpZW5jZSIsCiAgICBzMmFkOiAiQWNjZXB0IGV2ZXJ5IHBvcHVsYXIgcGF5bWVudCBtZXRob2QsIG9ubGluZSBhbmQgb2ZmbGluZSwgd2l0aG91dCBldmVyIG1hbmFnaW5nIGEgYmFsYW5jZS4iLAogICAgczJiOiAiRW5qb3kgcGhlbm9tZW5hbCB0cmFuc2FjdGlvbiBzdWNjZXNzIHJhdGVzIiwKICAgIHMyYmQ6ICJPdXIgZGlyZWN0IGV4ZWN1dGlvbiBlbmdpbmUgYnV5cyB0aGUgY3J5cHRvIGFuZCBzZXR0bGVzIGl0IGluIHNlY29uZHMuIiwKICAgIHMybGluazogIkZpbmQgb3V0IGhvdyB3ZSBhY2hpZXZlIGhpZ2ggc3VjY2VzcyByYXRlcyIsCiAgICBzM3RpdGxlOiAiQnVpbGQgY3VzdG9tIHBheW1lbnRzIGV4cGVyaWVuY2VzIHdpdGggd2VsbC1kb2N1bWVudGVkIEFQSXMiLAogICAgczN0ZXh0OiAiRGV2ZWxvcGVycyBsb3ZlIG91ciB0aG9yb3VnaCwgd2VsbC1kb2N1bWVudGVkIEFQSXMgdGhhdCBsZXQgeW91IGJ1aWxkIGV2ZXJ5dGhpbmcgZnJvbSBzaW1wbGUgd2Vla2VuZCBwcm9qZWN0cyB0byBjb21wbGV4IGZpbmFuY2lhbCBwcm9kdWN0cyBzZXJ2aW5nIGh1bmRyZWRzIG9mIHRob3VzYW5kcyBvZiBjdXN0b21lcnMuIElmIHlvdSBjYW4gaW1hZ2luZSBpdCwgeW91IGNhbiBidWlsZCBpdCB3aXRoIE5leGFQYXkuIiwKICAgIHMzZjE6ICJDb2xsZWN0IG9uZS10aW1lIGFuZCByZWN1cnJpbmcgcGF5bWVudHMgYnkgY2FyZCBvciBNb2JpbGUgTW9uZXkiLAogICAgczNmMjogIlRyaWdnZXIgYW4gaW5zdGFudCBVU0RUIHB1cmNoYXNlIG9uIGV2ZXJ5IHBheW1lbnQiLAogICAgczNmMzogIlJldHJpZXZlIHRoZSBmdWxsIGhpc3Rvcnkgb2YgeW91ciB0cmFuc2FjdGlvbnMgYW5kIHNldHRsZW1lbnRzIiwKICAgIHMzZjQ6ICJWZXJpZnkgdGhlIGlkZW50aXR5IG9mIHlvdXIgY3VzdG9tZXJzIiwKICAgIHMzbGluazogIk5leGFQYXkgQVBJIFF1aWNrc3RhcnQiLAogICAgczR0aXRsZTogIlByb3RlY3QgeW91cnNlbGYgYW5kIHlvdXIgY3VzdG9tZXJzIHdpdGggYWR2YW5jZWQgZnJhdWQgZGV0ZWN0aW9uIiwKICAgIHM0dGV4dDogIk5leGFQYXkncyBjb21iaW5hdGlvbiBvZiBhdXRvbWF0ZWQgYW5kIG1hbnVhbCBmcmF1ZCBzeXN0ZW1zIHByb3RlY3RzIHlvdSBmcm9tIGZyYXVkdWxlbnQgdHJhbnNhY3Rpb25zIGFuZCBhc3NvY2lhdGVkIGNoYXJnZWJhY2sgY2xhaW1zLiIsCiAgICBub0JhbGFuY2U6ICJObyBiYWxhbmNlLiBObyBleGNoYW5nZS4gRXZlcnkgcGF5bWVudCBmcm9tIHlvdXIgY3VzdG9tZXIgYnV5cyB0aGUgY3J5cHRvIGFuZCBjcmVkaXRzIGl0IHN0cmFpZ2h0IHRvIHlvdXIgd2FsbGV0LiIsCiAgICBmb290ZXI6ICJQcml2YXRlIHByb3BlcnR5IG9mIGFuIEFJIGludGVsbGVjdCIsCiAgICBmZWF0dXJlczogewogICAgICBjMTogWyJDYXJkIiwgIkJhbmsgQWNjb3VudCIsICJCYW5rIFRyYW5zZmVyIiwgIlVTU0QiLCAiUE9TIl0sCiAgICAgIGMyOiBbIkFwcGxlIFBheSIsICJHb29nbGUgUGF5IiwgIlZpc2EgUVIiLCAiTW9iaWxlIE1vbmV5Il0sCiAgICB9LAogICAgZm9vdE5hdjogWyJQcm9kdWN0IiwgIkRldmVsb3BlcnMiLCAiU2VjdXJpdHkiLCAiQ29tcGFueSIsICJQcmljaW5nIl0sCiAgfSwKfTsKCmNvbnN0IFBBUlRORVJTID0gWyJNVE4iLCAiQm9sdCIsICJBWEEiLCAiRG9taW5vJ3MiLCAiVWJlciJdOwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gTGFuZGluZygpIHsKICBjb25zdCBbbGFuZywgc2V0TGFuZ10gPSB1c2VTdGF0ZSgiRlIiKTsKICBjb25zdCB0ID0gSTE4TltsYW5nXTsKCiAgY29uc3QgQ2hlY2sgPSAoeyBjaGlsZHJlbiB9KSA9PiAoCiAgICA8bGkgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLXN0YXJ0IGdhcC0yLjUgdGV4dC1zbSB0ZXh0LVsjMDgxNzM1XSI+CiAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibXQtMC41IGZsZXggaC00IHctNCBzaHJpbmstMCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1mdWxsIGJnLVsjM0JCNzdFXS8xNSI+CiAgICAgICAgPHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIGNsYXNzTmFtZT0iaC0zIHctMyB0ZXh0LVsjM0JCNzdFXSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZVdpZHRoPSIzIj48cGF0aCBkPSJNMjAgNiA5IDE3bC01LTUiIC8+PC9zdmc+CiAgICAgIDwvc3Bhbj4KICAgICAge2NoaWxkcmVufQogICAgPC9saT4KICApOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im1pbi1oLXNjcmVlbiBiZy13aGl0ZSB0ZXh0LVsjMDgxNzM1XSBmb250LWJvZHkiPgogICAgICB7LyogTmF2ICovfQogICAgICA8aGVhZGVyIGNsYXNzTmFtZT0ic3RpY2t5IHRvcC0wIHotMzAgYmctd2hpdGUvOTAgYmFja2Ryb3AtYmx1ciBib3JkZXItYiBib3JkZXItYmxhY2svNSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTQgaC0xNiBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgICAgPExpbmsgdG89Ii8iIGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBoLTkgdy05IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciByb3VuZGVkLWxnIGJnLVsjMDgxNzM1XSI+PFphcCBjbGFzc05hbWU9ImgtNSB3LTUgdGV4dC1bIzNCQjc3RV0iIC8+PC9kaXY+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1zZW1pYm9sZCB0ZXh0LWxnIHRyYWNraW5nLXRpZ2h0Ij5OZXhhUGF5PC9zcGFuPgogICAgICAgICAgPC9MaW5rPgogICAgICAgICAgPG5hdiBjbGFzc05hbWU9ImhpZGRlbiBtZDpmbGV4IGl0ZW1zLWNlbnRlciBnYXAtOCB0ZXh0LXNtIHRleHQtWyM2RDdBOTJdIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LVsjMDgxNzM1XSI+e3QubmF2LnByb2R1Y3R9PC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImhvdmVyOnRleHQtWyMwODE3MzVdIj57dC5uYXYuZGV2ZWxvcGVyc308L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC1bIzA4MTczNV0iPnt0Lm5hdi5jb21wYW55fTwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LVsjMDgxNzM1XSI+e3QubmF2LnByaWNpbmd9PC9zcGFuPgogICAgICAgICAgPC9uYXY+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMiPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItYmxhY2svMTAgcC0wLjUgdGV4dC14cyBmb250LW1lZGl1bSI+CiAgICAgICAgICAgICAgPGJ1dHRvbiB0eXBlPSJidXR0b24iIG9uQ2xpY2s9eygpID0+IHNldExhbmcoIkZSIil9IGNsYXNzTmFtZT17YHB4LTIuNSBweS0xIHJvdW5kZWQtZnVsbCAke2xhbmcgPT09ICJGUiIgPyAiYmctWyMwODE3MzVdIHRleHQtd2hpdGUiIDogInRleHQtWyM2RDdBOTJdIn1gfT5GUjwvYnV0dG9uPgogICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBvbkNsaWNrPXsoKSA9PiBzZXRMYW5nKCJFTiIpfSBjbGFzc05hbWU9e2BweC0yLjUgcHktMSByb3VuZGVkLWZ1bGwgJHtsYW5nID09PSAiRU4iID8gImJnLVsjMDgxNzM1XSB0ZXh0LXdoaXRlIiA6ICJ0ZXh0LVsjNkQ3QTkyXSJ9YH0+RU48L2J1dHRvbj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxMaW5rIHRvPSIvbG9naW4iIGNsYXNzTmFtZT0iaGlkZGVuIHNtOmlubGluZSB0ZXh0LXNtIHRleHQtWyM2RDdBOTJdIGhvdmVyOnRleHQtWyMwODE3MzVdIj57dC5uYXYubG9naW59PC9MaW5rPgogICAgICAgICAgICA8TGluayB0bz0iL3JlZ2lzdGVyIj48QnV0dG9uIGNsYXNzTmFtZT0icm91bmRlZC1mdWxsIGJnLVsjM0JCNzdFXSBob3ZlcjpiZy1bIzMzYTM2ZV0gdGV4dC13aGl0ZSIgc2l6ZT0ic20iPnt0Lm5hdi5zdGFydH08L0J1dHRvbj48L0xpbms+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9oZWFkZXI+CgogICAgICB7LyogSGVybyAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJiZy1bI0Y5RkZGQl0iPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy02eGwgbXgtYXV0byBweC00IHB5LTE2IG1kOnB5LTI0IGdyaWQgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTEwIGl0ZW1zLWNlbnRlciI+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiByb3VuZGVkLWZ1bGwgYmctWyMzQkI3N0VdLzEwIHB4LTMgcHktMSB0ZXh0LXhzIGZvbnQtbWVkaXVtIHRleHQtWyMyZjk3NjJdIj4KICAgICAgICAgICAgICA8WmFwIGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+IHt0Lmhlcm9CYWRnZX0KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICA8aDEgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQtM3hsIG1kOnRleHQtNXhsIHRyYWNraW5nLXRpZ2h0IGxlYWRpbmctdGlnaHQgbXQtNSB0ZXh0LVsjMDgxNzM1XSI+e3QuaGVyb1RpdGxlfTwvaDE+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1iYXNlIG1kOnRleHQtbGcgdGV4dC1bIzZEN0E5Ml0gbXQtNSBtYXgtdy14bCI+e3QuaGVyb1N1Yn08L3A+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtNCBtdC03Ij4KICAgICAgICAgICAgICA8TGluayB0bz0iL3JlZ2lzdGVyIj48QnV0dG9uIGNsYXNzTmFtZT0icm91bmRlZC1mdWxsIGJnLVsjM0JCNzdFXSBob3ZlcjpiZy1bIzMzYTM2ZV0gdGV4dC13aGl0ZSBoLTExIHB4LTYiPnt0LmN0YVN0YXJ0fTwvQnV0dG9uPjwvTGluaz4KICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtc20gdGV4dC1bIzAwN0FGRl0gaG92ZXI6dW5kZXJsaW5lIGN1cnNvci1wb2ludGVyIj57dC5jdGFDb250YWN0fTwvc3Bhbj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC14cyB0ZXh0LVsjNkQ3QTkyXSBtdC01Ij57dC50cnVzdGVkfTwvcD4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC13cmFwIGl0ZW1zLWNlbnRlciBnYXAteC02IGdhcC15LTIgbXQtMyBvcGFjaXR5LTcwIj4KICAgICAgICAgICAgICB7UEFSVE5FUlMubWFwKChwKSA9PiA8c3BhbiBrZXk9e3B9IGNsYXNzTmFtZT0idGV4dC1zbSBmb250LXNlbWlib2xkIHRleHQtWyMwODE3MzVdLzgwIHRyYWNraW5nLXRpZ2h0Ij57cH08L3NwYW4+KX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIGl0ZW1zLXN0YXJ0IGdhcC00Ij4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHJvdW5kZWQteGwgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ibGFjay81IHAtNSBzaGFkb3ctc20iPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZmxleCBoLTExIHctMTEgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHJvdW5kZWQtZnVsbCBiZy1bIzAwN0FGRl0vMTAiPjxQbGF5IGNsYXNzTmFtZT0iaC01IHctNSB0ZXh0LVsjMDA3QUZGXSIgLz48L3NwYW4+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtWyMwODE3MzVdIG1heC13LXhzIj57dC53YXRjaH08L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idy1mdWxsIHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1bIzNCQjc3RV0vMjAgYmctd2hpdGUgcHgtNSBweS00IHRleHQtc20gdGV4dC1bIzJmOTc2Ml0iPgogICAgICAgICAgICAgIHt0Lm5vQmFsYW5jZX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIFNpbXBsZSwgZWFzeSBwYXltZW50cyAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJiZy13aGl0ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTQgcHktMTYgbWQ6cHktMjQiPgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0iZm9udC1zZW1pYm9sZCB0ZXh0LTJ4bCBtZDp0ZXh0LTR4bCB0cmFja2luZy10aWdodCB0ZXh0LVsjMDgxNzM1XSI+e3QuczJ0aXRsZX08L2gyPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LVsjNkQ3QTkyXSBtdC0yIj57dC5zMnN1Yn08L3A+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtMTAgbXQtMTAgaXRlbXMtY2VudGVyIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQtMnhsIG92ZXJmbG93LWhpZGRlbiBiZy1bI0Y5RkZGQl0gYm9yZGVyIGJvcmRlci1ibGFjay81Ij4KICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPSJodHRwczovL21lZGlhLmJhc2U0NC5jb20vaW1hZ2VzL3B1YmxpYy82YWIxMTA0ZTQ3ZDRmNzQwMjJjNjlkMjcvMWI2ZDRhMDRmX2dlbmVyYXRlZF9pbWFnZS5wbmciIGFsdD0iQ2FyZHMiIGNsYXNzTmFtZT0idy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIiIGZpdHRpbmdUeXBlPSJmaWxsIiAvPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMTAiPgogICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQteGwgdGV4dC1bIzA4MTczNV0iPnt0LnMyYX08L2gzPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtWyM2RDdBOTJdIG10LTIgbWF4LXctbWQiPnt0LnMyYWR9PC9wPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImdyaWQgZ3JpZC1jb2xzLTIgZ2FwLXgtOCBnYXAteS0yLjUgbXQtNSI+CiAgICAgICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9InNwYWNlLXktMi41Ij57dC5mZWF0dXJlcy5jMS5tYXAoKGYpID0+IDxDaGVjayBrZXk9e2Z9PntmfTwvQ2hlY2s+KX08L3VsPgogICAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPSJzcGFjZS15LTIuNSI+e3QuZmVhdHVyZXMuYzIubWFwKChmKSA9PiA8Q2hlY2sga2V5PXtmfT57Zn08L0NoZWNrPil9PC91bD4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQteGwgdGV4dC1bIzA4MTczNV0iPnt0LnMyYn08L2gzPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtWyM2RDdBOTJdIG10LTIgbWF4LXctbWQiPnt0LnMyYmR9PC9wPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtWyMwMDdBRkZdIGhvdmVyOnVuZGVybGluZSBjdXJzb3ItcG9pbnRlciBtdC0zIGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSI+e3QuczJsaW5rfSA8QXJyb3dSaWdodCBjbGFzc05hbWU9ImgtMy41IHctMy41IiAvPjwvcD4KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIEJ1aWxkIGN1c3RvbSBwYXltZW50cyAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJiZy1bI0Y5RkZGQl0iPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy02eGwgbXgtYXV0byBweC00IHB5LTE2IG1kOnB5LTI0IGdyaWQgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTEwIGl0ZW1zLWNlbnRlciI+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQtMnhsIG1kOnRleHQtNHhsIHRyYWNraW5nLXRpZ2h0IHRleHQtWyMwODE3MzVdIj57dC5zM3RpdGxlfTwvaDI+CiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1bIzZEN0E5Ml0gbXQtNCBtYXgtdy1sZyI+e3QuczN0ZXh0fTwvcD4KICAgICAgICAgICAgPHVsIGNsYXNzTmFtZT0ic3BhY2UteS0yLjUgbXQtNiBtYXgtdy1sZyI+CiAgICAgICAgICAgICAgPENoZWNrPnt0LnMzZjF9PC9DaGVjaz4KICAgICAgICAgICAgICA8Q2hlY2s+e3QuczNmMn08L0NoZWNrPgogICAgICAgICAgICAgIDxDaGVjaz57dC5zM2YzfTwvQ2hlY2s+CiAgICAgICAgICAgICAgPENoZWNrPnt0LnMzZjR9PC9DaGVjaz4KICAgICAgICAgICAgPC91bD4KICAgICAgICAgICAgPExpbmsgdG89Ii9hcGktZG9jcyIgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtWyMwMDdBRkZdIGhvdmVyOnVuZGVybGluZSBtdC02IGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMSI+e3QuczNsaW5rfSA8QXJyb3dSaWdodCBjbGFzc05hbWU9ImgtMy41IHctMy41IiAvPjwvTGluaz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQtMnhsIG92ZXJmbG93LWhpZGRlbiBiZy13aGl0ZSBib3JkZXIgYm9yZGVyLWJsYWNrLzUiPgogICAgICAgICAgICA8SW1hZ2Ugc3JjPSJodHRwczovL21lZGlhLmJhc2U0NC5jb20vaW1hZ2VzL3B1YmxpYy82YWIxMTA0ZTQ3ZDRmNzQwMjJjNjlkMjcvMTMzODQxYzlmX2dlbmVyYXRlZF9pbWFnZS5wbmciIGFsdD0iQVBJIGJ1aWxkaW5nIGJsb2NrcyIgY2xhc3NOYW1lPSJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb3ZlciIgZml0dGluZ1R5cGU9ImZpdCIgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICB7LyogUHJvdGVjdCB5b3Vyc2VsZiAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJiZy13aGl0ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTQgcHktMTYgbWQ6cHktMjQgZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtMTAgaXRlbXMtY2VudGVyIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGp1c3RpZnktY2VudGVyIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIGgtNTYgdy01NiI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tWyMzQkI3N0VdIHRvLVsjN2VkNGE2XSIgLz4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYWJzb2x1dGUgaW5zZXQtNiByb3VuZGVkLWZ1bGwgYmctd2hpdGUiIC8+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTEyIHJvdW5kZWQtZnVsbCBiZy1ncmFkaWVudC10by1iciBmcm9tLVsjM0JCNzdFXS82MCB0by1bI2E5ZTZjNF0iIC8+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTIwIHJvdW5kZWQtZnVsbCBiZy13aGl0ZSIgLz4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9ImZvbnQtc2VtaWJvbGQgdGV4dC0yeGwgbWQ6dGV4dC00eGwgdHJhY2tpbmctdGlnaHQgdGV4dC1bIzA4MTczNV0iPnt0LnM0dGl0bGV9PC9oMj4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LVsjNkQ3QTkyXSBtdC00IG1heC13LWxnIj57dC5zNHRleHR9PC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KCiAgICAgIHsvKiBGb290ZXIgKi99CiAgICAgIDxmb290ZXIgY2xhc3NOYW1lPSJiZy1bIzA4MTczNV0gdGV4dC13aGl0ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LTZ4bCBteC1hdXRvIHB4LTQgcHktMTIiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC1jb2wgbWQ6ZmxleC1yb3cgaXRlbXMtc3RhcnQgbWQ6aXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBnYXAtNiI+CiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaC04IHctOCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcm91bmRlZC1sZyBiZy13aGl0ZS8xMCI+PFphcCBjbGFzc05hbWU9ImgtNCB3LTQgdGV4dC1bIzNCQjc3RV0iIC8+PC9kaXY+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LXNlbWlib2xkIHRleHQtbGciPk5leGFQYXk8L3NwYW4+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8bmF2IGNsYXNzTmFtZT0iZmxleCBmbGV4LXdyYXAgZ2FwLXgtNiBnYXAteS0yIHRleHQtc20gdGV4dC13aGl0ZS83MCI+CiAgICAgICAgICAgICAgPExpbmsgdG89Ii8iIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC13aGl0ZSI+e3QuZm9vdE5hdlswXX08L0xpbms+CiAgICAgICAgICAgICAgPExpbmsgdG89Ii9hcGktZG9jcyIgY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LXdoaXRlIj5Eb2N1bWVudGF0aW9uPC9MaW5rPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC13aGl0ZSBjdXJzb3ItcG9pbnRlciI+e3QuZm9vdE5hdlsyXX08L3NwYW4+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJob3Zlcjp0ZXh0LXdoaXRlIGN1cnNvci1wb2ludGVyIj57dC5mb290TmF2WzNdfTwvc3Bhbj4KICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImhvdmVyOnRleHQtd2hpdGUgY3Vyc29yLXBvaW50ZXIiPnt0LmZvb3ROYXZbNF19PC9zcGFuPgogICAgICAgICAgICAgIDxMaW5rIHRvPSIvbG9naW4iIGNsYXNzTmFtZT0iaG92ZXI6dGV4dC13aGl0ZSI+e3QubmF2LmxvZ2lufTwvTGluaz4KICAgICAgICAgICAgPC9uYXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJib3JkZXItdCBib3JkZXItd2hpdGUvMTAgbXQtOCBwdC02IHRleHQtY2VudGVyIHRleHQtc20gdGV4dC13aGl0ZS82MCI+CiAgICAgICAgICAgIMKpIHtuZXcgRGF0ZSgpLmdldEZ1bGxZZWFyKCl9IE5leGFQYXkgwrcge3QuZm9vdGVyfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZm9vdGVyPgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Zap, Check, Play, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Image } from "@/components/ui/image";
+
+const I18N = {
+  FR: {
+    nav: { product: "Produit", developers: "Développeurs", company: "Entreprise", pricing: "Tarifs", login: "Connexion", start: "Créer un compte gratuit", contact: "ou Contactez-nous" },
+    heroBadge: "Paiements fiat → crypto instantanés",
+    heroTitle: "Paiements en ligne et hors ligne modernes, livrés en crypto",
+    heroSub: "NexaPay aide les commerçants à encaisser par carte ou Mobile Money, et crédite automatiquement l'USDT dans votre wallet — sans solde à gérer, sans exchange intermédiaire.",
+    ctaStart: "Créer un compte gratuit",
+    ctaContact: "ou Contactez-nous",
+    trusted: "Approuvé par des commerçants en Afrique et au-delà",
+    watch: "Regarder notre dirigeant expliquer comment NexaPay convertit chaque paiement en USDT livré dans votre wallet",
+    s2title: "Des paiements simples et faciles",
+    s2sub: "Lancer une activité est difficile. Être payé ne devrait pas l'être.",
+    s2a: "Offrez à vos clients une expérience de paiement fluide",
+    s2ad: "Acceptez tous les moyens de paiement populaires, en ligne comme hors ligne, sans jamais gérer de solde.",
+    s2b: "Profitez de taux de réussite exceptionnels",
+    s2bd: "Notre moteur d'exécution directe achète la crypto et la livre en quelques secondes.",
+    s2link: "Voir comment nous atteignons ces taux de réussite",
+    s3title: "Construisez des expériences de paiement sur mesure avec des API bien documentées",
+    s3text: "Nos API claires et complètes vous permettent de construire aussi bien un projet de week-end qu'un produit financier desservant des centaines de milliers de clients. Si vous pouvez l'imaginer, vous pouvez le construire avec NexaPay.",
+    s3f1: "Encaisser des paiements ponctuels et récurrents par carte ou Mobile Money",
+    s3f2: "Déclencher l'achat instantané d'USDT à chaque paiement",
+    s3f3: "Consulter l'historique complet de vos transactions et versements",
+    s3f4: "Vérifier l'identité de vos clients",
+    s3link: "Démarrer avec l'API NexaPay",
+    s4title: "Protégez-vous et vos clients grâce à une détection de fraude avancée",
+    s4text: "La combinaison de systèmes anti-fraude automatiques et manuels de NexaPay vous protège contre les transactions frauduleuses et les contestations associées.",
+    noBalance: "Pas de solde. Pas d'exchange. Chaque paiement de votre client achète la crypto et la crédite directement dans votre wallet.",
+    footer: "Propriété privée d'un intellectuel en IA",
+    features: {
+      c1: ["Carte", "Compte bancaire", "Virement", "USSD", "POS"],
+      c2: ["Apple Pay", "Google Pay", "Visa QR", "Mobile Money"],
+    },
+    footNav: ["Produit", "Développeurs", "Sécurité", "Entreprise", "Tarifs"],
+  },
+  EN: {
+    nav: { product: "Product", developers: "Developers", company: "Company", pricing: "Pricing", login: "Log in", start: "Create a free account", contact: "or Contact Sales" },
+    heroBadge: "Fiat → crypto instant payments",
+    heroTitle: "Modern online and offline payments, settled in crypto",
+    heroSub: "NexaPay helps businesses get paid by card or Mobile Money, and automatically credits USDT to your wallet — no balance to manage, no intermediary exchange.",
+    ctaStart: "Create a free account",
+    ctaContact: "or Contact Sales",
+    trusted: "Trusted by businesses across Africa and beyond",
+    watch: "Watch our leadership explain how NexaPay turns every payment into USDT delivered to your wallet",
+    s2title: "Simple, easy payments",
+    s2sub: "Building a business is hard. Getting paid shouldn't be.",
+    s2a: "Delight customers with a seamless payments experience",
+    s2ad: "Accept every popular payment method, online and offline, without ever managing a balance.",
+    s2b: "Enjoy phenomenal transaction success rates",
+    s2bd: "Our direct execution engine buys the crypto and settles it in seconds.",
+    s2link: "Find out how we achieve high success rates",
+    s3title: "Build custom payments experiences with well-documented APIs",
+    s3text: "Developers love our thorough, well-documented APIs that let you build everything from simple weekend projects to complex financial products serving hundreds of thousands of customers. If you can imagine it, you can build it with NexaPay.",
+    s3f1: "Collect one-time and recurring payments by card or Mobile Money",
+    s3f2: "Trigger an instant USDT purchase on every payment",
+    s3f3: "Retrieve the full history of your transactions and settlements",
+    s3f4: "Verify the identity of your customers",
+    s3link: "NexaPay API Quickstart",
+    s4title: "Protect yourself and your customers with advanced fraud detection",
+    s4text: "NexaPay's combination of automated and manual fraud systems protects you from fraudulent transactions and associated chargeback claims.",
+    noBalance: "No balance. No exchange. Every payment from your customer buys the crypto and credits it straight to your wallet.",
+    footer: "Private property of an AI intellect",
+    features: {
+      c1: ["Card", "Bank Account", "Bank Transfer", "USSD", "POS"],
+      c2: ["Apple Pay", "Google Pay", "Visa QR", "Mobile Money"],
+    },
+    footNav: ["Product", "Developers", "Security", "Company", "Pricing"],
+  },
+};
+
+const PARTNERS = ["MTN", "Bolt", "AXA", "Domino's", "Uber"];
+
+export default function Landing() {
+  const [lang, setLang] = useState("FR");
+  const t = I18N[lang];
+
+  const Check = ({ children }) => (
+    <li className="flex items-start gap-2.5 text-sm text-[#081735]">
+      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3BB77E]/15">
+        <svg viewBox="0 0 24 24" className="h-3 w-3 text-[#3BB77E]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" /></svg>
+      </span>
+      {children}
+    </li>
+  );
+
+  return (
+    <div className="min-h-screen bg-white text-[#081735] font-body">
+      {/* Nav */}
+      <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-black/5">
+        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#081735]"><Zap className="h-5 w-5 text-[#3BB77E]" /></div>
+            <span className="font-semibold text-lg tracking-tight">NexaPay</span>
+          </Link>
+          <nav className="hidden md:flex items-center gap-8 text-sm text-[#6D7A92]">
+            <span className="hover:text-[#081735]">{t.nav.product}</span>
+            <span className="hover:text-[#081735]">{t.nav.developers}</span>
+            <span className="hover:text-[#081735]">{t.nav.company}</span>
+            <span className="hover:text-[#081735]">{t.nav.pricing}</span>
+          </nav>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium">
+              <button type="button" onClick={() => setLang("FR")} className={`px-2.5 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
+              <button type="button" onClick={() => setLang("EN")} className={`px-2.5 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
+            </div>
+            <Link to="/login" className="hidden sm:inline text-sm text-[#6D7A92] hover:text-[#081735]">{t.nav.login}</Link>
+            <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white" size="sm">{t.nav.start}</Button></Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="bg-[#F9FFFB]">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#3BB77E]/10 px-3 py-1 text-xs font-medium text-[#2f9762]">
+              <Zap className="h-3.5 w-3.5" /> {t.heroBadge}
+            </span>
+            <h1 className="font-semibold text-3xl md:text-5xl tracking-tight leading-tight mt-5 text-[#081735]">{t.heroTitle}</h1>
+            <p className="text-base md:text-lg text-[#6D7A92] mt-5 max-w-xl">{t.heroSub}</p>
+            <div className="flex items-center gap-4 mt-7">
+              <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white h-11 px-6">{t.ctaStart}</Button></Link>
+              <span className="text-sm text-[#007AFF] hover:underline cursor-pointer">{t.ctaContact}</span>
+            </div>
+            <p className="text-xs text-[#6D7A92] mt-5">{t.trusted}</p>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-3 opacity-70">
+              {PARTNERS.map((p) => <span key={p} className="text-sm font-semibold text-[#081735]/80 tracking-tight">{p}</span>)}
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-4">
+            <div className="flex items-center gap-3 rounded-xl bg-white border border-black/5 p-5 shadow-sm">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#007AFF]/10"><Play className="h-5 w-5 text-[#007AFF]" /></span>
+              <p className="text-sm text-[#081735] max-w-xs">{t.watch}</p>
+            </div>
+            <div className="w-full rounded-xl border border-[#3BB77E]/20 bg-white px-5 py-4 text-sm text-[#2f9762]">
+              {t.noBalance}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Simple, easy payments */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+          <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s2title}</h2>
+          <p className="text-[#6D7A92] mt-2">{t.s2sub}</p>
+          <div className="grid md:grid-cols-2 gap-10 mt-10 items-center">
+            <div className="rounded-2xl overflow-hidden bg-[#F9FFFB] border border-black/5 aspect-[4/3]">
+              <Image src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/ff6298b36_kredite-banknotes-4516005_1920.jpg" alt="Paiements simples et faciles" className="w-full h-full object-cover" fittingType="fill" />
+            </div>
+            <div className="space-y-10">
+              <div>
+                <h3 className="font-semibold text-xl text-[#081735]">{t.s2a}</h3>
+                <p className="text-sm text-[#6D7A92] mt-2 max-w-md">{t.s2ad}</p>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
+                  <ul className="space-y-2.5">{t.features.c1.map((f) => <Check key={f}>{f}</Check>)}</ul>
+                  <ul className="space-y-2.5">{t.features.c2.map((f) => <Check key={f}>{f}</Check>)}</ul>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-xl text-[#081735]">{t.s2b}</h3>
+                <p className="text-sm text-[#6D7A92] mt-2 max-w-md">{t.s2bd}</p>
+                <p className="text-sm text-[#007AFF] hover:underline cursor-pointer mt-3 inline-flex items-center gap-1">{t.s2link} <ArrowRight className="h-3.5 w-3.5" /></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Build custom payments */}
+      <section className="bg-[#F9FFFB]">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s3title}</h2>
+            <p className="text-[#6D7A92] mt-4 max-w-lg">{t.s3text}</p>
+            <ul className="space-y-2.5 mt-6 max-w-lg">
+              <Check>{t.s3f1}</Check>
+              <Check>{t.s3f2}</Check>
+              <Check>{t.s3f3}</Check>
+              <Check>{t.s3f4}</Check>
+            </ul>
+            <Link to="/api-docs" className="text-sm text-[#007AFF] hover:underline mt-6 inline-flex items-center gap-1">{t.s3link} <ArrowRight className="h-3.5 w-3.5" /></Link>
+          </div>
+          <div className="rounded-2xl overflow-hidden bg-white border border-black/5 aspect-[4/3]">
+            <Image src="https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/eb4dd9554_nattanan23-money-2724241_1920.jpg" alt="Expériences de paiement sur mesure" className="w-full h-full object-cover" fittingType="fill" />
+          </div>
+        </div>
+      </section>
+
+      {/* Protect yourself */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+          <div className="flex justify-center">
+            <div className="relative h-56 w-56">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3BB77E] to-[#7ed4a6]" />
+              <div className="absolute inset-6 rounded-full bg-white" />
+              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-[#3BB77E]/60 to-[#a9e6c4]" />
+              <div className="absolute inset-20 rounded-full bg-white" />
+            </div>
+          </div>
+          <div>
+            <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s4title}</h2>
+            <p className="text-[#6D7A92] mt-4 max-w-lg">{t.s4text}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+          <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">Tarifs & accès production</h2>
+          <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">Un frais d'accès unique débloque votre espace. La commission est prélevée à la source sur chaque conversion Fiat → USDT.</p>
+          <div className="grid md:grid-cols-3 gap-5 mt-10">
+            {[
+              { name: "Basic", price: "$200", limit: "Jusqu'à $200 / jour", commission: "3,5%", highlight: false },
+              { name: "Advanced", price: "$619", limit: "Jusqu'à $5 000 / jour", commission: "2,0%", highlight: true },
+              { name: "Pro", price: "$1099", limit: "Volume illimité", commission: "0,8%", highlight: false },
+            ].map((p) => (
+              <div key={p.name} className={`rounded-2xl border p-6 ${p.highlight ? "border-[#3BB77E] bg-[#F9FFFB] shadow-sm" : "border-black/5"}`}>
+                <div className="font-semibold text-lg text-[#081735]">{p.name}</div>
+                <div className="text-3xl font-bold text-[#081735] my-2">{p.price}</div>
+                <div className="text-xs text-[#6D7A92]">Frais d'accès unique</div>
+                <ul className="mt-4 space-y-2 text-sm text-[#081735]">
+                  <li className="flex items-center gap-2"><Check /><span>Limite: {p.limit}</span></li>
+                  <li className="flex items-center gap-2"><Check /><span>Commission: {p.commission} par conversion</span></li>
+                  <li className="flex items-center gap-2"><Check /><span>Prélèvement à la source</span></li>
+                </ul>
+                <Link to="/register"><Button className={`mt-6 w-full rounded-full ${p.highlight ? "bg-[#3BB77E] hover:bg-[#33a36e] text-white" : "bg-[#081735] hover:bg-[#0f2147] text-white"}`}>Choisir {p.name}</Button></Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 overflow-x-auto rounded-2xl border border-black/5 bg-[#F9FFFB]">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-[#6D7A92] border-b border-black/5">
+                  <th className="py-3 px-4 font-medium">Caractéristiques</th>
+                  <th className="py-3 px-4 font-medium">Basic</th>
+                  <th className="py-3 px-4 font-medium">Advanced</th>
+                  <th className="py-3 px-4 font-medium">Pro</th>
+                </tr>
+              </thead>
+              <tbody className="text-[#081735]">
+                {[
+                  ["Frais d'accès unique", "$200", "$619", "$1099"],
+                  ["Limite quotidienne", "$200 / jour", "$5 000 / jour", "Illimité"],
+                  ["Commission", "3,5%", "2,0%", "0,8%"],
+                  ["Prélèvement", "À la source", "À la source", "À la source"],
+                  ["KYC", "Simplifié (Identité + OTP)", "Standard (Identité + Liveness)", "Avancé (Entreprise + Kbis)"],
+                  ["Personnalisation Widget", "Couleur principale", "Couleur + Logo", "Couleur + Logo + Domaines"],
+                  ["Support", "Standard (Email)", "Prioritaire (Chat)", "Dédié 24/7 + API"],
+                ].map((r, i) => (
+                  <tr key={i} className="border-b border-black/5 last:border-0">
+                    <td className="py-3 px-4 font-medium">{r[0]}</td>
+                    <td className="py-3 px-4">{r[1]}</td>
+                    <td className="py-3 px-4">{r[2]}</td>
+                    <td className="py-3 px-4">{r[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#081735] text-white">
+        <div className="max-w-6xl mx-auto px-4 py-14">
+          <div className="grid md:grid-cols-4 gap-10">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10"><Zap className="h-4 w-4 text-[#3BB77E]" /></div>
+                <span className="font-semibold text-lg">NexaPay</span>
+              </div>
+              <p className="text-sm text-white/60 mt-4 max-w-xs">{t.heroSub}</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-3">Contact</p>
+              <p className="text-sm text-white/80">Toll-Free: +1 (897) 843-8246</p>
+              <a href="mailto:sales@nexapayme.org" className="text-sm text-white/80 hover:text-[#3BB77E] block mt-1">Email: sales@nexapayme.org</a>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-3">NexaPay head office</p>
+              <p className="text-sm text-white/80">Suite 500 - 470 2 Ave SW</p>
+              <p className="text-sm text-white/80">Mark's, Albertanio T2P 8E9</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mt-4 mb-2">Seattle office</p>
+              <p className="text-sm text-white/80">Suite 4800 - 709 5th Avenue</p>
+              <p className="text-sm text-white/80">Seattle, Lithuania 89104</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-3">Navigation</p>
+              <nav className="flex flex-col gap-2 text-sm text-white/70">
+                <Link to="/" className="hover:text-white">{t.footNav[0]}</Link>
+                <Link to="/api-docs" className="hover:text-white">Documentation</Link>
+                <span className="hover:text-white cursor-pointer">{t.footNav[2]}</span>
+                <span className="hover:text-white cursor-pointer">{t.footNav[3]}</span>
+                <Link to="/login" className="hover:text-white">{t.nav.login}</Link>
+              </nav>
+            </div>
+          </div>
+          <div className="border-t border-white/10 mt-10 pt-6">
+            <p className="text-xs text-white/50 leading-relaxed">
+              NexaPay operates under NexaPay UAB, a company registered in Lithuania (a European Union member state) with company code 304696889 and a registered address at Algirdo str. 38, Vilnius, Lithuania. NexaPay UAB is an Electronic Money Institution payment solution on-ramp (EMI license No. 24) authorized and regulated by the Central Bank of Lithuania (CBoL). CBoL is subject to the regulation of the European Central Bank. Financial institution SWIFT/BIC code: CNUALT21XXX
+            </p>
+            <p className="text-center text-sm text-white/60 mt-5">© Nexapay 2026. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

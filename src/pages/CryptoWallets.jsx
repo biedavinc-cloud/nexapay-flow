@@ -1,1 +1,34 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFBhZ2VIZWFkZXIgZnJvbSAiQC9jb21wb25lbnRzL1BhZ2VIZWFkZXIiOwppbXBvcnQgQ29uZmlnTWFuYWdlciBmcm9tICJAL2NvbXBvbmVudHMvYWRtaW4vQ29uZmlnTWFuYWdlciI7CmltcG9ydCB7IFdhbGxldCB9IGZyb20gImx1Y2lkZS1yZWFjdCI7Cgpjb25zdCBDSEFJTlMgPSBbCiAgeyB2YWx1ZTogIlRSQzIwIiwgbGFiZWw6ICJUUkMyMCAoVHJvbikiIH0sCiAgeyB2YWx1ZTogIkVSQzIwIiwgbGFiZWw6ICJFUkMyMCAoRXRoZXJldW0pIiB9LAogIHsgdmFsdWU6ICJCRVAyMCIsIGxhYmVsOiAiQkVQMjAgKEJTQykiIH0sCiAgeyB2YWx1ZTogIlBPTFlHT04iLCBsYWJlbDogIlBvbHlnb24iIH0sCl07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDcnlwdG9XYWxsZXRzKCkgewogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy01eGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IlBvcnRlZmV1aWxsZXMgY3J5cHRvIgogICAgICAgIGRlc2NyaXB0aW9uPSJBZHJlc3NlcyBkZSBkw6lww7R0IG/DuSBsZXMgZm9uZHMgY29udmVydGlzIHNvbnQgZW52b3nDqXMgYXByw6hzIHLDqGdsZW1lbnQuIgogICAgICAgIGljb249e1dhbGxldH0KICAgICAgLz4KICAgICAgPENvbmZpZ01hbmFnZXIKICAgICAgICBlbnRpdHk9IkNyeXB0b1dhbGxldCIKICAgICAgICBhZGRMYWJlbD0iQWpvdXRlciB1biBwb3J0ZWZldWlsbGUiCiAgICAgICAgZmllbGRzPXtbCiAgICAgICAgICB7IG5hbWU6ICJsYWJlbCIsIGxhYmVsOiAiTGliZWxsw6kiLCB0eXBlOiAidGV4dCIsIHBsYWNlaG9sZGVyOiAiVHLDqXNvcmVyaWUgVVNEVCIgfSwKICAgICAgICAgIHsgbmFtZTogImFkZHJlc3MiLCBsYWJlbDogIkFkcmVzc2UgZGUgZMOpcMO0dCIsIHR5cGU6ICJ0ZXh0IiwgcGxhY2Vob2xkZXI6ICJULi4uIiwgc3BhbjogImZ1bGwiIH0sCiAgICAgICAgICB7IG5hbWU6ICJjaGFpbiIsIGxhYmVsOiAiUsOpc2VhdSIsIHR5cGU6ICJzZWxlY3QiLCBvcHRpb25zOiBDSEFJTlMsIGRlZmF1bHQ6ICJUUkMyMCIgfSwKICAgICAgICAgIHsgbmFtZTogImN1cnJlbmN5IiwgbGFiZWw6ICJEZXZpc2UiLCB0eXBlOiAidGV4dCIsIGRlZmF1bHQ6ICJVU0RUIiB9LAogICAgICAgICAgeyBuYW1lOiAiaXNfZGVmYXVsdCIsIGxhYmVsOiAiUGFyIGTDqWZhdXQiLCB0eXBlOiAiYm9vbGVhbiIsIGRlZmF1bHQ6IGZhbHNlIH0sCiAgICAgICAgXX0KICAgICAgLz4KICAgIDwvZGl2PgogICk7Cn0=
+import React from "react";
+import PageHeader from "@/components/PageHeader";
+import ConfigManager from "@/components/admin/ConfigManager";
+import { Wallet } from "lucide-react";
+
+const CHAINS = [
+  { value: "TRC20", label: "TRC20 (Tron)" },
+  { value: "ERC20", label: "ERC20 (Ethereum)" },
+  { value: "BEP20", label: "BEP20 (BSC)" },
+  { value: "POLYGON", label: "Polygon" },
+];
+
+export default function CryptoWallets() {
+  return (
+    <div className="p-6 md:p-8 max-w-5xl mx-auto">
+      <PageHeader
+        title="Portefeuilles crypto"
+        description="Adresses de dépôt où les fonds convertis sont envoyés après règlement."
+        icon={Wallet}
+      />
+      <ConfigManager
+        entity="CryptoWallet"
+        addLabel="Ajouter un portefeuille"
+        fields={[
+          { name: "label", label: "Libellé", type: "text", placeholder: "Trésorerie USDT" },
+          { name: "address", label: "Adresse de dépôt", type: "text", placeholder: "T...", span: "full" },
+          { name: "chain", label: "Réseau", type: "select", options: CHAINS, default: "TRC20" },
+          { name: "currency", label: "Devise", type: "text", default: "USDT" },
+          { name: "is_default", label: "Par défaut", type: "boolean", default: false },
+        ]}
+      />
+    </div>
+  );
+}

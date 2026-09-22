@@ -1,1 +1,46 @@
-ewogICJuYW1lIjogIldlYmhvb2tMb2ciLAogICJ0eXBlIjogIm9iamVjdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAiZW5kcG9pbnRfdXJsIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiVVJMIHRoZSB3ZWJob29rIHdhcyBzZW50IHRvIgogICAgfSwKICAgICJldmVudCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIkV2ZW50IHR5cGUgKGUuZy4gcGF5bWVudC5zdWNjZWVkZWQpIgogICAgfSwKICAgICJvcmRlcl9pZCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIlJlbGF0ZWQgb3JkZXIgaWQiCiAgICB9LAogICAgInN0YXR1cyI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImVudW0iOiBbCiAgICAgICAgIlNVQ0NFU1MiLAogICAgICAgICJGQUlMRUQiLAogICAgICAgICJSRVRSWUlORyIKICAgICAgXSwKICAgICAgImRlZmF1bHQiOiAiU1VDQ0VTUyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJEZWxpdmVyeSBzdGF0dXMiCiAgICB9LAogICAgImh0dHBfc3RhdHVzIjogewogICAgICAidHlwZSI6ICJudW1iZXIiLAogICAgICAiZGVzY3JpcHRpb24iOiAiSFRUUCBzdGF0dXMgY29kZSByZXR1cm5lZCBieSB0aGUgZW5kcG9pbnQiCiAgICB9LAogICAgImF0dGVtcHRzIjogewogICAgICAidHlwZSI6ICJudW1iZXIiLAogICAgICAiZGVmYXVsdCI6IDEsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJOdW1iZXIgb2YgZGVsaXZlcnkgYXR0ZW1wdHMiCiAgICB9LAogICAgInJlc3BvbnNlX3NuaXBwZXQiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJUcnVuY2F0ZWQgcmVzcG9uc2UgYm9keSIKICAgIH0KICB9LAogICJyZXF1aXJlZCI6IFsKICAgICJlbmRwb2ludF91cmwiLAogICAgImV2ZW50IiwKICAgICJzdGF0dXMiCiAgXQp9
+{
+  "name": "WebhookLog",
+  "type": "object",
+  "properties": {
+    "endpoint_url": {
+      "type": "string",
+      "description": "URL the webhook was sent to"
+    },
+    "event": {
+      "type": "string",
+      "description": "Event type (e.g. payment.succeeded)"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Related order id"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "SUCCESS",
+        "FAILED",
+        "RETRYING"
+      ],
+      "default": "SUCCESS",
+      "description": "Delivery status"
+    },
+    "http_status": {
+      "type": "number",
+      "description": "HTTP status code returned by the endpoint"
+    },
+    "attempts": {
+      "type": "number",
+      "default": 1,
+      "description": "Number of delivery attempts"
+    },
+    "response_snippet": {
+      "type": "string",
+      "description": "Truncated response body"
+    }
+  },
+  "required": [
+    "endpoint_url",
+    "event",
+    "status"
+  ]
+}

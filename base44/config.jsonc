@@ -1,1 +1,9 @@
-ewogICJuYW1lIjogInVudGl0bGVkIiwKICAic2l0ZSI6IHsKICAgICJpbnN0YWxsQ29tbWFuZCI6ICJucG0gaW5zdGFsbCIsCiAgICAiYnVpbGRDb21tYW5kIjogIm5wbSBydW4gYnVpbGQiLAogICAgInNlcnZlQ29tbWFuZCI6ICJucG0gcnVuIGRldiIsCiAgICAib3V0cHV0RGlyZWN0b3J5IjogIi4vZGlzdCIKICB9Cn0=
+{
+  "name": "untitled",
+  "site": {
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
+    "serveCommand": "npm run dev",
+    "outputDirectory": "./dist"
+  }
+}

@@ -1,1 +1,23 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgQ2hlY2tDaXJjbGUyLCBDbG9jaywgTG9hZGVyMiwgWENpcmNsZSwgQXJyb3dSaWdodENpcmNsZSB9IGZyb20gImx1Y2lkZS1yZWFjdCI7Cgpjb25zdCBTVEFUVVNfQ09ORklHID0gewogIFBFTkRJTkc6IHsgbGFiZWw6ICJQZW5kaW5nIiwgY29sb3I6ICJ0ZXh0LWFtYmVyLTQwMCIsIGJnOiAiYmctYW1iZXItNDAwLzEwIiwgYm9yZGVyOiAiYm9yZGVyLWFtYmVyLTQwMC8yNSIsIEljb246IENsb2NrIH0sCiAgRklBVF9BUFBST1ZFRDogeyBsYWJlbDogIkZpYXQgQXBwcm92ZWQiLCBjb2xvcjogInRleHQtc2t5LTQwMCIsIGJnOiAiYmctc2t5LTQwMC8xMCIsIGJvcmRlcjogImJvcmRlci1za3ktNDAwLzI1IiwgSWNvbjogQXJyb3dSaWdodENpcmNsZSB9LAogIFBST0NFU1NJTkdfQ1JZUFRPOiB7IGxhYmVsOiAiUHJvY2Vzc2luZyIsIGNvbG9yOiAidGV4dC1za3ktNDAwIiwgYmc6ICJiZy1za3ktNDAwLzEwIiwgYm9yZGVyOiAiYm9yZGVyLXNreS00MDAvMjUiLCBJY29uOiBMb2FkZXIyIH0sCiAgQ09NUExFVEVEOiB7IGxhYmVsOiAiQ29tcGxldGVkIiwgY29sb3I6ICJ0ZXh0LWVtZXJhbGQtNDAwIiwgYmc6ICJiZy1lbWVyYWxkLTQwMC8xMCIsIGJvcmRlcjogImJvcmRlci1lbWVyYWxkLTQwMC8yNSIsIEljb246IENoZWNrQ2lyY2xlMiB9LAogIEZBSUxFRDogeyBsYWJlbDogIkZhaWxlZCIsIGNvbG9yOiAidGV4dC1yZWQtNDAwIiwgYmc6ICJiZy1yZWQtNDAwLzEwIiwgYm9yZGVyOiAiYm9yZGVyLXJlZC00MDAvMjUiLCBJY29uOiBYQ2lyY2xlIH0sCn07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBTdGF0dXNCYWRnZSh7IHN0YXR1cywgY2xhc3NOYW1lID0gIiIgfSkgewogIGNvbnN0IGNmZyA9IFNUQVRVU19DT05GSUdbc3RhdHVzXSB8fCBTVEFUVVNfQ09ORklHLlBFTkRJTkc7CiAgY29uc3QgeyBJY29uIH0gPSBjZmc7CiAgcmV0dXJuICgKICAgIDxzcGFuCiAgICAgIGNsYXNzTmFtZT17YGlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IHJvdW5kZWQtZnVsbCBib3JkZXIgcHgtMi41IHB5LTEgdGV4dC14cyBmb250LW1lZGl1bSAke2NmZy5iZ30gJHtjZmcuY29sb3J9ICR7Y2ZnLmJvcmRlcn0gJHtjbGFzc05hbWV9YH0KICAgID4KICAgICAgPEljb24gY2xhc3NOYW1lPXtgaC0zLjUgdy0zLjUgJHtzdGF0dXMgPT09ICJQUk9DRVNTSU5HX0NSWVBUTyIgPyAiYW5pbWF0ZS1zcGluIiA6ICIifWB9IC8+CiAgICAgIHtjZmcubGFiZWx9CiAgICA8L3NwYW4+CiAgKTsKfQ==
+import React from "react";
+import { CheckCircle2, Clock, Loader2, XCircle, ArrowRightCircle } from "lucide-react";
+
+const STATUS_CONFIG = {
+  PENDING: { label: "Pending", color: "text-amber-400", bg: "bg-amber-400/10", border: "border-amber-400/25", Icon: Clock },
+  FIAT_APPROVED: { label: "Fiat Approved", color: "text-sky-400", bg: "bg-sky-400/10", border: "border-sky-400/25", Icon: ArrowRightCircle },
+  PROCESSING_CRYPTO: { label: "Processing", color: "text-sky-400", bg: "bg-sky-400/10", border: "border-sky-400/25", Icon: Loader2 },
+  COMPLETED: { label: "Completed", color: "text-emerald-400", bg: "bg-emerald-400/10", border: "border-emerald-400/25", Icon: CheckCircle2 },
+  FAILED: { label: "Failed", color: "text-red-400", bg: "bg-red-400/10", border: "border-red-400/25", Icon: XCircle },
+};
+
+export default function StatusBadge({ status, className = "" }) {
+  const cfg = STATUS_CONFIG[status] || STATUS_CONFIG.PENDING;
+  const { Icon } = cfg;
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium ${cfg.bg} ${cfg.color} ${cfg.border} ${className}`}
+    >
+      <Icon className={`h-3.5 w-3.5 ${status === "PROCESSING_CRYPTO" ? "animate-spin" : ""}`} />
+      {cfg.label}
+    </span>
+  );
+}

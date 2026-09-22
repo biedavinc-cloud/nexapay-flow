@@ -1,1 +1,18 @@
-ewogICJuYW1lIjogIkFwcFNldHRpbmciLAogICJ0eXBlIjogIm9iamVjdCIsCiAgInByb3BlcnRpZXMiOiB7CiAgICAia2V5IjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiU2V0dGluZyBrZXkiCiAgICB9LAogICAgInZhbHVlIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiU2V0dGluZyB2YWx1ZSIKICAgIH0KICB9LAogICJyZXF1aXJlZCI6IFsKICAgICJrZXkiLAogICAgInZhbHVlIgogIF0KfQ==
+{
+  "name": "AppSetting",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Setting key"
+    },
+    "value": {
+      "type": "string",
+      "description": "Setting value"
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+}

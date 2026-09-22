@@ -1,1 +1,125 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgSW5wdXQgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvaW5wdXQiOwppbXBvcnQgeyBMYWJlbCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9sYWJlbCI7CmltcG9ydCB7IENyZWRpdENhcmQgfSBmcm9tICJsdWNpZGUtcmVhY3QiOwppbXBvcnQgQ2FyZEJyYW5kTG9nbyBmcm9tICJAL2NvbXBvbmVudHMvY2hlY2tvdXQvQ2FyZEJyYW5kTG9nbyI7Cgpjb25zdCBMID0gewogIEZSOiB7IG51bWJlcjogIk51bcOpcm8gZGUgY2FydGUiLCBleHBpcnk6ICJFeHBpcmF0aW9uIiwgY3ZjOiAiQ1ZDIiwgbmFtZTogIk5vbSBkdSB0aXR1bGFpcmUiLCBwaE5hbWU6ICJKZWFuIER1cG9udCIgfSwKICBFTjogeyBudW1iZXI6ICJDYXJkIG51bWJlciIsIGV4cGlyeTogIkV4cGlyeSIsIGN2YzogIkNWQyIsIG5hbWU6ICJDYXJkaG9sZGVyIG5hbWUiLCBwaE5hbWU6ICJKb2huIERvZSIgfSwKfTsKCmZ1bmN0aW9uIGRldGVjdEJyYW5kKG51bSkgewogIGNvbnN0IG4gPSAobnVtIHx8ICIiKS5yZXBsYWNlKC9ccysvZywgIiIpOwogIGlmICgvXjQvLnRlc3QobikpIHJldHVybiAiVmlzYSI7CiAgaWYgKC9eKDVbMS01XXwyWzItN10pLy50ZXN0KG4pKSByZXR1cm4gIk1hc3RlcmNhcmQiOwogIGlmICgvXjNbNDddLy50ZXN0KG4pKSByZXR1cm4gIkFtZXgiOwogIGlmICgvXjYvLnRlc3QobikpIHJldHVybiAiRGlzY292ZXIiOwogIHJldHVybiAiIjsKfQoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQ2FyZEZpZWxkcyh7IHZhbHVlLCBvbkNoYW5nZSwgbGFuZyA9ICJGUiIgfSkgewogIGNvbnN0IHQgPSBMW2xhbmddIHx8IEwuRlI7CiAgY29uc3QgaGFuZGxlTnVtYmVyID0gKGUpID0+IHsKICAgIGNvbnN0IGRpZ2l0cyA9IGUudGFyZ2V0LnZhbHVlLnJlcGxhY2UoL1xEL2csICIiKS5zbGljZSgwLCAxNik7CiAgICBjb25zdCBncm91cGVkID0gZGlnaXRzLnJlcGxhY2UoLyguezR9KS9nLCAiJDEgIikudHJpbSgpOwogICAgb25DaGFuZ2UoIm51bWJlciIsIGdyb3VwZWQpOwogIH07CiAgY29uc3QgaGFuZGxlRXhwaXJ5ID0gKGUpID0+IHsKICAgIGxldCBkaWdpdHMgPSBlLnRhcmdldC52YWx1ZS5yZXBsYWNlKC9cRC9nLCAiIikuc2xpY2UoMCwgNCk7CiAgICBpZiAoZGlnaXRzLmxlbmd0aCA+PSAzKSBkaWdpdHMgPSBgJHtkaWdpdHMuc2xpY2UoMCwgMil9LyR7ZGlnaXRzLnNsaWNlKDIpfWA7CiAgICBvbkNoYW5nZSgiZXhwaXJ5IiwgZGlnaXRzKTsKICB9OwogIGNvbnN0IGhhbmRsZUN2YyA9IChlKSA9PiB7CiAgICBvbkNoYW5nZSgiY3ZjIiwgZS50YXJnZXQudmFsdWUucmVwbGFjZSgvXEQvZywgIiIpLnNsaWNlKDAsIDQpKTsKICB9OwogIGNvbnN0IGJyYW5kID0gZGV0ZWN0QnJhbmQodmFsdWUubnVtYmVyKTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTQiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICA8TGFiZWwgaHRtbEZvcj0iY2FyZC1udW1iZXIiPnt0Lm51bWJlcn08L0xhYmVsPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyZWxhdGl2ZSI+CiAgICAgICAgICA8Q3JlZGl0Q2FyZCBjbGFzc05hbWU9ImFic29sdXRlIGxlZnQtMyB0b3AtMS8yIC10cmFuc2xhdGUteS0xLzIgaC00IHctNCB0ZXh0LW11dGVkLWZvcmVncm91bmQiIC8+CiAgICAgICAgICA8SW5wdXQKICAgICAgICAgICAgaWQ9ImNhcmQtbnVtYmVyIgogICAgICAgICAgICBpbnB1dE1vZGU9Im51bWVyaWMiCiAgICAgICAgICAgIHZhbHVlPXt2YWx1ZS5udW1iZXJ9CiAgICAgICAgICAgIG9uQ2hhbmdlPXtoYW5kbGVOdW1iZXJ9CiAgICAgICAgICAgIHBsYWNlaG9sZGVyPSI0MjQyIDQyNDIgNDI0MiA0MjQyIgogICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQteGwgcGwtOSBwci0yMCIKICAgICAgICAgIC8+CiAgICAgICAgICB7YnJhbmQgJiYgKAogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImFic29sdXRlIHJpZ2h0LTIuNSB0b3AtMS8yIC10cmFuc2xhdGUteS0xLzIiPgogICAgICAgICAgICAgIDxDYXJkQnJhbmRMb2dvIGJyYW5kPXticmFuZH0gLz4KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdyaWQtY29scy0yIGdhcC0zIj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICAgIDxMYWJlbCBodG1sRm9yPSJjYXJkLWV4cGlyeSI+e3QuZXhwaXJ5fTwvTGFiZWw+CiAgICAgICAgICA8SW5wdXQKICAgICAgICAgICAgaWQ9ImNhcmQtZXhwaXJ5IgogICAgICAgICAgICBpbnB1dE1vZGU9Im51bWVyaWMiCiAgICAgICAgICAgIHZhbHVlPXt2YWx1ZS5leHBpcnl9CiAgICAgICAgICAgIG9uQ2hhbmdlPXtoYW5kbGVFeHBpcnl9CiAgICAgICAgICAgIHBsYWNlaG9sZGVyPSJNTS9ZWSIKICAgICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIgogICAgICAgICAgLz4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICAgIDxMYWJlbCBodG1sRm9yPSJjYXJkLWN2YyI+e3QuY3ZjfTwvTGFiZWw+CiAgICAgICAgICA8SW5wdXQKICAgICAgICAgICAgaWQ9ImNhcmQtY3ZjIgogICAgICAgICAgICBpbnB1dE1vZGU9Im51bWVyaWMiCiAgICAgICAgICAgIHZhbHVlPXt2YWx1ZS5jdmN9CiAgICAgICAgICAgIG9uQ2hhbmdlPXtoYW5kbGVDdmN9CiAgICAgICAgICAgIHBsYWNlaG9sZGVyPSIxMjMiCiAgICAgICAgICAgIGNsYXNzTmFtZT0icm91bmRlZC14bCIKICAgICAgICAgIC8+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICA8TGFiZWwgaHRtbEZvcj0iY2FyZC1uYW1lIj57dC5uYW1lfTwvTGFiZWw+CiAgICAgICAgPElucHV0CiAgICAgICAgICBpZD0iY2FyZC1uYW1lIgogICAgICAgICAgdmFsdWU9e3ZhbHVlLm5hbWV9CiAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IG9uQ2hhbmdlKCJuYW1lIiwgZS50YXJnZXQudmFsdWUpfQogICAgICAgICAgcGxhY2Vob2xkZXI9e3QucGhOYW1lfQogICAgICAgICAgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIgogICAgICAgIC8+CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { CreditCard } from "lucide-react";
+import CardBrandLogo from "@/components/checkout/CardBrandLogo";
+
+const L = {
+  FR: { number: "Numéro de carte", expiry: "Expiration", cvc: "CVC", name: "Nom du titulaire", phName: "Jean Dupont" },
+  EN: { number: "Card number", expiry: "Expiry", cvc: "CVC", name: "Cardholder name", phName: "John Doe" },
+};
+
+// Instant prefix-based brand detection (logo appears as the user types).
+function detectBrand(num) {
+  const n = (num || "").replace(/\s+/g, "");
+  if (!n) return "";
+  if (/^35(2[89]|[3-8][0-9])/.test(n)) return "JCB";
+  if (/^3[47]/.test(n)) return "Amex";
+  if (/^(30[0-5]|3095|36|38|39)/.test(n)) return "Diners";
+  if (/^(6011|65|64[4-9]|622)/.test(n)) return "Discover";
+  if (/^4/.test(n)) return "Visa";
+  if (/^(5[1-5]|2[2-7])/.test(n)) return "Mastercard";
+  return "";
+}
+
+// Full-length validators (used at submission).
+export function validateCardBrand(num) {
+  const n = (num || "").replace(/\s+/g, "");
+  if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(n)) return "Visa";
+  if (/^(5[1-5][0-9]{14}|2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12})$/.test(n)) return "Mastercard";
+  if (/^3[47][0-9]{13}$/.test(n)) return "Amex";
+  if (/^6(?:011|5[0-9]{2})[0-9]{12}$/.test(n)) return "Discover";
+  if (/^3(?:0[0-5]|095)[0-9]{11}$/.test(n) || /^36[0-9]{12}$/.test(n)) return "Diners";
+  if (/^(352[89]|35[3-8][0-9])[0-9]{12}$/.test(n)) return "JCB";
+  return "";
+}
+
+function formatNumber(digits, brand) {
+  if (brand === "Amex") {
+    const d = digits.slice(0, 15);
+    const a = d.slice(0, 4);
+    const b = d.slice(4, 10);
+    const c = d.slice(10, 15);
+    return [a, b, c].filter(Boolean).join(" ");
+  }
+  const d = digits.slice(0, 16);
+  return d.replace(/(.{4})(?=.)/g, "$1 ").trim();
+}
+
+export default function CardFields({ value, onChange, lang = "FR" }) {
+  const t = L[lang] || L.FR;
+  const brand = detectBrand((value.number || ""));
+
+  const handleNumber = (e) => {
+    const digits = e.target.value.replace(/\D/g, "");
+    const b = detectBrand(digits);
+    onChange("number", formatNumber(digits, b));
+  };
+  const handleExpiry = (e) => {
+    let digits = e.target.value.replace(/\D/g, "").slice(0, 4);
+    if (digits.length >= 3) digits = `${digits.slice(0, 2)}/${digits.slice(2)}`;
+    onChange("expiry", digits);
+  };
+  const handleCvc = (e) => {
+    const max = brand === "Amex" ? 4 : 3;
+    onChange("cvc", e.target.value.replace(/\D/g, "").slice(0, max));
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="card-number">{t.number}</Label>
+        <div className="relative">
+          <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            id="card-number"
+            inputMode="numeric"
+            value={value.number}
+            onChange={handleNumber}
+            placeholder="4242 4242 4242 4242"
+            className="rounded-xl pl-9 pr-20"
+          />
+          {brand && (
+            <span className="absolute right-2.5 top-1/2 -translate-y-1/2">
+              <CardBrandLogo brand={brand} />
+            </span>
+          )}
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="space-y-2">
+          <Label htmlFor="card-expiry">{t.expiry}</Label>
+          <Input
+            id="card-expiry"
+            inputMode="numeric"
+            value={value.expiry}
+            onChange={handleExpiry}
+            placeholder="MM/YY"
+            className="rounded-xl"
+          />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="card-cvc">{t.cvc}</Label>
+          <Input
+            id="card-cvc"
+            inputMode="numeric"
+            value={value.cvc}
+            onChange={handleCvc}
+            placeholder={brand === "Amex" ? "1234" : "123"}
+            className="rounded-xl"
+          />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="card-name">{t.name}</Label>
+        <Input
+          id="card-name"
+          value={value.name}
+          onChange={(e) => onChange("name", e.target.value)}
+          placeholder={t.phName}
+          className="rounded-xl"
+        />
+      </div>
+    </div>
+  );
+}

@@ -1,1 +1,62 @@
-IyBCYXNlNDQgUHJvamVjdAoKVXNlIHRoaXMgcmVwb3NpdG9yeSB0byBydW4gYW5kIGVkaXQgdGhlIGFwcCBsb2NhbGx5LCB0aGVuIHB1Ymxpc2ggY2hhbmdlcyBiYWNrIHRocm91Z2ggQmFzZTQ0LgoKQW55IGNoYW5nZSBwdXNoZWQgdG8gdGhlIHJlcG8gd2lsbCBhbHNvIGJlIHJlZmxlY3RlZCBpbiB0aGUgQmFzZTQ0IEJ1aWxkZXIuCgojIyBQcmVyZXF1aXNpdGVzCgoxLiBDbG9uZSB0aGUgcmVwb3NpdG9yeSB1c2luZyB0aGUgcHJvamVjdCdzIEdpdCBVUkwuCjIuIE5hdmlnYXRlIHRvIHRoZSBwcm9qZWN0IGRpcmVjdG9yeS4KMy4gSW5zdGFsbCBkZXBlbmRlbmNpZXM6IGBucG0gaW5zdGFsbGAuCjQuIEluc3RhbGwgdGhlIEJhc2U0NCBDTEk6IGBucG0gaW5zdGFsbCAtZyBiYXNlNDRAbGF0ZXN0YC4KNS4gSW5zdGFsbCBbRGVub10oaHR0cHM6Ly9kb2NzLmRlbm8uY29tL3J1bnRpbWUvZ2V0dGluZ19zdGFydGVkL2luc3RhbGxhdGlvbi8pIOKAlCB0aGUgbG9jYWwgQmFzZTQ0IGJhY2tlbmQgcnVucyBvbiBpdC4KClJ1biBgYmFzZTQ0IC0taGVscGAgKG9yIHNlZSB0aGUgW0NMSSByZWZlcmVuY2VdKGh0dHBzOi8vZG9jcy5iYXNlNDQuY29tL2RldmVsb3BlcnMvcmVmZXJlbmNlcy9jbGkvY29tbWFuZHMvaW50cm9kdWN0aW9uKSkgZm9yIHRoZSBmdWxsIGNvbW1hbmQgc3VyZmFjZS4KCiMjIFJ1biBMb2NhbGx5CgpUaHJlZSBjb21tYW5kcywgZnJvbSB0aGUgcHJvamVjdCByb290OgoKYGBgYmFzaApiYXNlNDQgbG9naW4gICAjIG9uZS10aW1lIHBlciBtYWNoaW5lCmJhc2U0NCBsaW5rICAgICMgb25lLXRpbWUgcGVyIGNsb25lCmJhc2U0NCBkZXYgICAgICMgbG9jYWwgYmFja2VuZCArIGZyb250ZW5kIHRvZ2V0aGVyCmBgYAoKT3BlbiB0aGUgZnJvbnRlbmQgVVJMIHRoYXQgYGJhc2U0NCBkZXZgIHByaW50cyAodHlwaWNhbGx5IGBodHRwOi8vbG9jYWxob3N0OjUxNzNgKS4KCk5vdGVzOgoKLSAqKkV2ZXJ5IGZyZXNoIGNsb25lIG5lZWRzIGBiYXNlNDQgbGlua2AuKiogSXQgd3JpdGVzIGBiYXNlNDQvLmFwcC5qc29uY2AgKHRoZSBhcHAtaWQgcG9pbnRlciksIHdoaWNoIGlzIGRlbGliZXJhdGVseSBnaXRpZ25vcmVkLiBZb3VyIGFwcCBpZCBpcyBpbiB0aGUgQnVpbGRlciBVUkwgKGBhcHAuYmFzZTQ0LmNvbS9hcHBzLzxpZD4vLi4uYCk7IGBiYXNlNDQgbGluayAtLWhlbHBgIHNob3dzIHRoZSBub24taW50ZXJhY3RpdmUgZmxhZ3MuCi0gKipgYmFzZTQ0IGRldmAgcnVucyB0aGUgZnJvbnRlbmQgZm9yIHlvdSoqICh2aWEgYHNpdGUuc2VydmVDb21tYW5kYCBpbiB0aGlzIHJlcG8ncyBgYmFzZTQ0L2NvbmZpZy5qc29uY2ApIOKAlCBuZXZlciBydW4gYG5wbSBydW4gZGV2YCB5b3Vyc2VsZjogYWxvbmUgaXQgc2VydmVzIGEgVUkgd2l0aCBubyBiYWNrZW5kIGJlaGluZCBpdCAoYFtiYXNlNDRdIFByb3h5IG5vdCBlbmFibGVkYCwgZXZlcnkgYC9hcGlgIGNhbGwgZmFpbHMpLCBhbmQgYWxvbmdzaWRlIGBiYXNlNDQgZGV2YCB0aGUgc2Vjb25kIFZpdGUgc2lsZW50bHkgdGFrZXMgdGhlIG5leHQgcG9ydCBhbmQgeW91IGVuZCB1cCBsb29raW5nIGF0IHRoZSB3cm9uZyBvbmUuCi0gKipUaGUgYXBwIG11c3QgYmUgcHVibGlzaGVkIGF0IGxlYXN0IG9uY2UgZm9yIHRoZSBVSSB0byBsb2FkIHVuZGVyIGBiYXNlNDQgZGV2YC4qKiBUaGUgZnJvbnRlbmQgYm9vdHMgYnkgZmV0Y2hpbmcgYXBwIHNldHRpbmdzIGZyb20gdGhlIGhvc3RlZCBhcHA7IGJlZm9yZSB0aGUgZmlyc3QgcHVibGlzaCB0aGF0IGZhaWxzIGFuZCBldmVyeSBwYWdlIHJlZGlyZWN0cyB0byBsb2dpbi4gVGhlIGxvY2FsIEFQSSB3b3JrcyByZWdhcmRsZXNzLgotIEVudGl0aWVzLCBmdW5jdGlvbnMsIGFuZCBhdXRoIHJ1biBsb2NhbGx5IOKAlCBlbnRpdHkgZGF0YSBpcyAqKmluLW1lbW9yeSBvbmx5KiosIHdpcGVkIHdoZW4gYGJhc2U0NCBkZXZgIHJlc3RhcnRzLiBFdmVyeXRoaW5nIGVsc2UgKENvcmUgaW50ZWdyYXRpb25zLCBPQXV0aCBsb2dpbikgaXMgZm9yd2FyZGVkIHRvIHlvdXIgZGVwbG95ZWQgYXBwLiBGdWxsIGJyZWFrZG93bjogW0xvY2FsIGRldmVsb3BtZW50IG92ZXJ2aWV3XShodHRwczovL2RvY3MuYmFzZTQ0LmNvbS9kZXZlbG9wZXJzL2JhY2tlbmQvb3ZlcnZpZXcvbG9jYWwtZGV2L2xvY2FsLWRldmVsb3BtZW50LW92ZXJ2aWV3KS4KCiMjIEZyb250ZW5kIE9ubHksIEhvc3RlZCBCYWNrZW5kCgpUbyB3b3JrIG9uIGp1c3QgdGhlIGZyb250ZW5kIGFnYWluc3QgeW91ciBhcHAncyBsaXZlIGhvc3RlZCBiYWNrZW5kOgoKYGBgYmFzaApiYXNlNDQgZGV2IC0tcmVtb3RlCmBgYAoK4pqg77iPIEluIHRoaXMgbW9kZSB3cml0ZXMgZ28gdG8geW91ciBhcHAncyAqKnByb2R1Y3Rpb24gZGF0YSoqIOKAlCBwbGFpbiBgYmFzZTQ0IGRldmAga2VlcHMgZXZlcnl0aGluZyBsb2NhbC4KCiMjIFB1Ymxpc2ggWW91ciBDaGFuZ2VzCgpBZnRlciBwdXNoaW5nIHlvdXIgY2hhbmdlcyB0byBnaXQsIG9wZW4gdGhlIEJhc2U0NCBkYXNoYm9hcmQgYW5kIHB1Ymxpc2ggdGhlIGFwcDoKCmBgYGJhc2gKYmFzZTQ0IGRhc2hib2FyZCBvcGVuCmBgYAoKVGhpcyByZXBvIHN5bmNzIHRvIEJhc2U0NCB0aHJvdWdoIGdpdCwgc28gcHVibGlzaCBmcm9tIHRoZSBkYXNoYm9hcmQgcmF0aGVyIHRoYW4gYGJhc2U0NCBkZXBsb3lgIOKAlCBhIENMSSBkZXBsb3kgc2hpcHMgeW91ciBsb2NhbCB0cmVlIGRpcmVjdGx5LCBieXBhc3NpbmcgdGhlIHN5bmMsIGFuZCB0aGUgZGVwbG95ZWQgc3RhdGUgc2lsZW50bHkgZGl2ZXJnZXMgZnJvbSB0aGUgcmVwby4KCiMjIERvY3MgJiBTdXBwb3J0CgpHaXRIdWIgaW50ZWdyYXRpb246IFtodHRwczovL2RvY3MuYmFzZTQ0LmNvbS9kZXZlbG9wZXJzL2FwcC1jb2RlL2xvY2FsLWRldmVsb3BtZW50L2dpdGh1Yl0oaHR0cHM6Ly9kb2NzLmJhc2U0NC5jb20vZGV2ZWxvcGVycy9hcHAtY29kZS9sb2NhbC1kZXZlbG9wbWVudC9naXRodWIpCgpMb2NhbCBkZXZlbG9wbWVudDogW2h0dHBzOi8vZG9jcy5iYXNlNDQuY29tL2RldmVsb3BlcnMvYmFja2VuZC9vdmVydmlldy9sb2NhbC1kZXYvbG9jYWwtZGV2ZWxvcG1lbnQtb3ZlcnZpZXddKGh0dHBzOi8vZG9jcy5iYXNlNDQuY29tL2RldmVsb3BlcnMvYmFja2VuZC9vdmVydmlldy9sb2NhbC1kZXYvbG9jYWwtZGV2ZWxvcG1lbnQtb3ZlcnZpZXcpCgpTdXBwb3J0OiBbaHR0cHM6Ly9hcHAuYmFzZTQ0LmNvbS9zdXBwb3J0XShodHRwczovL2FwcC5iYXNlNDQuY29tL3N1cHBvcnQpCg==
+# Base44 Project
+
+Use this repository to run and edit the app locally, then publish changes back through Base44.
+
+Any change pushed to the repo will also be reflected in the Base44 Builder.
+
+## Prerequisites
+
+1. Clone the repository using the project's Git URL.
+2. Navigate to the project directory.
+3. Install dependencies: `npm install`.
+4. Install the Base44 CLI: `npm install -g base44@latest`.
+5. Install [Deno](https://docs.deno.com/runtime/getting_started/installation/) — the local Base44 backend runs on it.
+
+Run `base44 --help` (or see the [CLI reference](https://docs.base44.com/developers/references/cli/commands/introduction)) for the full command surface.
+
+## Run Locally
+
+Three commands, from the project root:
+
+```bash
+base44 login   # one-time per machine
+base44 link    # one-time per clone
+base44 dev     # local backend + frontend together
+```
+
+Open the frontend URL that `base44 dev` prints (typically `http://localhost:5173`).
+
+Notes:
+
+- **Every fresh clone needs `base44 link`.** It writes `base44/.app.jsonc` (the app-id pointer), which is deliberately gitignored. Your app id is in the Builder URL (`app.base44.com/apps/<id>/...`); `base44 link --help` shows the non-interactive flags.
+- **`base44 dev` runs the frontend for you** (via `site.serveCommand` in this repo's `base44/config.jsonc`) — never run `npm run dev` yourself: alone it serves a UI with no backend behind it (`[base44] Proxy not enabled`, every `/api` call fails), and alongside `base44 dev` the second Vite silently takes the next port and you end up looking at the wrong one.
+- **The app must be published at least once for the UI to load under `base44 dev`.** The frontend boots by fetching app settings from the hosted app; before the first publish that fails and every page redirects to login. The local API works regardless.
+- Entities, functions, and auth run locally — entity data is **in-memory only**, wiped when `base44 dev` restarts. Everything else (Core integrations, OAuth login) is forwarded to your deployed app. Full breakdown: [Local development overview](https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview).
+
+## Frontend Only, Hosted Backend
+
+To work on just the frontend against your app's live hosted backend:
+
+```bash
+base44 dev --remote
+```
+
+⚠️ In this mode writes go to your app's **production data** — plain `base44 dev` keeps everything local.
+
+## Publish Your Changes
+
+After pushing your changes to git, open the Base44 dashboard and publish the app:
+
+```bash
+base44 dashboard open
+```
+
+This repo syncs to Base44 through git, so publish from the dashboard rather than `base44 deploy` — a CLI deploy ships your local tree directly, bypassing the sync, and the deployed state silently diverges from the repo.
+
+## Docs & Support
+
+GitHub integration: [https://docs.base44.com/developers/app-code/local-development/github](https://docs.base44.com/developers/app-code/local-development/github)
+
+Local development: [https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview](https://docs.base44.com/developers/backend/overview/local-dev/local-development-overview)
+
+Support: [https://app.base44.com/support](https://app.base44.com/support)

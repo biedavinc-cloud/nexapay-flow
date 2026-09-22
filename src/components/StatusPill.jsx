@@ -1,1 +1,27 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKCmNvbnN0IFRPTkVTID0gewogIE9QRVJBVElPTkFMOiAiYmctZW1lcmFsZC01MCB0ZXh0LWVtZXJhbGQtNzAwIGJvcmRlci1lbWVyYWxkLTIwMCIsCiAgREVHUkFERUQ6ICJiZy1hbWJlci01MCB0ZXh0LWFtYmVyLTcwMCBib3JkZXItYW1iZXItMjAwIiwKICBET1dOOiAiYmctcmVkLTUwIHRleHQtcmVkLTcwMCBib3JkZXItcmVkLTIwMCIsCiAgRElTQUJMRUQ6ICJiZy1zbGF0ZS0xMDAgdGV4dC1zbGF0ZS01MDAgYm9yZGVyLXNsYXRlLTIwMCIsCiAgQ09NUExFVEVEOiAiYmctZW1lcmFsZC01MCB0ZXh0LWVtZXJhbGQtNzAwIGJvcmRlci1lbWVyYWxkLTIwMCIsCiAgUFJPQ0VTU0lOR19DUllQVE86ICJiZy1za3ktNTAgdGV4dC1za3ktNzAwIGJvcmRlci1za3ktMjAwIiwKICBQRU5ESU5HOiAiYmctYW1iZXItNTAgdGV4dC1hbWJlci03MDAgYm9yZGVyLWFtYmVyLTIwMCIsCiAgRklBVF9BUFBST1ZFRDogImJnLXNreS01MCB0ZXh0LXNreS03MDAgYm9yZGVyLXNreS0yMDAiLAogIEZBSUxFRDogImJnLXJlZC01MCB0ZXh0LXJlZC03MDAgYm9yZGVyLXJlZC0yMDAiLAogIFNVQ0NFU1M6ICJiZy1lbWVyYWxkLTUwIHRleHQtZW1lcmFsZC03MDAgYm9yZGVyLWVtZXJhbGQtMjAwIiwKICBSRVRSWUlORzogImJnLWFtYmVyLTUwIHRleHQtYW1iZXItNzAwIGJvcmRlci1hbWJlci0yMDAiLAogIElORk86ICJiZy1za3ktNTAgdGV4dC1za3ktNzAwIGJvcmRlci1za3ktMjAwIiwKICBXQVJOOiAiYmctYW1iZXItNTAgdGV4dC1hbWJlci03MDAgYm9yZGVyLWFtYmVyLTIwMCIsCiAgRVJST1I6ICJiZy1yZWQtNTAgdGV4dC1yZWQtNzAwIGJvcmRlci1yZWQtMjAwIiwKfTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFN0YXR1c1BpbGwoeyBzdGF0dXMsIGNsYXNzTmFtZSA9ICIiIH0pIHsKICBjb25zdCB0b25lID0gVE9ORVNbc3RhdHVzXSB8fCAiYmctc2xhdGUtMTAwIHRleHQtc2xhdGUtNjAwIGJvcmRlci1zbGF0ZS0yMDAiOwogIHJldHVybiAoCiAgICA8c3BhbiBjbGFzc05hbWU9e2BpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBweC0yLjUgcHktMC41IHRleHQteHMgZm9udC1tZWRpdW0gJHt0b25lfSAke2NsYXNzTmFtZX1gfT4KICAgICAge3N0YXR1c30KICAgIDwvc3Bhbj4KICApOwp9
+import React from "react";
+
+const TONES = {
+  OPERATIONAL: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  DEGRADED: "bg-amber-50 text-amber-700 border-amber-200",
+  DOWN: "bg-red-50 text-red-700 border-red-200",
+  DISABLED: "bg-slate-100 text-slate-500 border-slate-200",
+  COMPLETED: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  PROCESSING_CRYPTO: "bg-sky-50 text-sky-700 border-sky-200",
+  PENDING: "bg-amber-50 text-amber-700 border-amber-200",
+  FIAT_APPROVED: "bg-sky-50 text-sky-700 border-sky-200",
+  FAILED: "bg-red-50 text-red-700 border-red-200",
+  SUCCESS: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  RETRYING: "bg-amber-50 text-amber-700 border-amber-200",
+  INFO: "bg-sky-50 text-sky-700 border-sky-200",
+  WARN: "bg-amber-50 text-amber-700 border-amber-200",
+  ERROR: "bg-red-50 text-red-700 border-red-200",
+};
+
+export default function StatusPill({ status, className = "" }) {
+  const tone = TONES[status] || "bg-slate-100 text-slate-600 border-slate-200";
+  return (
+    <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${tone} ${className}`}>
+      {status}
+    </span>
+  );
+}

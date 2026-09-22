@@ -1,1 +1,81 @@
-ewogICJuYW1lIjogIlByb3ZpZGVyQ29uZmlnIiwKICAidHlwZSI6ICJvYmplY3QiLAogICJwcm9wZXJ0aWVzIjogewogICAgInByb3ZpZGVyIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZW51bSI6IFsKICAgICAgICAiS1VDT0lOIiwKICAgICAgICAiQklOQU5DRSIsCiAgICAgICAgIkJJTkdYIiwKICAgICAgICAiQ09JTkJBU0UiLAogICAgICAgICJXRUIzX0RJUkVDVCIKICAgICAgXSwKICAgICAgImRlc2NyaXB0aW9uIjogIkV4Y2hhbmdlIGlkZW50aWZpZXIiCiAgICB9LAogICAgImxhYmVsIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiRGlzcGxheSBuYW1lIgogICAgfSwKICAgICJzdGF0dXMiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJlbnVtIjogWwogICAgICAgICJPUEVSQVRJT05BTCIsCiAgICAgICAgIkRFR1JBREVEIiwKICAgICAgICAiRE9XTiIsCiAgICAgICAgIkRJU0FCTEVEIgogICAgICBdLAogICAgICAiZGVmYXVsdCI6ICJPUEVSQVRJT05BTCIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJPcGVyYXRpb25hbCBoZWFsdGgiCiAgICB9LAogICAgImVuYWJsZWQiOiB7CiAgICAgICJ0eXBlIjogImJvb2xlYW4iLAogICAgICAiZGVmYXVsdCI6IHRydWUsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJXaXRoZHJhd2FscyBlbmFibGVkIGZvciB0aGlzIGV4Y2hhbmdlIgogICAgfSwKICAgICJpc19kZWZhdWx0IjogewogICAgICAidHlwZSI6ICJib29sZWFuIiwKICAgICAgImRlZmF1bHQiOiBmYWxzZSwKICAgICAgImRlc2NyaXB0aW9uIjogIlByZWZlcnJlZCBleGNoYW5nZSIKICAgIH0sCiAgICAiYXBpX2tleV9sYWJlbCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIlJlZmVyZW5jZSBsYWJlbCBmb3IgdGhlIGNvbmZpZ3VyZWQgQVBJIGtleSIKICAgIH0sCiAgICAiaGFzX2FwaV9zZWNyZXQiOiB7CiAgICAgICJ0eXBlIjogImJvb2xlYW4iLAogICAgICAiZGVmYXVsdCI6IGZhbHNlLAogICAgICAiZGVzY3JpcHRpb24iOiAiV2hldGhlciB0aGUgQVBJIHNlY3JldCBpcyBzdG9yZWQgaW4gU2VjcmV0cyIKICAgIH0sCiAgICAiaGFzX3Bhc3NwaHJhc2UiOiB7CiAgICAgICJ0eXBlIjogImJvb2xlYW4iLAogICAgICAiZGVmYXVsdCI6IGZhbHNlLAogICAgICAiZGVzY3JpcHRpb24iOiAiV2hldGhlciB0aGUgcGFzc3BocmFzZSBpcyBzdG9yZWQgKEt1Q29pbikiCiAgICB9LAogICAgIndpdGhkcmF3YWxzX2VuYWJsZWQiOiB7CiAgICAgICJ0eXBlIjogImJvb2xlYW4iLAogICAgICAiZGVmYXVsdCI6IGZhbHNlLAogICAgICAiZGVzY3JpcHRpb24iOiAiV2l0aGRyYXdhbCBwZXJtaXNzaW9uIGFjdGl2ZSIKICAgIH0sCiAgICAic3VjY2Vzc19yYXRlIjogewogICAgICAidHlwZSI6ICJudW1iZXIiLAogICAgICAiZGVmYXVsdCI6IDAsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJPYnNlcnZlZCBzdWNjZXNzIHJhdGUgcGVyY2VudGFnZSIKICAgIH0sCiAgICAibGFzdF9jaGVja2VkIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZm9ybWF0IjogImRhdGUtdGltZSIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJMYXN0IGhlYWx0aCBjaGVjayB0aW1lc3RhbXAiCiAgICB9LAogICAgIm5vdGVzIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiRnJlZS1mb3JtIG5vdGVzIgogICAgfQogIH0sCiAgInJlcXVpcmVkIjogWwogICAgInByb3ZpZGVyIiwKICAgICJsYWJlbCIsCiAgICAic3RhdHVzIiwKICAgICJlbmFibGVkIgogIF0KfQ==
+{
+  "name": "ProviderConfig",
+  "type": "object",
+  "properties": {
+    "provider": {
+      "type": "string",
+      "enum": [
+        "KUCOIN",
+        "BINANCE",
+        "BINGX",
+        "COINBASE",
+        "WEB3_DIRECT"
+      ],
+      "description": "Exchange identifier"
+    },
+    "label": {
+      "type": "string",
+      "description": "Display name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPERATIONAL",
+        "DEGRADED",
+        "DOWN",
+        "DISABLED"
+      ],
+      "default": "OPERATIONAL",
+      "description": "Operational health"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Withdrawals enabled for this exchange"
+    },
+    "is_default": {
+      "type": "boolean",
+      "default": false,
+      "description": "Preferred exchange"
+    },
+    "api_key_label": {
+      "type": "string",
+      "description": "Reference label for the configured API key"
+    },
+    "has_api_secret": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the API secret is stored in Secrets"
+    },
+    "has_passphrase": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the passphrase is stored (KuCoin)"
+    },
+    "withdrawals_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Withdrawal permission active"
+    },
+    "success_rate": {
+      "type": "number",
+      "default": 0,
+      "description": "Observed success rate percentage"
+    },
+    "last_checked": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last health check timestamp"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form notes"
+    }
+  },
+  "required": [
+    "provider",
+    "label",
+    "status",
+    "enabled"
+  ]
+}

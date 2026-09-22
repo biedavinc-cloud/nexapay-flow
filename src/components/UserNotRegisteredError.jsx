@@ -1,1 +1,31 @@
-aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JzsKCmNvbnN0IFVzZXJOb3RSZWdpc3RlcmVkRXJyb3IgPSAoKSA9PiB7CiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtaW4taC1zY3JlZW4gYmctZ3JhZGllbnQtdG8tYiBmcm9tLXdoaXRlIHRvLXNsYXRlLTUwIj4KICAgICAgPGRpdiBjbGFzc05hbWU9Im1heC13LW1kIHctZnVsbCBwLTggYmctd2hpdGUgcm91bmRlZC1sZyBzaGFkb3ctbGcgYm9yZGVyIGJvcmRlci1zbGF0ZS0xMDAiPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ0ZXh0LWNlbnRlciI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHctMTYgaC0xNiBtYi02IHJvdW5kZWQtZnVsbCBiZy1vcmFuZ2UtMTAwIj4KICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9InctOCBoLTggdGV4dC1vcmFuZ2UtNjAwIiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgICAgICAgICAgICA8cGF0aCBzdHJva2VMaW5lY2FwPSJyb3VuZCIgc3Ryb2tlTGluZWpvaW49InJvdW5kIiBzdHJva2VXaWR0aD0iMiIgZD0iTTEyIDl2Mm0wIDRoLjAxbS02LjkzOCA0aDEzLjg1NmMxLjU0IDAgMi41MDItMS42NjcgMS43MzItM0wxMy43MzIgNGMtLjc3LTEuMzMzLTIuNjk0LTEuMzMzLTMuNDY0IDBMMy4zNCAxNmMtLjc3IDEuMzMzLjE5MiAzIDEuNzMyIDN6IiAvPgogICAgICAgICAgICA8L3N2Zz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGgxIGNsYXNzTmFtZT0idGV4dC0zeGwgZm9udC1ib2xkIHRleHQtc2xhdGUtOTAwIG1iLTQiPkFjY2VzcyBSZXN0cmljdGVkPC9oMT4KICAgICAgICAgIDxwIGNsYXNzTmFtZT0idGV4dC1zbGF0ZS02MDAgbWItOCI+CiAgICAgICAgICAgIFlvdSBhcmUgbm90IHJlZ2lzdGVyZWQgdG8gdXNlIHRoaXMgYXBwbGljYXRpb24uIFBsZWFzZSBjb250YWN0IHRoZSBhcHAgYWRtaW5pc3RyYXRvciB0byByZXF1ZXN0IGFjY2Vzcy4KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTQgYmctc2xhdGUtNTAgcm91bmRlZC1tZCB0ZXh0LXNtIHRleHQtc2xhdGUtNjAwIj4KICAgICAgICAgICAgPHA+SWYgeW91IGJlbGlldmUgdGhpcyBpcyBhbiBlcnJvciwgeW91IGNhbjo8L3A+CiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9Imxpc3QtZGlzYyBsaXN0LWluc2lkZSBtdC0yIHNwYWNlLXktMSI+CiAgICAgICAgICAgICAgPGxpPlZlcmlmeSB5b3UgYXJlIGxvZ2dlZCBpbiB3aXRoIHRoZSBjb3JyZWN0IGFjY291bnQ8L2xpPgogICAgICAgICAgICAgIDxsaT5Db250YWN0IHRoZSBhcHAgYWRtaW5pc3RyYXRvciBmb3IgYWNjZXNzPC9saT4KICAgICAgICAgICAgICA8bGk+VHJ5IGxvZ2dpbmcgb3V0IGFuZCBiYWNrIGluIGFnYWluPC9saT4KICAgICAgICAgICAgPC91bD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn07CgpleHBvcnQgZGVmYXVsdCBVc2VyTm90UmVnaXN0ZXJlZEVycm9yOwo=
+import React from 'react';
+
+const UserNotRegisteredError = () => {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-white to-slate-50">
+      <div className="max-w-md w-full p-8 bg-white rounded-lg shadow-lg border border-slate-100">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-orange-100">
+            <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-bold text-slate-900 mb-4">Access Restricted</h1>
+          <p className="text-slate-600 mb-8">
+            You are not registered to use this application. Please contact the app administrator to request access.
+          </p>
+          <div className="p-4 bg-slate-50 rounded-md text-sm text-slate-600">
+            <p>If you believe this is an error, you can:</p>
+            <ul className="list-disc list-inside mt-2 space-y-1">
+              <li>Verify you are logged in with the correct account</li>
+              <li>Contact the app administrator for access</li>
+              <li>Try logging out and back in again</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserNotRegisteredError;

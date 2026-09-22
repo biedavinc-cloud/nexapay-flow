@@ -1,1 +1,88 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgSW5wdXQgfSBmcm9tICJAL2NvbXBvbmVudHMvdWkvaW5wdXQiOwppbXBvcnQgeyBMYWJlbCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9sYWJlbCI7CmltcG9ydCB7CiAgU2VsZWN0LAogIFNlbGVjdENvbnRlbnQsCiAgU2VsZWN0R3JvdXAsCiAgU2VsZWN0SXRlbSwKICBTZWxlY3RMYWJlbCwKICBTZWxlY3RUcmlnZ2VyLAogIFNlbGVjdFZhbHVlLAp9IGZyb20gIkAvY29tcG9uZW50cy91aS9zZWxlY3QiOwoKY29uc3QgTCA9IHsKICBGUjogeyBvcGVyYXRvcjogIk9ww6lyYXRldXIiLCBwaG9uZTogIk51bcOpcm8gZGUgdMOpbMOpcGhvbmUiLCBwaE9wZXJhdG9yOiAiU8OpbGVjdGlvbm5lciB1biBvcMOpcmF0ZXVyIiwgcGhQcmVmaXg6ICJJbmRpY2F0aWYiIH0sCiAgRU46IHsgb3BlcmF0b3I6ICJPcGVyYXRvciIsIHBob25lOiAiUGhvbmUgbnVtYmVyIiwgcGhPcGVyYXRvcjogIlNlbGVjdCBhbiBvcGVyYXRvciIsIHBoUHJlZml4OiAiQ29kZSIgfSwKfTsKCi8vIEludGVybmF0aW9uYWwgbW9iaWxlIG1vbmV5IOKAlCBvcGVyYXRvcnMgZ3JvdXBlZCBieSByZWdpb24uCmNvbnN0IFJFR0lPTlMgPSBbCiAgewogICAgbGFiZWw6ICJBZnJpcXVlIGRlIGwnT3Vlc3QgJiBDZW50cmFsZSIsCiAgICBwcmVmaXhlczogWyIrMjM3IiwgIisyMzMiLCAiKzIyNSIsICIrMjIxIiwgIisyMjMiLCAiKzIyOSIsICIrMjM0IiwgIisyMjgiLCAiKzIyNiIsICIrMjI3Il0sCiAgICBwcm92aWRlcnM6IFsiT3JhbmdlIE1vbmV5IiwgIk1UTiBNb01vIiwgIldhdmUiLCAiTW9vdiBNb25leSIsICJBaXJ0ZWwgTW9uZXkiLCAiWWVsbG8gTW9uZXkiLCAiQ2FtcGF5Il0sCiAgfSwKICB7CiAgICBsYWJlbDogIkFmcmlxdWUgZGUgbCdFc3QiLAogICAgcHJlZml4ZXM6IFsiKzI1NCIsICIrMjU1IiwgIisyNTYiLCAiKzI1MCIsICIrMjU3IiwgIisyNTIiLCAiKzIxMSJdLAogICAgcHJvdmlkZXJzOiBbIk0tUGVzYSIsICJBaXJ0ZWwgTW9uZXkiLCAiVGlnbyBQZXNhIiwgIkhhbG9wZXNhIiwgIk1UTiBNb01vIiwgIk1vTW8gUFMiXSwKICB9LAogIHsKICAgIGxhYmVsOiAiQWZyaXF1ZSBkdSBOb3JkICYgQXVzdHJhbGUiLAogICAgcHJlZml4ZXM6IFsiKzIwIiwgIisyMTIiLCAiKzIxMyIsICIrMjE2IiwgIisyNjMiLCAiKzI0MyIsICIrMjYwIiwgIisyNjUiXSwKICAgIHByb3ZpZGVyczogWyJWb2RhZm9uZSBDYXNoIiwgIk9yYW5nZSBNb25leSIsICJBaXJ0ZWwgTW9uZXkiLCAiRWNvY2FzaCIsICJDSUIgV2FsbGV0IiwgIkZhd3J5Il0sCiAgfSwKICB7CiAgICBsYWJlbDogIk1veWVuLU9yaWVudCAmIEFzaWUiLAogICAgcHJlZml4ZXM6IFsiKzk3MSIsICIrOTY2IiwgIis5MSIsICIrOTIiLCAiKzg4MCIsICIrNjIiLCAiKzY2IiwgIis4NCIsICIrNjMiXSwKICAgIHByb3ZpZGVyczogWyJiS2FzaCIsICJKYXp6Q2FzaCIsICJFYXN5cGFpc2EiLCAiUGF5TWF5YSIsICJHQ2FzaCIsICJPVk8iLCAiR29QYXkiLCAiVHJ1ZU1vbmV5IiwgIkRhbmEiLCAiU1RDIFBheSJdLAogIH0sCiAgewogICAgbGFiZWw6ICJBbcOpcmlxdWUgTGF0aW5lICYgYXV0cmVzIiwKICAgIHByZWZpeGVzOiBbIis1NSIsICIrNTIiLCAiKzU3IiwgIis1MSIsICIrNTQiLCAiKzU4IiwgIisxIl0sCiAgICBwcm92aWRlcnM6IFsiUGl4IiwgIk1lcmNhZG8gUGFnbyIsICJOZXF1aSIsICJEYXZpUGxhdGEiLCAiWWFwZSIsICJQaWNQYXkiXSwKICB9LApdOwoKY29uc3QgQUxMX1BSRUZJWEVTID0gQXJyYXkuZnJvbShuZXcgU2V0KFJFR0lPTlMuZmxhdE1hcCgocikgPT4gci5wcmVmaXhlcykpKS5zb3J0KCk7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBNb01vRmllbGRzKHsgdmFsdWUsIG9uQ2hhbmdlLCBsYW5nID0gIkZSIiB9KSB7CiAgY29uc3QgdCA9IExbbGFuZ10gfHwgTC5GUjsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNCI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgIDxMYWJlbD57dC5vcGVyYXRvcn08L0xhYmVsPgogICAgICAgIDxTZWxlY3QgdmFsdWU9e3ZhbHVlLnByb3ZpZGVyfSBvblZhbHVlQ2hhbmdlPXsodikgPT4gb25DaGFuZ2UoInByb3ZpZGVyIiwgdil9PgogICAgICAgICAgPFNlbGVjdFRyaWdnZXIgY2xhc3NOYW1lPSJyb3VuZGVkLXhsIj4KICAgICAgICAgICAgPFNlbGVjdFZhbHVlIHBsYWNlaG9sZGVyPXt0LnBoT3BlcmF0b3J9IC8+CiAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICA8U2VsZWN0Q29udGVudD4KICAgICAgICAgICAge1JFR0lPTlMubWFwKChyKSA9PiAoCiAgICAgICAgICAgICAgPFNlbGVjdEdyb3VwIGtleT17ci5sYWJlbH0+CiAgICAgICAgICAgICAgICA8U2VsZWN0TGFiZWw+e3IubGFiZWx9PC9TZWxlY3RMYWJlbD4KICAgICAgICAgICAgICAgIHtyLnByb3ZpZGVycy5tYXAoKHApID0+ICgKICAgICAgICAgICAgICAgICAgPFNlbGVjdEl0ZW0ga2V5PXtwfSB2YWx1ZT17cH0+e3B9PC9TZWxlY3RJdGVtPgogICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgPC9TZWxlY3RHcm91cD4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L1NlbGVjdENvbnRlbnQ+CiAgICAgICAgPC9TZWxlY3Q+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0ic3BhY2UteS0yIj4KICAgICAgICA8TGFiZWwgaHRtbEZvcj0ibW9tby1waG9uZSI+e3QucGhvbmV9PC9MYWJlbD4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBnYXAtMiI+CiAgICAgICAgICA8U2VsZWN0IHZhbHVlPXt2YWx1ZS5wcmVmaXh9IG9uVmFsdWVDaGFuZ2U9eyh2KSA9PiBvbkNoYW5nZSgicHJlZml4Iiwgdil9PgogICAgICAgICAgICA8U2VsZWN0VHJpZ2dlciBjbGFzc05hbWU9InJvdW5kZWQteGwgdy0yOCI+CiAgICAgICAgICAgICAgPFNlbGVjdFZhbHVlIHBsYWNlaG9sZGVyPXt0LnBoUHJlZml4fSAvPgogICAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PgogICAgICAgICAgICAgIHtBTExfUFJFRklYRVMubWFwKChwKSA9PiAoCiAgICAgICAgICAgICAgICA8U2VsZWN0SXRlbSBrZXk9e3B9IHZhbHVlPXtwfT57cH08L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD4KICAgICAgICAgIDwvU2VsZWN0PgogICAgICAgICAgPElucHV0CiAgICAgICAgICAgIGlkPSJtb21vLXBob25lIgogICAgICAgICAgICBpbnB1dE1vZGU9InRlbCIKICAgICAgICAgICAgdmFsdWU9e3ZhbHVlLnBob25lfQogICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IG9uQ2hhbmdlKCJwaG9uZSIsIGUudGFyZ2V0LnZhbHVlLnJlcGxhY2UoL1teXGRdL2csICIiKS5zbGljZSgwLCAxMikpfQogICAgICAgICAgICBwbGFjZWhvbGRlcj0iNjEyMzQ1Njc4IgogICAgICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQteGwgZmxleC0xIgogICAgICAgICAgLz4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICApOwp9
+import React, { useMemo } from "react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { COUNTRIES, FRANC_ZONE_FIRST, detectOperator } from "@/lib/countries";
+
+const L = {
+  FR: { country: "Pays", phone: "Numéro de téléphone", phCountry: "Sélectionner un pays", operator: "Opérateur détecté", push: "Un code OTP / push USSD sera envoyé pour confirmer le paiement." },
+  EN: { country: "Country", phone: "Phone number", phCountry: "Select country", operator: "Detected operator", push: "An OTP / USSD push will be sent to confirm the payment." },
+};
+
+export default function MoMoFields({ value, onChange, lang = "FR" }) {
+  const t = L[lang] || L.FR;
+  const country = value.country || "";
+  const countryObj = useMemo(() => COUNTRIES.find((c) => c.code === country), [country]);
+  const prefix = value.prefix || countryObj?.dial || "";
+  const operator = useMemo(() => detectOperator(prefix, value.phone || ""), [prefix, value.phone]);
+
+  const onCountry = (code) => {
+    const c = COUNTRIES.find((x) => x.code === code);
+    onChange("country", code);
+    if (c) onChange("prefix", c.dial);
+    onChange("provider", detectOperator(c?.dial || "", value.phone || ""));
+  };
+  const onPhone = (e) => {
+    const raw = e.target.value.replace(/[^\d]/g, "").slice(0, 12);
+    onChange("phone", raw);
+    onChange("provider", detectOperator(prefix, raw));
+  };
+
+  const franc = FRANC_ZONE_FIRST.filter((c) => c.francZone);
+  const others = FRANC_ZONE_FIRST.filter((c) => !c.francZone);
+  const current = COUNTRIES.find((c) => c.code === country);
+
+  return (
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label>{t.country}</Label>
+        <Select value={country} onValueChange={onCountry}>
+          <SelectTrigger className="rounded-xl">
+            <SelectValue placeholder={t.phCountry}>
+              {current ? `${current.flag} ${current.name}` : t.phCountry}
+            </SelectValue>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Zone Franc (XAF / XOF)</SelectLabel>
+              {franc.map((c) => (
+                <SelectItem key={c.code} value={c.code}>{c.flag} {c.name} ({c.dial})</SelectItem>
+              ))}
+            </SelectGroup>
+            <SelectGroup>
+              <SelectLabel>Autres pays</SelectLabel>
+              {others.map((c) => (
+                <SelectItem key={c.code} value={c.code}>{c.flag} {c.name} ({c.dial})</SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="momo-phone">{t.phone}</Label>
+        <div className="flex gap-2">
+          <Input value={prefix} readOnly className="rounded-xl w-28 bg-muted/40 font-medium" />
+          <Input
+            id="momo-phone"
+            inputMode="tel"
+            value={value.phone || ""}
+            onChange={onPhone}
+            placeholder="612345678"
+            className="rounded-xl flex-1"
+          />
+        </div>
+        {operator && <Badge variant="secondary" className="mt-1">{t.operator}: {operator}</Badge>}
+      </div>
+      <p className="text-xs text-muted-foreground">{t.push}</p>
+    </div>
+  );
+}

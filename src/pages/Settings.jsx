@@ -1,1 +1,93 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCBQYWdlSGVhZGVyIGZyb20gIkAvY29tcG9uZW50cy9QYWdlSGVhZGVyIjsKaW1wb3J0IHsgU2V0dGluZ3MgYXMgU2V0dGluZ3NJY29uLCBMb2FkZXIyLCBTYXZlIH0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCB7IExhYmVsIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2xhYmVsIjsKaW1wb3J0IHsgU2VsZWN0LCBTZWxlY3RDb250ZW50LCBTZWxlY3RJdGVtLCBTZWxlY3RUcmlnZ2VyLCBTZWxlY3RWYWx1ZSB9IGZyb20gIkAvY29tcG9uZW50cy91aS9zZWxlY3QiOwoKY29uc3QgUFJPVklERVJTID0gWwogIHsgdmFsdWU6ICJLVUNPSU4iLCBsYWJlbDogIkt1Q29pbiIgfSwKICB7IHZhbHVlOiAiQklOQU5DRSIsIGxhYmVsOiAiQmluYW5jZSIgfSwKICB7IHZhbHVlOiAiV0VCM19ESVJFQ1QiLCBsYWJlbDogIldlYjMgRGlyZWN0IiB9LApdOwpjb25zdCBNT0RFUyA9IFsKICB7IHZhbHVlOiAiQVVUTyIsIGxhYmVsOiAiQXV0b21hdGlxdWUgKGZhbGxiYWNrKSIgfSwKICB7IHZhbHVlOiAiTE9XRVNUX0ZFRSIsIGxhYmVsOiAiRnJhaXMgbGVzIHBsdXMgYmFzIiB9LAogIHsgdmFsdWU6ICJST1VORF9ST0JJTiIsIGxhYmVsOiAiUm91bmQtcm9iaW4iIH0sCl07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBTZXR0aW5nc1BhZ2UoKSB7CiAgY29uc3QgW2RlZmF1bHRQcm92aWRlciwgc2V0RGVmYXVsdFByb3ZpZGVyXSA9IHVzZVN0YXRlKCJLVUNPSU4iKTsKICBjb25zdCBbcm91dGluZ01vZGUsIHNldFJvdXRpbmdNb2RlXSA9IHVzZVN0YXRlKCJBVVRPIik7CiAgY29uc3QgW3NhdmluZywgc2V0U2F2aW5nXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCBbc2F2ZWQsIHNldFNhdmVkXSA9IHVzZVN0YXRlKGZhbHNlKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIChhc3luYyAoKSA9PiB7CiAgICAgIGNvbnN0IGFsbCA9IGF3YWl0IGJhc2U0NC5lbnRpdGllcy5BcHBTZXR0aW5nLmxpc3QoIi1jcmVhdGVkX2RhdGUiLCAxMDApOwogICAgICBjb25zdCBtYXAgPSBPYmplY3QuZnJvbUVudHJpZXMoYWxsLm1hcCgocykgPT4gW3Mua2V5LCBzXSkpOwogICAgICBpZiAobWFwLmRlZmF1bHRfcHJvdmlkZXIpIHNldERlZmF1bHRQcm92aWRlcihtYXAuZGVmYXVsdF9wcm92aWRlci52YWx1ZSk7CiAgICAgIGlmIChtYXAucm91dGluZ19tb2RlKSBzZXRSb3V0aW5nTW9kZShtYXAucm91dGluZ19tb2RlLnZhbHVlKTsKICAgIH0pKCk7CiAgfSwgW10pOwoKICBjb25zdCBzYXZlID0gYXN5bmMgKGUpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNldFNhdmluZyh0cnVlKTsKICAgIGNvbnN0IGFsbCA9IGF3YWl0IGJhc2U0NC5lbnRpdGllcy5BcHBTZXR0aW5nLmxpc3QoIi1jcmVhdGVkX2RhdGUiLCAxMDApOwogICAgY29uc3QgdXBzZXJ0ID0gYXN5bmMgKGtleSwgdmFsdWUpID0+IHsKICAgICAgY29uc3QgZXhpc3RpbmcgPSBhbGwuZmluZCgocykgPT4gcy5rZXkgPT09IGtleSk7CiAgICAgIGlmIChleGlzdGluZykgYXdhaXQgYmFzZTQ0LmVudGl0aWVzLkFwcFNldHRpbmcudXBkYXRlKGV4aXN0aW5nLmlkLCB7IHZhbHVlIH0pOwogICAgICBlbHNlIGF3YWl0IGJhc2U0NC5lbnRpdGllcy5BcHBTZXR0aW5nLmNyZWF0ZSh7IGtleSwgdmFsdWUgfSk7CiAgICB9OwogICAgYXdhaXQgdXBzZXJ0KCJkZWZhdWx0X3Byb3ZpZGVyIiwgZGVmYXVsdFByb3ZpZGVyKTsKICAgIGF3YWl0IHVwc2VydCgicm91dGluZ19tb2RlIiwgcm91dGluZ01vZGUpOwogICAgc2V0U2F2aW5nKGZhbHNlKTsKICAgIHNldFNhdmVkKHRydWUpOwogICAgc2V0VGltZW91dCgoKSA9PiBzZXRTYXZlZChmYWxzZSksIDIwMDApOwogIH07CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0icC02IG1kOnAtOCBtYXgtdy0zeGwgbXgtYXV0byI+CiAgICAgIDxQYWdlSGVhZGVyCiAgICAgICAgdGl0bGU9IlBhcmFtw6h0cmVzIgogICAgICAgIGRlc2NyaXB0aW9uPSJGb3Vybmlzc2V1ciBwYXIgZMOpZmF1dCBldCBsb2dpcXVlIGRlIHJvdXRhZ2UgZGVzIHBhaWVtZW50cy4iCiAgICAgICAgaWNvbj17U2V0dGluZ3NJY29ufQogICAgICAvPgogICAgICA8Zm9ybSBvblN1Ym1pdD17c2F2ZX0gY2xhc3NOYW1lPSJyb3VuZGVkLXhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQgcC02IHNwYWNlLXktNSBtYXgtdy1tZCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktMiI+CiAgICAgICAgICA8TGFiZWw+Rm91cm5pc3NldXIgcGFyIGTDqWZhdXQ8L0xhYmVsPgogICAgICAgICAgPFNlbGVjdCB2YWx1ZT17ZGVmYXVsdFByb3ZpZGVyfSBvblZhbHVlQ2hhbmdlPXtzZXREZWZhdWx0UHJvdmlkZXJ9PgogICAgICAgICAgICA8U2VsZWN0VHJpZ2dlciBjbGFzc05hbWU9InJvdW5kZWQteGwiPgogICAgICAgICAgICAgIDxTZWxlY3RWYWx1ZSAvPgogICAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PgogICAgICAgICAgICAgIHtQUk9WSURFUlMubWFwKChwKSA9PiAoCiAgICAgICAgICAgICAgICA8U2VsZWN0SXRlbSBrZXk9e3AudmFsdWV9IHZhbHVlPXtwLnZhbHVlfT57cC5sYWJlbH08L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD4KICAgICAgICAgIDwvU2VsZWN0PgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgPExhYmVsPkxvZ2lxdWUgZGUgcm91dGFnZTwvTGFiZWw+CiAgICAgICAgICA8U2VsZWN0IHZhbHVlPXtyb3V0aW5nTW9kZX0gb25WYWx1ZUNoYW5nZT17c2V0Um91dGluZ01vZGV9PgogICAgICAgICAgICA8U2VsZWN0VHJpZ2dlciBjbGFzc05hbWU9InJvdW5kZWQteGwiPgogICAgICAgICAgICAgIDxTZWxlY3RWYWx1ZSAvPgogICAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PgogICAgICAgICAgICAgIHtNT0RFUy5tYXAoKG0pID0+ICgKICAgICAgICAgICAgICAgIDxTZWxlY3RJdGVtIGtleT17bS52YWx1ZX0gdmFsdWU9e20udmFsdWV9PnttLmxhYmVsfTwvU2VsZWN0SXRlbT4KICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgPC9TZWxlY3RDb250ZW50PgogICAgICAgICAgPC9TZWxlY3Q+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPEJ1dHRvbiB0eXBlPSJzdWJtaXQiIGRpc2FibGVkPXtzYXZpbmd9IGNsYXNzTmFtZT0icm91bmRlZC1mdWxsIj4KICAgICAgICAgIHtzYXZpbmcgPyA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNCB3LTQgbXItMiBhbmltYXRlLXNwaW4iIC8+IDogPFNhdmUgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTIiIC8+fQogICAgICAgICAgRW5yZWdpc3RyZXIKICAgICAgICA8L0J1dHRvbj4KICAgICAgICB7c2F2ZWQgJiYgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtZW1lcmFsZC02MDAiPlBhcmFtw6h0cmVzIGVucmVnaXN0csOpcy48L3A+fQogICAgICA8L2Zvcm0+CiAgICA8L2Rpdj4KICApOwp9
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import PageHeader from "@/components/PageHeader";
+import { Settings as SettingsIcon, Loader2, Save } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+const PROVIDERS = [
+  { value: "KUCOIN", label: "KuCoin" },
+  { value: "BINANCE", label: "Binance" },
+  { value: "WEB3_DIRECT", label: "Web3 Direct" },
+];
+const MODES = [
+  { value: "AUTO", label: "Automatique (fallback)" },
+  { value: "LOWEST_FEE", label: "Frais les plus bas" },
+  { value: "ROUND_ROBIN", label: "Round-robin" },
+];
+
+export default function SettingsPage() {
+  const [defaultProvider, setDefaultProvider] = useState("KUCOIN");
+  const [routingMode, setRoutingMode] = useState("AUTO");
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const all = await base44.entities.AppSetting.list("-created_date", 100);
+      const map = Object.fromEntries(all.map((s) => [s.key, s]));
+      if (map.default_provider) setDefaultProvider(map.default_provider.value);
+      if (map.routing_mode) setRoutingMode(map.routing_mode.value);
+    })();
+  }, []);
+
+  const save = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    const all = await base44.entities.AppSetting.list("-created_date", 100);
+    const upsert = async (key, value) => {
+      const existing = all.find((s) => s.key === key);
+      if (existing) await base44.entities.AppSetting.update(existing.id, { value });
+      else await base44.entities.AppSetting.create({ key, value });
+    };
+    await upsert("default_provider", defaultProvider);
+    await upsert("routing_mode", routingMode);
+    setSaving(false);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
+
+  return (
+    <div className="p-6 md:p-8 max-w-3xl mx-auto">
+      <PageHeader
+        title="Paramètres"
+        description="Fournisseur par défaut et logique de routage des paiements."
+        icon={SettingsIcon}
+      />
+      <form onSubmit={save} className="rounded-xl border border-border bg-card p-6 space-y-5 max-w-md">
+        <div className="space-y-2">
+          <Label>Fournisseur par défaut</Label>
+          <Select value={defaultProvider} onValueChange={setDefaultProvider}>
+            <SelectTrigger className="rounded-xl">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {PROVIDERS.map((p) => (
+                <SelectItem key={p.value} value={p.value}>{p.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="space-y-2">
+          <Label>Logique de routage</Label>
+          <Select value={routingMode} onValueChange={setRoutingMode}>
+            <SelectTrigger className="rounded-xl">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {MODES.map((m) => (
+                <SelectItem key={m.value} value={m.value}>{m.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+        <Button type="submit" disabled={saving} className="rounded-full">
+          {saving ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <Save className="h-4 w-4 mr-2" />}
+          Enregistrer
+        </Button>
+        {saved && <p className="text-sm text-emerald-600">Paramètres enregistrés.</p>}
+      </form>
+    </div>
+  );
+}

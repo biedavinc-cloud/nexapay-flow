@@ -1,1 +1,262 @@
-aW1wb3J0IFJlYWN0LCB7IHVzZUVmZmVjdCwgdXNlU3RhdGUgfSBmcm9tICJyZWFjdCI7CmltcG9ydCB7IGJhc2U0NCB9IGZyb20gIkAvYXBpL2Jhc2U0NENsaWVudCI7CmltcG9ydCB7IEJ1dHRvbiB9IGZyb20gIkAvY29tcG9uZW50cy91aS9idXR0b24iOwppbXBvcnQgeyBJbnB1dCB9IGZyb20gIkAvY29tcG9uZW50cy91aS9pbnB1dCI7CmltcG9ydCB7IExhYmVsIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2xhYmVsIjsKaW1wb3J0IHsgU3dpdGNoIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL3N3aXRjaCI7CmltcG9ydCB7CiAgU2VsZWN0LAogIFNlbGVjdENvbnRlbnQsCiAgU2VsZWN0SXRlbSwKICBTZWxlY3RUcmlnZ2VyLAogIFNlbGVjdFZhbHVlLAp9IGZyb20gIkAvY29tcG9uZW50cy91aS9zZWxlY3QiOwppbXBvcnQgeyB1c2VUb2FzdCB9IGZyb20gIkAvY29tcG9uZW50cy91aS91c2UtdG9hc3QiOwppbXBvcnQgeyBMb2FkZXIyLCBQbHVzLCBUcmFzaDIsIENvcHksIEV5ZSwgRXllT2ZmLCBDaGVjaywgWCB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CgovLyBHZW5lcmljIGNvbmZpZyBDUlVEOiBhIGNyZWF0ZSBmb3JtICsgYSBsaXN0IHdpdGggYWN0aXZlIHRvZ2dsZSwgc2VjcmV0IHJldmVhbC9jb3B5IGFuZCBkZWxldGUuCi8vIGZpZWxkczogeyBuYW1lLCBsYWJlbCwgdHlwZTogdGV4dHxwYXNzd29yZHxudW1iZXJ8ZGF0ZXxzZWxlY3R8Ym9vbGVhbiwgb3B0aW9ucz8sIHBsYWNlaG9sZGVyPywgZGVmYXVsdD8sIHNwYW4/LCBoaWRkZW4/LCBnZW5lcmF0ZT8gfQpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDb25maWdNYW5hZ2VyKHsgZW50aXR5LCBmaWVsZHMsIGFkZExhYmVsID0gIkFqb3V0ZXIiIH0pIHsKICBjb25zdCBbaXRlbXMsIHNldEl0ZW1zXSA9IHVzZVN0YXRlKFtdKTsKICBjb25zdCBbbG9hZGluZywgc2V0TG9hZGluZ10gPSB1c2VTdGF0ZSh0cnVlKTsKICBjb25zdCBbZm9ybSwgc2V0Rm9ybV0gPSB1c2VTdGF0ZSh7fSk7CiAgY29uc3QgW3NhdmluZywgc2V0U2F2aW5nXSA9IHVzZVN0YXRlKGZhbHNlKTsKICBjb25zdCBbcmV2ZWFsZWQsIHNldFJldmVhbGVkXSA9IHVzZVN0YXRlKHt9KTsKICBjb25zdCBbbGFzdENyZWF0ZWQsIHNldExhc3RDcmVhdGVkXSA9IHVzZVN0YXRlKG51bGwpOwogIGNvbnN0IFtjb3BpZWRGaWVsZCwgc2V0Q29waWVkRmllbGRdID0gdXNlU3RhdGUoIiIpOwogIGNvbnN0IHsgdG9hc3QgfSA9IHVzZVRvYXN0KCk7CgogIGNvbnN0IGxvYWQgPSBhc3luYyAoKSA9PiB7CiAgICBzZXRMb2FkaW5nKHRydWUpOwogICAgdHJ5IHsKICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IGJhc2U0NC5lbnRpdGllc1tlbnRpdHldLmxpc3QoIi1jcmVhdGVkX2RhdGUiLCAyMDApOwogICAgICBzZXRJdGVtcyhkYXRhKTsKICAgIH0gY2F0Y2ggKGUpIHsKICAgICAgc2V0SXRlbXMoW10pOwogICAgICB0b2FzdCh7IHZhcmlhbnQ6ICJkZXN0cnVjdGl2ZSIsIHRpdGxlOiAiQ2hhcmdlbWVudCBpbXBvc3NpYmxlIiwgZGVzY3JpcHRpb246IGU/Lm1lc3NhZ2UgfHwgIkVycmV1ciBpbmNvbm51ZSIgfSk7CiAgICB9CiAgICBzZXRMb2FkaW5nKGZhbHNlKTsKICB9OwogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBsb2FkKCk7CiAgICAvLyBlc2xpbnQtZGlzYWJsZS1uZXh0LWxpbmUgcmVhY3QtaG9va3MvZXhoYXVzdGl2ZS1kZXBzCiAgfSwgW10pOwoKICBjb25zdCBzZXRGaWVsZCA9IChuYW1lLCB2YWwpID0+IHNldEZvcm0oKGYpID0+ICh7IC4uLmYsIFtuYW1lXTogdmFsIH0pKTsKCiAgY29uc3Qgc3VibWl0ID0gYXN5bmMgKGUpID0+IHsKICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgIHNldFNhdmluZyh0cnVlKTsKICAgIGNvbnN0IHJlY29yZCA9IHt9OwogICAgdHJ5IHsKICAgICAgZm9yIChjb25zdCBmIG9mIGZpZWxkcykgewogICAgICAgIGlmIChmLmdlbmVyYXRlKSByZWNvcmRbZi5uYW1lXSA9IGYuZ2VuZXJhdGUoKTsKICAgICAgICBlbHNlIGlmIChmLnR5cGUgPT09ICJib29sZWFuIikgcmVjb3JkW2YubmFtZV0gPSBmb3JtW2YubmFtZV0gPz8gZi5kZWZhdWx0ID8/IGZhbHNlOwogICAgICAgIGVsc2UgaWYgKGYudHlwZSA9PT0gIm51bWJlciIpIHJlY29yZFtmLm5hbWVdID0gTnVtYmVyKGZvcm1bZi5uYW1lXSA/PyBmLmRlZmF1bHQgPz8gMCk7CiAgICAgICAgZWxzZSByZWNvcmRbZi5uYW1lXSA9IChmb3JtW2YubmFtZV0gPz8gZi5kZWZhdWx0ID8/ICIiKS50b1N0cmluZygpOwogICAgICB9CiAgICAgIGNvbnN0IGNyZWF0ZWQgPSBhd2FpdCBiYXNlNDQuZW50aXRpZXNbZW50aXR5XS5jcmVhdGUocmVjb3JkKTsKICAgICAgc2V0Rm9ybSh7fSk7CiAgICAgIGNvbnN0IHNlY3JldEZpZWxkcyA9IGZpZWxkcy5maWx0ZXIoKGYpID0+IGYudHlwZSA9PT0gInBhc3N3b3JkIiB8fCBmLmdlbmVyYXRlKTsKICAgICAgc2V0TGFzdENyZWF0ZWQoeyByZWNvcmQ6IGNyZWF0ZWQsIHJlY29yZFJhdzogcmVjb3JkLCBmaWVsZHM6IHNlY3JldEZpZWxkcyB9KTsKICAgICAgaWYgKHNlY3JldEZpZWxkcy5sZW5ndGgpIHsKICAgICAgICB0b2FzdCh7CiAgICAgICAgICB0aXRsZTogIsOJbMOpbWVudCBjcsOpw6kiLAogICAgICAgICAgZGVzY3JpcHRpb246ICJDb3BpZXogdm9zIHZhbGV1cnMgY2ktZGVzc291cyDigJQgZWxsZXMgbmUgcydhZmZpY2hlcm9udCBxdSd1bmUgc2V1bGUgZm9pcy4iLAogICAgICAgIH0pOwogICAgICB9IGVsc2UgewogICAgICAgIHRvYXN0KHsgdGl0bGU6ICLDiWzDqW1lbnQgY3LDqcOpIGF2ZWMgc3VjY8Oocy4iIH0pOwogICAgICB9CiAgICB9IGNhdGNoIChlKSB7CiAgICAgIHRvYXN0KHsgdmFyaWFudDogImRlc3RydWN0aXZlIiwgdGl0bGU6ICLDiWNoZWMgZGUgbGEgY3LDqWF0aW9uIiwgZGVzY3JpcHRpb246IGU/Lm1lc3NhZ2UgfHwgIkVycmV1ciBpbmNvbm51ZSIgfSk7CiAgICB9CiAgICBzZXRTYXZpbmcoZmFsc2UpOwogICAgbG9hZCgpOwogIH07CgogIGNvbnN0IHRvZ2dsZSA9IGFzeW5jIChpdGVtLCBmaWVsZCkgPT4gewogICAgdHJ5IHsKICAgICAgYXdhaXQgYmFzZTQ0LmVudGl0aWVzW2VudGl0eV0udXBkYXRlKGl0ZW0uaWQsIHsgW2ZpZWxkXTogIWl0ZW1bZmllbGRdIH0pOwogICAgfSBjYXRjaCAoZSkgewogICAgICB0b2FzdCh7IHZhcmlhbnQ6ICJkZXN0cnVjdGl2ZSIsIHRpdGxlOiAiTWlzZSDDoCBqb3VyIGltcG9zc2libGUiLCBkZXNjcmlwdGlvbjogZT8ubWVzc2FnZSB9KTsKICAgIH0KICAgIGxvYWQoKTsKICB9OwoKICBjb25zdCByZW1vdmUgPSBhc3luYyAoaWQpID0+IHsKICAgIHRyeSB7CiAgICAgIGF3YWl0IGJhc2U0NC5lbnRpdGllc1tlbnRpdHldLmRlbGV0ZShpZCk7CiAgICB9IGNhdGNoIChlKSB7CiAgICAgIHRvYXN0KHsgdmFyaWFudDogImRlc3RydWN0aXZlIiwgdGl0bGU6ICJTdXBwcmVzc2lvbiBpbXBvc3NpYmxlIiwgZGVzY3JpcHRpb246IGU/Lm1lc3NhZ2UgfSk7CiAgICB9CiAgICBsb2FkKCk7CiAgfTsKCiAgY29uc3QgY29weSA9ICh2YWwsIGxhYmVsLCBrZXkpID0+IHsKICAgIG5hdmlnYXRvci5jbGlwYm9hcmQ/LndyaXRlVGV4dCh2YWwgfHwgIiIpOwogICAgaWYgKGtleSkgewogICAgICBzZXRDb3BpZWRGaWVsZChrZXkpOwogICAgICBzZXRUaW1lb3V0KCgpID0+IHNldENvcGllZEZpZWxkKCIiKSwgMTUwMCk7CiAgICB9CiAgICB0b2FzdCh7IHRpdGxlOiBgJHtsYWJlbH0gY29wacOpYCB9KTsKICB9OwoKICBjb25zdCB2aXNpYmxlRmllbGRzID0gZmllbGRzLmZpbHRlcigoZikgPT4gIWYuaGlkZGVuICYmIGYudHlwZSAhPT0gImJvb2xlYW4iKTsKICBjb25zdCBib29sRmllbGRzID0gZmllbGRzLmZpbHRlcigoZikgPT4gZi50eXBlID09PSAiYm9vbGVhbiIpOwoKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9InNwYWNlLXktNiI+CiAgICAgIDxmb3JtCiAgICAgICAgb25TdWJtaXQ9e3N1Ym1pdH0KICAgICAgICBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTQgZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMiBnYXAtMyIKICAgICAgPgogICAgICAgIHtmaWVsZHMubWFwKChmKSA9PgogICAgICAgICAgZi5oaWRkZW4gfHwgZi5nZW5lcmF0ZSA/IG51bGwgOiAoCiAgICAgICAgICAgIDxkaXYKICAgICAgICAgICAgICBrZXk9e2YubmFtZX0KICAgICAgICAgICAgICBjbGFzc05hbWU9e2Yuc3BhbiA9PT0gImZ1bGwiID8gIm1kOmNvbC1zcGFuLTIgc3BhY2UteS0xLjUiIDogInNwYWNlLXktMS41In0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIDxMYWJlbCBodG1sRm9yPXtmLm5hbWV9PntmLmxhYmVsfTwvTGFiZWw+CiAgICAgICAgICAgICAge2YudHlwZSA9PT0gInNlbGVjdCIgPyAoCiAgICAgICAgICAgICAgICA8U2VsZWN0IHZhbHVlPXtmb3JtW2YubmFtZV0gPz8gIiJ9IG9uVmFsdWVDaGFuZ2U9eyh2KSA9PiBzZXRGaWVsZChmLm5hbWUsIHYpfT4KICAgICAgICAgICAgICAgICAgPFNlbGVjdFRyaWdnZXIgaWQ9e2YubmFtZX0gY2xhc3NOYW1lPSJyb3VuZGVkLXhsIj4KICAgICAgICAgICAgICAgICAgICA8U2VsZWN0VmFsdWUgcGxhY2Vob2xkZXI9e2YucGxhY2Vob2xkZXIgfHwgIlPDqWxlY3Rpb25uZXIifSAvPgogICAgICAgICAgICAgICAgICA8L1NlbGVjdFRyaWdnZXI+CiAgICAgICAgICAgICAgICAgIDxTZWxlY3RDb250ZW50PgogICAgICAgICAgICAgICAgICAgIHtmLm9wdGlvbnMubWFwKChvKSA9PiAoCiAgICAgICAgICAgICAgICAgICAgICA8U2VsZWN0SXRlbSBrZXk9e28udmFsdWV9IHZhbHVlPXtvLnZhbHVlfT57by5sYWJlbH08L1NlbGVjdEl0ZW0+CiAgICAgICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgICAgIDwvU2VsZWN0Q29udGVudD4KICAgICAgICAgICAgICAgIDwvU2VsZWN0PgogICAgICAgICAgICAgICkgOiBmLnR5cGUgPT09ICJib29sZWFuIiA/ICgKICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBoLTkiPgogICAgICAgICAgICAgICAgICA8U3dpdGNoCiAgICAgICAgICAgICAgICAgICAgaWQ9e2YubmFtZX0KICAgICAgICAgICAgICAgICAgICBjaGVja2VkPXtmb3JtW2YubmFtZV0gPz8gZi5kZWZhdWx0ID8/IGZhbHNlfQogICAgICAgICAgICAgICAgICAgIG9uQ2hlY2tlZENoYW5nZT17KHYpID0+IHNldEZpZWxkKGYubmFtZSwgdil9CiAgICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICApIDogKAogICAgICAgICAgICAgICAgPElucHV0CiAgICAgICAgICAgICAgICAgIGlkPXtmLm5hbWV9CiAgICAgICAgICAgICAgICAgIHR5cGU9e2YudHlwZSA9PT0gInBhc3N3b3JkIiA/ICJwYXNzd29yZCIgOiBmLnR5cGUgPT09ICJudW1iZXIiID8gIm51bWJlciIgOiBmLnR5cGUgPT09ICJkYXRlIiA/ICJkYXRlIiA6ICJ0ZXh0In0KICAgICAgICAgICAgICAgICAgdmFsdWU9e2Zvcm1bZi5uYW1lXSA/PyAiIn0KICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRGaWVsZChmLm5hbWUsIGUudGFyZ2V0LnZhbHVlKX0KICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9e2YucGxhY2Vob2xkZXJ9CiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0icm91bmRlZC14bCIKICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgKX0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApCiAgICAgICAgKX0KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWQ6Y29sLXNwYW4tMiI+CiAgICAgICAgICA8QnV0dG9uIHR5cGU9InN1Ym1pdCIgZGlzYWJsZWQ9e3NhdmluZ30gY2xhc3NOYW1lPSJyb3VuZGVkLWZ1bGwiPgogICAgICAgICAgICB7c2F2aW5nID8gPExvYWRlcjIgY2xhc3NOYW1lPSJoLTQgdy00IG1yLTIgYW5pbWF0ZS1zcGluIiAvPiA6IDxQbHVzIGNsYXNzTmFtZT0iaC00IHctNCBtci0yIiAvPn0KICAgICAgICAgICAge2FkZExhYmVsfQogICAgICAgICAgPC9CdXR0b24+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZm9ybT4KCiAgICAgIHtsYXN0Q3JlYXRlZCAmJiBsYXN0Q3JlYXRlZC5maWVsZHMubGVuZ3RoID4gMCAmJiAoCiAgICAgICAgPGRpdiBjbGFzc05hbWU9InJvdW5kZWQteGwgYm9yZGVyLTIgYm9yZGVyLWVtZXJhbGQtNTAwLzQwIGJnLWVtZXJhbGQtNTAvNjAgcC00IHNwYWNlLXktMyI+CiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIGdhcC0zIj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIj4KICAgICAgICAgICAgICA8Q2hlY2sgY2xhc3NOYW1lPSJoLTQgdy00IHRleHQtZW1lcmFsZC02MDAiIC8+CiAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQtc20gZm9udC1zZW1pYm9sZCB0ZXh0LWVtZXJhbGQtODAwIj5WYWxldXJzIGfDqW7DqXLDqWVzIOKAlCBjb3BpZXotbGVzIG1haW50ZW5hbnQ8L2gzPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPEJ1dHRvbgogICAgICAgICAgICAgIHZhcmlhbnQ9Imdob3N0IgogICAgICAgICAgICAgIHNpemU9Imljb24iCiAgICAgICAgICAgICAgY2xhc3NOYW1lPSJoLTcgdy03IHRleHQtZW1lcmFsZC03MDAgaG92ZXI6dGV4dC1lbWVyYWxkLTkwMCIKICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRMYXN0Q3JlYXRlZChudWxsKX0KICAgICAgICAgICAgPgogICAgICAgICAgICAgIDxYIGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+CiAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQteHMgdGV4dC1lbWVyYWxkLTcwMC84MCI+CiAgICAgICAgICAgIENlcyB2YWxldXJzIGNvbmZpZGVudGllbGxlcyBuZSBzb250IGFmZmljaMOpZXMgcXUnaWNpLiBDb3BpZXotbGVzIGV0IHN0b2NrZXotbGVzIGVuIGxpZXUgc8O7ci4KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTIiPgogICAgICAgICAgICB7bGFzdENyZWF0ZWQuZmllbGRzLm1hcCgoZikgPT4gewogICAgICAgICAgICAgIGNvbnN0IHZhbCA9IGxhc3RDcmVhdGVkLnJlY29yZFtmLm5hbWVdIHx8IGxhc3RDcmVhdGVkLnJlY29yZFJhd1tmLm5hbWVdIHx8ICIiOwogICAgICAgICAgICAgIGNvbnN0IGtleSA9IGYubmFtZTsKICAgICAgICAgICAgICBjb25zdCBpc0NvcGllZCA9IGNvcGllZEZpZWxkID09PSBrZXk7CiAgICAgICAgICAgICAgcmV0dXJuICgKICAgICAgICAgICAgICAgIDxkaXYga2V5PXtrZXl9IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcm91bmRlZC1sZyBib3JkZXIgYm9yZGVyLWVtZXJhbGQtMjAwIGJnLXdoaXRlIHB4LTMgcHktMiI+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1bMTFweF0gZm9udC1tZWRpdW0gdGV4dC1lbWVyYWxkLTcwMCB3LTI4IHNocmluay0wIj57Zi5sYWJlbH08L3NwYW4+CiAgICAgICAgICAgICAgICAgIDxjb2RlIGNsYXNzTmFtZT0iZmxleC0xIG1pbi13LTAgdHJ1bmNhdGUgZm9udC1tb25vIHRleHQteHMgdGV4dC1mb3JlZ3JvdW5kIj57U3RyaW5nKHZhbCl9PC9jb2RlPgogICAgICAgICAgICAgICAgICA8QnV0dG9uCiAgICAgICAgICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICAgICAgICAgIHZhcmlhbnQ9Imdob3N0IgogICAgICAgICAgICAgICAgICAgIHNpemU9InNtIgogICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iaC03IHNocmluay0wIHRleHQtZW1lcmFsZC03MDAgaG92ZXI6dGV4dC1lbWVyYWxkLTkwMCIKICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBjb3B5KHZhbCwgZi5sYWJlbCwga2V5KX0KICAgICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICAgIHtpc0NvcGllZCA/IDxDaGVjayBjbGFzc05hbWU9ImgtMy41IHctMy41IiAvPiA6IDxDb3B5IGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+fQogICAgICAgICAgICAgICAgICA8L0J1dHRvbj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICk7CiAgICAgICAgICAgIH0pfQogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICl9CgogICAgICA8ZGl2IGNsYXNzTmFtZT0icm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWJvcmRlciBiZy1jYXJkIG92ZXJmbG93LWhpZGRlbiI+CiAgICAgICAge2xvYWRpbmcgPyAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC04IGZsZXgganVzdGlmeS1jZW50ZXIiPgogICAgICAgICAgICA8TG9hZGVyMiBjbGFzc05hbWU9ImgtNSB3LTUgYW5pbWF0ZS1zcGluIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCIgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgICkgOiBpdGVtcy5sZW5ndGggPT09IDAgPyAoCiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0icC04IHRleHQtY2VudGVyIHRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5BdWN1biDDqWzDqW1lbnQgcG91ciBsZSBtb21lbnQuPC9kaXY+CiAgICAgICAgKSA6ICgKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJkaXZpZGUteSBkaXZpZGUtYm9yZGVyIj4KICAgICAgICAgICAge2l0ZW1zLm1hcCgoaXRlbSkgPT4gKAogICAgICAgICAgICAgIDxkaXYga2V5PXtpdGVtLmlkfSBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQganVzdGlmeS1iZXR3ZWVuIGdhcC0zIHAtNCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZ3JpZCBncmlkLWNvbHMtMiBtZDpncmlkLWNvbHMtMyBnYXAteC02IGdhcC15LTIgZmxleC0xIG1pbi13LTAgdGV4dC1zbSI+CiAgICAgICAgICAgICAgICAgIHt2aXNpYmxlRmllbGRzLm1hcCgoZikgPT4gewogICAgICAgICAgICAgICAgICAgIGNvbnN0IG9wdCA9IGYub3B0aW9ucz8uZmluZCgobykgPT4gby52YWx1ZSA9PT0gaXRlbVtmLm5hbWVdKTsKICAgICAgICAgICAgICAgICAgICBjb25zdCB2YWwgPSBvcHQgPyBvcHQubGFiZWwgOiBpdGVtW2YubmFtZV07CiAgICAgICAgICAgICAgICAgICAgY29uc3QgaXNTZWNyZXQgPSBmLnR5cGUgPT09ICJwYXNzd29yZCIgfHwgZi5nZW5lcmF0ZTsKICAgICAgICAgICAgICAgICAgICBjb25zdCBzaG93biA9IGlzU2VjcmV0ID8gcmV2ZWFsZWRbaXRlbS5pZCArIGYubmFtZV0gOiB0cnVlOwogICAgICAgICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGtleT17Zi5uYW1lfSBjbGFzc05hbWU9Im1pbi13LTAiPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InRleHQtWzExcHhdIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBibG9jayI+e2YubGFiZWx9PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICB7aXNTZWNyZXQgPyAoCiAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMS41IG1pbi13LTAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJmb250LW1lZGl1bSB0cnVuY2F0ZSBibG9jayBmb250LW1vbm8gdGV4dC14cyI+e3Nob3duID8gKFN0cmluZyh2YWwgPz8gIuKAlCIpKSA6ICLigKLigKLigKLigKLigKLigKLigKLigKIifTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBvbkNsaWNrPXsoKSA9PiBzZXRSZXZlYWxlZCgocikgPT4gKHsgLi4uciwgW2l0ZW0uaWQgKyBmLm5hbWVdOiAhcltpdGVtLmlkICsgZi5uYW1lXSB9KSl9IGNsYXNzTmFtZT0idGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGhvdmVyOnRleHQtZm9yZWdyb3VuZCBzaHJpbmstMCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtzaG93biA/IDxFeWVPZmYgY2xhc3NOYW1lPSJoLTMuNSB3LTMuNSIgLz4gOiA8RXllIGNsYXNzTmFtZT0iaC0zLjUgdy0zLjUiIC8+fQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgb25DbGljaz17KCkgPT4gY29weSh2YWwsIGYubGFiZWwpfSBjbGFzc05hbWU9InRleHQtbXV0ZWQtZm9yZWdyb3VuZCBob3Zlcjp0ZXh0LWZvcmVncm91bmQgc2hyaW5rLTAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q29weSBjbGFzc05hbWU9ImgtMy41IHctMy41IiAvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICApIDogKAogICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZm9udC1tZWRpdW0gdHJ1bmNhdGUgYmxvY2siPntTdHJpbmcodmFsID8/ICLigJQiKX08L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgICl9CiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgICB9KX0KICAgICAgICAgICAgICAgICAge2Jvb2xGaWVsZHMubWFwKChmKSA9PiAoCiAgICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e2YubmFtZX0gY2xhc3NOYW1lPSJtaW4tdy0wIj4KICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0idGV4dC1bMTFweF0gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGJsb2NrIj57Zi5sYWJlbH08L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICA8U3dpdGNoIGNoZWNrZWQ9eyEhaXRlbVtmLm5hbWVdfSBvbkNoZWNrZWRDaGFuZ2U9eygpID0+IHRvZ2dsZShpdGVtLCBmLm5hbWUpfSAvPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPEJ1dHRvbgogICAgICAgICAgICAgICAgICB2YXJpYW50PSJnaG9zdCIKICAgICAgICAgICAgICAgICAgc2l6ZT0iaWNvbiIKICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gcmVtb3ZlKGl0ZW0uaWQpfQogICAgICAgICAgICAgICAgICBjbGFzc05hbWU9InRleHQtbXV0ZWQtZm9yZWdyb3VuZCBob3Zlcjp0ZXh0LWRlc3RydWN0aXZlIHNocmluay0wIgogICAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgICA8VHJhc2gyIGNsYXNzTmFtZT0iaC00IHctNCIgLz4KICAgICAgICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICApKX0KICAgICAgICAgIDwvZGl2PgogICAgICAgICl9CiAgICAgIDwvZGl2PgogICAgPC9kaXY+CiAgKTsKfQ==
+import React, { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/components/ui/use-toast";
+import { Loader2, Plus, Trash2, Copy, Eye, EyeOff, Check, X } from "lucide-react";
+
+// Generic config CRUD: a create form + a list with active toggle, secret reveal/copy and delete.
+// fields: { name, label, type: text|password|number|date|select|boolean, options?, placeholder?, default?, span?, hidden?, generate? }
+export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [form, setForm] = useState({});
+  const [saving, setSaving] = useState(false);
+  const [revealed, setRevealed] = useState({});
+  const [lastCreated, setLastCreated] = useState(null);
+  const [copiedField, setCopiedField] = useState("");
+  const { toast } = useToast();
+
+  const load = async () => {
+    setLoading(true);
+    try {
+      const data = await base44.entities[entity].list("-created_date", 200);
+      setItems(data);
+    } catch (e) {
+      setItems([]);
+      toast({ variant: "destructive", title: "Chargement impossible", description: e?.message || "Erreur inconnue" });
+    }
+    setLoading(false);
+  };
+  useEffect(() => {
+    load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const setField = (name, val) => setForm((f) => ({ ...f, [name]: val }));
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    const record = {};
+    try {
+      for (const f of fields) {
+        if (f.generate) record[f.name] = f.generate();
+        else if (f.type === "boolean") record[f.name] = form[f.name] ?? f.default ?? false;
+        else if (f.type === "number") record[f.name] = Number(form[f.name] ?? f.default ?? 0);
+        else record[f.name] = (form[f.name] ?? f.default ?? "").toString();
+      }
+      const created = await base44.entities[entity].create(record);
+      setForm({});
+      const secretFields = fields.filter((f) => f.type === "password" || f.generate);
+      setLastCreated({ record: created, recordRaw: record, fields: secretFields });
+      if (secretFields.length) {
+        toast({
+          title: "Élément créé",
+          description: "Copiez vos valeurs ci-dessous — elles ne s'afficheront qu'une seule fois.",
+        });
+      } else {
+        toast({ title: "Élément créé avec succès." });
+      }
+    } catch (e) {
+      toast({ variant: "destructive", title: "Échec de la création", description: e?.message || "Erreur inconnue" });
+    }
+    setSaving(false);
+    load();
+  };
+
+  const toggle = async (item, field) => {
+    try {
+      await base44.entities[entity].update(item.id, { [field]: !item[field] });
+    } catch (e) {
+      toast({ variant: "destructive", title: "Mise à jour impossible", description: e?.message });
+    }
+    load();
+  };
+
+  const remove = async (id) => {
+    try {
+      await base44.entities[entity].delete(id);
+    } catch (e) {
+      toast({ variant: "destructive", title: "Suppression impossible", description: e?.message });
+    }
+    load();
+  };
+
+  const copy = (val, label, key) => {
+    navigator.clipboard?.writeText(val || "");
+    if (key) {
+      setCopiedField(key);
+      setTimeout(() => setCopiedField(""), 1500);
+    }
+    toast({ title: `${label} copié` });
+  };
+
+  const visibleFields = fields.filter((f) => !f.hidden && f.type !== "boolean");
+  const boolFields = fields.filter((f) => f.type === "boolean");
+
+  return (
+    <div className="space-y-6">
+      <form
+        onSubmit={submit}
+        className="rounded-xl border border-border bg-card p-4 grid grid-cols-1 md:grid-cols-2 gap-3"
+      >
+        {fields.map((f) =>
+          f.hidden || f.generate ? null : (
+            <div
+              key={f.name}
+              className={f.span === "full" ? "md:col-span-2 space-y-1.5" : "space-y-1.5"}
+            >
+              <Label htmlFor={f.name}>{f.label}</Label>
+              {f.type === "select" ? (
+                <Select value={form[f.name] ?? ""} onValueChange={(v) => setField(f.name, v)}>
+                  <SelectTrigger id={f.name} className="rounded-xl">
+                    <SelectValue placeholder={f.placeholder || "Sélectionner"} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {f.options.map((o) => (
+                      <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              ) : f.type === "boolean" ? (
+                <div className="flex items-center gap-2 h-9">
+                  <Switch
+                    id={f.name}
+                    checked={form[f.name] ?? f.default ?? false}
+                    onCheckedChange={(v) => setField(f.name, v)}
+                  />
+                </div>
+              ) : (
+                <Input
+                  id={f.name}
+                  type={f.type === "password" ? "password" : f.type === "number" ? "number" : f.type === "date" ? "date" : "text"}
+                  value={form[f.name] ?? ""}
+                  onChange={(e) => setField(f.name, e.target.value)}
+                  placeholder={f.placeholder}
+                  className="rounded-xl"
+                />
+              )}
+            </div>
+          )
+        )}
+        <div className="md:col-span-2">
+          <Button type="submit" disabled={saving} className="rounded-full">
+            {saving ? <Loader2 className="h-4 w-4 mr-2 animate-spin" /> : <Plus className="h-4 w-4 mr-2" />}
+            {addLabel}
+          </Button>
+        </div>
+      </form>
+
+      {lastCreated && lastCreated.fields.length > 0 && (
+        <div className="rounded-xl border-2 border-emerald-500/40 bg-emerald-50/60 p-4 space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-emerald-600" />
+              <h3 className="font-display text-sm font-semibold text-emerald-800">Valeurs générées — copiez-les maintenant</h3>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-7 w-7 text-emerald-700 hover:text-emerald-900"
+              onClick={() => setLastCreated(null)}
+            >
+              <X className="h-3.5 w-3.5" />
+            </Button>
+          </div>
+          <p className="text-xs text-emerald-700/80">
+            Ces valeurs confidentielles ne sont affichées qu'ici. Copiez-les et stockez-les en lieu sûr.
+          </p>
+          <div className="space-y-2">
+            {lastCreated.fields.map((f) => {
+              const val = lastCreated.record[f.name] || lastCreated.recordRaw[f.name] || "";
+              const key = f.name;
+              const isCopied = copiedField === key;
+              return (
+                <div key={key} className="flex items-center gap-2 rounded-lg border border-emerald-200 bg-white px-3 py-2">
+                  <span className="text-[11px] font-medium text-emerald-700 w-28 shrink-0">{f.label}</span>
+                  <code className="flex-1 min-w-0 truncate font-mono text-xs text-foreground">{String(val)}</code>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="sm"
+                    className="h-7 shrink-0 text-emerald-700 hover:text-emerald-900"
+                    onClick={() => copy(val, f.label, key)}
+                  >
+                    {isCopied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                  </Button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      <div className="rounded-xl border border-border bg-card overflow-hidden">
+        {loading ? (
+          <div className="p-8 flex justify-center">
+            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+          </div>
+        ) : items.length === 0 ? (
+          <div className="p-8 text-center text-sm text-muted-foreground">Aucun élément pour le moment.</div>
+        ) : (
+          <div className="divide-y divide-border">
+            {items.map((item) => (
+              <div key={item.id} className="flex items-start justify-between gap-3 p-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 flex-1 min-w-0 text-sm">
+                  {visibleFields.map((f) => {
+                    const opt = f.options?.find((o) => o.value === item[f.name]);
+                    const val = opt ? opt.label : item[f.name];
+                    const isSecret = f.type === "password" || f.generate;
+                    const shown = isSecret ? revealed[item.id + f.name] : true;
+                    return (
+                      <div key={f.name} className="min-w-0">
+                        <span className="text-[11px] text-muted-foreground block">{f.label}</span>
+                        {isSecret ? (
+                          <span className="flex items-center gap-1.5 min-w-0">
+                            <span className="font-medium truncate block font-mono text-xs">{shown ? (String(val ?? "—")) : "••••••••"}</span>
+                            <button type="button" onClick={() => setRevealed((r) => ({ ...r, [item.id + f.name]: !r[item.id + f.name] }))} className="text-muted-foreground hover:text-foreground shrink-0">
+                              {shown ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+                            </button>
+                            <button type="button" onClick={() => copy(val, f.label)} className="text-muted-foreground hover:text-foreground shrink-0">
+                              <Copy className="h-3.5 w-3.5" />
+                            </button>
+                          </span>
+                        ) : (
+                          <span className="font-medium truncate block">{String(val ?? "—")}</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                  {boolFields.map((f) => (
+                    <div key={f.name} className="min-w-0">
+                      <span className="text-[11px] text-muted-foreground block">{f.label}</span>
+                      <Switch checked={!!item[f.name]} onCheckedChange={() => toggle(item, f.name)} />
+                    </div>
+                  ))}
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => remove(item.id)}
+                  className="text-muted-foreground hover:text-destructive shrink-0"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

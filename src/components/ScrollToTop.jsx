@@ -1,1 +1,33 @@
-aW1wb3J0IHsgdXNlRWZmZWN0IH0gZnJvbSAicmVhY3QiOwppbXBvcnQgeyB1c2VMb2NhdGlvbiwgdXNlTmF2aWdhdGlvblR5cGUgfSBmcm9tICJyZWFjdC1yb3V0ZXItZG9tIjsKCmNvbnN0IGdldEhhc2hJZCA9IChoYXNoKSA9PiB7CiAgY29uc3QgcmF3SWQgPSBoYXNoLnNsaWNlKDEpOwoKICB0cnkgewogICAgcmV0dXJuIGRlY29kZVVSSUNvbXBvbmVudChyYXdJZCk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gcmF3SWQ7CiAgfQp9OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gU2Nyb2xsVG9Ub3AoKSB7CiAgY29uc3QgeyBwYXRobmFtZSwgaGFzaCB9ID0gdXNlTG9jYXRpb24oKTsKICBjb25zdCBuYXZpZ2F0aW9uVHlwZSA9IHVzZU5hdmlnYXRpb25UeXBlKCk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBpZiAobmF2aWdhdGlvblR5cGUgPT09ICJQT1AiKSByZXR1cm47CgogICAgaWYgKGhhc2gpIHsKICAgICAgY29uc3QgaWQgPSBnZXRIYXNoSWQoaGFzaCk7CiAgICAgIGNvbnN0IHRpbWVyID0gd2luZG93LnNldFRpbWVvdXQoKCkgPT4gewogICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKT8uc2Nyb2xsSW50b1ZpZXcoeyBiZWhhdmlvcjogInNtb290aCIgfSk7CiAgICAgIH0sIDUwKTsKICAgICAgcmV0dXJuICgpID0+IHdpbmRvdy5jbGVhclRpbWVvdXQodGltZXIpOwogICAgfQoKICAgIHdpbmRvdy5zY3JvbGxUbyh7IHRvcDogMCwgbGVmdDogMCwgYmVoYXZpb3I6ICJpbnN0YW50IiB9KTsKICB9LCBbcGF0aG5hbWUsIGhhc2gsIG5hdmlnYXRpb25UeXBlXSk7CgogIHJldHVybiBudWxsOwp9Cg==
+import { useEffect } from "react";
+import { useLocation, useNavigationType } from "react-router-dom";
+
+const getHashId = (hash) => {
+  const rawId = hash.slice(1);
+
+  try {
+    return decodeURIComponent(rawId);
+  } catch {
+    return rawId;
+  }
+};
+
+export default function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  const navigationType = useNavigationType();
+
+  useEffect(() => {
+    if (navigationType === "POP") return;
+
+    if (hash) {
+      const id = getHashId(hash);
+      const timer = window.setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+      return () => window.clearTimeout(timer);
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname, hash, navigationType]);
+
+  return null;
+}

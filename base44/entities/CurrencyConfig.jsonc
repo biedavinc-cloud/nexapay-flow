@@ -1,1 +1,43 @@
-ewogICJuYW1lIjogIkN1cnJlbmN5Q29uZmlnIiwKICAidHlwZSI6ICJvYmplY3QiLAogICJwcm9wZXJ0aWVzIjogewogICAgImNvZGUiOiB7CiAgICAgICJ0eXBlIjogInN0cmluZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJGaWF0IElTTyBjb2RlIChFVVIsIFVTRCwgWE9GLCBYQUYuLi4pIgogICAgfSwKICAgICJsYWJlbCI6IHsKICAgICAgInR5cGUiOiAic3RyaW5nIiwKICAgICAgImRlc2NyaXB0aW9uIjogIkRpc3BsYXkgbmFtZSIKICAgIH0sCiAgICAic3ltYm9sIjogewogICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAiZGVzY3JpcHRpb24iOiAiQ3VycmVuY3kgc3ltYm9sIgogICAgfSwKICAgICJlbmFibGVkIjogewogICAgICAidHlwZSI6ICJib29sZWFuIiwKICAgICAgImRlZmF1bHQiOiB0cnVlLAogICAgICAiZGVzY3JpcHRpb24iOiAiV2hldGhlciB0aGlzIGZpYXQgY3VycmVuY3kgaXMgYWNjZXB0ZWQgYXQgY2hlY2tvdXQiCiAgICB9LAogICAgImF1dG9fY29udmVydCI6IHsKICAgICAgInR5cGUiOiAiYm9vbGVhbiIsCiAgICAgICJkZWZhdWx0IjogdHJ1ZSwKICAgICAgImRlc2NyaXB0aW9uIjogIkF1dG8tY29udmVydCBjYXB0dXJlZCBmaWF0IGludG8gVVNEVCIKICAgIH0sCiAgICAibWluX3RocmVzaG9sZCI6IHsKICAgICAgInR5cGUiOiAibnVtYmVyIiwKICAgICAgImRlZmF1bHQiOiAwLAogICAgICAiZGVzY3JpcHRpb24iOiAiTWluaW11bSBmaWF0IGFtb3VudCB0cmlnZ2VyaW5nIGF1dG9tYXRpYyBjb252ZXJzaW9uIgogICAgfSwKICAgICJtYXJnaW5fcGN0IjogewogICAgICAidHlwZSI6ICJudW1iZXIiLAogICAgICAiZGVmYXVsdCI6IDAsCiAgICAgICJkZXNjcmlwdGlvbiI6ICJDb252ZXJzaW9uIG1hcmdpbiBhcHBsaWVkIG9uIHRvcCBvZiB0aGUgbGl2ZSByYXRlICglKSIKICAgIH0KICB9LAogICJyZXF1aXJlZCI6IFsKICAgICJjb2RlIiwKICAgICJsYWJlbCIsCiAgICAiZW5hYmxlZCIKICBdCn0=
+{
+  "name": "CurrencyConfig",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Fiat ISO code (EUR, USD, XOF, XAF...)"
+    },
+    "label": {
+      "type": "string",
+      "description": "Display name"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Currency symbol"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this fiat currency is accepted at checkout"
+    },
+    "auto_convert": {
+      "type": "boolean",
+      "default": true,
+      "description": "Auto-convert captured fiat into USDT"
+    },
+    "min_threshold": {
+      "type": "number",
+      "default": 0,
+      "description": "Minimum fiat amount triggering automatic conversion"
+    },
+    "margin_pct": {
+      "type": "number",
+      "default": 0,
+      "description": "Conversion margin applied on top of the live rate (%)"
+    }
+  },
+  "required": [
+    "code",
+    "label",
+    "enabled"
+  ]
+}

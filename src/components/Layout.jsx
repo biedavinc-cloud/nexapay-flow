@@ -1,1 +1,198 @@
-aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgT3V0bGV0LCBOYXZMaW5rLCB1c2VOYXZpZ2F0ZSB9IGZyb20gInJlYWN0LXJvdXRlci1kb20iOwppbXBvcnQgewogIExheW91dERhc2hib2FyZCwKICBQbHVzQ2lyY2xlLAogIExvZ091dCwKICBBY3Rpdml0eSwKICBTY3JvbGxUZXh0LAogIFdlYmhvb2ssCiAgQmFyQ2hhcnQzLAogIFRyZW5kaW5nVXAsCiAgU2V0dGluZ3MsCiAgS2V5Um91bmQsCiAgTGluayBhcyBMaW5rSWNvbiwKICBXYWxsZXQsCiAgU2hpZWxkQ2hlY2ssCiAgU2VydmVyLAogIFNoaWVsZEFsZXJ0LAogIFBlcmNlbnQsCiAgQm9va09wZW4sCiAgSGlzdG9yeSwKICBDbGlwYm9hcmRDaGVjaywKICBDb2lucywKICBSYWRpb1Rvd2VyLAogIFBsdWcsCn0gZnJvbSAibHVjaWRlLXJlYWN0IjsKaW1wb3J0IHsgYmFzZTQ0IH0gZnJvbSAiQC9hcGkvYmFzZTQ0Q2xpZW50IjsKaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2J1dHRvbiI7CmltcG9ydCB7IEltYWdlIH0gZnJvbSAiQC9jb21wb25lbnRzL3VpL2ltYWdlIjsKCmNvbnN0IE5FWEFQQVlfTE9HTyA9ICJodHRwczovL21lZGlhLmJhc2U0NC5jb20vaW1hZ2VzL3B1YmxpYy82YWIxMTA0ZTQ3ZDRmNzQwMjJjNjlkMjcvM2RiNjMzMzc5X2dlbmVyYXRlZF9pbWFnZS5wbmciOwoKY29uc3QgU0VDVElPTlMgPSBbCiAgewogICAgdGl0bGU6ICJQYWllbWVudHMiLAogICAgaXRlbXM6IFsKICAgICAgeyB0bzogIi9kYXNoYm9hcmQiLCBsYWJlbDogIlRhYmxlYXUgZGUgYm9yZCIsIGljb246IExheW91dERhc2hib2FyZCwgZW5kOiB0cnVlIH0sCiAgICAgIHsgdG86ICIvcGF5bWVudHMvbmV3IiwgbGFiZWw6ICJOb3V2ZWwgYWNoYXQgY3J5cHRvIiwgaWNvbjogUGx1c0NpcmNsZSwgZW5kOiBmYWxzZSB9LAogICAgXSwKICB9LAogIHsKICAgIHRpdGxlOiAiU3VydmVpbGxhbmNlIiwKICAgIGl0ZW1zOiBbCiAgICAgIHsgdG86ICIvcHJvdmlkZXItc3RhdHVzIiwgbGFiZWw6ICJTdGF0dXQgZm91cm5pc3NldXJzIiwgaWNvbjogQWN0aXZpdHkgfSwKICAgICAgeyB0bzogIi9wYXltZW50LWhpc3RvcnkiLCBsYWJlbDogIkpvdXJuYWwgZGVzIHBhaWVtZW50cyIsIGljb246IEhpc3RvcnkgfSwKICAgICAgeyB0bzogIi90cmFuc2FjdGlvbi1sb2dzIiwgbGFiZWw6ICJKb3VybmFsIHRyYW5zYWN0aW9ucyIsIGljb246IFNjcm9sbFRleHQgfSwKICAgICAgeyB0bzogIi93ZWJob29rLWNvbnNvbGUiLCBsYWJlbDogIkNvbnNvbGUgd2ViaG9va3MiLCBpY29uOiBXZWJob29rIH0sCiAgICBdLAogIH0sCiAgewogICAgdGl0bGU6ICJBbmFseXNlIiwKICAgIGl0ZW1zOiBbCiAgICAgIHsgdG86ICIvYW5hbHl0aWNzIiwgbGFiZWw6ICJBbmFseXRpY3MiLCBpY29uOiBCYXJDaGFydDMgfSwKICAgICAgeyB0bzogIi9yYXBwb3J0cy1wZXJmb3JtYW5jZSIsIGxhYmVsOiAiUmFwcG9ydHMgcGVyZm9ybWFuY2UiLCBpY29uOiBUcmVuZGluZ1VwIH0sCiAgICBdLAogIH0sCiAgewogICAgdGl0bGU6ICJFeGNoYW5nZXMgJiBDcnlwdG8iLAogICAgaXRlbXM6IFsKICAgICAgeyB0bzogIi9tYW5hZ2UtcHJvdmlkZXJzIiwgbGFiZWw6ICJGb3Vybmlzc2V1cnMgY3J5cHRvIiwgaWNvbjogU2VydmVyIH0sCiAgICAgIHsgdG86ICIvd2FsbGV0cyIsIGxhYmVsOiAiV2FsbGV0cyBkZSByw6ljZXB0aW9uIiwgaWNvbjogV2FsbGV0IH0sCiAgICAgIHsgdG86ICIvcmF0ZS1tYW5hZ2VtZW50IiwgbGFiZWw6ICJUYXV4ICYgbWFyZ2VzIiwgaWNvbjogUGVyY2VudCB9LAogICAgXSwKICB9LAogIHsKICAgIHRpdGxlOiAiQ29uZmlndXJhdGlvbiIsCiAgICBpdGVtczogWwogICAgICB7IHRvOiAiL3NldHRpbmdzIiwgbGFiZWw6ICJQYXJhbcOodHJlcyIsIGljb246IFNldHRpbmdzIH0sCiAgICAgIHsgdG86ICIvYXBpLWtleXMiLCBsYWJlbDogIkNsw6lzIEFQSSIsIGljb246IEtleVJvdW5kIH0sCiAgICAgIHsgdG86ICIvd2ViaG9va3MiLCBsYWJlbDogIldlYmhvb2tzIiwgaWNvbjogTGlua0ljb24gfSwKICAgICAgeyB0bzogIi9jcnlwdG8td2FsbGV0cyIsIGxhYmVsOiAiUG9ydGVmZXVpbGxlcyBjcnlwdG8iLCBpY29uOiBXYWxsZXQgfSwKICAgICAgeyB0bzogIi9zZWN1cml0eSIsIGxhYmVsOiAiU8OpY3VyaXTDqSIsIGljb246IFNoaWVsZENoZWNrIH0sCiAgICAgIHsgdG86ICIvc2VjdXJpdHktc2V0dGluZ3MiLCBsYWJlbDogIlPDqWN1cml0w6kgJiBJUCIsIGljb246IFNoaWVsZEFsZXJ0IH0sCiAgICAgIHsgdG86ICIvZ2VzdGlvbi1wcmVzdGF0YWlyZXMiLCBsYWJlbDogIkdlc3Rpb24gcHJlc3RhdGFpcmVzIiwgaWNvbjogU2VydmVyIH0sCiAgICAgIHsgdG86ICIvcGFyYW1ldHJlcy1zZWN1cml0ZSIsIGxhYmVsOiAiUGFyYW3DqHRyZXMgc8OpY3VyaXTDqSIsIGljb246IFNoaWVsZEFsZXJ0IH0sCiAgICAgIHsgdG86ICIvYXBpLWRvY3MiLCBsYWJlbDogIkRvY3VtZW50YXRpb24gQVBJIiwgaWNvbjogQm9va09wZW4gfSwKICAgIF0sCiAgfSwKICB7CiAgICB0aXRsZTogIk91dGlscyAmIFRlc3RzIiwKICAgIGl0ZW1zOiBbCiAgICAgIHsgdG86ICIvd2ViaG9vay1hdWRpdCIsIGxhYmVsOiAiQXVkaXQgZGVzIHdlYmhvb2tzIiwgaWNvbjogQ2xpcGJvYXJkQ2hlY2sgfSwKICAgICAgeyB0bzogIi9jdXJyZW5jeS1tYW5hZ2VtZW50IiwgbGFiZWw6ICJHZXN0aW9uIGRlcyBkZXZpc2VzIiwgaWNvbjogQ29pbnMgfSwKICAgICAgeyB0bzogIi93ZWJob29rLXRlc3RlciIsIGxhYmVsOiAiVGVzdCB3ZWJob29rIiwgaWNvbjogUmFkaW9Ub3dlciB9LAogICAgICB7IHRvOiAiL2Nvbm5lY3Rpb24tdGVzdGVyIiwgbGFiZWw6ICJUZXN0IGRlIGNvbm5leGlvbiIsIGljb246IFBsdWcgfSwKICAgIF0sCiAgfSwKXTsKCmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIExheW91dCgpIHsKICBjb25zdCBuYXZpZ2F0ZSA9IHVzZU5hdmlnYXRlKCk7CgogIGNvbnN0IGhhbmRsZUxvZ291dCA9IGFzeW5jICgpID0+IHsKICAgIGF3YWl0IGJhc2U0NC5hdXRoLmxvZ291dCgiL2xvZ2luIik7CiAgfTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJtaW4taC1zY3JlZW4gZmxleCBiZy1iYWNrZ3JvdW5kIHRleHQtZm9yZWdyb3VuZCI+CiAgICAgIDxhc2lkZSBjbGFzc05hbWU9ImhpZGRlbiBtZDpmbGV4IHctNjQgc2hyaW5rLTAgZmxleC1jb2wgYm9yZGVyLXIgYm9yZGVyLWJvcmRlciBiZy1zaWRlYmFyIj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIuNSBweC02IGgtMTYgYm9yZGVyLWIgYm9yZGVyLWJvcmRlciI+CiAgICAgICAgICA8SW1hZ2Ugc3JjPXtORVhBUEFZX0xPR099IGFsdD0iTmV4YVBheSIgY2xhc3NOYW1lPSJoLTkgdy05IHJvdW5kZWQtbGciIGZpdHRpbmdUeXBlPSJmaWxsIiAvPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImxlYWRpbmctdGlnaHQiPgogICAgICAgICAgICA8cCBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSBmb250LXNlbWlib2xkIHRyYWNraW5nLXRpZ2h0IHRleHQtZm9yZWdyb3VuZCI+TmV4YVBheTwvcD4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LVsxMXB4XSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPkNyeXB0byBFbmdpbmU8L3A+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPG5hdiBjbGFzc05hbWU9ImZsZXgtMSBvdmVyZmxvdy15LWF1dG8gcHgtMyBweS00IHNwYWNlLXktNSI+CiAgICAgICAgICB7U0VDVElPTlMubWFwKChzZWN0aW9uKSA9PiAoCiAgICAgICAgICAgIDxkaXYga2V5PXtzZWN0aW9uLnRpdGxlfT4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InB4LTMgbWItMSB0ZXh0LVsxMXB4XSBmb250LXNlbWlib2xkIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciB0ZXh0LW11dGVkLWZvcmVncm91bmQvNzAiPgogICAgICAgICAgICAgICAge3NlY3Rpb24udGl0bGV9CiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJzcGFjZS15LTEiPgogICAgICAgICAgICAgICAge3NlY3Rpb24uaXRlbXMubWFwKCh7IHRvLCBsYWJlbCwgaWNvbjogSWNvbiwgZW5kIH0pID0+ICgKICAgICAgICAgICAgICAgICAgPE5hdkxpbmsKICAgICAgICAgICAgICAgICAgICBrZXk9e3RvfQogICAgICAgICAgICAgICAgICAgIHRvPXt0b30KICAgICAgICAgICAgICAgICAgICBlbmQ9e2VuZH0KICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9eyh7IGlzQWN0aXZlIH0pID0+CiAgICAgICAgICAgICAgICAgICAgICBgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgcm91bmRlZC1sZyBweC0zIHB5LTIgdGV4dC1zbSBmb250LW1lZGl1bSB0cmFuc2l0aW9uLWNvbG9ycyAkewogICAgICAgICAgICAgICAgICAgICAgICBpc0FjdGl2ZQogICAgICAgICAgICAgICAgICAgICAgICAgID8gImJnLXByaW1hcnkvMTUgdGV4dC1wcmltYXJ5IGJvcmRlciBib3JkZXItcHJpbWFyeS8zMCIKICAgICAgICAgICAgICAgICAgICAgICAgICA6ICJ0ZXh0LW11dGVkLWZvcmVncm91bmQgaG92ZXI6dGV4dC1mb3JlZ3JvdW5kIGhvdmVyOmJnLWFjY2VudCBib3JkZXIgYm9yZGVyLXRyYW5zcGFyZW50IgogICAgICAgICAgICAgICAgICAgICAgfWAKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgICAgICA8SWNvbiBjbGFzc05hbWU9ImgtNCB3LTQgc2hyaW5rLTAiIC8+CiAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJ0cnVuY2F0ZSI+e2xhYmVsfTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgPC9OYXZMaW5rPgogICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgKSl9CiAgICAgICAgPC9uYXY+CgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwLTMgYm9yZGVyLXQgYm9yZGVyLWJvcmRlciI+CiAgICAgICAgICA8QnV0dG9uCiAgICAgICAgICAgIHZhcmlhbnQ9Imdob3N0IgogICAgICAgICAgICBvbkNsaWNrPXtoYW5kbGVMb2dvdXR9CiAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIGp1c3RpZnktc3RhcnQgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGhvdmVyOnRleHQtZm9yZWdyb3VuZCIKICAgICAgICAgID4KICAgICAgICAgICAgPExvZ091dCBjbGFzc05hbWU9ImgtNCB3LTQgbXItMiIgLz4KICAgICAgICAgICAgU2lnbiBvdXQKICAgICAgICAgIDwvQnV0dG9uPgogICAgICAgIDwvZGl2PgogICAgICA8L2FzaWRlPgoKICAgICAgPGRpdiBjbGFzc05hbWU9Im1kOmhpZGRlbiBmaXhlZCB0b3AtMCBpbnNldC14LTAgei00MCBoLTE0IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlbiBweC00IGJvcmRlci1iIGJvcmRlci1ib3JkZXIgYmctc2lkZWJhciI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIj4KICAgICAgICAgIDxJbWFnZSBzcmM9e05FWEFQQVlfTE9HT30gYWx0PSJOZXhhUGF5IiBjbGFzc05hbWU9ImgtOCB3LTggcm91bmRlZC1sZyIgZml0dGluZ1R5cGU9ImZpbGwiIC8+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9ImZvbnQtZGlzcGxheSBmb250LXNlbWlib2xkIj5OZXhhUGF5PC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICAgIDxCdXR0b24gdmFyaWFudD0iZ2hvc3QiIHNpemU9InNtIiBvbkNsaWNrPXsoKSA9PiBuYXZpZ2F0ZSgiL3BheW1lbnRzL25ldyIpfT4KICAgICAgICAgIDxQbHVzQ2lyY2xlIGNsYXNzTmFtZT0iaC00IHctNCBtci0xIiAvPiBOZXcKICAgICAgICA8L0J1dHRvbj4KICAgICAgPC9kaXY+CgogICAgICA8bWFpbiBjbGFzc05hbWU9ImZsZXgtMSBtaW4tdy0wIHB0LTE0IG1kOnB0LTAiPgogICAgICAgIDxPdXRsZXQgLz4KICAgICAgPC9tYWluPgogICAgPC9kaXY+CiAgKTsKfQ==
+import React from "react";
+import { Outlet, NavLink, useNavigate, useLocation } from "react-router-dom";
+import {
+  LayoutDashboard,
+  PlusCircle,
+  LogOut,
+  Activity,
+  ScrollText,
+  Webhook,
+  BarChart3,
+  TrendingUp,
+  Settings,
+  KeyRound,
+  Link as LinkIcon,
+  Wallet,
+  ShieldCheck,
+  Server,
+  ShieldAlert,
+  Percent,
+  BookOpen,
+  History,
+  ClipboardCheck,
+  Coins,
+  RadioTower,
+  Plug,
+} from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { Button } from "@/components/ui/button";
+import { Image } from "@/components/ui/image";
+import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
+
+const NEXAPAY_LOGO = "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png";
+
+const SECTIONS = [
+  {
+    title: "Paiements",
+    items: [
+      { to: "/dashboard", label: "Tableau de bord", icon: LayoutDashboard, end: true },
+      { to: "/payments/new", label: "Nouvel achat crypto", icon: PlusCircle, end: false },
+      { to: "/payment-links", label: "Liens de paiement", icon: LinkIcon },
+    ],
+  },
+  {
+    title: "Surveillance",
+    items: [
+      { to: "/provider-status", label: "Statut fournisseurs", icon: Activity },
+      { to: "/payment-history", label: "Journal des paiements", icon: History },
+      { to: "/transaction-logs", label: "Journal transactions", icon: ScrollText },
+      { to: "/webhook-console", label: "Console webhooks", icon: Webhook },
+    ],
+  },
+  {
+    title: "Analyse",
+    items: [
+      { to: "/analytics", label: "Analytics", icon: BarChart3 },
+      { to: "/rapports-performance", label: "Rapports performance", icon: TrendingUp },
+    ],
+  },
+  {
+    title: "Exchanges & Crypto",
+    items: [
+      { to: "/manage-providers", label: "Fournisseurs crypto", icon: Server },
+      { to: "/wallets", label: "Wallets de réception", icon: Wallet },
+      { to: "/rate-management", label: "Taux & marges", icon: Percent },
+    ],
+  },
+  {
+    title: "Configuration",
+    items: [
+      { to: "/settings", label: "Paramètres", icon: Settings },
+      { to: "/api-keys", label: "Clés API", icon: KeyRound },
+      { to: "/webhooks", label: "Webhooks", icon: LinkIcon },
+      { to: "/crypto-wallets", label: "Portefeuilles crypto", icon: Wallet },
+      { to: "/security", label: "Sécurité", icon: ShieldCheck },
+      { to: "/security-settings", label: "Sécurité & IP", icon: ShieldAlert },
+      { to: "/gestion-prestataires", label: "Gestion prestataires", icon: Server },
+      { to: "/parametres-securite", label: "Paramètres sécurité", icon: ShieldAlert },
+      { to: "/api-docs", label: "Documentation API", icon: BookOpen },
+      { to: "/approvals", label: "Approbations marchands", icon: ClipboardCheck },
+    ],
+  },
+  {
+    title: "Outils & Tests",
+    items: [
+      { to: "/webhook-audit", label: "Audit des webhooks", icon: ClipboardCheck },
+      { to: "/currency-management", label: "Gestion des devises", icon: Coins },
+      { to: "/webhook-tester", label: "Test webhook", icon: RadioTower },
+      { to: "/connection-tester", label: "Test de connexion", icon: Plug },
+    ],
+  },
+];
+
+export default function Layout() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [gate, setGate] = React.useState("loading");
+
+  const handleLogout = async () => {
+    await base44.auth.logout("/login");
+  };
+
+  React.useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const me = await base44.auth.me();
+        if (me.role === "admin" || me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email)) { if (!cancelled) setGate("ok"); return; }
+        const path = location.pathname;
+        if (path === "/onboarding" || path === "/approval-pending") { if (!cancelled) setGate("ok"); return; }
+        if (!me.data?.tenant_id) { navigate("/onboarding", { replace: true }); return; }
+        const tenant = await base44.entities.Tenant.get(me.data.tenant_id);
+        const st = tenant.account_status || "PENDING_ONBOARDING";
+        if (st === "APPROVED") { if (!cancelled) setGate("ok"); return; }
+        if (st === "AWAITING_APPROVAL" || st === "REJECTED") { navigate("/approval-pending", { replace: true }); return; }
+        navigate("/onboarding", { replace: true });
+      } catch {
+        if (!cancelled) setGate("ok");
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [location.pathname]);
+
+  if (gate === "loading") {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex bg-background text-foreground">
+      <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
+        <div className="flex items-center gap-2.5 px-6 h-16 border-b border-border">
+          <Image src={NEXAPAY_LOGO} alt="NexaPay" className="h-9 w-9 rounded-lg" fittingType="fill" />
+          <div className="leading-tight">
+            <p className="font-display font-semibold tracking-tight text-foreground">NexaPay</p>
+            <p className="text-[11px] text-muted-foreground">Crypto Engine</p>
+          </div>
+        </div>
+
+        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-5">
+          {SECTIONS.map((section) => (
+            <div key={section.title}>
+              <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+                {section.title}
+              </p>
+              <div className="space-y-1">
+                {section.items.map(({ to, label, icon: Icon, end }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    end={end}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                        isActive
+                          ? "bg-primary/15 text-primary border border-primary/30"
+                          : "text-muted-foreground hover:text-foreground hover:bg-accent border border-transparent"
+                      }`
+                    }
+                  >
+                    <Icon className="h-4 w-4 shrink-0" />
+                    <span className="truncate">{label}</span>
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          ))}
+        </nav>
+
+        <div className="p-3 border-t border-border">
+          <Button
+            variant="ghost"
+            onClick={handleLogout}
+            className="w-full justify-start text-muted-foreground hover:text-foreground"
+          >
+            <LogOut className="h-4 w-4 mr-2" />
+            Sign out
+          </Button>
+        </div>
+      </aside>
+
+      <div className="md:hidden fixed top-0 inset-x-0 z-40 h-14 flex items-center justify-between px-4 border-b border-border bg-sidebar">
+        <div className="flex items-center gap-2">
+          <Image src={NEXAPAY_LOGO} alt="NexaPay" className="h-8 w-8 rounded-lg" fittingType="fill" />
+          <span className="font-display font-semibold">NexaPay</span>
+        </div>
+        <Button variant="ghost" size="sm" onClick={() => navigate("/payments/new")}>
+          <PlusCircle className="h-4 w-4 mr-1" /> New
+        </Button>
+      </div>
+
+      <main className="flex-1 min-w-0 pt-14 md:pt-0">
+        <Outlet />
+      </main>
+    </div>
+  );
+}
