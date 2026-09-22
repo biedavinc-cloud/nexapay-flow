@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 
-// Official NexaPay mark — a geometric eye (almond outline + centered solid
-// pupil), transparent background. Uses currentColor so it adapts to the
-// surrounding text color: navy on light surfaces, white on dark surfaces.
+// Official NexaPay mark — a rounded diamond (eye aperture, 4-fold symmetric)
+// with a solid square pupil at its center. Transparent background; uses
+// currentColor so it adapts to the surrounding text color (navy on light,
+// white on dark).
 export function NexaMark({ size = 28, className }) {
   return (
     <svg
@@ -13,13 +14,15 @@ export function NexaMark({ size = 28, className }) {
       fill="none"
       aria-hidden="true"
     >
+      {/* Rounded diamond aperture — four convex sides meeting at four points */}
       <path
-        d="M8 50 C30 24 70 24 92 50 C70 76 30 76 8 50 Z"
+        d="M50 6 C66 14 86 34 94 50 C86 66 66 86 50 94 C34 86 14 66 6 50 C14 34 34 14 50 6 Z"
         stroke="currentColor"
         strokeWidth="7"
         strokeLinejoin="round"
       />
-      <circle cx="50" cy="50" r="13" fill="currentColor" />
+      {/* Square pupil */}
+      <rect x="37" y="37" width="26" height="26" fill="currentColor" />
     </svg>
   );
 }
