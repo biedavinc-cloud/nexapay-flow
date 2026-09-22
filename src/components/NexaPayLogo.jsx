@@ -1,34 +1,40 @@
 import { cn } from "@/lib/utils";
 
-// Official NexaPay mark — the exact attached logo asset (white zigzag stroke
-// on black). Rendered as-is; sized by the `size` prop.
+// Official NexaPay mark — green cards + padlock icon. The source PNG is green
+// icon on a solid black background; we render only the icon in brand green with
+// a transparent background by using the image as a luminance mask (bright =
+// visible, black = transparent) over a green fill.
 const NEXAPAY_MARK_URL =
-  "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/679c5d640_Nexapay.png";
+  "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/59c01e422_1Nexapay.png";
 
 export function NexaMark({ size = 28, className }) {
-  // Brand-green zigzag with NO background: the white-on-black PNG is used as a
-  // luminance mask (white = visible, black = transparent) over a green fill.
   const mask = `url(${NEXAPAY_MARK_URL})`;
+  const layerStyle = {
+    position: "absolute",
+    inset: 0,
+    backgroundColor: "#3BB77E",
+    WebkitMaskImage: mask,
+    maskImage: mask,
+    WebkitMaskSize: "contain",
+    maskSize: "contain",
+    WebkitMaskRepeat: "no-repeat",
+    maskRepeat: "no-repeat",
+    WebkitMaskPosition: "center",
+    maskPosition: "center",
+    WebkitMaskMode: "luminance",
+    maskMode: "luminance",
+  };
   return (
     <span
-      className={cn("inline-block shrink-0", className)}
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: "#3BB77E",
-        WebkitMaskImage: mask,
-        maskImage: mask,
-        WebkitMaskSize: "contain",
-        maskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        maskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        maskPosition: "center",
-        WebkitMaskMode: "luminance",
-        maskMode: "luminance",
-      }}
+      className={cn("relative inline-block shrink-0", className)}
+      style={{ width: size, height: size }}
       aria-hidden="true"
-    />
+    >
+      {/* Stacked masked layers so the green icon reads as fully opaque
+          (the icon's mid-luminance green otherwise masks at ~53% alpha). */}
+      <span style={layerStyle} />
+      <span style={layerStyle} />
+    </span>
   );
 }
 
