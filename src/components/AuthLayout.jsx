@@ -13,7 +13,7 @@ export default function AuthLayout({ icon: Icon, title, subtitle, footer, childr
         <Image src={BG} alt="" className="absolute inset-0 h-full w-full opacity-30" fittingType="fill" />
         <div className="relative z-10 flex flex-col justify-between p-10 text-white">
           <Link to="/" className="flex items-center gap-2">
-            <NexaMark size={36} variant="translucent" />
+            <NexaMark size={36} variant="ringed" />
             <span className="font-semibold text-lg tracking-tight text-white">NexaPay</span>
           </Link>
           <div className="max-w-sm">
