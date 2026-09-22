@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Building2, ArrowLeftRight, Server, Percent, ScrollText, ShieldCheck, LogOut, Zap, Crown, GitPullRequest } from "lucide-react";
+import { LayoutDashboard, Building2, ArrowLeftRight, Server, Percent, ScrollText, ShieldCheck, LogOut, Crown, GitPullRequest } from "lucide-react";
+import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
@@ -50,7 +51,7 @@ export default function AdminLayout() {
     <div className="min-h-screen flex bg-secondary/30">
       <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
         <div className="flex items-center gap-2.5 px-6 h-16 border-b border-border">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-foreground"><Zap className="h-5 w-5 text-primary" /></div>
+          <NexaMark size={36} />
           <div className="leading-tight">
             <p className="font-display font-semibold">NexaPay</p>
             <p className="text-[11px] text-muted-foreground">SuperAdmin</p>
@@ -85,7 +86,7 @@ export default function AdminLayout() {
       </aside>
 
       <div className="md:hidden fixed top-0 inset-x-0 z-40 h-14 flex items-center gap-2 px-4 border-b border-border bg-sidebar">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground"><Zap className="h-4 w-4 text-primary" /></div>
+        <NexaMark size={32} />
         <span className="font-display font-semibold text-sm">NexaPay SuperAdmin</span>
       </div>
 

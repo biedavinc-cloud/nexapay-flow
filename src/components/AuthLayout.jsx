@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Zap } from "lucide-react";
 import { Image } from "@/components/ui/image";
+import { NexaMark } from "@/components/NexaPayLogo";
 
 const BG = "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/4e7a5383c_peggy_marco-key-1020134_1920.jpg";
 
@@ -13,8 +13,8 @@ export default function AuthLayout({ icon: Icon, title, subtitle, footer, childr
         <Image src={BG} alt="" className="absolute inset-0 h-full w-full opacity-30" fittingType="fill" />
         <div className="relative z-10 flex flex-col justify-between p-10 text-white">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10"><Zap className="h-5 w-5 text-[#3BB77E]" /></div>
-            <span className="font-semibold text-lg tracking-tight">NexaPay</span>
+            <NexaMark size={36} variant="translucent" />
+            <span className="font-semibold text-lg tracking-tight text-white">NexaPay</span>
           </Link>
           <div className="max-w-sm">
             <h2 className="text-2xl font-semibold leading-tight">Paiements fiat → crypto, livrés directement dans votre wallet.</h2>

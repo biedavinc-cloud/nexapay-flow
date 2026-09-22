@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { TIERS } from "@/lib/tiers";
-import { Check, ChevronRight, ChevronLeft, Upload, Palette, Wallet, ShieldCheck, Building2, Lock, CreditCard, Smartphone } from "lucide-react";
+import { Check, ChevronRight, ChevronLeft, Upload, Palette, Wallet, ShieldCheck, Building2, Lock, CreditCard, Smartphone, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import { CountrySelect, DialCodeSelect } from "@/components/CountrySelect";
 import CardFields from "@/components/checkout/CardFields";
@@ -164,11 +164,11 @@ export default function Onboarding() {
               </div>
               <div className="grid sm:grid-cols-2 gap-3">
                 <div className="grid gap-2">
-                  <Label>Pays</Label>
+                  <Label className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-primary" /> Pays <span className="text-destructive">*</span></Label>
                   <CountrySelect value={form.country} onValueChange={(v) => set("country", v)} />
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="city">Ville</Label>
+                  <Label htmlFor="city" className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-primary" /> Ville</Label>
                   <Input id="city" value={form.city} onChange={(e) => set("city", e.target.value)} placeholder="Douala" />
                 </div>
               </div>
@@ -177,11 +177,15 @@ export default function Onboarding() {
                 <Input id="ba" value={form.business_activity} onChange={(e) => set("business_activity", e.target.value)} placeholder="E-commerce, Services, Import-export, Restauration..." />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="ph">Téléphone (OTP optionnel)</Label>
+                <Label htmlFor="ph" className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5 text-primary" /> Téléphone <span className="text-destructive">*</span></Label>
                 <div className="flex gap-2">
                   <DialCodeSelect value={form.phone_prefix} onValueChange={(v) => set("phone_prefix", v)} />
-                  <Input id="ph" inputMode="tel" value={form.phone_local} onChange={(e) => set("phone_local", e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612345678" className="flex-1" />
+                  <div className="relative flex-1">
+                    <Input id="ph" inputMode="tel" value={form.phone_local} onChange={(e) => set("phone_local", e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612 34 56 78" className="pr-9" />
+                    {form.phone_local.length >= 6 && <CheckCircle2 className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary" />}
+                  </div>
                 </div>
+                <p className="text-xs text-muted-foreground">Numéro de contact marchand. Indicatif pays détecté automatiquement.</p>
                 <label className="flex items-center gap-2 text-xs text-muted-foreground mt-1 cursor-pointer">
                   <input type="checkbox" checked={form.otp_optional} onChange={(e) => set("otp_optional", e.target.checked)} className="rounded" />
                   Vérifier ce numéro par SMS (OTP) — optionnel

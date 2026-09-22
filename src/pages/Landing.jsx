@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Zap, Check, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
+import { NexaMark } from "@/components/NexaPayLogo";
 
 const I18N = {
   FR: {
@@ -94,14 +95,14 @@ export default function Landing() {
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-black/5">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#081735]"><Zap className="h-5 w-5 text-[#3BB77E]" /></div>
-            <span className="font-semibold text-lg tracking-tight">NexaPay</span>
+            <NexaMark size={36} />
+            <span className="font-semibold text-lg tracking-tight text-[#081735]">NexaPay</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-[#6D7A92]">
-            <span className="hover:text-[#081735]">{t.nav.product}</span>
-            <span className="hover:text-[#081735]">{t.nav.developers}</span>
-            <span className="hover:text-[#081735]">{t.nav.company}</span>
-            <span className="hover:text-[#081735]">{t.nav.pricing}</span>
+            <a href="#product" className="hover:text-[#081735]">{t.nav.product}</a>
+            <Link to="/api-docs" className="hover:text-[#081735]">{t.nav.developers}</Link>
+            <a href="#company" className="hover:text-[#081735]">{t.nav.company}</a>
+            <a href="#pricing" className="hover:text-[#081735]">{t.nav.pricing}</a>
           </nav>
           <div className="flex items-center gap-3">
             <div className="flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium">
@@ -145,7 +146,7 @@ export default function Landing() {
       </section>
 
       {/* Simple, easy payments */}
-      <section className="bg-white">
+      <section id="product" className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
           <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s2title}</h2>
           <p className="text-[#6D7A92] mt-2">{t.s2sub}</p>
@@ -173,7 +174,7 @@ export default function Landing() {
       </section>
 
       {/* Build custom payments */}
-      <section className="bg-[#F9FFFB]">
+      <section id="developers" className="bg-[#F9FFFB]">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s3title}</h2>
@@ -193,7 +194,7 @@ export default function Landing() {
       </section>
 
       {/* Protect yourself */}
-      <section className="bg-white">
+      <section id="security" className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center">
             <div className="relative h-56 w-56">
@@ -211,7 +212,7 @@ export default function Landing() {
       </section>
 
       {/* Pricing */}
-      <section className="bg-white">
+      <section id="pricing" className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
           <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">Tarifs & accès production</h2>
           <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">Un frais d'accès unique débloque votre espace. La commission est prélevée à la source sur chaque conversion Fiat → USDT.</p>
@@ -268,13 +269,13 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#081735] text-white">
+      <footer id="company" className="bg-[#081735] text-white">
         <div className="max-w-6xl mx-auto px-4 py-14">
           <div className="grid md:grid-cols-4 gap-10">
             <div>
               <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10"><Zap className="h-4 w-4 text-[#3BB77E]" /></div>
-                <span className="font-semibold text-lg">NexaPay</span>
+                <NexaMark size={32} variant="translucent" />
+                <span className="font-semibold text-lg text-white">NexaPay</span>
               </div>
               <p className="text-sm text-white/60 mt-4 max-w-xs">{t.heroSub}</p>
             </div>
@@ -294,10 +295,10 @@ export default function Landing() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-white/50 mb-3">Navigation</p>
               <nav className="flex flex-col gap-2 text-sm text-white/70">
-                <Link to="/" className="hover:text-white">{t.footNav[0]}</Link>
+                <a href="#product" className="hover:text-white">{t.footNav[0]}</a>
                 <Link to="/api-docs" className="hover:text-white">Documentation</Link>
-                <span className="hover:text-white cursor-pointer">{t.footNav[2]}</span>
-                <span className="hover:text-white cursor-pointer">{t.footNav[3]}</span>
+                <a href="#security" className="hover:text-white">{t.footNav[2]}</a>
+                <a href="#company" className="hover:text-white">{t.footNav[3]}</a>
                 <Link to="/login" className="hover:text-white">{t.nav.login}</Link>
               </nav>
             </div>

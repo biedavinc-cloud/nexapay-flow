@@ -26,10 +26,8 @@ import {
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
-import { Image } from "@/components/ui/image";
 import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
-
-const NEXAPAY_LOGO = "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/3db633379_generated_image.png";
+import { NexaMark } from "@/components/NexaPayLogo";
 
 const SECTIONS = [
   {
@@ -132,7 +130,7 @@ export default function Layout() {
     <div className="min-h-screen flex bg-background text-foreground">
       <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
         <div className="flex items-center gap-2.5 px-6 h-16 border-b border-border">
-          <Image src={NEXAPAY_LOGO} alt="NexaPay" className="h-9 w-9 rounded-lg" fittingType="fill" />
+          <NexaMark size={36} />
           <div className="leading-tight">
             <p className="font-display font-semibold tracking-tight text-foreground">NexaPay</p>
             <p className="text-[11px] text-muted-foreground">Crypto Engine</p>
@@ -182,7 +180,7 @@ export default function Layout() {
 
       <div className="md:hidden fixed top-0 inset-x-0 z-40 h-14 flex items-center justify-between px-4 border-b border-border bg-sidebar">
         <div className="flex items-center gap-2">
-          <Image src={NEXAPAY_LOGO} alt="NexaPay" className="h-8 w-8 rounded-lg" fittingType="fill" />
+          <NexaMark size={32} />
           <span className="font-display font-semibold">NexaPay</span>
         </div>
         <Button variant="ghost" size="sm" onClick={() => navigate("/payments/new")}>
