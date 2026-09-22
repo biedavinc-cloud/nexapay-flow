@@ -6,23 +6,29 @@ const NEXAPAY_MARK_URL =
   "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/679c5d640_Nexapay.png";
 
 export function NexaMark({ size = 28, className }) {
-  // White-on-black mark tinted to the brand green via a multiply overlay:
-  // green × white = green, green × black = black → green zigzag on black.
+  // Brand-green zigzag with NO background: the white-on-black PNG is used as a
+  // luminance mask (white = visible, black = transparent) over a green fill.
+  const mask = `url(${NEXAPAY_MARK_URL})`;
   return (
     <span
-      className={cn("relative inline-flex shrink-0 overflow-hidden rounded-sm", className)}
-      style={{ width: size, height: size }}
-    >
-      <img
-        src={NEXAPAY_MARK_URL}
-        width={size}
-        height={size}
-        alt=""
-        aria-hidden="true"
-        className="block h-full w-full object-contain"
-      />
-      <span className="pointer-events-none absolute inset-0 bg-[#3BB77E] mix-blend-multiply" />
-    </span>
+      className={cn("inline-block shrink-0", className)}
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: "#3BB77E",
+        WebkitMaskImage: mask,
+        maskImage: mask,
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+        WebkitMaskMode: "luminance",
+        maskMode: "luminance",
+      }}
+      aria-hidden="true"
+    />
   );
 }
 
