@@ -1,46 +1,40 @@
 import { cn } from "@/lib/utils";
 
-// Official NexaPay mark — green "N" (#3BB77E) on a pure-black square (#000000),
-// drawn as one continuous angular stroke (left vertical slightly shorter than
-// the right). variant="ringed" adds a faint white ring so the black square stays
-// visible on dark backgrounds (footer / auth panel).
+// Official NexaPay mark — the green "N" (#3BB77E) only, transparent background.
+// Drawn as one continuous angular stroke (left vertical slightly shorter than
+// the right). No container, no fill behind it.
 const GREEN = "#3BB77E";
 
-export function NexaMark({ size = 36, variant = "solid", className }) {
+export function NexaMark({ size = 28, className }) {
   return (
-    <span
-      className={cn(
-        "inline-flex items-center justify-center rounded-lg shrink-0",
-        variant === "ringed" && "ring-1 ring-white/15",
-        className
-      )}
-      style={{ width: size, height: size, background: "#000000" }}
+    <svg
+      viewBox="0 0 100 100"
+      width={size}
+      height={size}
+      className={cn("shrink-0", className)}
+      fill="none"
       aria-hidden="true"
     >
-      <svg viewBox="0 0 100 100" width={size * 0.6} height={size * 0.6}>
-        <path
-          d="M34 26 L34 74 L66 20 L66 80"
-          stroke={GREEN}
-          strokeWidth="16"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-      </svg>
-    </span>
+      <path
+        d="M32 25 L32 75 L68 20 L68 80"
+        stroke={GREEN}
+        strokeWidth="16"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
 export default function NexaPayLogo({
-  size = 36,
-  variant = "solid",
+  size = 28,
   wordmark = true,
   wordmarkClassName = "text-foreground",
   className,
 }) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
-      <NexaMark size={size} variant={variant} />
+      <NexaMark size={size} />
       {wordmark && (
         <span className={cn("font-semibold tracking-tight", wordmarkClassName)}>NexaPay</span>
       )}

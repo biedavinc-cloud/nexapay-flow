@@ -274,7 +274,7 @@ export default function Landing() {
           <div className="grid md:grid-cols-4 gap-10">
             <div>
               <div className="flex items-center gap-2">
-                <NexaMark size={32} variant="ringed" />
+                <NexaMark size={32} />
                 <span className="font-semibold text-lg text-white">NexaPay</span>
               </div>
               <p className="text-sm text-white/60 mt-4 max-w-xs">{t.heroSub}</p>
