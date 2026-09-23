@@ -218,9 +218,9 @@ export default function Landing() {
           <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">A one-time setup fee unlocks your merchant account. Then pay a low per-transaction rate — and every payout settles instantly as USDT/USDC to your wallet.</p>
           <div className="grid md:grid-cols-3 gap-5 mt-10">
             {[
-              { name: "Starter", price: "$49", limit: "Up to $10k / month", commission: "2.5% + $0.30", highlight: false },
-              { name: "Growth", price: "$99", limit: "Up to $50k / month", commission: "1.9% + $0.20", highlight: true },
-              { name: "Scale", price: "Custom", limit: "$50k+ / month", commission: "1.5% + $0.10", highlight: false },
+              { name: "Starter", price: "$219", limit: "Up to $10k / month", commission: "2.5% + $0.30", highlight: false },
+              { name: "Growth", price: "$359", limit: "Up to $50k / month", commission: "1.9% + $0.20", highlight: true },
+              { name: "Scale", price: "$1099", limit: "$50k+ / month", commission: "1.5% + $0.10", highlight: false },
             ].map((p) => (
               <div key={p.name} className={`rounded-2xl border p-6 ${p.highlight ? "border-[#3BB77E] bg-[#F9FFFB] shadow-sm" : "border-black/5"}`}>
                 <div className="font-semibold text-lg text-[#081735]">{p.name}</div>

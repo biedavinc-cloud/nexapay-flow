@@ -7,25 +7,30 @@ const TABS = [
   { id: "bank", label: "Bank Transfers", icon: Building2 },
 ];
 
-// Per-method effective rates by volume tier (USD). Index 3 = Custom tier.
+// Three merchant plans — one-time onboarding fee + per-volume rate tier.
+const PLANS = [
+  { name: "Starter", fee: "$219", max: 10000, commission: "2.5% + $0.30" },
+  { name: "Growth", fee: "$359", max: 50000, commission: "1.9% + $0.20" },
+  { name: "Scale", fee: "$1099", max: 100000, commission: "1.5% + $0.10" },
+];
+
+// Per-method effective rates by tier (USD). Three tiers, no custom.
 const RATES = {
-  momo: { primary: ["2.5% + $0.30", "1.9% + $0.20", "1.5% + $0.10", "Custom"], other: { global: "3.5% + $0.30", local: "1.2% + $0.20" } },
-  card: { primary: ["2.9% + $0.30", "2.3% + $0.20", "1.9% + $0.10", "Custom"], other: { global: "2.9% + $0.30", local: "2.5% + $0.30" } },
-  bank: { primary: ["1.5% + $0.20", "1.0% + $0.15", "0.8% + $0.10", "Custom"], other: { global: "1.5% + $0.20", local: "0.8% + $0.10" } },
+  momo: { primary: ["2.5% + $0.30", "1.9% + $0.20", "1.5% + $0.10"], other: { global: "3.5% + $0.30", local: "1.2% + $0.20" } },
+  card: { primary: ["2.9% + $0.30", "2.3% + $0.20", "1.9% + $0.10"], other: { global: "2.9% + $0.30", local: "2.5% + $0.30" } },
+  bank: { primary: ["1.5% + $0.20", "1.0% + $0.15", "0.8% + $0.10"], other: { global: "1.5% + $0.20", local: "0.8% + $0.10" } },
 };
 
 const TIERS = [
-  { volume: "Up to $10,000", tier: "Tier 1" },
-  { volume: "$10,000 – $50,000", tier: "Tier 2" },
-  { volume: "$50,000 – $100,000", tier: "Tier 3" },
-  { volume: "$100,000 and above", tier: "Custom" },
+  { volume: "Up to $10,000 / month" },
+  { volume: "$10,000 – $50,000 / month" },
+  { volume: "$50,000 – $100,000 / month" },
 ];
 
 function tierIndex(v) {
   if (v < 10000) return 0;
   if (v < 50000) return 1;
-  if (v < 100000) return 2;
-  return 3;
+  return 2;
 }
 const fmtVol = (n) => (n >= 1000 ? `$${Math.round(n / 1000)}k` : `$${n}`);
 
@@ -33,6 +38,7 @@ export default function PricingCalculator() {
   const [tab, setTab] = useState("momo");
   const [volume, setVolume] = useState(10000);
   const idx = tierIndex(volume);
+  const plan = PLANS[idx];
   const rates = RATES[tab];
   const pct = (volume / 100000) * 100;
 
@@ -70,10 +76,9 @@ export default function PricingCalculator() {
         <div className="rounded-2xl border border-black/5 bg-[#FAFAFF] p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-[#6D7A92]">Your effective rate</p>
           <p className="text-4xl md:text-5xl font-bold text-[#081735] mt-2">{rates.primary[idx]}</p>
-          <div className="flex items-center gap-2 mt-4 opacity-80">
-            <span className="rounded-md bg-white border border-black/10 px-2 py-1 text-xs font-semibold text-[#081735]">VISA</span>
-            <span className="rounded-md bg-white border border-black/10 px-2 py-1 text-xs font-semibold text-[#081735]">Mastercard</span>
-            <span className="rounded-md bg-white border border-black/10 px-2 py-1 text-xs font-semibold text-[#081735]">Discover</span>
+          <div className="flex items-center gap-3 mt-4">
+            <span className="inline-flex items-center rounded-full bg-[#1a1a4d] px-3 py-1 text-xs font-semibold text-white">{plan.name} plan</span>
+            <span className="text-sm text-[#081735]"><span className="font-semibold">{plan.fee}</span> one-time</span>
           </div>
         </div>
         <div className="rounded-2xl border border-black/5 p-6 bg-white">
@@ -112,7 +117,7 @@ export default function PricingCalculator() {
         <div className="grid grid-cols-3 bg-[#F1F5F9] text-xs font-semibold uppercase tracking-wider text-[#6D7A92]">
           <div className="px-4 py-3">In-person rate</div>
           <div className="px-4 py-3">Monthly volume</div>
-          <div className="px-4 py-3">Discount tier</div>
+          <div className="px-4 py-3">Plan</div>
         </div>
         {TIERS.map((row, i) => {
           const active = i === idx;
@@ -120,7 +125,7 @@ export default function PricingCalculator() {
             <div key={i} className={`grid grid-cols-3 text-sm ${active ? "bg-[#E0D7FF] text-[#1a1a4d] font-semibold" : "text-[#081735] border-t border-black/5"}`}>
               <div className="px-4 py-3 font-medium">{rates.primary[i]}</div>
               <div className="px-4 py-3">{row.volume}</div>
-              <div className="px-4 py-3">{row.tier}</div>
+              <div className="px-4 py-3">{PLANS[i].name} · {PLANS[i].fee}</div>
             </div>
           );
         })}

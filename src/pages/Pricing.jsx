@@ -12,7 +12,7 @@ const TRANSPARENCY = [
 ];
 
 const FEES = [
-  { label: "One-time onboarding", value: "$49", sub: "Create your merchant account instantly" },
+  { label: "One-time onboarding", value: "from $219", sub: "Starter $219 · Growth $359 · Scale $1099" },
   { label: "Monthly software fees", value: "$0", sub: "No recurring platform fee, ever" },
   { label: "Recurring payments", value: "+0.4% / txn", sub: "Automate your subscription billing" },
   { label: "Card & data migration", value: "$0", sub: "Transfer from another payment provider" },
