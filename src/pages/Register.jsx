@@ -240,7 +240,7 @@ export default function Register() {
           <Label htmlFor="phone">Phone</Label>
           <div className="flex gap-2">
             <DialCodeSelect value={phonePrefix} onValueChange={setPhonePrefix} />
-            <Input id="phone" inputMode="tel" value={phoneLocal} onChange={(e) => setPhoneLocal(e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612 345 678" className="h-12 flex-1" required />
+            <Input id="phone" inputMode="tel" value={phoneLocal} onChange={(e) => setPhoneLocal(e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612 345 678" className="h-12 flex-1 focus:ring-1 focus:ring-ring focus:outline-none" required />
           </div>
         </div>
         <Button type="submit" className="w-full h-12 rounded-full font-medium" disabled={loading}>

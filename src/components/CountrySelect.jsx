@@ -10,26 +10,26 @@ import {
 } from "@/components/ui/select";
 import { FRANC_ZONE_FIRST } from "@/lib/countries";
 
-export function CountrySelect({ value, onValueChange, placeholder = "Sélectionner un pays" }) {
+export function CountrySelect({ value, onValueChange, placeholder = "Select country" }) {
   const franc = FRANC_ZONE_FIRST.filter((c) => c.francZone);
   const others = FRANC_ZONE_FIRST.filter((c) => !c.francZone);
   const current = FRANC_ZONE_FIRST.find((c) => c.code === value);
   return (
     <Select value={value || ""} onValueChange={onValueChange}>
-      <SelectTrigger className="rounded-xl">
+      <SelectTrigger className="h-12 rounded-md">
         <SelectValue placeholder={placeholder}>
           {current ? `${current.flag} ${current.name}` : placeholder}
         </SelectValue>
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Zone Franc (XAF / XOF)</SelectLabel>
+          <SelectLabel>Franc Zone (XAF / XOF)</SelectLabel>
           {franc.map((c) => (
             <SelectItem key={c.code} value={c.code}>{c.flag} {c.name}</SelectItem>
           ))}
         </SelectGroup>
         <SelectGroup>
-          <SelectLabel>Autres pays</SelectLabel>
+          <SelectLabel>Other countries</SelectLabel>
           {others.map((c) => (
             <SelectItem key={c.code} value={c.code}>{c.flag} {c.name}</SelectItem>
           ))}
@@ -39,10 +39,10 @@ export function CountrySelect({ value, onValueChange, placeholder = "Sélectionn
   );
 }
 
-export function DialCodeSelect({ value, onValueChange, placeholder = "Indicatif" }) {
+export function DialCodeSelect({ value, onValueChange, placeholder = "Code" }) {
   return (
     <Select value={value || ""} onValueChange={onValueChange}>
-      <SelectTrigger className="rounded-xl w-28">
+      <SelectTrigger className="h-12 rounded-md w-28">
         <SelectValue placeholder={placeholder}>{value || placeholder}</SelectValue>
       </SelectTrigger>
       <SelectContent>
