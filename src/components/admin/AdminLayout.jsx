@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import { LayoutDashboard, Building2, ArrowLeftRight, Server, Percent, ScrollText, ShieldCheck, LogOut, Crown, GitPullRequest } from "lucide-react";
+import { LayoutDashboard, Building2, ArrowLeftRight, Server, Percent, ScrollText, ShieldCheck, LogOut, Crown, GitPullRequest, Plug } from "lucide-react";
 import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ const NAV = [
   { to: "/admin/superadmin/tenants", label: "Tenants & KYC", icon: Building2 },
   { to: "/admin/superadmin/transactions", label: "Transactions", icon: ArrowLeftRight },
   { to: "/admin/superadmin/providers", label: "Fournisseurs & Trésorerie", icon: Server },
+  { to: "/admin/superadmin/gateways", label: "Passerelles & API Keys", icon: Plug },
   { to: "/admin/superadmin/rates", label: "Taux & Marges", icon: Percent },
   { to: "/admin/superadmin/roles", label: "Rôles & SuperAdmins", icon: Crown },
   { to: "/admin/superadmin/system-logs", label: "Logs & Webhooks", icon: ScrollText },
@@ -26,7 +27,8 @@ export default function AdminLayout() {
     (async () => {
       try {
         const me = await base44.auth.me();
-        const allowed = me.role === "admin" || me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email);
+        // Strict gate: only SUPER_ADMIN role or whitelisted emails may enter.
+        const allowed = me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email);
         if (!allowed) { navigate("/dashboard", { replace: true }); return; }
         // Auto-provision whitelisted emails so the role persists (fire-and-forget).
         if (me.role !== "SUPER_ADMIN" && SUPERADMIN_EMAILS.includes(me.email)) {

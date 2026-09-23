@@ -1,0 +1,125 @@
+{
+  "name": "PspConfig",
+  "type": "object",
+  "properties": {
+    "provider": {
+      "type": "string",
+      "enum": [
+        "KORAPAY",
+        "PAYUNIT",
+        "STRIPE",
+        "FLUTTERWAVE",
+        "PAYSTACK",
+        "MONNIFY",
+        "PAWAPAY",
+        "BIZAO"
+      ],
+      "description": "PSP identifier"
+    },
+    "label": {
+      "type": "string",
+      "description": "Display name"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the gateway is enabled for live routing"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "sandbox",
+        "live"
+      ],
+      "default": "sandbox",
+      "description": "Current active mode (sandbox / live)"
+    },
+    "priority_card": {
+      "type": "number",
+      "default": 0,
+      "description": "Routing priority for card payments (lower = preferred)"
+    },
+    "priority_momo": {
+      "type": "number",
+      "default": 0,
+      "description": "Routing priority for Mobile Money (lower = preferred)"
+    },
+    "config_encrypted": {
+      "type": "string",
+      "description": "AES-256-GCM encrypted JSON of per-environment credentials"
+    },
+    "has_keys": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether credentials are stored for the active environment"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form notes"
+    }
+  },
+  "required": [
+    "provider",
+    "label",
+    "active",
+    "environment"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
+        }
+      ]
+    },
+    "create": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -42,6 +42,7 @@ import WebhookTester from '@/pages/WebhookTester';
 import ConnectionTester from '@/pages/ConnectionTester';
 import PaymentLinks from '@/pages/PaymentLinks';
 import PayLink from '@/pages/PayLink';
+import PayunitReturn from '@/pages/PayunitReturn';
 import Onboarding from '@/pages/Onboarding';
 import MerchantSettings from '@/pages/MerchantSettings';
 import ApprovalPending from '@/pages/ApprovalPending';
@@ -56,6 +57,7 @@ import AdminSystemLogs from '@/pages/admin/SystemLogs';
 import AdminSecurity from '@/pages/admin/Security';
 import AdminRoles from '@/pages/admin/Roles';
 import AdminGitHubReviews from '@/pages/admin/GitHubReviews';
+import AdminGateways from '@/pages/admin/Gateways';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -96,6 +98,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/pay/:slug" element={<PayLink />} />
+      <Route path="/payunit-return" element={<PayunitReturn />} />
       <Route path="/api-docs" element={<ApiDocs />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
@@ -144,6 +147,7 @@ const AuthenticatedApp = () => {
           <Route path="system-logs" element={<AdminSystemLogs />} />
           <Route path="security" element={<AdminSecurity />} />
           <Route path="github" element={<AdminGitHubReviews />} />
+          <Route path="gateways" element={<AdminGateways />} />
         </Route>
       </Route>
       <Route path="*" element={<PageNotFound />} />
