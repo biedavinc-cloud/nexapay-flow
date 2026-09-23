@@ -25,7 +25,7 @@ export default function HeroBackgroundSlider({ interval = 4500 }) {
       {IMAGES.map((src, idx) => (
         <div
           key={src}
-          className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
           style={{ opacity: idx === i ? 0.9 : 0 }}
           aria-hidden="true"
         >
