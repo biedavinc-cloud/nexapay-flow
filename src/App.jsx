@@ -42,6 +42,7 @@ import WebhookTester from '@/pages/WebhookTester';
 import ConnectionTester from '@/pages/ConnectionTester';
 import PaymentLinks from '@/pages/PaymentLinks';
 import PayLink from '@/pages/PayLink';
+import Pricing from '@/pages/Pricing';
 import PayunitReturn from '@/pages/PayunitReturn';
 import Onboarding from '@/pages/Onboarding';
 import MerchantSettings from '@/pages/MerchantSettings';
@@ -100,6 +101,7 @@ const AuthenticatedApp = () => {
       <Route path="/pay/:slug" element={<PayLink />} />
       <Route path="/payunit-return" element={<PayunitReturn />} />
       <Route path="/api-docs" element={<ApiDocs />} />
+      <Route path="/pricing" element={<Pricing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />

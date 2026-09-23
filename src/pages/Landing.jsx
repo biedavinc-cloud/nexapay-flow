@@ -41,9 +41,9 @@ const I18N = {
   },
   EN: {
     nav: { product: "Product", developers: "Developers", company: "Company", pricing: "Pricing", login: "Log in", start: "Create a free account", contact: "or Contact Sales" },
-    heroBadge: "Fiat → crypto instant payments",
-    heroTitle: "Modern online and offline payments, settled in crypto",
-    heroSub: "NexaPay helps businesses get paid by card or Mobile Money, and automatically credits USDT to your wallet — no balance to manage, no intermediary exchange.",
+    heroBadge: "Instant Crypto Settlement for Merchants",
+    heroTitle: "The fiat-to-crypto merchant gateway",
+    heroSub: "NexaPay is the next-gen PSP: get paid by card or Mobile Money, and receive your payouts instantly in USDT/USDC directly into your self-custody wallet. No balance, no intermediary exchange.",
     ctaStart: "Create a free account",
     ctaContact: "or Contact Sales",
     trusted: "Trusted by businesses across Africa and beyond",
@@ -64,7 +64,7 @@ const I18N = {
     s3link: "NexaPay API Quickstart",
     s4title: "Protect yourself and your customers with advanced fraud detection",
     s4text: "NexaPay's combination of automated and manual fraud systems protects you from fraudulent transactions and associated chargeback claims.",
-    noBalance: "No balance. No exchange. Every payment from your customer buys the crypto and credits it straight to your wallet.",
+    noBalance: "Direct Wallet Settlement PSP — every payment settles as crypto straight to your wallet, instantly.",
     footer: "Private property of an AI intellect",
     features: {
       c1: ["Card", "Bank Account", "Bank Transfer", "USSD", "POS"],
@@ -77,7 +77,7 @@ const I18N = {
 const PARTNERS = ["MTN", "Bolt", "AXA", "Domino's", "Uber"];
 
 export default function Landing() {
-  const [lang, setLang] = useState("FR");
+  const [lang, setLang] = useState("EN");
   const t = I18N[lang];
 
   const Check = ({ children }) => (
@@ -102,7 +102,7 @@ export default function Landing() {
             <a href="#product" className="hover:text-[#081735]">{t.nav.product}</a>
             <Link to="/api-docs" className="hover:text-[#081735]">{t.nav.developers}</Link>
             <a href="#company" className="hover:text-[#081735]">{t.nav.company}</a>
-            <a href="#pricing" className="hover:text-[#081735]">{t.nav.pricing}</a>
+            <Link to="/pricing" className="hover:text-[#081735]">{t.nav.pricing}</Link>
           </nav>
           <div className="flex items-center gap-3">
             <div className="flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium">
@@ -214,56 +214,29 @@ export default function Landing() {
       {/* Pricing */}
       <section id="pricing" className="bg-white">
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
-          <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">Tarifs & accès production</h2>
-          <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">Un frais d'accès unique débloque votre espace. La commission est prélevée à la source sur chaque conversion Fiat → USDT.</p>
+          <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">Pricing that scales with you</h2>
+          <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">A one-time setup fee unlocks your merchant account. Then pay a low per-transaction rate — and every payout settles instantly as USDT/USDC to your wallet.</p>
           <div className="grid md:grid-cols-3 gap-5 mt-10">
             {[
-              { name: "Basic", price: "$200", limit: "Jusqu'à $200 / jour", commission: "3,5%", highlight: false },
-              { name: "Advanced", price: "$619", limit: "Jusqu'à $5 000 / jour", commission: "2,0%", highlight: true },
-              { name: "Pro", price: "$1099", limit: "Volume illimité", commission: "0,8%", highlight: false },
+              { name: "Starter", price: "$49", limit: "Up to $10k / month", commission: "2.5% + $0.30", highlight: false },
+              { name: "Growth", price: "$99", limit: "Up to $50k / month", commission: "1.9% + $0.20", highlight: true },
+              { name: "Scale", price: "Custom", limit: "$50k+ / month", commission: "1.5% + $0.10", highlight: false },
             ].map((p) => (
               <div key={p.name} className={`rounded-2xl border p-6 ${p.highlight ? "border-[#3BB77E] bg-[#F9FFFB] shadow-sm" : "border-black/5"}`}>
                 <div className="font-semibold text-lg text-[#081735]">{p.name}</div>
                 <div className="text-3xl font-bold text-[#081735] my-2">{p.price}</div>
-                <div className="text-xs text-[#6D7A92]">Frais d'accès unique</div>
+                <div className="text-xs text-[#6D7A92]">One-time setup</div>
                 <ul className="mt-4 space-y-2 text-sm text-[#081735]">
-                  <li className="flex items-center gap-2"><Check /><span>Limite: {p.limit}</span></li>
-                  <li className="flex items-center gap-2"><Check /><span>Commission: {p.commission} par conversion</span></li>
-                  <li className="flex items-center gap-2"><Check /><span>Prélèvement à la source</span></li>
+                  <li className="flex items-center gap-2"><span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3BB77E]/15"><svg viewBox="0 0 24 24" className="h-3 w-3 text-[#3BB77E]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" /></svg></span><span>Volume: {p.limit}</span></li>
+                  <li className="flex items-center gap-2"><span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3BB77E]/15"><svg viewBox="0 0 24 24" className="h-3 w-3 text-[#3BB77E]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" /></svg></span><span>Rate: {p.commission} per txn</span></li>
+                  <li className="flex items-center gap-2"><span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3BB77E]/15"><svg viewBox="0 0 24 24" className="h-3 w-3 text-[#3BB77E]" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6 9 17l-5-5" /></svg></span><span>Instant USDT/USDC settlement</span></li>
                 </ul>
-                <Link to="/register"><Button className={`mt-6 w-full rounded-full ${p.highlight ? "bg-[#3BB77E] hover:bg-[#33a36e] text-white" : "bg-[#081735] hover:bg-[#0f2147] text-white"}`}>Choisir {p.name}</Button></Link>
+                <Link to="/register"><Button className={`mt-6 w-full rounded-full ${p.highlight ? "bg-[#3BB77E] hover:bg-[#33a36e] text-white" : "bg-[#081735] hover:bg-[#0f2147] text-white"}`}>Choose {p.name}</Button></Link>
               </div>
             ))}
           </div>
-          <div className="mt-12 overflow-x-auto rounded-2xl border border-black/5 bg-[#F9FFFB]">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-left text-[#6D7A92] border-b border-black/5">
-                  <th className="py-3 px-4 font-medium">Caractéristiques</th>
-                  <th className="py-3 px-4 font-medium">Basic</th>
-                  <th className="py-3 px-4 font-medium">Advanced</th>
-                  <th className="py-3 px-4 font-medium">Pro</th>
-                </tr>
-              </thead>
-              <tbody className="text-[#081735]">
-                {[
-                  ["Frais d'accès unique", "$200", "$619", "$1099"],
-                  ["Limite quotidienne", "$200 / jour", "$5 000 / jour", "Illimité"],
-                  ["Commission", "3,5%", "2,0%", "0,8%"],
-                  ["Prélèvement", "À la source", "À la source", "À la source"],
-                  ["KYC", "Simplifié (Identité + OTP)", "Standard (Identité + Liveness)", "Avancé (Entreprise + Kbis)"],
-                  ["Personnalisation Widget", "Couleur principale", "Couleur + Logo", "Couleur + Logo + Domaines"],
-                  ["Support", "Standard (Email)", "Prioritaire (Chat)", "Dédié 24/7 + API"],
-                ].map((r, i) => (
-                  <tr key={i} className="border-b border-black/5 last:border-0">
-                    <td className="py-3 px-4 font-medium">{r[0]}</td>
-                    <td className="py-3 px-4">{r[1]}</td>
-                    <td className="py-3 px-4">{r[2]}</td>
-                    <td className="py-3 px-4">{r[3]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="text-center mt-10">
+            <Link to="/pricing" className="inline-flex items-center gap-1.5 text-sm font-medium text-[#3BB77E] hover:underline">Explore the interactive rate calculator <ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>
       </section>
