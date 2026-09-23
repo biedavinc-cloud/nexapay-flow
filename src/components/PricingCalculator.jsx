@@ -52,7 +52,7 @@ export default function PricingCalculator() {
             const Icon = tb.icon;
             return (
               <button key={tb.id} type="button" onClick={() => setTab(tb.id)}
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors ${active ? "bg-[#1a1a4d] text-white shadow-sm" : "text-[#6D7A92] hover:text-[#081735]"}`}>
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors ${active ? "bg-[#081735] text-white shadow-sm" : "text-[#6D7A92] hover:text-[#081735]"}`}>
                 <Icon className="h-4 w-4" /> {tb.label}
               </button>
             );
@@ -73,11 +73,11 @@ export default function PricingCalculator() {
 
       {/* Main metric + secondary */}
       <div className="mt-6 grid md:grid-cols-2 gap-5 items-stretch">
-        <div className="rounded-2xl border border-black/5 bg-[#FAFAFF] p-6">
+        <div className="rounded-2xl border border-black/5 bg-[#F9FFFB] p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-[#6D7A92]">Your effective rate</p>
           <p className="text-4xl md:text-5xl font-bold text-[#081735] mt-2">{rates.primary[idx]}</p>
           <div className="flex items-center gap-3 mt-4">
-            <span className="inline-flex items-center rounded-full bg-[#1a1a4d] px-3 py-1 text-xs font-semibold text-white">{plan.name} plan</span>
+            <span className="inline-flex items-center rounded-full bg-[#081735] px-3 py-1 text-xs font-semibold text-white">{plan.name} plan</span>
             <span className="text-sm text-[#081735]"><span className="font-semibold">{plan.fee}</span> one-time</span>
           </div>
         </div>
@@ -85,11 +85,11 @@ export default function PricingCalculator() {
           <p className="text-xs font-semibold uppercase tracking-wider text-[#6D7A92]">Other card types</p>
           <div className="mt-3 space-y-3">
             <div className="flex items-center justify-between rounded-xl bg-[#F9FFFB] px-4 py-3">
-              <span className="flex items-center gap-2 text-sm text-[#081735]"><CreditCard className="h-4 w-4 text-[#6D4AFF]" /> Global cards</span>
+              <span className="flex items-center gap-2 text-sm text-[#081735]"><CreditCard className="h-4 w-4 text-[#3BB77E]" /> Global cards</span>
               <span className="font-semibold text-[#081735]">{rates.other.global}</span>
             </div>
             <div className="flex items-center justify-between rounded-xl bg-[#F9FFFB] px-4 py-3">
-              <span className="flex items-center gap-2 text-sm text-[#081735]"><Smartphone className="h-4 w-4 text-[#6D4AFF]" /> Local methods</span>
+              <span className="flex items-center gap-2 text-sm text-[#081735]"><Smartphone className="h-4 w-4 text-[#3BB77E]" /> Local methods</span>
               <span className="font-semibold text-[#081735]">{rates.other.local}</span>
             </div>
           </div>
@@ -100,11 +100,11 @@ export default function PricingCalculator() {
       <div className="mt-8">
         <div className="flex items-center justify-between">
           <p className="text-sm font-medium text-[#081735]">Monthly volume</p>
-          <p className="text-sm font-semibold text-[#6D4AFF]">{fmtVol(volume)}</p>
+          <p className="text-sm font-semibold text-[#3BB77E]">{fmtVol(volume)}</p>
         </div>
         <div className="relative mt-4 h-2 w-full rounded-full bg-[#E2E8F0]">
-          <div className="absolute h-2 rounded-full bg-[#6D4AFF]" style={{ width: `${pct}%` }} />
-          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-5 w-5 rounded-full bg-white border-2 border-[#6D4AFF] shadow" style={{ left: `${pct}%` }} />
+          <div className="absolute h-2 rounded-full bg-[#3BB77E]" style={{ width: `${pct}%` }} />
+          <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-5 w-5 rounded-full bg-white border-2 border-[#3BB77E] shadow" style={{ left: `${pct}%` }} />
           <input type="range" min={0} max={100000} step={1000} value={volume}
             onChange={(e) => setVolume(Number(e.target.value))}
             className="absolute inset-0 w-full opacity-0 cursor-pointer" aria-label="Monthly volume" />
@@ -122,7 +122,7 @@ export default function PricingCalculator() {
         {TIERS.map((row, i) => {
           const active = i === idx;
           return (
-            <div key={i} className={`grid grid-cols-3 text-sm ${active ? "bg-[#E0D7FF] text-[#1a1a4d] font-semibold" : "text-[#081735] border-t border-black/5"}`}>
+            <div key={row.volume} className={`grid grid-cols-3 text-sm ${active ? "bg-[#DCFCE7] text-[#081735] font-semibold" : "text-[#081735] border-t border-black/5"}`}>
               <div className="px-4 py-3 font-medium">{rates.primary[i]}</div>
               <div className="px-4 py-3">{row.volume}</div>
               <div className="px-4 py-3">{PLANS[i].name} · {PLANS[i].fee}</div>

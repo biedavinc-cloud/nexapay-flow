@@ -70,8 +70,8 @@ export default function Pricing() {
           <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">No games, just transparency</h2>
           <div className="grid md:grid-cols-3 gap-5 mt-8">
             {TRANSPARENCY.map((c) => (
-              <div key={c.title} className="rounded-2xl bg-[#1a1a4d] p-7 text-white">
-                <p className="text-4xl font-bold text-[#FCE566]">{c.big}</p>
+              <div key={c.title} className="rounded-2xl bg-[#081735] p-7 text-white">
+                <p className="text-4xl font-bold text-[#3BB77E]">{c.big}</p>
                 <h3 className="font-semibold text-lg mt-3">{c.title}</h3>
                 <p className="text-sm text-white/70 mt-2">{c.text}</p>
               </div>
