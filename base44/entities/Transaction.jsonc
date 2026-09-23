@@ -23,6 +23,16 @@
       "default": "USDT",
       "description": "Asset code for direct crypto orders"
     },
+    "fee_amount_fiat": {
+      "type": "number",
+      "default": 0,
+      "description": "NexaPay fiat commission charged on the order"
+    },
+    "net_fiat_amount": {
+      "type": "number",
+      "default": 0,
+      "description": "Fiat amount after NexaPay commission (converted to USDT)"
+    },
     "gateway_fee": {
       "type": "number",
       "default": 0,
@@ -52,6 +62,10 @@
       "type": "number",
       "description": "Gross USDT before commission"
     },
+    "usdt_amount_estimated": {
+      "type": "number",
+      "description": "USDT estimate shown to the client at quote time (net of commission)"
+    },
     "usdt_net_sent": {
       "type": "number",
       "description": "Net USDT sent to the merchant wallet"
@@ -71,6 +85,18 @@
       "default": "DIRECT_CRYPTO",
       "description": "How the order was initiated"
     },
+    "psp_provider": {
+      "type": "string",
+      "enum": [
+        "KORAPAY",
+        "PAYUNIT"
+      ],
+      "description": "Which PSP captured the fiat (white-labeled under NexaPay)"
+    },
+    "korapay_reference": {
+      "type": "string",
+      "description": "Korapay transaction/payment reference (KPY-...)"
+    },
     "crypto_provider": {
       "type": "string",
       "enum": [
@@ -80,7 +106,7 @@
         "COINBASE",
         "WEB3_DIRECT"
       ],
-      "description": "Exchange that executed the order"
+      "description": "Exchange that executed the order (empty until real execution)"
     },
     "destination_wallet": {
       "type": "string",
@@ -89,13 +115,18 @@
     "status": {
       "type": "string",
       "enum": [
+        "INITIATED",
+        "FIAT_RECEIVED",
+        "CRYPTO_PROCESSING",
+        "COMPLETED",
+        "CRYPTO_FAILED",
+        "REFUNDED",
         "PENDING",
         "FIAT_APPROVED",
         "PROCESSING_CRYPTO",
-        "COMPLETED",
         "FAILED"
       ],
-      "default": "PENDING",
+      "default": "INITIATED",
       "description": "Current execution state"
     },
     "payload_base64": {
@@ -108,7 +139,7 @@
     },
     "error_message": {
       "type": "string",
-      "description": "Failure reason if FAILED"
+      "description": "Failure reason if FAILED / CRYPTO_FAILED"
     }
   },
   "required": [
@@ -117,7 +148,6 @@
     "usdt_amount",
     "exchange_rate",
     "payment_method",
-    "crypto_provider",
     "destination_wallet",
     "status"
   ],
@@ -131,6 +161,11 @@
           "user_condition": {
             "role": "admin"
           }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
         }
       ]
     },
@@ -142,6 +177,11 @@
         {
           "user_condition": {
             "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
           }
         }
       ]
@@ -155,13 +195,27 @@
           "user_condition": {
             "role": "admin"
           }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
         }
       ]
     },
     "delete": {
-      "user_condition": {
-        "role": "admin"
-      }
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "SUPER_ADMIN"
+          }
+        }
+      ]
     }
   }
 }

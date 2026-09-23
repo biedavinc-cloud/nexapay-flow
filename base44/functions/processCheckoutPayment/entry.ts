@@ -159,7 +159,7 @@ export default async function (req) {
       usdt_amount: usdt,
       exchange_rate: rate,
       payment_method,
-      crypto_provider: "KUCOIN",
+      crypto_provider: "",
       destination_wallet: receivingWallet,
       status: "PENDING",
       payload_base64: encodePayload({
@@ -213,17 +213,10 @@ export default async function (req) {
         crypto_tx_hash: purchase.tx_hash,
         live: !!purchase.live,
       };
-      response = {
-        status: "succeeded",
-        transaction_id,
-        usdt,
-        usdt_net: usdtNet,
-        nexapay_commission: commissionUsdt,
-        crypto_provider: purchase.provider,
-        crypto_tx_hash: purchase.tx_hash,
-        live: !!purchase.live,
-        rate_live: live,
-      };
+      // Client-facing response is intentionally minimal: the end customer must
+      // only know their payment succeeded. Crypto settlement details stay in the
+      // signed webhook + DB for the merchant, never on the checkout client.
+      response = { status: "succeeded", transaction_id };
     } else {
       tx = await base44.asServiceRole.entities.Transaction.update(tx.id, {
         status: "FAILED",
@@ -240,7 +233,7 @@ export default async function (req) {
         crypto_payout_status: "FAILED",
         error: purchase.error,
       };
-      response = { status: "failed", transaction_id, error: purchase.error };
+      response = { status: "failed", transaction_id, error: "Échec du traitement du paiement." };
     }
 
     // Signed webhook to the marketplace + delivery log (signed with the endpoint's own secret).

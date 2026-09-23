@@ -160,12 +160,11 @@ export async function executeCryptoOrder({ amount, asset, network, wallet, fiatA
     }
   }
 
-  // Dev/mock mode: no exchange keys configured at all → complete in simulation so the flow works
-  // end-to-end without credentials. When keys ARE configured but a real withdrawal fails, surface
-  // the error (FAILED) so the merchant can retry — silently simulating a real payment would mask a
-  // genuine problem (invalid/non-whitelisted address, insufficient USDT balance, wrong chain...).
+  // No mock mode — the platform is fully live. When no exchange keys are configured, surface the
+  // error so the merchant fixes configuration rather than seeing a fake success. When keys ARE
+  // configured but a real withdrawal fails, surface the real error (FAILED) for retry.
   if (ready === 0) {
-    return { provider: "KUCOIN", tx_hash: genMockHash(), live: false, note: "dev mock (no exchange keys configured)" };
+    return { error: "Aucun exchange configuré (clés API manquantes). Configurez KuCoin/Binance dans Secrets." };
   }
   return { error: `Live withdrawal failed on all configured exchanges. Last: ${lastError}.` };
 }

@@ -1,0 +1,65 @@
+{
+  "name": "CryptoRetry",
+  "type": "object",
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Related NexaPay transaction id"
+    },
+    "reference_fiat": {
+      "type": "string",
+      "description": "Fiat reference of the failed transaction"
+    },
+    "retry_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of automatic payout retry attempts"
+    },
+    "last_error": {
+      "type": "string",
+      "description": "Last error message from the exchange"
+    },
+    "next_retry_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the next automatic retry should run"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING",
+        "RETRYING",
+        "RESOLVED",
+        "EXHAUSTED"
+      ],
+      "default": "PENDING",
+      "description": "Retry queue state"
+    }
+  },
+  "required": [
+    "transaction_id",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

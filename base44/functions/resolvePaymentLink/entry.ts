@@ -25,6 +25,7 @@ export default async function(req) {
       network: link.network || "TRC20",
       description: link.description || "",
       slug: link.slug,
+      tenant_id: link.tenant_id || "",
     });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });

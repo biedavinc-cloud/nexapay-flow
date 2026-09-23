@@ -1,82 +1,49 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Loader2, Lock, CheckCircle2, Send, CreditCard, Smartphone, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Loader2, Lock, Send, ShieldCheck, CreditCard, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import CardFields from "@/components/checkout/CardFields";
-import MoMoFields from "@/components/checkout/MoMoFields";
-import ProcessingOverlay from "@/components/checkout/ProcessingOverlay";
+import { CheckCircle2, XCircle } from "lucide-react";
 import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
+import CardFields, { validateCardBrand } from "@/components/checkout/CardFields";
+import ThreeDSModal from "@/components/checkout/ThreeDSModal";
+import UssdPromptModal from "@/components/checkout/UssdPromptModal";
+import MoMoFields from "@/components/checkout/MoMoFields";
+import { COUNTRIES } from "@/lib/countries";
 
 const FALLBACK_PK = "nexa_pk_test_123";
+const COUNTRY_BY_CURRENCY = { XAF: "CM", XOF: "CI", GHS: "GH", NGN: "NG", EUR: "FR", USD: "US" };
 
 const I18N = {
   FR: {
-    secure: "Paiement sécurisé",
-    poweredBy: "Paiement sécurisé par",
-    order: "Commande",
-    pay: "Payer",
-    processing: "Traitement…",
-    back: "Retour au tableau de bord",
-    email: "Email de confirmation",
+    secure: "Paiement sécurisé", poweredBy: "Paiement sécurisé par", order: "Commande", product: "Produit", pay: "Payer",
+    processing: "Traitement…", back: "Retour au tableau de bord", email: "Email de confirmation",
     emailPh: "jean.dupont@email.com",
-    card: "Carte bancaire",
-    momo: "Mobile Money",
-    success: "Paiement confirmé",
-    successMsg: "Merci pour votre achat. Votre paiement a bien été reçu par NexaPay.",
-    ref: "Référence",
-    again: "Nouveau paiement",
-    usdt: "USDT livrés",
-    net: "Réseau",
-    prov: "Exécuteur",
-    txhash: "Hash de règlement",
-    liveBadge: "Exécution réelle",
-    mockBadge: "Mode démo",
-    errAmount: "Montant de la commande indisponible.",
-    errEmail: "Veuillez saisir un email valide.",
-    errCard: "Numéro de carte invalide.",
-    errExp: "Date d'expiration invalide.",
-    errCvc: "CVC invalide.",
-    errName: "Nom du titulaire requis.",
-    errProvider: "Veuillez choisir un opérateur.",
-    errPrefix: "Indicatif pays requis.",
-    errPhone: "Numéro mobile money requis.",
-    errFail: "Échec du paiement.",
+    methodCard: "Carte bancaire", methodMomo: "Mobile Money",
+    success: "Paiement confirmé", successMsg: "Merci. Votre paiement a bien été reçu par NexaPay.",
+    ref: "Référence", again: "Nouveau paiement", closeTab: "Vous pouvez fermer cet onglet.",
+    errAmount: "Montant indisponible.", errEmail: "Veuillez saisir un email valide.",
+    errCard: "Veuillez saisir un numéro de carte valide.", errCvc: "CVC invalide.", errExpiry: "Date d'expiration invalide.",
+    errPhone: "Veuillez saisir un numéro de téléphone valide.", errMomo: "Opérateur Mobile Money non supporté pour ce pays.",
+    errFail: "Échec du paiement.", timedOut: "Délai de confirmation dépassé.",
+    waitingTitle: "Validation en cours…",
+    waitingMsg: "Confirmez le paiement sur votre téléphone.",
   },
   EN: {
-    secure: "Secure payment",
-    poweredBy: "Secure payment by",
-    order: "Order",
-    pay: "Pay",
-    processing: "Processing…",
-    back: "Back to dashboard",
-    email: "Confirmation email",
+    secure: "Secure payment", poweredBy: "Secure payment by", order: "Order", product: "Product", pay: "Pay",
+    processing: "Processing…", back: "Back to dashboard", email: "Confirmation email",
     emailPh: "john.doe@email.com",
-    card: "Bank card",
-    momo: "Mobile Money",
-    success: "Payment confirmed",
-    successMsg: "Thank you for your purchase. Your payment has been received by NexaPay.",
-    ref: "Reference",
-    again: "New payment",
-    usdt: "USDT delivered",
-    net: "Network",
-    prov: "Executor",
-    txhash: "Settlement hash",
-    liveBadge: "Live execution",
-    mockBadge: "Demo mode",
-    errAmount: "Order amount unavailable.",
-    errEmail: "Please enter a valid email.",
-    errCard: "Invalid card number.",
-    errExp: "Invalid expiration date.",
-    errCvc: "Invalid CVC.",
-    errName: "Cardholder name required.",
-    errProvider: "Please choose an operator.",
-    errPrefix: "Country code required.",
-    errPhone: "Mobile money number required.",
-    errFail: "Payment failed.",
+    methodCard: "Bank card", methodMomo: "Mobile Money",
+    success: "Payment confirmed", successMsg: "Thank you. Your payment has been received by NexaPay.",
+    ref: "Reference", again: "New payment", closeTab: "You can close this tab.",
+    errAmount: "Amount unavailable.", errEmail: "Please enter a valid email.",
+    errCard: "Please enter a valid card number.", errCvc: "Invalid CVC.", errExpiry: "Invalid expiry date.",
+    errPhone: "Please enter a valid phone number.", errMomo: "Mobile Money operator not supported for this country.",
+    errFail: "Payment failed.", timedOut: "Confirmation timed out.",
+    waitingTitle: "Validation in progress…",
+    waitingMsg: "Confirm the payment on your phone.",
   },
 };
 
@@ -88,18 +55,6 @@ const formatTotal = (amount, currency, lang) => {
   }
 };
 
-const luhnValid = (num) => {
-  const n = (num || "").replace(/\D/g, "");
-  if (n.length < 13) return false;
-  let s = 0, alt = false;
-  for (let i = n.length - 1; i >= 0; i--) {
-    let d = +n[i];
-    if (alt) { d *= 2; if (d > 9) d -= 9; }
-    s += d; alt = !alt;
-  }
-  return s % 10 === 0;
-};
-
 export default function NewTransaction() {
   const navigate = useNavigate();
   const params = new URLSearchParams(window.location.search);
@@ -107,92 +62,161 @@ export default function NewTransaction() {
   const clientSecret = params.get("client_secret") || "";
   const publishableKey = params.get("publishable_key") || FALLBACK_PK;
 
-  const [lang, setLang] = useState("FR");
+  const [lang, setLang] = useState("EN");
   const t = I18N[lang];
 
   const [amount] = useState(() => Number(params.get("amount")) || 50);
   const [currency] = useState(params.get("currency") || "EUR");
   const network = params.get("network") || "TRC20";
+  const tenantId = params.get("tenant_id") || "";
   const orderRef = params.get("order_id") || "";
+  const product = params.get("product") || params.get("label") || "";
   const webhookUrl = params.get("webhook_url") || "";
 
-  const [method, setMethod] = useState("CARD");
-  const [card, setCard] = useState({ number: "", expiry: "", cvc: "", name: "" });
-  const [momo, setMomo] = useState({ provider: "", prefix: "", phone: "" });
+  const [method, setMethod] = useState("card");
   const [email, setEmail] = useState("");
-  const [processing, setProcessing] = useState(false);
-  const [step, setStep] = useState(0);
-  const [success, setSuccess] = useState(false);
-  const [result, setResult] = useState(null);
+  const [card, setCard] = useState({ number: "", expiry: "", cvc: "", name: "" });
+  const defaultCountry = COUNTRY_BY_CURRENCY[currency] || "CM";
+  const defaultDial = (COUNTRIES.find((c) => c.code === defaultCountry) || {}).dial || "";
+  const [momo, setMomo] = useState({ country: defaultCountry, prefix: defaultDial, phone: "", provider: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [waiting, setWaiting] = useState(false);
+  const [threeDS, setThreeDS] = useState(null);
+  const [ussd, setUssd] = useState(null);
+  const [done, setDone] = useState(null);
   const [error, setError] = useState("");
+  const doneRef = useRef(false);
   const timers = useRef([]);
-  useEffect(() => () => timers.current.forEach((id) => clearTimeout(id)), []);
+  useEffect(() => () => { doneRef.current = true; timers.current.forEach((id) => clearTimeout(id)); }, []);
 
   const total = formatTotal(amount, currency, lang);
 
-  const handleSubmit = async (e) => {
+  const onCardChange = (field, val) => setCard((c) => ({ ...c, [field]: val }));
+  const onMomoChange = (field, val) => setMomo((m) => ({ ...m, [field]: val }));
+
+  const finishSuccess = (reference, transactionId) => {
+    doneRef.current = true; setDone({ status: "COMPLETED", reference, transaction_id: transactionId });
+    setWaiting(false); setThreeDS(null); setUssd(null);
+    try { window.parent.postMessage({ status: "PAYMENT_SUCCESS", transactionId, reference }, "*"); } catch {}
+  };
+  const finishFailed = (reference, msg) => {
+    doneRef.current = true; setDone({ status: "FAILED", reference }); setWaiting(false); setThreeDS(null); setUssd(null);
+    setError(msg || t.errFail);
+    try { window.parent.postMessage({ status: "PAYMENT_FAILED", reference }, "*"); } catch {}
+  };
+
+  const pollKorapay = (reference) => {
+    const poll = async () => {
+      try {
+        const r = await base44.functions.invoke("korapayVerify", { reference });
+        const d = r?.data || r;
+        if (doneRef.current) return;
+        if (d.status === "COMPLETED") return finishSuccess(d.reference || reference, d.transaction_id);
+        if (d.status === "FAILED" || d.status === "CRYPTO_FAILED") return finishFailed(d.reference || reference, d.error);
+        const id = setTimeout(poll, 3000); timers.current.push(id);
+      } catch { const id = setTimeout(poll, 4000); timers.current.push(id); }
+    };
+    poll();
+    const stop = setTimeout(() => { if (!doneRef.current) finishFailed(reference, t.timedOut); }, 600000);
+    timers.current.push(stop);
+  };
+
+  const pollMoMo = (reference) => {
+    const poll = async () => {
+      try {
+        const r = await base44.functions.invoke("checkPayunitStatus", { ref: reference });
+        const d = r?.data || r;
+        if (doneRef.current) return;
+        if (d.status === "COMPLETED") return finishSuccess(d.reference || reference, d.transaction_id);
+        if (d.status === "FAILED") return finishFailed(d.reference || reference, d.error);
+        const id = setTimeout(poll, 3000); timers.current.push(id);
+      } catch { const id = setTimeout(poll, 4000); timers.current.push(id); }
+    };
+    poll();
+    const stop = setTimeout(() => { if (!doneRef.current) finishFailed(reference, t.timedOut); }, 600000);
+    timers.current.push(stop);
+  };
+
+  const handleCardSubmit = async (e) => {
     e.preventDefault();
     setError("");
     if (!amount || amount <= 0) return setError(t.errAmount);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return setError(t.errEmail);
-    if (method === "CARD") {
-      if (!luhnValid(card.number)) return setError(t.errCard);
-      if (!/^\d{2}\/\d{2}$/.test(card.expiry)) return setError(t.errExp);
-      if (!card.cvc) return setError(t.errCvc);
-      if (!card.name.trim()) return setError(t.errName);
-    } else {
-      if (!momo.provider) return setError(t.errProvider);
-      if (!momo.prefix) return setError(t.errPrefix);
-      if (!momo.phone) return setError(t.errPhone);
-    }
+    if (!validateCardBrand(card.number)) return setError(t.errCard);
+    if (!/^\d{2}\/\d{2}$/.test(card.expiry)) return setError(t.errExpiry);
+    if (card.cvc.length < 3) return setError(t.errCvc);
 
-    const payload = {
-      client_secret: clientSecret,
-      payment_method: method,
-      order_id: orderRef,
-      webhook_url: webhookUrl,
-      amount: clientSecret ? undefined : amount,
-      currency: clientSecret ? undefined : currency,
-      network: clientSecret ? undefined : network,
-      card: method === "CARD" ? card : undefined,
-      momo: method === "MOBILE_MONEY" ? momo : undefined,
-      payer: { email: email.trim() },
-    };
-
-    setProcessing(true);
-    setStep(0);
-    const t1 = setTimeout(() => setStep(1), 900); timers.current.push(t1);
-    const t2 = setTimeout(() => setStep(2), 1800); timers.current.push(t2);
+    setSubmitting(true);
     try {
-      const res = await base44.functions.invoke("processCheckoutPayment", { ...payload, key: publishableKey });
+      const [mm, yy] = card.expiry.split("/");
+      const res = await base44.functions.invoke("korapayCharge", {
+        tenant_id: tenantId || undefined,
+        amount, currency, network,
+        order_id: orderRef || undefined, webhook_url: webhookUrl || undefined,
+        customer_name: card.name || undefined, customer_email: email.trim(),
+        card: { number: card.number.replace(/\s+/g, ""), cvv: card.cvc, expiry_month: mm, expiry_year: yy },
+      });
       const data = res?.data || res;
-      if (data.status !== "succeeded") throw new Error(data.error || t.errFail);
-      clearTimeout(t1);
-      clearTimeout(t2);
-      setStep(3);
-      const t3 = setTimeout(() => {
-        try {
-          window.parent.postMessage(
-            { status: "PAYMENT_SUCCESS", transactionId: data.transaction_id, cryptoTxHash: data.crypto_tx_hash },
-            "*"
-          );
-        } catch (_) {}
-        setProcessing(false);
-        setResult(data);
-        setSuccess(true);
-      }, 700);
-      timers.current.push(t3);
+
+      if (data.status === "3DS") {
+        setSubmitting(false); setThreeDS({ url: data.auth_url, reference: data.reference });
+        pollKorapay(data.reference);
+        return;
+      }
+      if (data.status === "SUCCESS") {
+        setSubmitting(false);
+        const s = data.settlement || {};
+        if (s.status === "COMPLETED") return finishSuccess(data.reference, data.transaction_id);
+        setWaiting(true); pollKorapay(data.reference);
+        return;
+      }
+      if (data.status === "PENDING") {
+        setSubmitting(false); setWaiting(true); pollKorapay(data.reference);
+        return;
+      }
+      throw new Error(data.error || t.errFail);
     } catch (err) {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      setError(err.message || t.errFail);
-      setProcessing(false);
+      setError(err.message || t.errFail); setSubmitting(false);
     }
   };
 
-  const reset = () => { setSuccess(false); setResult(null); setError(""); setStep(0); };
+  const handleMomoSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    if (!amount || amount <= 0) return setError(t.errAmount);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return setError(t.errEmail);
+    if (!momo.phone || momo.phone.length < 6) return setError(t.errPhone);
+    if (!momo.provider) return setError(t.errMomo);
 
-  if (success) {
+    setSubmitting(true);
+    try {
+      const res = await base44.functions.invoke("initMoMoCharge", {
+        key: clientSecret ? undefined : publishableKey,
+        client_secret: clientSecret || undefined,
+        amount: clientSecret ? undefined : amount,
+        currency: clientSecret ? undefined : currency,
+        network: clientSecret ? undefined : network,
+        tenant_id: tenantId || undefined,
+        order_id: orderRef || undefined, webhook_url: webhookUrl || undefined, embed: isEmbed,
+        payer: { email: email.trim() },
+        country: momo.country, operator: momo.provider, phone: momo.phone,
+      });
+      const data = res?.data || res;
+      if (data.status !== "pending") throw new Error(data.error || t.errFail);
+
+      setSubmitting(false);
+      doneRef.current = false;
+      setUssd({ reference: data.reference, phone: momo.phone });
+      pollMoMo(data.reference);
+    } catch (err) {
+      setError(err.message || t.errFail); setSubmitting(false);
+    }
+  };
+
+  const reset = () => { setDone(null); setError(""); setWaiting(false); setThreeDS(null); setUssd(null); };
+
+  // Success
+  if (done && done.status === "COMPLETED") {
     return (
       <div className="max-w-md w-full mx-auto px-4 py-8">
         <div className="rounded-2xl border border-border bg-card p-7 shadow-sm text-center">
@@ -202,19 +226,61 @@ export default function NewTransaction() {
           <NexaMark size={38} className="mx-auto mt-4" />
           <h2 className="font-display text-xl font-semibold mt-3">{t.success}</h2>
           <p className="text-sm text-muted-foreground mt-1">{t.successMsg}</p>
-          <div className="mt-4 rounded-xl border border-border bg-secondary/40 px-4 py-3">
+          <div className="mt-4 rounded-xl border border-border bg-secondary/40 px-4 py-3 space-y-2">
+            {product && (
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-muted-foreground">{t.product}</span>
+                <span className="font-medium">{product}</span>
+              </div>
+            )}
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">{t.order}</span>
               <span className="font-display font-semibold">{total}</span>
             </div>
-            {orderRef && (
-              <div className="flex items-center justify-between text-xs mt-2 pt-2 border-t border-border">
+            {done.reference && (
+              <div className="flex items-center justify-between text-xs pt-2 border-t border-border">
                 <span className="text-muted-foreground">{t.ref}</span>
-                <span className="font-mono">{orderRef}</span>
+                <span className="font-mono">{done.reference}</span>
               </div>
             )}
           </div>
           <p className="mt-4 text-[11px] text-muted-foreground">{t.poweredBy} NexaPay</p>
+          {isEmbed && <p className="mt-3 text-sm text-muted-foreground">{t.closeTab}</p>}
+          {!isEmbed && <Button onClick={reset} variant="outline" className="rounded-full mt-4">{t.again}</Button>}
+        </div>
+      </div>
+    );
+  }
+
+  // Waiting (Card 3DS settlement / MoMo polling — MoMo shows the USSD modal instead)
+  if (waiting && !ussd) {
+    return (
+      <div className="max-w-md w-full mx-auto px-4 py-8">
+        <div className="rounded-2xl border border-border bg-card p-7 shadow-sm text-center">
+          <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+            <Loader2 className="h-7 w-7 text-primary animate-spin" />
+          </div>
+          <NexaMark size={38} className="mx-auto mt-4" />
+          <h2 className="font-display text-xl font-semibold mt-3">{t.waitingTitle}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t.waitingMsg}</p>
+          {error && <div className="mt-4 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-600">{error}</div>}
+          <p className="mt-4 text-[11px] text-muted-foreground">{t.poweredBy} NexaPay</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Failed
+  if (done && done.status === "FAILED") {
+    return (
+      <div className="max-w-md w-full mx-auto px-4 py-8">
+        <div className="rounded-2xl border border-border bg-card p-7 shadow-sm text-center">
+          <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-red-50 border border-red-200">
+            <XCircle className="h-7 w-7 text-red-600" />
+          </div>
+          <NexaMark size={38} className="mx-auto mt-4" />
+          <h2 className="font-display text-xl font-semibold mt-3">{t.errFail}</h2>
+          {error && <p className="text-sm text-muted-foreground mt-1">{error}</p>}
           <Button onClick={reset} variant="outline" className="rounded-full mt-5">{t.again}</Button>
         </div>
       </div>
@@ -223,6 +289,18 @@ export default function NewTransaction() {
 
   return (
     <div className="max-w-md w-full mx-auto px-4 py-8">
+      {threeDS && (
+        <ThreeDSModal url={threeDS.url} lang={lang} busy={waiting}
+          onClose={() => { setThreeDS(null); setWaiting(true); }}
+          onDone={() => { setThreeDS(null); setWaiting(true); pollKorapay(threeDS.reference); }}
+        />
+      )}
+      {ussd && (
+        <UssdPromptModal phone={momo.prefix && momo.phone ? `${momo.prefix}${momo.phone}` : momo.phone} lang={lang}
+          onCancel={() => { setUssd(null); setWaiting(false); reset(); }}
+        />
+      )}
+
       {!isEmbed && (
         <Button type="button" variant="outline" onClick={() => navigate("/dashboard")} className="rounded-full mb-6">
           <ArrowLeft className="h-4 w-4 mr-1.5" /> {t.back}
@@ -230,9 +308,13 @@ export default function NewTransaction() {
       )}
 
       <div className="relative rounded-2xl border border-border bg-card p-6 md:p-7 shadow-sm">
-        {processing && <ProcessingOverlay lang={lang} step={step} />}
+        {submitting && (
+          <div className="absolute inset-0 z-10 rounded-2xl bg-card/80 backdrop-blur-sm flex flex-col items-center justify-center gap-3">
+            <Loader2 className="h-7 w-7 animate-spin text-primary" />
+            <p className="text-sm text-muted-foreground">{t.processing}</p>
+          </div>
+        )}
 
-        {/* Merchant lockup + language toggle */}
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             <NexaMark size={44} />
@@ -247,37 +329,45 @@ export default function NewTransaction() {
           </div>
         </div>
 
-        {/* Order amount — equivalent of the product amount (read-only) */}
         <div className="mt-5 rounded-xl border border-border bg-secondary/40 px-4 py-3.5">
+          {product && (
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-muted-foreground">{t.product}</span>
+              <span className="text-sm font-medium">{product}</span>
+            </div>
+          )}
           <div className="flex items-center justify-between">
             <span className="text-sm text-muted-foreground">{t.order}</span>
             <span className="font-display text-2xl font-semibold tracking-tight">{total}</span>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-5">
-          <Tabs value={method} onValueChange={setMethod}>
-            <TabsList className="grid grid-cols-2 w-full rounded-xl">
-              <TabsTrigger value="CARD" className="rounded-xl"><CreditCard className="h-4 w-4 mr-1.5" /> {t.card}</TabsTrigger>
-              <TabsTrigger value="MOBILE_MONEY" className="rounded-xl"><Smartphone className="h-4 w-4 mr-1.5" /> {t.momo}</TabsTrigger>
-            </TabsList>
-            <TabsContent value="CARD" className="mt-4">
-              <CardFields lang={lang} value={card} onChange={(k, v) => setCard((c) => ({ ...c, [k]: v }))} />
-            </TabsContent>
-            <TabsContent value="MOBILE_MONEY" className="mt-4">
-              <MoMoFields lang={lang} value={momo} onChange={(k, v) => setMomo((m) => ({ ...m, [k]: v }))} />
-            </TabsContent>
-          </Tabs>
+        {/* Payment method selection */}
+        <div className="mt-5 grid grid-cols-2 gap-2 rounded-xl border border-border bg-secondary/30 p-1">
+          <button type="button" onClick={() => setMethod("card")} className={`flex items-center justify-center gap-2 rounded-lg py-2 text-sm font-medium transition-colors ${method === "card" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"}`}>
+            <CreditCard className="h-4 w-4" /> {t.methodCard}
+          </button>
+          <button type="button" onClick={() => setMethod("momo")} className={`flex items-center justify-center gap-2 rounded-lg py-2 text-sm font-medium transition-colors ${method === "momo" ? "bg-card text-foreground shadow-sm" : "text-muted-foreground"}`}>
+            <Smartphone className="h-4 w-4" /> {t.methodMomo}
+          </button>
+        </div>
 
+        <form onSubmit={method === "card" ? handleCardSubmit : handleMomoSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
             <Label htmlFor="email">{t.email}</Label>
             <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t.emailPh} className="rounded-xl" />
           </div>
 
+          {method === "card" ? (
+            <CardFields value={card} onChange={onCardChange} lang={lang} />
+          ) : (
+            <MoMoFields value={momo} onChange={onMomoChange} lang={lang} />
+          )}
+
           {error && <div className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-600">{error}</div>}
 
-          <Button type="submit" disabled={processing} className="w-full rounded-full bg-primary text-primary-foreground font-semibold shadow-sm hover:shadow-md transition-shadow h-11">
-            {processing ? <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> {t.processing}</>
+          <Button type="submit" disabled={submitting} className="w-full rounded-full bg-primary text-primary-foreground font-semibold shadow-sm hover:shadow-md transition-shadow h-11">
+            {submitting ? <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> {t.processing}</>
               : <><Send className="h-4 w-4 mr-2" /> {t.pay} {total}</>}
           </Button>
         </form>

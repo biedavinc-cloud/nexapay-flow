@@ -9,7 +9,9 @@ const WHITELIST = [
 // SuperAdmin role provisioning & management.
 // - provision: auto-promote the caller if their email is whitelisted.
 // - list: return all users + active superadmin count (SUPER_ADMIN only).
-// - setRole: promote/revoke SUPER_ADMIN, enforcing the 2-superadmin minimum guard.
+// - setRole: promote/revoke SUPER_ADMIN or assign a custom staff role,
+//   enforcing the 2-superadmin minimum guard.
+// - invite: invite a new user by email with an initial role.
 export default async function (req) {
   try {
     const base44 = createClientFromRequest(req);
@@ -82,6 +84,34 @@ export default async function (req) {
         });
       } catch {}
       return Response.json({ ok: true });
+    }
+
+    if (action === "invite") {
+      if (!canManage) return Response.json({ error: "Forbidden" }, { status: 403 });
+      const email = String(body.email || "").trim().toLowerCase();
+      const role = body.role || "user";
+      if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
+        return Response.json({ error: "Email invalide" }, { status: 400 });
+      try {
+        await base44.users.inviteUser(email, role);
+      } catch (e) {
+        // Platform may restrict invite roles to admin/user — fallback then retry.
+        if (role !== "user") {
+          try { await base44.users.inviteUser(email, "user"); }
+          catch (e2) { return Response.json({ error: e2?.message || "Invitation échouée" }, { status: 500 }); }
+        } else {
+          return Response.json({ error: e?.message || "Invitation échouée" }, { status: 500 });
+        }
+      }
+      try {
+        await sr.SuperadminAuditLog.create({
+          action: `invite:${role}`,
+          admin_id: me.id,
+          admin_email: me.email,
+          details: email,
+        });
+      } catch {}
+      return Response.json({ ok: true, email, role });
     }
 
     return Response.json({ error: "unknown action" }, { status: 400 });

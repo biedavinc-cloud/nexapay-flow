@@ -23,6 +23,7 @@ import {
   Coins,
   RadioTower,
   Plug,
+  Crown,
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
@@ -92,6 +93,7 @@ export default function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
   const [gate, setGate] = React.useState("loading");
+  const [isSuper, setIsSuper] = React.useState(false);
 
   const handleLogout = async () => {
     await base44.auth.logout("/login");
@@ -102,6 +104,9 @@ export default function Layout() {
     (async () => {
       try {
         const me = await base44.auth.me();
+        if (me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email)) {
+          if (!cancelled) setIsSuper(true);
+        }
         if (me.role === "admin" || me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email)) { if (!cancelled) setGate("ok"); return; }
         const path = location.pathname;
         if (path === "/onboarding" || path === "/approval-pending") { if (!cancelled) setGate("ok"); return; }
@@ -138,6 +143,28 @@ export default function Layout() {
         </div>
 
         <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-5">
+          {isSuper && (
+            <div>
+              <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-primary/70">
+                Backoffice
+              </p>
+              <div className="space-y-1">
+                <NavLink
+                  to="/admin/superadmin"
+                  className={({ isActive }) =>
+                    `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                      isActive
+                        ? "bg-primary/15 text-primary border border-primary/30"
+                        : "text-primary hover:bg-primary/10 border border-transparent"
+                    }`
+                  }
+                >
+                  <Crown className="h-4 w-4 shrink-0" />
+                  <span className="truncate">SuperAdmin</span>
+                </NavLink>
+              </div>
+            </div>
+          )}
           {SECTIONS.map((section) => (
             <div key={section.title}>
               <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
