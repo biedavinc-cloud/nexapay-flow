@@ -4,6 +4,7 @@ import { Zap, Check, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
 import { NexaMark } from "@/components/NexaPayLogo";
+import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 
 const I18N = {
   FR: {
@@ -116,8 +117,9 @@ export default function Landing() {
       </header>
 
       {/* Hero */}
-      <section className="bg-[#F9FFFB]">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <section className="relative bg-[#F9FFFB] overflow-hidden">
+        <HeroBackgroundSlider />
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#3BB77E]/10 px-3 py-1 text-xs font-medium text-[#2f9762]">
               <Zap className="h-3.5 w-3.5" /> {t.heroBadge}
