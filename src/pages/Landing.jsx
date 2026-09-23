@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Zap, Check, Play, ArrowRight } from "lucide-react";
+import { Zap, ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/components/ui/image";
 import { NexaMark } from "@/components/NexaPayLogo";
@@ -79,6 +79,7 @@ const PARTNERS = ["MTN", "Bolt", "AXA", "Domino's", "Uber"];
 
 export default function Landing() {
   const [lang, setLang] = useState("EN");
+  const [menuOpen, setMenuOpen] = useState(false);
   const t = I18N[lang];
 
   const Check = ({ children }) => (
@@ -106,14 +107,32 @@ export default function Landing() {
             <Link to="/pricing" className="hover:text-[#081735]">{t.nav.pricing}</Link>
           </nav>
           <div className="flex items-center gap-2 md:gap-3">
-            <div className="flex items-center rounded-full border border-black/10 p-0.5 text-[11px] md:text-xs font-medium">
-              <button type="button" onClick={() => setLang("FR")} className={`px-2 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
-              <button type="button" onClick={() => setLang("EN")} className={`px-2 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
+            <div className="hidden md:flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium">
+              <button type="button" onClick={() => setLang("FR")} className={`px-2.5 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
+              <button type="button" onClick={() => setLang("EN")} className={`px-2.5 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
             </div>
-            <Link to="/login" className="hidden sm:inline text-sm text-[#6D7A92] hover:text-[#081735]">{t.nav.login}</Link>
+            <Link to="/login" className="hidden md:inline text-sm text-[#6D7A92] hover:text-[#081735]">{t.nav.login}</Link>
             <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white" size="sm"><span className="hidden sm:inline">{t.nav.start}</span><span className="sm:hidden">{t.nav.startShort}</span></Button></Link>
+            <button type="button" onClick={() => setMenuOpen((v) => !v)} className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/10 text-[#081735]" aria-label="Menu">
+              {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
         </div>
+        {menuOpen && (
+          <div className="md:hidden border-t border-black/5 bg-white">
+            <div className="px-4 py-3 flex flex-col">
+              <a href="#product" onClick={() => setMenuOpen(false)} className="py-2.5 text-sm text-[#081735] border-b border-black/5">{t.nav.product}</a>
+              <Link to="/api-docs" onClick={() => setMenuOpen(false)} className="py-2.5 text-sm text-[#081735] border-b border-black/5">{t.nav.developers}</Link>
+              <a href="#company" onClick={() => setMenuOpen(false)} className="py-2.5 text-sm text-[#081735] border-b border-black/5">{t.nav.company}</a>
+              <Link to="/pricing" onClick={() => setMenuOpen(false)} className="py-2.5 text-sm text-[#081735] border-b border-black/5">{t.nav.pricing}</Link>
+              <Link to="/login" onClick={() => setMenuOpen(false)} className="py-2.5 text-sm text-[#6D7A92] border-b border-black/5">{t.nav.login}</Link>
+              <div className="flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium mt-3 self-start">
+                <button type="button" onClick={() => setLang("FR")} className={`px-3 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
+                <button type="button" onClick={() => setLang("EN")} className={`px-3 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero */}
@@ -128,7 +147,6 @@ export default function Landing() {
             <p className="text-sm sm:text-base md:text-lg text-[#6D7A92] mt-4 md:mt-5 max-w-xl">{t.heroSub}</p>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 md:mt-7">
               <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white h-11 px-6">{t.ctaStart}</Button></Link>
-              <span className="text-sm text-[#007AFF] hover:underline cursor-pointer">{t.ctaContact}</span>
             </div>
             <p className="text-xs text-[#6D7A92] mt-5">{t.trusted}</p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-3 opacity-70">
@@ -136,10 +154,6 @@ export default function Landing() {
             </div>
           </div>
           <div className="flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3 rounded-xl bg-white border border-black/5 p-4 sm:p-5 shadow-sm">
-              <span className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-[#007AFF]/10"><Play className="h-5 w-5 text-[#007AFF]" /></span>
-              <p className="text-sm text-[#081735]">{t.watch}</p>
-            </div>
             <div className="w-full rounded-xl border border-[#3BB77E]/20 bg-white px-5 py-4 text-sm text-[#2f9762]">
               {t.noBalance}
             </div>
@@ -149,7 +163,7 @@ export default function Landing() {
 
       {/* Simple, easy payments */}
       <section id="product" className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-24">
           <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s2title}</h2>
           <p className="text-[#6D7A92] mt-2">{t.s2sub}</p>
           <div className="grid md:grid-cols-2 gap-10 mt-10 items-center">
@@ -177,7 +191,7 @@ export default function Landing() {
 
       {/* Build custom payments */}
       <section id="developers" className="bg-[#F9FFFB]">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735]">{t.s3title}</h2>
             <p className="text-[#6D7A92] mt-4 max-w-lg">{t.s3text}</p>
@@ -197,7 +211,7 @@ export default function Landing() {
 
       {/* Protect yourself */}
       <section id="security" className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center">
             <div className="relative h-56 w-56">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#3BB77E] to-[#7ed4a6]" />
@@ -215,7 +229,7 @@ export default function Landing() {
 
       {/* Pricing */}
       <section id="pricing" className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 py-12 md:py-24">
           <h2 className="font-semibold text-2xl md:text-4xl tracking-tight text-[#081735] text-center">Pricing that scales with you</h2>
           <p className="text-[#6D7A92] mt-2 text-center max-w-2xl mx-auto">A one-time setup fee unlocks your merchant account. Then pay a low per-transaction rate — and every payout settles instantly as USDT/USDC to your wallet.</p>
           <div className="grid md:grid-cols-3 gap-5 mt-10">
