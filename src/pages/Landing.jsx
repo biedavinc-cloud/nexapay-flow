@@ -8,7 +8,7 @@ import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 
 const I18N = {
   FR: {
-    nav: { product: "Produit", developers: "Développeurs", company: "Entreprise", pricing: "Tarifs", login: "Connexion", start: "Créer un compte gratuit", contact: "ou Contactez-nous" },
+    nav: { product: "Produit", developers: "Développeurs", company: "Entreprise", pricing: "Tarifs", login: "Connexion", start: "Créer un compte gratuit", startShort: "S'inscrire", contact: "ou Contactez-nous" },
     heroBadge: "Paiements fiat → crypto instantanés",
     heroTitle: "Paiements en ligne et hors ligne modernes, livrés en crypto",
     heroSub: "NexaPay aide les commerçants à encaisser par carte ou Mobile Money, et crédite automatiquement l'USDT dans votre wallet — sans solde à gérer, sans exchange intermédiaire.",
@@ -41,7 +41,7 @@ const I18N = {
     footNav: ["Produit", "Développeurs", "Sécurité", "Entreprise", "Tarifs"],
   },
   EN: {
-    nav: { product: "Product", developers: "Developers", company: "Company", pricing: "Pricing", login: "Log in", start: "Create a free account", contact: "or Contact Sales" },
+    nav: { product: "Product", developers: "Developers", company: "Company", pricing: "Pricing", login: "Log in", start: "Create a free account", startShort: "Sign up", contact: "or Contact Sales" },
     heroBadge: "Instant Crypto Settlement for Merchants",
     heroTitle: "The fiat-to-crypto merchant gateway",
     heroSub: "NexaPay is the next-gen PSP: get paid by card or Mobile Money, and receive your payouts instantly in USDT/USDC directly into your self-custody wallet. No balance, no intermediary exchange.",
@@ -94,10 +94,10 @@ export default function Landing() {
     <div className="min-h-screen bg-white text-[#081735] font-body">
       {/* Nav */}
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-black/5">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 h-14 md:h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <NexaMark size={36} />
-            <span className="font-semibold text-lg tracking-tight text-[#081735]">NexaPay</span>
+            <NexaMark size={30} />
+            <span className="font-semibold text-base md:text-lg tracking-tight text-[#081735]">NexaPay</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-[#6D7A92]">
             <a href="#product" className="hover:text-[#081735]">{t.nav.product}</a>
@@ -105,13 +105,13 @@ export default function Landing() {
             <a href="#company" className="hover:text-[#081735]">{t.nav.company}</a>
             <Link to="/pricing" className="hover:text-[#081735]">{t.nav.pricing}</Link>
           </nav>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center rounded-full border border-black/10 p-0.5 text-xs font-medium">
-              <button type="button" onClick={() => setLang("FR")} className={`px-2.5 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
-              <button type="button" onClick={() => setLang("EN")} className={`px-2.5 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="flex items-center rounded-full border border-black/10 p-0.5 text-[11px] md:text-xs font-medium">
+              <button type="button" onClick={() => setLang("FR")} className={`px-2 py-1 rounded-full ${lang === "FR" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>FR</button>
+              <button type="button" onClick={() => setLang("EN")} className={`px-2 py-1 rounded-full ${lang === "EN" ? "bg-[#081735] text-white" : "text-[#6D7A92]"}`}>EN</button>
             </div>
             <Link to="/login" className="hidden sm:inline text-sm text-[#6D7A92] hover:text-[#081735]">{t.nav.login}</Link>
-            <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white" size="sm">{t.nav.start}</Button></Link>
+            <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white" size="sm"><span className="hidden sm:inline">{t.nav.start}</span><span className="sm:hidden">{t.nav.startShort}</span></Button></Link>
           </div>
         </div>
       </header>
@@ -119,14 +119,14 @@ export default function Landing() {
       {/* Hero */}
       <section className="relative bg-[#F9FFFB] overflow-hidden">
         <HeroBackgroundSlider />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-[#3BB77E]/10 px-3 py-1 text-xs font-medium text-[#2f9762]">
               <Zap className="h-3.5 w-3.5" /> {t.heroBadge}
             </span>
-            <h1 className="font-semibold text-3xl md:text-5xl tracking-tight leading-tight mt-5 text-[#081735]">{t.heroTitle}</h1>
-            <p className="text-base md:text-lg text-[#6D7A92] mt-5 max-w-xl">{t.heroSub}</p>
-            <div className="flex items-center gap-4 mt-7">
+            <h1 className="font-semibold text-[28px] sm:text-3xl md:text-5xl tracking-tight leading-tight mt-4 md:mt-5 text-[#081735]">{t.heroTitle}</h1>
+            <p className="text-sm sm:text-base md:text-lg text-[#6D7A92] mt-4 md:mt-5 max-w-xl">{t.heroSub}</p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-6 md:mt-7">
               <Link to="/register"><Button className="rounded-full bg-[#3BB77E] hover:bg-[#33a36e] text-white h-11 px-6">{t.ctaStart}</Button></Link>
               <span className="text-sm text-[#007AFF] hover:underline cursor-pointer">{t.ctaContact}</span>
             </div>
@@ -136,9 +136,9 @@ export default function Landing() {
             </div>
           </div>
           <div className="flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3 rounded-xl bg-white border border-black/5 p-5 shadow-sm">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#007AFF]/10"><Play className="h-5 w-5 text-[#007AFF]" /></span>
-              <p className="text-sm text-[#081735] max-w-xs">{t.watch}</p>
+            <div className="flex items-center gap-3 rounded-xl bg-white border border-black/5 p-4 sm:p-5 shadow-sm">
+              <span className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-[#007AFF]/10"><Play className="h-5 w-5 text-[#007AFF]" /></span>
+              <p className="text-sm text-[#081735]">{t.watch}</p>
             </div>
             <div className="w-full rounded-xl border border-[#3BB77E]/20 bg-white px-5 py-4 text-sm text-[#2f9762]">
               {t.noBalance}
