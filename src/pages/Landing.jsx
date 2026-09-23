@@ -64,7 +64,7 @@ const I18N = {
     s3link: "NexaPay API Quickstart",
     s4title: "Protect yourself and your customers with advanced fraud detection",
     s4text: "NexaPay's combination of automated and manual fraud systems protects you from fraudulent transactions and associated chargeback claims.",
-    noBalance: "Direct Wallet Settlement PSP — every payment settles as crypto straight to your wallet, instantly.",
+    noBalance: "On-Ramp PSP with at-source commission — your fee is deducted automatically at the source and the net amount settles instantly as crypto straight to your wallet.",
     footer: "Private property of an AI intellect",
     features: {
       c1: ["Card", "Bank Account", "Bank Transfer", "USSD", "POS"],

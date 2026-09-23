@@ -229,20 +229,18 @@ export default function Register() {
           </div>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="country">Pays</Label>
+          <Label htmlFor="country">Country</Label>
           <CountrySelect value={country} onValueChange={setCountry} />
         </div>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="space-y-2">
-            <Label htmlFor="city">Ville</Label>
-            <Input id="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Douala" className="h-12" required />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">Téléphone</Label>
-            <div className="flex gap-2">
-              <DialCodeSelect value={phonePrefix} onValueChange={setPhonePrefix} />
-              <Input id="phone" inputMode="tel" value={phoneLocal} onChange={(e) => setPhoneLocal(e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612345678" className="h-12 flex-1" required />
-            </div>
+        <div className="space-y-2">
+          <Label htmlFor="city">City</Label>
+          <Input id="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Your city" className="h-12" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="phone">Phone</Label>
+          <div className="flex gap-2">
+            <DialCodeSelect value={phonePrefix} onValueChange={setPhonePrefix} />
+            <Input id="phone" inputMode="tel" value={phoneLocal} onChange={(e) => setPhoneLocal(e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612 345 678" className="h-12 flex-1" required />
           </div>
         </div>
         <Button type="submit" className="w-full h-12 rounded-full font-medium" disabled={loading}>

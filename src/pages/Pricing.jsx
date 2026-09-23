@@ -55,7 +55,7 @@ export default function Pricing() {
         <div className="max-w-4xl mx-auto px-4 py-16 md:py-20 text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#3BB77E]/10 px-3 py-1 text-xs font-medium text-[#2f9762]"><Zap className="h-3.5 w-3.5" /> Instant Crypto Settlement for Merchants</span>
           <h1 className="font-semibold text-3xl md:text-5xl tracking-tight leading-tight mt-5 text-[#081735]">Pricing that scales with you.<br className="hidden md:block" /> No games, just transparency.</h1>
-          <p className="text-base md:text-lg text-[#6D7A92] mt-5 max-w-2xl mx-auto">A one-time setup unlocks your merchant account. Then pay a low per-transaction rate — and every payout settles instantly as USDT/USDC directly into your wallet.</p>
+          <p className="text-base md:text-lg text-[#6D7A92] mt-5 max-w-2xl mx-auto">NexaPay is the on-ramp PSP for instant crypto settlement. Connect our gateway to your site — your commission is deducted at the source and the net settles instantly as USDT/USDC directly in your wallet.</p>
         </div>
       </section>
 
