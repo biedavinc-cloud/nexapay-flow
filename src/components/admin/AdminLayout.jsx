@@ -3,6 +3,7 @@ import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { LayoutDashboard, Building2, ArrowLeftRight, Server, Percent, ScrollText, ShieldCheck, LogOut, Crown, GitPullRequest, Plug } from "lucide-react";
 import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
+import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
 
@@ -26,11 +27,15 @@ export default function AdminLayout() {
   useEffect(() => {
     (async () => {
       try {
-        const me = await base44.auth.me();
+        const me = await auth.me();
         // Strict gate: only SUPER_ADMIN role or whitelisted emails may enter.
         const allowed = me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email);
         if (!allowed) { navigate("/dashboard", { replace: true }); return; }
         // Auto-provision whitelisted emails so the role persists (fire-and-forget).
+        // NOTE (Phase 2 TODO): this still calls a Base44 function, which now has
+        // no valid Base44 token to authenticate with since login no longer goes
+        // through base44.auth.* -- this call will fail until superadminRoles is
+        // ported to a Cloudflare Pages Function backed by Neon.
         if (me.role !== "SUPER_ADMIN" && SUPERADMIN_EMAILS.includes(me.email)) {
           try { await base44.functions.invoke("superadminRoles", { action: "provision" }); } catch {}
         }
@@ -81,7 +86,7 @@ export default function AdminLayout() {
           <Button variant="ghost" onClick={() => navigate("/dashboard")} className="w-full justify-start text-muted-foreground">
             <LayoutDashboard className="h-4 w-4 mr-2" /> Vue marchand
           </Button>
-          <Button variant="ghost" onClick={() => base44.auth.logout("/login")} className="w-full justify-start text-muted-foreground">
+          <Button variant="ghost" onClick={() => auth.logout("/login")} className="w-full justify-start text-muted-foreground">
             <LogOut className="h-4 w-4 mr-2" /> Déconnexion
           </Button>
         </div>

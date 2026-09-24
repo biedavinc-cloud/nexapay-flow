@@ -1,0 +1,21 @@
+# Cloudflare Pages Functions — Auth backend (Phase 1 of the Base44 -> Neon migration)
+# Set these under Cloudflare Pages > your project > Settings > Environment variables,
+# for both Production and Preview. Never commit real values.
+
+# Neon Postgres connection string (run migrations/0001_users.sql against it first)
+DATABASE_URL=postgresql://user:password@ep-xxxx.neon.tech/dbname?sslmode=require
+
+# Random secret >= 32 chars used to sign session JWTs, e.g. `openssl rand -base64 48`
+JWT_SECRET=
+
+# Public base URL of the deployed app (used to build OAuth redirect / reset-password links)
+APP_URL=https://your-app.pages.dev
+
+# Transactional email (OTP + password reset) via Resend (https://resend.com)
+RESEND_API_KEY=
+EMAIL_FROM="NexaPay <auth@yourdomain.com>"
+
+# Google OAuth (https://console.cloud.google.com/apis/credentials)
+# Authorized redirect URI must be exactly: ${APP_URL}/api/auth/google/callback
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=

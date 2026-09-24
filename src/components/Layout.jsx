@@ -26,6 +26,7 @@ import {
   Crown,
 } from "lucide-react";
 import { base44 } from "@/api/base44Client";
+import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
 import { NexaMark } from "@/components/NexaPayLogo";
@@ -96,22 +97,22 @@ export default function Layout() {
   const [isSuper, setIsSuper] = React.useState(false);
 
   const handleLogout = async () => {
-    await base44.auth.logout("/login");
+    await auth.logout("/login");
   };
 
   React.useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        const me = await base44.auth.me();
+        const me = await auth.me();
         if (me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email)) {
           if (!cancelled) setIsSuper(true);
         }
         if (me.role === "admin" || me.role === "SUPER_ADMIN" || SUPERADMIN_EMAILS.includes(me.email)) { if (!cancelled) setGate("ok"); return; }
         const path = location.pathname;
         if (path === "/onboarding" || path === "/approval-pending") { if (!cancelled) setGate("ok"); return; }
-        if (!me.data?.tenant_id) { navigate("/onboarding", { replace: true }); return; }
-        const tenant = await base44.entities.Tenant.get(me.data.tenant_id);
+        if (!me.tenant_id) { navigate("/onboarding", { replace: true }); return; }
+        const tenant = await base44.entities.Tenant.get(me.tenant_id);
         const st = tenant.account_status || "PENDING_ONBOARDING";
         if (st === "APPROVED") { if (!cancelled) setGate("ok"); return; }
         if (st === "AWAITING_APPROVAL" || st === "REJECTED") { navigate("/approval-pending", { replace: true }); return; }
