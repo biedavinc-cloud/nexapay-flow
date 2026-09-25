@@ -1,40 +1,32 @@
 import { createClientFromRequest } from "npm:@base44/sdk@0.8.44";
 import { waitUntil } from "base44:runtime";
 import {
-  verifyClientSecret,
-  extractBearer,
-  signWebhook,
-  genTransactionId,
-  genReference,
-  encodePayload,
-  normText,
-  resolveRate,
-  normCurrency,
-  resolveApiKey,
-  resolveWebhookSecret,
+  verifyClientSecret, extractBearer, genReference, encodePayload,
+  normText, resolveRate, normCurrency, resolveApiKey,
 } from "../../shared/checkout.ts";
-import { executeCryptoOrder } from "../../shared/crypto.ts";
-import { mirrorTransaction, mirrorLog } from "../../shared/neon.ts";
 import { isUnlimited } from "../../shared/tiers.ts";
+import { resolvePspCredentials } from "../../shared/pspCrypto.ts";
+import { chargeCard, setKorapayKeys, korapayConfigured, settleKorapayCharge } from "../../shared/korapay.ts";
+import { makePayment, resolveGateway, payunitConfigured, setPayunitKeys } from "../../shared/payunit.ts";
+import { mirrorTransaction } from "../../shared/neon.ts";
 
-// NexaPay checkout endpoint — NO fiat PSP.
-// Flow: client pays by CARD or MOBILE_MONEY → mock fiat capture → fiat converted to USDT
-// (live CoinGecko rate) → DIRECT crypto purchase on the active exchange → withdrawn to our
-// receiving wallet → signed webhook to the marketplace + full audit trail.
+// NexaPay checkout endpoint — REAL fiat capture, no mock approval.
+// CARD -> Korapay direct encrypted charge (customer never leaves NexaPay; may
+//         return requires_action for 3DS -- poll korapayVerify to finish).
+// MOBILE_MONEY -> PayUnit direct USSD/OTP push (customer never leaves NexaPay;
+//         returns pending -- poll checkPayunitStatus to finish).
+// There is deliberately NO code path here that marks a payment approved
+// without a live confirmation from the PSP. If neither PSP is configured for
+// a method, the request fails loudly instead of pretending to succeed.
 
 const VALID_NETWORKS = new Set(["TRC20", "ERC20", "POLYGON"]);
 const VALID_METHODS = new Set(["CARD", "MOBILE_MONEY"]);
+const COUNTRY_BY_CURRENCY = { XAF: "CM", XOF: "CI", GHS: "GH", NGN: "NG", ZAR: "ZA", KES: "KE", RWF: "RW", TZS: "TZ", UGX: "UG" };
 
-function luhnValid(num) {
-  const n = (num || "").replace(/\D/g, "");
-  if (n.length < 13) return false;
-  let s = 0, alt = false;
-  for (let i = n.length - 1; i >= 0; i--) {
-    let d = +n[i];
-    if (alt) { d *= 2; if (d > 9) d -= 9; }
-    s += d; alt = !alt;
-  }
-  return s % 10 === 0;
+function genPayunitTxId() {
+  const stamp = Date.now().toString(36).toUpperCase();
+  const rand = Math.random().toString(36).slice(2, 8).toUpperCase();
+  return `NX${stamp}${rand}`;
 }
 
 export default async function (req) {
@@ -46,7 +38,6 @@ export default async function (req) {
     if (!auth) {
       return Response.json({ error: "Unauthorized: missing or invalid key." }, { status: 401 });
     }
-    const isSecret = auth.type === "secret";
     const isPublishable = auth.type === "publishable";
     if (auth.record) {
       base44.asServiceRole.entities.ApiKey.update(auth.record.id, { last_used: new Date().toISOString() }).catch(() => {});
@@ -83,10 +74,8 @@ export default async function (req) {
     if (!VALID_NETWORKS.has(network)) {
       return Response.json({ error: "network must be TRC20, ERC20 or POLYGON." }, { status: 400 });
     }
-
-    // Mock fiat capture — basic format validation only (no PSP / no Stripe).
     if (payment_method === "CARD") {
-      if (!card || !luhnValid(card.number) || !/^\d{2}\/\d{2}$/.test(card.expiry || "") || !(card.cvc || "")) {
+      if (!card || !card.number || !card.expiry || !card.cvc) {
         return Response.json({ error: "Coordonnées de carte invalides." }, { status: 400 });
       }
     } else {
@@ -104,8 +93,6 @@ export default async function (req) {
     if (tenant && tenant.has_paid_access === false) {
       return Response.json({ error: "Accès marchand non débloqué (paiement du pass requis)." }, { status: 403 });
     }
-
-    // Daily limit enforcement (PRO = unlimited).
     if (tenant && !isUnlimited(tenant.daily_limit)) {
       try {
         const since = new Date(Date.now() - 86400000).toISOString();
@@ -117,17 +104,16 @@ export default async function (req) {
       } catch {}
     }
 
-    // Receiving wallet: the platform default CryptoWallet (the Binance USDT wallet) receives ALL
-    // crypto payouts, regardless of merchant — per the platform owner's configuration.
+    // Receiving wallet: platform default CryptoWallet (never sent to the client).
     let receivingWallet = "NEXAPAY-TONTINE-SERVICE";
     try {
       const wallets = await base44.asServiceRole.entities.CryptoWallet.list("-created_date", 20);
       const def = wallets.find((w) => w.chain === network && w.is_default) || wallets.find((w) => w.is_default) || wallets[0];
       if (def && def.address) receivingWallet = def.address;
-    } catch { /* keep fallback */ }
+    } catch {}
 
     // Fiat → USDT (live CoinGecko rate, with offline fallback).
-    const { rate, live } = await resolveRate(currency);
+    const { rate } = await resolveRate(currency);
     let usdt = Math.round(amount * rate * 1e6) / 1e6;
     let globalMargin = 0;
     try {
@@ -137,139 +123,126 @@ export default async function (req) {
     } catch {}
     if (globalMargin > 0) usdt = Math.round(usdt * (1 - globalMargin / 100) * 1e6) / 1e6;
 
-    const transaction_id = genTransactionId();
     const reference_fiat = genReference();
     const commissionRate = tenant ? (tenant.commission_rate || 0) : 0;
     const commissionUsdt = Math.round(usdt * commissionRate) / 100;
     const usdtNet = Math.round((usdt - commissionUsdt) * 1e6) / 1e6;
 
-    const log = async (from, to, message, level = "INFO", actor = "system") => {
-      const rec = await base44.asServiceRole.entities.TransactionLog.create({
-        transaction_id, reference_fiat, from_status: from || "", to_status: to, level, message, actor,
+    // Dynamic statement descriptor: what the payer's bank statement shows.
+    // Real PSP feature (Korapay dynamic_descriptor, 10 alnum chars max) --
+    // never a way to disguise the transaction, just to identify the merchant.
+    const rawDescriptor = tenant?.statement_descriptor || tenant?.company_name || "NEXAPAY";
+    const descriptor = String(rawDescriptor).toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10);
+
+    const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || "";
+    const base = host ? `https://${host}` : "https://thankful-nexa-pay-flow.base44.app";
+    const returnUrl = `${base}/checkout-return?ref=${encodeURIComponent(reference_fiat)}${body.embed ? `&embed=true` : ""}`;
+    const notifyUrl = `${base}/functions/payunitNotify?ref=${encodeURIComponent(reference_fiat)}`;
+
+    if (payment_method === "CARD") {
+      setKorapayKeys((await resolvePspCredentials(base44, "KORAPAY"))?.keys || null);
+      if (!korapayConfigured()) {
+        return Response.json({ error: "Card payments are not currently configured. Please contact support." }, { status: 503 });
+      }
+
+      const tx = await base44.asServiceRole.entities.Transaction.create({
+        reference_fiat, client_name: email || card.name || "NexaPay Customer",
+        amount_fiat: amount, currency_fiat: currency, usdt_amount: usdt, exchange_rate: rate,
+        payment_method: "CARD", psp_provider: "KORAPAY", crypto_provider: "",
+        destination_wallet: receivingWallet, status: "PENDING",
+        payload_base64: encodePayload({ order_id, webhook_url, transaction_id: reference_fiat }),
+        tenant_id: tenantId || "", gateway_fee: 0, nexapay_commission: commissionUsdt,
+        usdt_net_sent: usdtNet, asset: "USDT", network,
       });
-      waitUntil(mirrorLog(rec).catch(() => {}));
-      return rec;
-    };
 
-    let tx = await base44.asServiceRole.entities.Transaction.create({
-      reference_fiat,
-      client_name: email || (payment_method === "CARD" ? card.name : `${momo.prefix}${momo.phone}`),
-      amount_fiat: amount,
-      currency_fiat: currency,
-      usdt_amount: usdt,
-      exchange_rate: rate,
-      payment_method,
-      crypto_provider: "",
-      destination_wallet: receivingWallet,
-      status: "PENDING",
-      payload_base64: encodePayload({
-        order_id,
-        transaction_id,
-        card: card ? { last4: (card.number || "").slice(-4) } : undefined,
-        momo,
-      }),
-      tenant_id: tenantId || "",
-      gateway_fee: 0,
-      nexapay_commission: commissionUsdt,
-      usdt_net_sent: usdtNet,
-      asset: "USDT",
-      network,
-    });
-    await log("", "PENDING", `Paiement ${payment_method} ${amount} ${currency} initié`);
+      const [expMonth, expYear] = String(card.expiry).split("/").map((s) => s.trim());
+      let charge;
+      try {
+        charge = await chargeCard({
+          reference: reference_fiat,
+          card: { name: card.name || "NexaPay Customer", number: String(card.number).replace(/\s+/g, ""), cvv: String(card.cvc), expiry_month: expMonth, expiry_year: expYear },
+          amount, currency, redirectUrl: returnUrl,
+          customer: { name: card.name || "NexaPay Customer", email: email || "customer@nexapay.app" },
+          metadata: { reference: reference_fiat, order_id: order_id || undefined, descriptor },
+        });
+      } catch (e) {
+        await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "FAILED", error_message: e.message });
+        return Response.json({ status: "failed", transaction_id: tx.id, error: "Échec du traitement du paiement." });
+      }
 
-    // Step 1 — mock fiat capture (no PSP).
-    tx = await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "FIAT_APPROVED" });
-    await log("PENDING", "FIAT_APPROVED", `Encaissement ${payment_method} validé. Cible: ${usdt} USDT sur ${network}`, "INFO", "fiatCapture");
+      const data = charge.data || {};
+      const authModel = String(data.auth_model || "").toUpperCase();
 
-    // Step 2 — direct crypto purchase + withdraw to our wallet.
-    tx = await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "PROCESSING_CRYPTO" });
-    await log("FIAT_APPROVED", "PROCESSING_CRYPTO", `Achat ${usdtNet} USDT (net, commission ${commissionUsdt}) → retrait vers ${receivingWallet}`, "INFO", "cryptoEngine");
+      if (authModel === "3DS") {
+        const authUrl = data.authorization?.redirect_url;
+        if (!authUrl) {
+          await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "FAILED", error_message: "3DS sans URL d'autorisation." });
+          return Response.json({ status: "failed", transaction_id: tx.id, error: "Authentification carte indisponible." });
+        }
+        // Bank-mandated step -- this is the cardholder's own bank verification
+        // page (3D Secure), required by card network rules; it cannot be
+        // skipped or hidden, and it is not third-party PSP branding.
+        return Response.json({ status: "requires_action", transaction_id: tx.id, reference: reference_fiat, auth_url: authUrl });
+      }
 
-    // NexaPay buys USDT directly on its own exchange account (no third-party PSP), using the
-    // client's fiat as the quote currency, then withdraws the USDT to NexaPay's default wallet.
-    const purchase = await executeCryptoOrder({ amount: usdtNet, asset: "USDT", network, wallet: receivingWallet, fiatAmount: amount, fiatCurrency: currency });
+      if (data.status === "success") {
+        await base44.asServiceRole.entities.Transaction.update(tx.id, { korapay_reference: data.payment_reference || reference_fiat });
+        const settled = await settleKorapayCharge(base44, data.payment_reference || reference_fiat);
+        if (settled.status === "COMPLETED") {
+          return Response.json({ status: "succeeded", transaction_id: tx.id, crypto_tx_hash: settled.crypto_tx_hash });
+        }
+        // Fiat WAS captured but crypto payout failed/is retrying -- still a
+        // successful payment from the payer's point of view; never reported
+        // as failed just because our internal payout hasn't settled yet.
+        return Response.json({ status: "succeeded", transaction_id: tx.id, settlement: settled.status });
+      }
 
-    let webhookPayload;
-    let response;
-    if (purchase.provider) {
-      tx = await base44.asServiceRole.entities.Transaction.update(tx.id, {
-        status: "COMPLETED",
-        crypto_provider: purchase.provider,
-        tx_hash_crypto: purchase.tx_hash,
-      });
-      await log("PROCESSING_CRYPTO", "COMPLETED", `${usdtNet} USDT livré via ${purchase.provider}${purchase.live ? " (LIVE)" : " (mock dev)"} — ${purchase.tx_hash}`);
-      webhookPayload = {
-        event: "payment.succeeded",
-        order_id,
-        transaction_id,
-        amount,
-        currency,
-        usdt,
-        usdt_net: usdtNet,
-        nexapay_commission: commissionUsdt,
-        network,
-        crypto_payout_status: "COMPLETED",
-        crypto_provider: purchase.provider,
-        crypto_tx_hash: purchase.tx_hash,
-        live: !!purchase.live,
-      };
-      // Client-facing response is intentionally minimal: the end customer must
-      // only know their payment succeeded. Crypto settlement details stay in the
-      // signed webhook + DB for the merchant, never on the checkout client.
-      response = { status: "succeeded", transaction_id };
-    } else {
-      tx = await base44.asServiceRole.entities.Transaction.update(tx.id, {
-        status: "FAILED",
-        error_message: purchase.error,
-      });
-      await log("PROCESSING_CRYPTO", "FAILED", purchase.error, "ERROR", "cryptoEngine");
-      webhookPayload = {
-        event: "payment.failed",
-        order_id,
-        transaction_id,
-        amount,
-        currency,
-        usdt,
-        crypto_payout_status: "FAILED",
-        error: purchase.error,
-      };
-      response = { status: "failed", transaction_id, error: "Échec du traitement du paiement." };
+      return Response.json({ status: "failed", transaction_id: tx.id, error: "Paiement refusé par la banque." });
     }
 
-    // Signed webhook to the marketplace + delivery log (signed with the endpoint's own secret).
-    if (webhook_url) {
-      const whSecret = await resolveWebhookSecret(base44, webhook_url);
-      const { raw, header } = await signWebhook(webhookPayload, whSecret);
-      waitUntil(
-        (async () => {
-          let httpStatus = 0;
-          let deliveryStatus = "FAILED";
-          try {
-            const res = await fetch(webhook_url, {
-              method: "POST",
-              headers: { "Content-Type": "application/json", "NexaPay-Signature": header },
-              body: raw,
-            });
-            httpStatus = res.status;
-            deliveryStatus = res.ok ? "SUCCESS" : "FAILED";
-          } catch {
-            deliveryStatus = "RETRYING";
-          }
-          await base44.asServiceRole.entities.WebhookLog.create({
-            endpoint_url: webhook_url,
-            event: webhookPayload.event,
-            order_id: order_id || transaction_id,
-            status: deliveryStatus,
-            http_status: httpStatus,
-            attempts: 1,
-            response_snippet: "",
-          });
-        })().catch(() => {})
-      );
+    // --- MOBILE_MONEY ---
+    setPayunitKeys((await resolvePspCredentials(base44, "PAYUNIT"))?.keys || null);
+    if (!payunitConfigured()) {
+      return Response.json({ error: "Mobile Money payments are not currently configured. Please contact support." }, { status: 503 });
+    }
+    const country = normText(body.country || momo.country || COUNTRY_BY_CURRENCY[currency]);
+    const gateway = resolveGateway(country, momo.provider);
+    if (!gateway) {
+      return Response.json({ error: `Opérateur Mobile Money non supporté pour ${country || currency}.` }, { status: 400 });
+    }
+
+    const payunitTxId = genPayunitTxId();
+    const tx = await base44.asServiceRole.entities.Transaction.create({
+      reference_fiat, client_name: email || `${momo.prefix || ""}${momo.phone}`,
+      amount_fiat: amount, currency_fiat: currency, usdt_amount: usdt, exchange_rate: rate,
+      payment_method: "MOBILE_MONEY", psp_provider: "PAYUNIT", crypto_provider: "",
+      destination_wallet: receivingWallet, status: "PENDING",
+      payload_base64: encodePayload({ order_id, webhook_url, payunit_tx_id: payunitTxId, email, payment_country: country, return_url: returnUrl, notify_url: notifyUrl }),
+      tenant_id: tenantId || "", gateway_fee: 0, nexapay_commission: commissionUsdt,
+      usdt_net_sent: usdtNet, asset: "USDT", network,
+    });
+
+    try {
+      await makePayment({
+        gateway, amount, currency, transaction_id: payunitTxId,
+        return_url: returnUrl, notify_url: notifyUrl, phone_number: `${momo.prefix || ""}${momo.phone}`,
+      });
+    } catch (e) {
+      await base44.asServiceRole.entities.Transaction.update(tx.id, { status: "FAILED", error_message: e.message });
+      return Response.json({ status: "failed", transaction_id: tx.id, error: "Échec du traitement du paiement." });
     }
 
     waitUntil(mirrorTransaction(tx).catch(() => {}));
-    return Response.json(response);
+    // Real Mobile Money confirmation needs the customer to enter their PIN on
+    // their phone -- it cannot be synchronous. The widget must poll
+    // checkPayunitStatus?ref=<reference> (or the payment.succeeded/failed
+    // webhook) until it resolves. This is a real wait, not a mock.
+    return Response.json({
+      status: "pending",
+      transaction_id: tx.id,
+      reference: reference_fiat,
+      prompt_message: "Un prompt USSD a été envoyé sur votre téléphone. Veuillez saisir votre code PIN pour valider.",
+    });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }

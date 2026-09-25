@@ -6,6 +6,11 @@
       "type": "string",
       "description": "Merchant company / entity name"
     },
+    "statement_descriptor": {
+      "type": "string",
+      "maxLength": 10,
+      "description": "What appears on the payer's bank/card statement (max 10 alphanumeric chars, Korapay dynamic_descriptor limit). Falls back to company_name if unset. Must identify the actual merchant -- not a way to obscure the transaction."
+    },
     "country": {
       "type": "string",
       "description": "Merchant country (ISO code)"
