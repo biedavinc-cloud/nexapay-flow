@@ -20,26 +20,26 @@ export function publicUser(row) {
 
 export async function findUserByEmail(env, email) {
   const sql = getDb(env);
-  const rows = await sql`select * from users where email = ${email.toLowerCase()} limit 1`;
+  const rows = await sql`select * from nexapay_auth_users where email = ${email.toLowerCase()} limit 1`;
   return rows[0] || null;
 }
 
 export async function findUserById(env, id) {
   const sql = getDb(env);
-  const rows = await sql`select * from users where id = ${id} limit 1`;
+  const rows = await sql`select * from nexapay_auth_users where id = ${id} limit 1`;
   return rows[0] || null;
 }
 
 export async function findUserByGoogleId(env, googleId) {
   const sql = getDb(env);
-  const rows = await sql`select * from users where google_id = ${googleId} limit 1`;
+  const rows = await sql`select * from nexapay_auth_users where google_id = ${googleId} limit 1`;
   return rows[0] || null;
 }
 
 export async function findUserByResetTokenHash(env, tokenHash) {
   const sql = getDb(env);
   const rows = await sql`
-    select * from users
+    select * from nexapay_auth_users
     where reset_token_hash = ${tokenHash} and reset_token_expires_at > now()
     limit 1
   `;

@@ -32,7 +32,7 @@ export async function onRequestPatch({ request, env }) {
 
   const sql = getDb(env);
   const [updated] = await sql`
-    update users set
+    update nexapay_auth_users set
       full_name = coalesce(${updates.full_name ?? null}, full_name),
       country = coalesce(${updates.country ?? null}, country),
       city = coalesce(${updates.city ?? null}, city),

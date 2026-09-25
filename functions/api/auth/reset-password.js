@@ -19,7 +19,7 @@ export async function onRequestPost({ request, env }) {
   const passwordHash = await hashPassword(newPassword);
   const sql = getDb(env);
   await sql`
-    update users
+    update nexapay_auth_users
     set password_hash = ${passwordHash}, reset_token_hash = null, reset_token_expires_at = null
     where id = ${user.id}
   `;

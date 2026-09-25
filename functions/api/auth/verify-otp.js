@@ -26,12 +26,12 @@ export async function onRequestPost({ request, env }) {
   const sql = getDb(env);
   const providedHash = await sha256Hex(otpCode.trim());
   if (providedHash !== user.otp_code_hash) {
-    await sql`update users set otp_attempts = otp_attempts + 1 where id = ${user.id}`;
+    await sql`update nexapay_auth_users set otp_attempts = otp_attempts + 1 where id = ${user.id}`;
     return jsonError("Invalid or expired code", 400);
   }
 
   const [updated] = await sql`
-    update users
+    update nexapay_auth_users
     set email_verified = true, otp_code_hash = null, otp_expires_at = null, otp_attempts = 0
     where id = ${user.id}
     returning *

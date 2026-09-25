@@ -53,13 +53,13 @@ export async function onRequestGet({ request, env }) {
     const byEmail = await findUserByEmail(env, profile.email);
     if (byEmail) {
       [user] = await sql`
-        update users set google_id = ${profile.sub}, email_verified = true
+        update nexapay_auth_users set google_id = ${profile.sub}, email_verified = true
         where id = ${byEmail.id}
         returning *
       `;
     } else {
       [user] = await sql`
-        insert into users (email, google_id, email_verified, full_name)
+        insert into nexapay_auth_users (email, google_id, email_verified, full_name)
         values (${profile.email.toLowerCase()}, ${profile.sub}, true, ${profile.name || null})
         returning *
       `;

@@ -28,7 +28,7 @@ export async function onRequestPost({ request, env }) {
   if (existing) {
     // Re-registering before verifying: refresh password + OTP.
     await sql`
-      update users
+      update nexapay_auth_users
       set password_hash = ${passwordHash},
           otp_code_hash = ${otpHash},
           otp_expires_at = ${otpExpires},
@@ -37,7 +37,7 @@ export async function onRequestPost({ request, env }) {
     `;
   } else {
     await sql`
-      insert into users (email, password_hash, otp_code_hash, otp_expires_at, otp_attempts)
+      insert into nexapay_auth_users (email, password_hash, otp_code_hash, otp_expires_at, otp_attempts)
       values (${email.toLowerCase()}, ${passwordHash}, ${otpHash}, ${otpExpires}, 0)
     `;
   }

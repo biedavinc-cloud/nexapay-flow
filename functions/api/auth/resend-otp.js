@@ -18,7 +18,7 @@ export async function onRequestPost({ request, env }) {
 
   const sql = getDb(env);
   await sql`
-    update users
+    update nexapay_auth_users
     set otp_code_hash = ${otpHash}, otp_expires_at = ${otpExpires}, otp_attempts = 0
     where id = ${user.id}
   `;
