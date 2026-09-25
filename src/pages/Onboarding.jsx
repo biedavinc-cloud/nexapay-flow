@@ -39,6 +39,13 @@ export default function Onboarding() {
     access_method: "CARD", momo_country: "", momo_prefix: "+237", momo_provider: "", momo_phone: "",
   });
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+  const [pubKey, setPubKey] = useState(null);
+  React.useEffect(() => {
+    base44.functions.invoke("getPublishableKey", {}).then((res) => {
+      const d = res?.data || res;
+      if (d?.publishable_key) setPubKey(d.publishable_key);
+    }).catch(() => {});
+  }, []);
   const [threeDS, setThreeDS] = useState(null); // { url, reference }
   const [ussd, setUssd] = useState(null); // { reference }
 
@@ -87,8 +94,13 @@ export default function Onboarding() {
     setBusy(true);
     try {
       const t = TIERS[form.tier];
+      if (!pubKey) {
+        toast({ title: "Erreur", description: "Configuration de paiement indisponible. Réessayez dans un instant.", variant: "destructive" });
+        setBusy(false);
+        return;
+      }
       const payload = {
-        key: "nexa_pk_test_123",
+        key: pubKey,
         amount: t.price,
         currency: "USD",
         network: "TRC20",

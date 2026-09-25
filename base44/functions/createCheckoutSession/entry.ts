@@ -1,6 +1,6 @@
 import { createClientFromRequest } from "npm:@base44/sdk@0.8.44";
 import {
-  PUBLISHABLE_KEY,
+  getPublishableKey,
   createClientSecret,
   verifyClientSecret,
   extractBearer,
@@ -40,7 +40,7 @@ export default async function (req) {
     if (!auth || auth.type !== "secret") {
       return Response.json({ error: "Unauthorized: missing or invalid API key." }, { status: 401 });
     }
-    const publishable = auth.record?.publishable_key || PUBLISHABLE_KEY;
+    const publishable = auth.record?.publishable_key || getPublishableKey();
     if (auth.record) {
       base44.asServiceRole.entities.ApiKey.update(auth.record.id, { last_used: new Date().toISOString() }).catch(() => {});
     }
