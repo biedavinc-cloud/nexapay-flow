@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { base44 } from "@/api/base44Client";
+import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -36,7 +36,7 @@ export default function Login() {
     if (remember) localStorage.setItem("nexapay_remember_email", email);
     else localStorage.removeItem("nexapay_remember_email");
     try {
-      await base44.auth.loginViaEmailPassword(email, password);
+      await auth.loginViaEmailPassword(email, password);
       window.location.href = returnTo;
     } catch (err) {
       setError(err.message || "Invalid email or password");
@@ -46,7 +46,7 @@ export default function Login() {
   };
 
   const handleGoogle = () => {
-    base44.auth.loginWithProvider("google", returnTo);
+    auth.loginWithProvider("google", returnTo);
   };
 
   return (

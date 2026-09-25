@@ -1,3 +1,27 @@
+# NexaPay
+
+## ⚠️ Migration status: Base44 → Neon + Cloudflare Pages (in progress)
+
+**Phase 1 — Auth (this PR): done.** Email/password + OTP verification, Google
+OAuth, password reset, and sessions now run on Neon (table
+`nexapay_auth_users`) + Cloudflare Pages Functions (`/functions/api/auth/*`),
+not Base44. See `.env.example` for the environment variables you must set in
+Cloudflare Pages before this works, and `migrations/0001_auth_users.sql` for
+the schema (already applied to the `Nexapay` Neon project).
+
+**Not migrated yet (still calling Base44, and will fail once nobody has a
+Base44 access token anymore):** merchant onboarding (`Tenant` entity),
+superadmin audit log, file uploads, and — importantly — **payment/settlement
+processing** (`processCheckoutPayment`, crypto dispatch). Do not merge this
+branch to `main` / deploy to production until that Phase 2 work lands, or
+those flows will break for real merchants.
+
+`nexapay_users` (no password/session columns) is the pre-existing read-only
+mirror written by the `syncNeon` Base44 function — it is a reporting copy,
+not the auth source of truth, and is left untouched by this migration.
+
+---
+
 # Base44 Project
 
 Use this repository to run and edit the app locally, then publish changes back through Base44.

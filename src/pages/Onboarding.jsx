@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { base44 } from "@/api/base44Client";
+import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -107,7 +108,7 @@ export default function Onboarding() {
         blockchain: form.blockchain,
         onboarding_complete: true,
       });
-      await base44.auth.updateMe({ tenant_id: tenant.id, kyc_status: "PENDING_KYC" });
+      await auth.updateMe({ tenant_id: tenant.id, kyc_status: "PENDING_KYC" });
       toast({ title: "Dossier soumis", description: "En attente de validation par NexaPay." });
       setTimeout(() => { window.location.href = "/approval-pending"; }, 1200);
     } catch (e) {

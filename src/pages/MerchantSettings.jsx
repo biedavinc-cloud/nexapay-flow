@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
+import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,9 +25,9 @@ export default function MerchantSettings() {
   useEffect(() => {
     (async () => {
       try {
-        const me = await base44.auth.me();
-        if (!me.data?.tenant_id) { navigate("/onboarding"); return; }
-        const t = await base44.entities.Tenant.get(me.data.tenant_id);
+        const me = await auth.me();
+        if (!me.tenant_id) { navigate("/onboarding"); return; }
+        const t = await base44.entities.Tenant.get(me.tenant_id);
         setTenant(t);
         setForm({
           company_name: t.company_name || "",
