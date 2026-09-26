@@ -36,6 +36,7 @@ import WebhookConsole from '@/pages/WebhookConsole';
 import RateManagement from '@/pages/RateManagement';
 import SecuritySettings from '@/pages/SecuritySettings';
 import ApiDocs from '@/pages/ApiDocs';
+import RefundPolicy from '@/pages/RefundPolicy';
 import WebhookAudit from '@/pages/WebhookAudit';
 import CurrencyManagement from '@/pages/CurrencyManagement';
 import WebhookTester from '@/pages/WebhookTester';
@@ -101,6 +102,7 @@ const AuthenticatedApp = () => {
       <Route path="/pay/:slug" element={<PayLink />} />
       <Route path="/payunit-return" element={<PayunitReturn />} />
       <Route path="/api-docs" element={<ApiDocs />} />
+      <Route path="/refund-policy" element={<RefundPolicy />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

@@ -3,9 +3,9 @@
 // PRO daily_limit uses a large sentinel (9999999) instead of Infinity for JSON-safe storage.
 
 export const TIERS = {
-  BASIC: { id: "BASIC", label: "Basic", price: 200, daily_limit: 200, commission: 3.5 },
-  ADVANCED: { id: "ADVANCED", label: "Advanced", price: 619, daily_limit: 5000, commission: 2.0 },
-  PRO: { id: "PRO", label: "Pro", price: 1099, daily_limit: 9999999, commission: 0.8 },
+  BASIC: { id: "BASIC", label: "Basic", price: 200, daily_limit: 200, commission: 3.9 },
+  ADVANCED: { id: "ADVANCED", label: "Advanced", price: 619, daily_limit: 5000, commission: 2.4 },
+  PRO: { id: "PRO", label: "Pro", price: 1099, daily_limit: 9999999, commission: 1.2 },
 } as const;
 
 export type TierId = keyof typeof TIERS;

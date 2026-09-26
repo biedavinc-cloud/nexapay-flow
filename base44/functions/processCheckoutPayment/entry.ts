@@ -3,6 +3,7 @@ import { waitUntil } from "base44:runtime";
 import {
   verifyClientSecret, extractBearer, genReference, encodePayload,
   normText, resolveRate, normCurrency, resolveApiKey,
+  getAppUrlFallback,
 } from "../../shared/checkout.ts";
 import { isUnlimited } from "../../shared/tiers.ts";
 import { resolvePspCredentials } from "../../shared/pspCrypto.ts";
@@ -152,7 +153,7 @@ export default async function (req) {
     const descriptor = String(rawDescriptor).toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10);
 
     const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || "";
-    const base = host ? `https://${host}` : "https://thankful-nexa-pay-flow.base44.app";
+    const base = host ? `https://${host}` : getAppUrlFallback();
     const returnUrl = `${base}/checkout-return?ref=${encodeURIComponent(reference_fiat)}${body.embed ? `&embed=true` : ""}`;
     const notifyUrl = `${base}/functions/payunitNotify?ref=${encodeURIComponent(reference_fiat)}`;
 

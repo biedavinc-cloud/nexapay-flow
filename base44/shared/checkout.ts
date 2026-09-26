@@ -23,6 +23,15 @@ function getPublishableKey() { return requireSecret("NEXAPAY_PUBLISHABLE_KEY"); 
 function getWebhookSecret() { return requireSecret("NEXAPAY_WEBHOOK_SECRET"); }
 export { getPublishableKey };
 
+// Optional -- used only as a fallback base URL (webhook/return URLs) when a
+// request has no Host header. Never falls back to a base44.app URL: better
+// to end up with a relative/empty base (caught by the caller) than leak
+// which platform this runs on into a URL sent to a PSP or a merchant.
+export function getAppUrlFallback() {
+  try { return secrets.get("APP_URL") || ""; } catch { return ""; }
+}
+export { getPublishableKey };
+
 const enc = new TextEncoder();
 
 function b64url(input) {
