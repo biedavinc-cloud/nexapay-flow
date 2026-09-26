@@ -90,13 +90,23 @@ export default async function (req) {
       } catch {}
     }
 
-    // Receiving wallet = platform default CryptoWallet (server-side only, never sent to client).
-    let receivingWallet = "NEXAPAY-TONTINE-SERVICE";
-    try {
-      const wallets = await base44.asServiceRole.entities.CryptoWallet.list("-created_date", 20);
-      const def = wallets.find((w) => w.chain === network && w.is_default) || wallets.find((w) => w.is_default) || wallets[0];
-      if (def && def.address) receivingWallet = def.address;
-    } catch {}
+    // Receiving wallet: the MERCHANT's own wallet -- never a shared platform
+    // default, or one tenant's Mobile Money customer would fund another
+    // tenant (or the platform wallet) by mistake.
+    let receivingWallet = tenant?.receiving_wallet || "";
+    if (!receivingWallet) {
+      if (tenant) {
+        return Response.json({ error: "This merchant has no receiving wallet configured." }, { status: 422 });
+      }
+      try {
+        const wallets = await base44.asServiceRole.entities.CryptoWallet.list("-created_date", 20);
+        const def = wallets.find((w) => w.chain === network && w.is_default) || wallets.find((w) => w.is_default) || wallets[0];
+        if (def && def.address) receivingWallet = def.address;
+      } catch {}
+      if (!receivingWallet) {
+        return Response.json({ error: "No platform receiving wallet configured." }, { status: 503 });
+      }
+    }
 
     const { rate } = await resolveRate(currency);
     let usdt = Math.round(amount * rate * 1e6) / 1e6;
