@@ -4,7 +4,6 @@ import { queryClientInstance } from '@/lib/query-client'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
-import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
 import Landing from '@/pages/Landing';
@@ -62,7 +61,7 @@ import AdminGitHubReviews from '@/pages/admin/GitHubReviews';
 import AdminGateways from '@/pages/admin/Gateways';
 
 const AuthenticatedApp = () => {
-  const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
+  const { isLoadingAuth, isLoadingPublicSettings, authError } = useAuth();
   const isEmbed = new URLSearchParams(window.location.search).get("embed") === "true";
 
   // Embedded checkout (iframe on a marketplace) — render only the bare checkout, no auth/sidebar.
@@ -84,16 +83,17 @@ const AuthenticatedApp = () => {
     );
   }
 
-  // Handle authentication errors
-  if (authError) {
-    if (authError.type === 'user_not_registered') {
-      return <UserNotRegisteredError />;
-    } else if (authError.type === 'auth_required') {
-      // Redirect to login automatically
-      navigateToLogin();
-      return null;
-    }
-  }
+  // NOTE: there used to be a blanket redirect-to-login here whenever
+  // authError.type === 'auth_required', running unconditionally before any
+  // route matched. That meant EVERY page -- including the public landing
+  // page and /login itself -- triggered an auth check, got a normal 401 for
+  // an anonymous visitor, and redirected to /login... which re-ran the same
+  // check, got the same 401, and redirected to /login again: an infinite
+  // loop (visible as returnTo=%2Flo...252525...25F, the URL being
+  // percent-re-encoded on every iteration). Public routes below render
+  // regardless of auth state; ProtectedRoute (wrapping only the routes that
+  // actually require a session) already redirects unauthenticated users to
+  // /login on its own, correctly, per-route.
 
   // Render the main app
   return (
