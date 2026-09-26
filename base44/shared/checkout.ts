@@ -1,11 +1,27 @@
 // NexaPay checkout shared helpers — Stripe-style key model (secret / publishable / webhook),
 // signed client_secret, signed webhook, LIVE fiat->USDT rate (CoinGecko).
 // The crypto execution engine lives in crypto.ts (single source of truth).
+import { secrets } from "base44:runtime";
 
 // --- Keys (private PSP, single marketplace) ---
-export const SECRET_KEY = "nexa_sk_test_123";       // server-side only (marketplace backend)
-export const PUBLISHABLE_KEY = "nexa_pk_test_123";  // safe to expose in the client/iframe
-export const WEBHOOK_SECRET = "nexa_whsec_test_123"; // marketplace verifies webhook signatures with this
+// SECURITY: these MUST come from Base44 project secrets (`base44 secrets set
+// NEXAPAY_SECRET_KEY=... NEXAPAY_PUBLISHABLE_KEY=... NEXAPAY_WEBHOOK_SECRET=...`),
+// never hardcoded in source. A key that has ever been committed to git must
+// be treated as compromised -- rotating it here (setting a new secret value)
+// is what actually invalidates the old, leaked one.
+function requireSecret(name) {
+  let v;
+  try { v = secrets.get(name); } catch { v = undefined; }
+  if (!v) {
+    throw new Error(`Missing required secret: ${name}. Run: base44 secrets set ${name}=<value>`);
+  }
+  return v;
+}
+
+function getSecretKey() { return requireSecret("NEXAPAY_SECRET_KEY"); }
+function getPublishableKey() { return requireSecret("NEXAPAY_PUBLISHABLE_KEY"); }
+function getWebhookSecret() { return requireSecret("NEXAPAY_WEBHOOK_SECRET"); }
+export { getPublishableKey };
 
 const enc = new TextEncoder();
 
@@ -34,7 +50,7 @@ async function hmacHex(key, msg) {
 // --- client_secret (signed session token, bound to the order) ---
 export async function createClientSecret(payload) {
   const body = b64url(JSON.stringify(payload));
-  const sig = await hmacB64(SECRET_KEY, body);
+  const sig = await hmacB64(getSecretKey(), body);
   return `${body}.${sig}`;
 }
 
@@ -42,7 +58,7 @@ export async function verifyClientSecret(secret) {
   if (!secret) return null;
   const [body, sig] = secret.split(".");
   if (!body || !sig) return null;
-  const expected = await hmacB64(SECRET_KEY, body);
+  const expected = await hmacB64(getSecretKey(), body);
   if (expected !== sig) return null;
   try {
     return JSON.parse(b64urlDecode(body));
@@ -52,30 +68,33 @@ export async function verifyClientSecret(secret) {
 }
 
 // --- Webhook signing (Stripe-Signature style: t=<ts>,v1=<hex-hmac>) ---
-export async function signWebhook(payload, secret = WEBHOOK_SECRET) {
+export async function signWebhook(payload, secret) {
   const raw = JSON.stringify(payload);
   const t = Math.floor(Date.now() / 1000);
-  const v1 = await hmacHex(secret, `${t}.${raw}`);
+  const v1 = await hmacHex(secret || getWebhookSecret(), `${t}.${raw}`);
   return { raw, header: `t=${t},v1=${v1}` };
 }
 
-export async function verifyWebhook(rawBody, signatureHeader, secret = WEBHOOK_SECRET) {
+export async function verifyWebhook(rawBody, signatureHeader, secret) {
   if (!signatureHeader) return false;
   const parts = Object.fromEntries(String(signatureHeader).split(",").map((kv) => kv.split("=")));
   const t = parts.t;
   const v1 = parts.v1;
   if (!t || !v1) return false;
-  const expected = await hmacHex(secret, `${t}.${rawBody}`);
+  const expected = await hmacHex(secret || getWebhookSecret(), `${t}.${rawBody}`);
   return expected === v1;
 }
 
 // --- DB-backed API key resolution (real keys created in the dashboard) ---
 // Returns { type: "secret"|"publishable", record, legacy } or null.
-// Legacy hardcoded test keys are still accepted for dev/backward compatibility.
+// The platform-level NEXAPAY_SECRET_KEY / NEXAPAY_PUBLISHABLE_KEY secrets are
+// still accepted (for NexaPay's own onboarding flow, which has no tenant
+// yet), but they now come from Base44 secrets, not from a literal anyone
+// reading this file could copy.
 export async function resolveApiKey(base44, bearer) {
   if (!bearer) return null;
-  if (bearer === SECRET_KEY) return { type: "secret", record: null, legacy: true };
-  if (bearer === PUBLISHABLE_KEY) return { type: "publishable", record: null, legacy: true };
+  if (bearer === getPublishableKey()) return { type: "publishable", record: null, legacy: true };
+  if (bearer === getSecretKey()) return { type: "secret", record: null, legacy: true };
   try {
     const keys = await base44.asServiceRole.entities.ApiKey.list("-created_date", 100);
     const rec = keys.find((k) => k.active && (k.secret_key === bearer || k.publishable_key === bearer));
@@ -87,15 +106,15 @@ export async function resolveApiKey(base44, bearer) {
 }
 
 // Resolves the signing secret for a webhook target URL from the WebhookEndpoint config.
-// Falls back to the global WEBHOOK_SECRET when no matching endpoint is registered.
+// Falls back to the global platform webhook secret when no matching endpoint is registered.
 export async function resolveWebhookSecret(base44, url) {
-  if (!url) return WEBHOOK_SECRET;
+  if (!url) return getWebhookSecret();
   try {
     const endpoints = await base44.asServiceRole.entities.WebhookEndpoint.list("-created_date", 100);
     const ep = endpoints.find((e) => e.active && e.url === url);
-    return (ep && ep.signing_secret) || WEBHOOK_SECRET;
+    return (ep && ep.signing_secret) || getWebhookSecret();
   } catch {
-    return WEBHOOK_SECRET;
+    return getWebhookSecret();
   }
 }
 

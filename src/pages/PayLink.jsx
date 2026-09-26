@@ -7,8 +7,6 @@ import { Label } from "@/components/ui/label";
 import { NexaMark } from "@/components/NexaPayLogo";
 import { base44 } from "@/api/base44Client";
 
-const FALLBACK_PK = "nexa_pk_test_123";
-
 const I18N = {
   FR: {
     secure: "Paiement sécurisé", poweredBy: "Paiement sécurisé par", order: "Commande", pay: "Payer",

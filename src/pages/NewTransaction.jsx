@@ -13,7 +13,6 @@ import UssdPromptModal from "@/components/checkout/UssdPromptModal";
 import MoMoFields from "@/components/checkout/MoMoFields";
 import { COUNTRIES } from "@/lib/countries";
 
-const FALLBACK_PK = "nexa_pk_test_123";
 const COUNTRY_BY_CURRENCY = { XAF: "CM", XOF: "CI", GHS: "GH", NGN: "NG", EUR: "FR", USD: "US" };
 
 const I18N = {
@@ -60,7 +59,14 @@ export default function NewTransaction() {
   const params = new URLSearchParams(window.location.search);
   const isEmbed = params.get("embed") === "true";
   const clientSecret = params.get("client_secret") || "";
-  const publishableKey = params.get("publishable_key") || FALLBACK_PK;
+  const [publishableKey, setPublishableKey] = useState(params.get("publishable_key") || "");
+  useEffect(() => {
+    if (publishableKey) return;
+    base44.functions.invoke("getPublishableKey", {}).then((res) => {
+      const d = res?.data || res;
+      if (d?.publishable_key) setPublishableKey(d.publishable_key);
+    }).catch(() => {});
+  }, [publishableKey]);
 
   const [lang, setLang] = useState("EN");
   const t = I18N[lang];

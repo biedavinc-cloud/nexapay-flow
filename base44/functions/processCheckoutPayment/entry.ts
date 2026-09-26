@@ -104,13 +104,30 @@ export default async function (req) {
       } catch {}
     }
 
-    // Receiving wallet: platform default CryptoWallet (never sent to the client).
-    let receivingWallet = "NEXAPAY-TONTINE-SERVICE";
-    try {
-      const wallets = await base44.asServiceRole.entities.CryptoWallet.list("-created_date", 20);
-      const def = wallets.find((w) => w.chain === network && w.is_default) || wallets.find((w) => w.is_default) || wallets[0];
-      if (def && def.address) receivingWallet = def.address;
-    } catch {}
+    // Receiving wallet: the MERCHANT's own wallet, never a shared platform
+    // default. Sending a tenant-scoped payment to a generic "any default"
+    // wallet would misroute one merchant's customer funds to another
+    // merchant (or to the platform's own wallet) -- this must be
+    // tenant-specific, exactly like korapayCharge already does it correctly.
+    let receivingWallet = tenant?.receiving_wallet || "";
+    if (!receivingWallet) {
+      if (tenant) {
+        // A real merchant with no wallet configured must not silently
+        // settle into some other wallet.
+        return Response.json({ error: "Ce marchand n'a pas encore configuré de wallet de réception." }, { status: 422 });
+      }
+      // No tenant = NexaPay's own platform-level flow (e.g. merchant
+      // onboarding setup fee, paid TO NexaPay, not through a merchant key).
+      // Only here is a platform default CryptoWallet the correct target.
+      try {
+        const wallets = await base44.asServiceRole.entities.CryptoWallet.list("-created_date", 20);
+        const def = wallets.find((w) => w.chain === network && w.is_default) || wallets.find((w) => w.is_default) || wallets[0];
+        if (def && def.address) receivingWallet = def.address;
+      } catch {}
+      if (!receivingWallet) {
+        return Response.json({ error: "Aucun wallet de réception plateforme configuré." }, { status: 503 });
+      }
+    }
 
     // Fiat → USDT (live CoinGecko rate, with offline fallback).
     const { rate } = await resolveRate(currency);

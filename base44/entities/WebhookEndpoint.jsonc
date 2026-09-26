@@ -2,6 +2,10 @@
   "name": "WebhookEndpoint",
   "type": "object",
   "properties": {
+    "tenant_id": {
+      "type": "string",
+      "description": "Owning merchant tenant"
+    },
     "label": {
       "type": "string",
       "description": "Endpoint label"
@@ -12,7 +16,7 @@
     },
     "signing_secret": {
       "type": "string",
-      "description": "Secret used to sign outgoing webhooks (whsec_)"
+      "description": "Secret used to sign outgoing webhooks (whsec_). Lets a merchant verify a webhook really came from NexaPay -- must never be readable by another tenant."
     },
     "active": {
       "type": "boolean",
@@ -30,5 +34,35 @@
     "url",
     "signing_secret",
     "active"
-  ]
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        { "data.tenant_id": "{{user.data.tenant_id}}" },
+        { "user_condition": { "role": "admin" } },
+        { "user_condition": { "role": "SUPER_ADMIN" } }
+      ]
+    },
+    "create": {
+      "$or": [
+        { "data.tenant_id": "{{user.data.tenant_id}}" },
+        { "user_condition": { "role": "admin" } },
+        { "user_condition": { "role": "SUPER_ADMIN" } }
+      ]
+    },
+    "update": {
+      "$or": [
+        { "data.tenant_id": "{{user.data.tenant_id}}" },
+        { "user_condition": { "role": "admin" } },
+        { "user_condition": { "role": "SUPER_ADMIN" } }
+      ]
+    },
+    "delete": {
+      "$or": [
+        { "data.tenant_id": "{{user.data.tenant_id}}" },
+        { "user_condition": { "role": "admin" } },
+        { "user_condition": { "role": "SUPER_ADMIN" } }
+      ]
+    }
+  }
 }

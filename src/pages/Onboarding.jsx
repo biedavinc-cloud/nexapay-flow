@@ -11,6 +11,8 @@ import { Image } from "@/components/ui/image";
 import { CountrySelect, DialCodeSelect } from "@/components/CountrySelect";
 import CardFields from "@/components/checkout/CardFields";
 import MoMoFields from "@/components/checkout/MoMoFields";
+import ThreeDSModal from "@/components/checkout/ThreeDSModal";
+import UssdPromptModal from "@/components/checkout/UssdPromptModal";
 
 const BG = "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/a6fcd431d_stux-euro-400249_1920.jpg";
 
@@ -37,6 +39,44 @@ export default function Onboarding() {
     access_method: "CARD", momo_country: "", momo_prefix: "+237", momo_provider: "", momo_phone: "",
   });
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+  const [pubKey, setPubKey] = useState(null);
+  React.useEffect(() => {
+    base44.functions.invoke("getPublishableKey", {}).then((res) => {
+      const d = res?.data || res;
+      if (d?.publishable_key) setPubKey(d.publishable_key);
+    }).catch(() => {});
+  }, []);
+  const [threeDS, setThreeDS] = useState(null); // { url, reference }
+  const [ussd, setUssd] = useState(null); // { reference }
+
+  function finishPayment(status, extra = {}) {
+    setThreeDS(null);
+    setUssd(null);
+    if (status === "succeeded") {
+      set("has_paid_access", true);
+      toast({ title: "Paiement réussi", description: `Accès débloqué.${extra.transaction_id ? ` (TX ${extra.transaction_id})` : ""}` });
+    } else {
+      toast({ title: "Paiement refusé", description: extra.error || "Paiement non validé.", variant: "destructive" });
+    }
+  }
+
+  // Background poll: checks checkoutStatus every 3s (~2min max) and settles
+  // the pending 3DS/USSD modal once the PSP confirms succeeded or failed.
+  function pollCheckoutStatus(reference) {
+    let attempts = 0;
+    const interval = setInterval(async () => {
+      attempts += 1;
+      if (attempts > 40) { clearInterval(interval); finishPayment("failed", { error: "Délai dépassé. Réessayez ou contactez le support." }); return; }
+      try {
+        const res = await base44.functions.invoke("checkoutStatus", { reference });
+        const d = res?.data || res;
+        if (d?.status === "succeeded" || d?.status === "failed") {
+          clearInterval(interval);
+          finishPayment(d.status, d);
+        }
+      } catch { /* transient network error, keep polling */ }
+    }, 3000);
+  }
 
   async function upload(key, file) {
     if (!file) return;
@@ -54,8 +94,13 @@ export default function Onboarding() {
     setBusy(true);
     try {
       const t = TIERS[form.tier];
+      if (!pubKey) {
+        toast({ title: "Erreur", description: "Configuration de paiement indisponible. Réessayez dans un instant.", variant: "destructive" });
+        setBusy(false);
+        return;
+      }
       const payload = {
-        key: "nexa_pk_test_123",
+        key: pubKey,
         amount: t.price,
         currency: "USD",
         network: "TRC20",
@@ -71,12 +116,25 @@ export default function Onboarding() {
       }
       const res = await base44.functions.invoke("processCheckoutPayment", payload);
       const data = res?.data || res;
+
       if (data && data.status === "succeeded") {
-        set("has_paid_access", true);
-        toast({ title: "Paiement réussi", description: `Accès ${t.label} débloqué (TX ${data.transaction_id}).` });
-      } else {
-        toast({ title: "Paiement refusé", description: (data && (data.error || data.status)) || "Erreur inconnue", variant: "destructive" });
+        finishPayment("succeeded", data);
+        return;
       }
+      if (data && data.status === "requires_action" && data.auth_url) {
+        // Cardholder's own bank verification (3D Secure) -- required by card
+        // network rules, cannot be skipped or hidden.
+        setThreeDS({ url: data.auth_url, reference: data.reference });
+        pollCheckoutStatus(data.reference);
+        return;
+      }
+      if (data && data.status === "pending" && data.reference) {
+        // Mobile Money: waiting for the customer to enter their PIN.
+        setUssd({ reference: data.reference });
+        pollCheckoutStatus(data.reference);
+        return;
+      }
+      finishPayment("failed", data || {});
     } catch (e) {
       toast({ title: "Erreur paiement", description: e.message, variant: "destructive" });
     } finally { setBusy(false); }
@@ -312,6 +370,21 @@ export default function Onboarding() {
           </div>
         </div>
       </div>
+      {threeDS && (
+        <ThreeDSModal
+          url={threeDS.url}
+          lang="FR"
+          onDone={() => { /* checkoutStatus is already polling in the background */ }}
+          onClose={() => finishPayment("failed", { error: "Authentification annulée." })}
+        />
+      )}
+      {ussd && (
+        <UssdPromptModal
+          phone={`${form.momo_prefix}${form.momo_phone}`}
+          lang="FR"
+          onCancel={() => finishPayment("failed", { error: "Paiement annulé." })}
+        />
+      )}
     </div>
   );
 }
