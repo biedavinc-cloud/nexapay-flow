@@ -14,4 +14,10 @@ export const base44 = createClient({
   token,
   functionsVersion,
   appBaseUrl,
+  // The SDK's own analytics module is enabled by default and fires an
+  // auth.me() call against Base44 on every construction (unrelated to the
+  // separate Vite-plugin-injected page-view tracker, which is disabled in
+  // vite.config.js). Auth now lives on Neon, not Base44 -- this call would
+  // just 401 against Base44's server for no benefit. Disabled explicitly.
+  analytics: { enabled: false },
 });
