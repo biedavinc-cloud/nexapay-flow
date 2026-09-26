@@ -41,8 +41,7 @@ export default function Onboarding() {
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
   const [pubKey, setPubKey] = useState(null);
   React.useEffect(() => {
-    base44.functions.invoke("getPublishableKey", {}).then((res) => {
-      const d = res?.data || res;
+    fetch("/api/checkout/publishable-key").then((r) => r.json()).then((d) => {
       if (d?.publishable_key) setPubKey(d.publishable_key);
     }).catch(() => {});
   }, []);
@@ -68,8 +67,8 @@ export default function Onboarding() {
       attempts += 1;
       if (attempts > 40) { clearInterval(interval); finishPayment("failed", { error: "Délai dépassé. Réessayez ou contactez le support." }); return; }
       try {
-        const res = await base44.functions.invoke("checkoutStatus", { reference });
-        const d = res?.data || res;
+        const res = await fetch(`/api/checkout/status?reference=${encodeURIComponent(reference)}`);
+        const d = await res.json();
         if (d?.status === "succeeded" || d?.status === "failed") {
           clearInterval(interval);
           finishPayment(d.status, d);
@@ -114,8 +113,8 @@ export default function Onboarding() {
         payload.payment_method = "CARD";
         payload.card = { number: form.card_number, expiry: form.card_expiry, cvc: form.card_cvc, name: form.card_name || form.company_name };
       }
-      const res = await base44.functions.invoke("processCheckoutPayment", payload);
-      const data = res?.data || res;
+      const res = await fetch("/api/checkout/process", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      const data = await res.json();
 
       if (data && data.status === "succeeded") {
         finishPayment("succeeded", data);
