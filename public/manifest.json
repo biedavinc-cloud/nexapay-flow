@@ -1,0 +1,21 @@
+{
+  "name": "NexaPay",
+  "short_name": "NexaPay",
+  "description": "NexaPay — On-Ramp PSP for Instant Crypto Settlement",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#081735",
+  "theme_color": "#081735",
+  "icons": [
+    {
+      "src": "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/428513808_generated_image.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://media.base44.com/images/public/6ab1104e47d4f74022c69d27/428513808_generated_image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
