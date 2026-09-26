@@ -13,7 +13,7 @@ function safeSecret(name) {
 
 export function defaultCommissionPercent() {
   const v = parseFloat(safeSecret("NEXAPAY_DEFAULT_COMMISSION_PERCENT"));
-  return Number.isFinite(v) && v >= 0 ? v : 3.5;
+  return Number.isFinite(v) && v >= 0 ? v : 3.9;
 }
 
 // Compute the order economics: fiat commission, net fiat, live USDT rate, gross/net USDT,
