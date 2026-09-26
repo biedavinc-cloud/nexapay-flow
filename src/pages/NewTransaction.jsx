@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { NexaMark } from "@/components/NexaPayLogo";
-import { base44 } from "@/api/base44Client";
 import CardFields, { validateCardBrand } from "@/components/checkout/CardFields";
 import ThreeDSModal from "@/components/checkout/ThreeDSModal";
 import UssdPromptModal from "@/components/checkout/UssdPromptModal";
@@ -62,8 +61,7 @@ export default function NewTransaction() {
   const [publishableKey, setPublishableKey] = useState(params.get("publishable_key") || "");
   useEffect(() => {
     if (publishableKey) return;
-    base44.functions.invoke("getPublishableKey", {}).then((res) => {
-      const d = res?.data || res;
+    fetch("/api/checkout/publishable-key").then((r) => r.json()).then((d) => {
       if (d?.publishable_key) setPublishableKey(d.publishable_key);
     }).catch(() => {});
   }, [publishableKey]);
@@ -111,30 +109,18 @@ export default function NewTransaction() {
     try { window.parent.postMessage({ status: "PAYMENT_FAILED", reference }, "*"); } catch {}
   };
 
-  const pollKorapay = (reference) => {
+  // Single status endpoint for both PSPs -- checkoutStatus never reveals
+  // which one handled the payment (Korapay direct charge or PayUnit push).
+  const pollStatus = (reference) => {
     const poll = async () => {
       try {
-        const r = await base44.functions.invoke("korapayVerify", { reference });
-        const d = r?.data || r;
+        const r = await fetch(`/api/checkout/status?reference=${encodeURIComponent(reference)}`, {
+          headers: publishableKey ? { Authorization: `Bearer ${publishableKey}` } : {},
+        });
+        const d = await r.json();
         if (doneRef.current) return;
-        if (d.status === "COMPLETED") return finishSuccess(d.reference || reference, d.transaction_id);
-        if (d.status === "FAILED" || d.status === "CRYPTO_FAILED") return finishFailed(d.reference || reference, d.error);
-        const id = setTimeout(poll, 3000); timers.current.push(id);
-      } catch { const id = setTimeout(poll, 4000); timers.current.push(id); }
-    };
-    poll();
-    const stop = setTimeout(() => { if (!doneRef.current) finishFailed(reference, t.timedOut); }, 600000);
-    timers.current.push(stop);
-  };
-
-  const pollMoMo = (reference) => {
-    const poll = async () => {
-      try {
-        const r = await base44.functions.invoke("checkPayunitStatus", { ref: reference });
-        const d = r?.data || r;
-        if (doneRef.current) return;
-        if (d.status === "COMPLETED") return finishSuccess(d.reference || reference, d.transaction_id);
-        if (d.status === "FAILED") return finishFailed(d.reference || reference, d.error);
+        if (d.status === "succeeded") return finishSuccess(d.reference || reference, d.transaction_id);
+        if (d.status === "failed") return finishFailed(d.reference || reference, d.error);
         const id = setTimeout(poll, 3000); timers.current.push(id);
       } catch { const id = setTimeout(poll, 4000); timers.current.push(id); }
     };
@@ -154,31 +140,28 @@ export default function NewTransaction() {
 
     setSubmitting(true);
     try {
-      const [mm, yy] = card.expiry.split("/");
-      const res = await base44.functions.invoke("korapayCharge", {
-        tenant_id: tenantId || undefined,
-        amount, currency, network,
-        order_id: orderRef || undefined, webhook_url: webhookUrl || undefined,
-        customer_name: card.name || undefined, customer_email: email.trim(),
-        card: { number: card.number.replace(/\s+/g, ""), cvv: card.cvc, expiry_month: mm, expiry_year: yy },
+      const res = await fetch("/api/checkout/process", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: clientSecret ? undefined : publishableKey,
+          client_secret: clientSecret || undefined,
+          amount: clientSecret ? undefined : amount, currency: clientSecret ? undefined : currency,
+          network: clientSecret ? undefined : network, payment_method: "CARD",
+          tenant_id: tenantId || undefined, order_id: orderRef || undefined, webhook_url: webhookUrl || undefined,
+          payer: { email: email.trim() },
+          card: { number: card.number.replace(/\s+/g, ""), expiry: card.expiry, cvc: card.cvc, name: card.name || undefined },
+        }),
       });
-      const data = res?.data || res;
+      const data = await res.json();
 
-      if (data.status === "3DS") {
+      if (data.status === "requires_action") {
         setSubmitting(false); setThreeDS({ url: data.auth_url, reference: data.reference });
-        pollKorapay(data.reference);
+        pollStatus(data.reference);
         return;
       }
-      if (data.status === "SUCCESS") {
+      if (data.status === "succeeded") {
         setSubmitting(false);
-        const s = data.settlement || {};
-        if (s.status === "COMPLETED") return finishSuccess(data.reference, data.transaction_id);
-        setWaiting(true); pollKorapay(data.reference);
-        return;
-      }
-      if (data.status === "PENDING") {
-        setSubmitting(false); setWaiting(true); pollKorapay(data.reference);
-        return;
+        return finishSuccess(data.reference || data.transaction_id, data.transaction_id);
       }
       throw new Error(data.error || t.errFail);
     } catch (err) {
@@ -196,24 +179,26 @@ export default function NewTransaction() {
 
     setSubmitting(true);
     try {
-      const res = await base44.functions.invoke("initMoMoCharge", {
-        key: clientSecret ? undefined : publishableKey,
-        client_secret: clientSecret || undefined,
-        amount: clientSecret ? undefined : amount,
-        currency: clientSecret ? undefined : currency,
-        network: clientSecret ? undefined : network,
-        tenant_id: tenantId || undefined,
-        order_id: orderRef || undefined, webhook_url: webhookUrl || undefined, embed: isEmbed,
-        payer: { email: email.trim() },
-        country: momo.country, operator: momo.provider, phone: momo.phone,
+      const res = await fetch("/api/checkout/process", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: clientSecret ? undefined : publishableKey,
+          client_secret: clientSecret || undefined,
+          amount: clientSecret ? undefined : amount, currency: clientSecret ? undefined : currency,
+          network: clientSecret ? undefined : network, payment_method: "MOBILE_MONEY",
+          tenant_id: tenantId || undefined, order_id: orderRef || undefined, webhook_url: webhookUrl || undefined,
+          payer: { email: email.trim() },
+          country: momo.country,
+          momo: { provider: momo.provider, prefix: momo.prefix, phone: momo.phone },
+        }),
       });
-      const data = res?.data || res;
+      const data = await res.json();
       if (data.status !== "pending") throw new Error(data.error || t.errFail);
 
       setSubmitting(false);
       doneRef.current = false;
       setUssd({ reference: data.reference, phone: momo.phone });
-      pollMoMo(data.reference);
+      pollStatus(data.reference);
     } catch (err) {
       setError(err.message || t.errFail); setSubmitting(false);
     }
@@ -298,7 +283,7 @@ export default function NewTransaction() {
       {threeDS && (
         <ThreeDSModal url={threeDS.url} lang={lang} busy={waiting}
           onClose={() => { setThreeDS(null); setWaiting(true); }}
-          onDone={() => { setThreeDS(null); setWaiting(true); pollKorapay(threeDS.reference); }}
+          onDone={() => { setThreeDS(null); setWaiting(true); pollStatus(threeDS.reference); }}
         />
       )}
       {ussd && (
