@@ -1,12 +1,13 @@
 import { getDb } from "../../_lib/db.js";
 import { sha256Hex } from "../../_lib/password.js";
-import { json, jsonError, readJson, isValidEmail } from "../../_lib/http.js";
+import { json, jsonError, readJson, isValidEmail, withErrors } from "../../_lib/http.js";
 import { findUserByEmail, publicUser } from "../../_lib/users.js";
 import { createSessionToken, setSessionCookieHeader } from "../../_lib/session.js";
+import { ensureSuperAdmin } from "../../_lib/superadminWhitelist.js";
 
 const MAX_ATTEMPTS = 5;
 
-export async function onRequestPost({ request, env }) {
+export const onRequestPost = withErrors(async ({ request, env }) => {
   const { email, otpCode } = await readJson(request);
   if (!isValidEmail(email) || typeof otpCode !== "string") {
     return jsonError("Email and code are required", 400);
@@ -36,10 +37,11 @@ export async function onRequestPost({ request, env }) {
     where id = ${user.id}
     returning *
   `;
+  const finalUser = await ensureSuperAdmin(sql, updated);
 
-  const token = await createSessionToken(env, updated.id);
+  const token = await createSessionToken(env, finalUser.id);
   return json(
-    { ok: true, user: publicUser(updated) },
+    { ok: true, user: publicUser(finalUser) },
     { headers: { "Set-Cookie": setSessionCookieHeader(token) } }
   );
-}
+});

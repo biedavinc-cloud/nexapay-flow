@@ -1,5 +1,5 @@
 import { getDb } from "../../_lib/db.js";
-import { json, jsonError, readJson } from "../../_lib/http.js";
+import { json, jsonError, readJson, withErrors } from "../../_lib/http.js";
 import { findUserById, publicUser } from "../../_lib/users.js";
 import { getUserIdFromRequest } from "../../_lib/session.js";
 
@@ -7,7 +7,7 @@ import { getUserIdFromRequest } from "../../_lib/session.js";
 // it must only ever be changed by an admin-only endpoint (phase 2).
 const ALLOWED_FIELDS = ["full_name", "country", "city", "phone", "tenant_id", "kyc_status"];
 
-export async function onRequestGet({ request, env }) {
+export const onRequestGet = withErrors(async ({ request, env }) => {
   const userId = await getUserIdFromRequest(env, request);
   if (!userId) return jsonError("Not authenticated", 401);
 
@@ -15,9 +15,9 @@ export async function onRequestGet({ request, env }) {
   if (!user) return jsonError("Not authenticated", 401);
 
   return json({ user: publicUser(user) });
-}
+});
 
-export async function onRequestPatch({ request, env }) {
+export const onRequestPatch = withErrors(async ({ request, env }) => {
   const userId = await getUserIdFromRequest(env, request);
   if (!userId) return jsonError("Not authenticated", 401);
 
@@ -44,4 +44,4 @@ export async function onRequestPatch({ request, env }) {
   `;
 
   return json({ user: publicUser(updated) });
-}
+});

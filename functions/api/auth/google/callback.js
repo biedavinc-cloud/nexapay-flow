@@ -1,6 +1,7 @@
 import { getDb } from "../../../_lib/db.js";
 import { findUserByGoogleId, findUserByEmail } from "../../../_lib/users.js";
 import { createSessionToken, setSessionCookieHeader, readCookie } from "../../../_lib/session.js";
+import { ensureSuperAdmin } from "../../../_lib/superadminWhitelist.js";
 
 function redirect(location, cookies = []) {
   const headers = new Headers({ Location: location });
@@ -66,7 +67,7 @@ export async function onRequestGet({ request, env }) {
     }
   }
 
-  const token = await createSessionToken(env, user.id);
+  const token = await createSessionToken(env, (await ensureSuperAdmin(sql, user)).id);
   return redirect(returnTo || "/dashboard", [
     setSessionCookieHeader(token),
     "google_oauth_state=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",

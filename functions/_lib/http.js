@@ -16,6 +16,17 @@ export async function readJson(request) {
   }
 }
 
+export function withErrors(handler) {
+  return async (ctx) => {
+    try {
+      return await handler(ctx);
+    } catch (error) {
+      console.error("auth function error:", error);
+      return jsonError(error?.message || "Internal error", 500);
+    }
+  };
+}
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export function isValidEmail(email) {
   return typeof email === "string" && EMAIL_RE.test(email) && email.length <= 254;

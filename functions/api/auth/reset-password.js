@@ -1,9 +1,9 @@
 import { getDb } from "../../_lib/db.js";
 import { hashPassword, sha256Hex } from "../../_lib/password.js";
-import { json, jsonError, readJson } from "../../_lib/http.js";
+import { json, jsonError, readJson, withErrors } from "../../_lib/http.js";
 import { findUserByResetTokenHash } from "../../_lib/users.js";
 
-export async function onRequestPost({ request, env }) {
+export const onRequestPost = withErrors(async ({ request, env }) => {
   const { resetToken, newPassword } = await readJson(request);
   if (typeof resetToken !== "string" || !resetToken) {
     return jsonError("Invalid or expired reset link", 400);
@@ -25,4 +25,4 @@ export async function onRequestPost({ request, env }) {
   `;
 
   return json({ ok: true });
-}
+});

@@ -1,10 +1,10 @@
 import { getDb } from "../../_lib/db.js";
 import { generateOtp, sha256Hex } from "../../_lib/password.js";
 import { sendEmail, otpEmailHtml } from "../../_lib/email.js";
-import { json, jsonError, readJson, isValidEmail } from "../../_lib/http.js";
+import { json, jsonError, readJson, isValidEmail, withErrors } from "../../_lib/http.js";
 import { findUserByEmail } from "../../_lib/users.js";
 
-export async function onRequestPost({ request, env }) {
+export const onRequestPost = withErrors(async ({ request, env }) => {
   const { email } = await readJson(request);
   if (!isValidEmail(email)) return jsonError("A valid email is required", 400);
 
@@ -30,4 +30,4 @@ export async function onRequestPost({ request, env }) {
   });
 
   return json({ ok: true });
-}
+});
