@@ -1,6 +1,11 @@
 // PBKDF2-SHA256 password hashing via Web Crypto (no native deps, runs on the
 // Workers runtime that powers Cloudflare Pages Functions).
-const ITERATIONS = 210_000;
+// Cloudflare Workers' Web Crypto PBKDF2 caps iterations at 100,000 (Node's
+// crypto module has no such limit, which is why this worked when hashes
+// were generated/tested outside the Workers runtime but failed at actual
+// login/register time with "iteration counts above 100000 are not
+// supported"). 100,000 is the max allowed here, not a security choice.
+const ITERATIONS = 100_000;
 const KEY_LENGTH_BITS = 256;
 
 function toBase64(bytes) {
