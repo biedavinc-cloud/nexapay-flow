@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { NexaMark } from "@/components/NexaPayLogo";
-import { base44 } from "@/api/base44Client";
 
 const I18N = {
   FR: {
@@ -46,8 +45,9 @@ export default function PayLink() {
   React.useEffect(() => {
     (async () => {
       try {
-        const res = await base44.functions.invoke("resolvePaymentLink", { slug });
-        const data = res?.data || res;
+        const res = await fetch(`/api/payment-links/resolve?slug=${encodeURIComponent(slug)}`);
+        const data = await res.json();
+        if (!res.ok) throw data;
         if (data?.error) { setStatus("error"); return; }
         setLink(data);
         setStatus("ready");

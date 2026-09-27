@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link2, Copy, CheckCircle2, Plus, Trash2, Power, Loader2 } from "lucide-react";
-import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   Select, SelectTrigger, SelectValue, SelectContent, SelectItem,
 } from "@/components/ui/select";
-
-const genSlug = () => `nx_${Math.random().toString(36).slice(2, 8)}${Date.now().toString(36).slice(-4)}`;
 
 const NETWORKS = ["TRC20", "ERC20", "POLYGON"];
 const CURRENCIES = ["EUR", "USD", "XAF", "XOF", "GBP", "CAD"];
@@ -23,8 +20,9 @@ export default function PaymentLinks() {
   const load = async () => {
     setLoading(true);
     try {
-      const data = await base44.entities.PaymentLink.list("-created_date", 100);
-      setLinks(data || []);
+      const res = await fetch("/api/payment-links", { credentials: "include" });
+      const d = await res.json();
+      setLinks(d.links || []);
     } catch (e) {
       setLinks([]);
     } finally {
@@ -41,16 +39,16 @@ export default function PaymentLinks() {
     if (!form.label.trim() || !form.amount || Number(form.amount) <= 0) return;
     setSaving(true);
     try {
-      const rec = await base44.entities.PaymentLink.create({
-        label: form.label.trim(),
-        amount: Number(form.amount),
-        currency: form.currency,
-        network: form.network,
-        description: form.description.trim(),
-        slug: genSlug(),
-        active: true,
+      const res = await fetch("/api/payment-links", {
+        method: "POST", credentials: "include", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          label: form.label.trim(), amount: Number(form.amount), currency: form.currency,
+          network: form.network, description: form.description.trim(),
+        }),
       });
-      setLinks((p) => [rec, ...p]);
+      const d = await res.json();
+      if (!res.ok) throw new Error(d.error || "Failed to create link");
+      setLinks((p) => [d.link, ...p]);
       setForm({ label: "", amount: "", currency: "EUR", network: "TRC20", description: "" });
     } finally {
       setSaving(false);
@@ -58,13 +56,17 @@ export default function PaymentLinks() {
   };
 
   const toggle = async (l) => {
-    const updated = await base44.entities.PaymentLink.update(l.id, { active: !l.active });
-    setLinks((p) => p.map((x) => (x.id === l.id ? updated : x)));
+    const res = await fetch(`/api/payment-links/${l.id}`, {
+      method: "PATCH", credentials: "include", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ active: !l.active }),
+    });
+    const d = await res.json();
+    if (res.ok) setLinks((p) => p.map((x) => (x.id === l.id ? d.link : x)));
   };
 
   const remove = async (l) => {
-    await base44.entities.PaymentLink.delete(l.id);
-    setLinks((p) => p.filter((x) => x.id !== l.id));
+    const res = await fetch(`/api/payment-links/${l.id}`, { method: "DELETE", credentials: "include" });
+    if (res.ok) setLinks((p) => p.filter((x) => x.id !== l.id));
   };
 
   const copy = async (l) => {

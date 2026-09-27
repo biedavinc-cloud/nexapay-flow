@@ -3,7 +3,33 @@ import PageHeader from "@/components/PageHeader";
 import ConfigManager from "@/components/admin/ConfigManager";
 import { KeyRound } from "lucide-react";
 
-const rand = () => Math.random().toString(36).slice(2, 12);
+const adapter = {
+  list: async () => {
+    const res = await fetch("/api/merchant/api-keys", { credentials: "include" });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || "Failed to load");
+    return res.json();
+  },
+  create: async (record) => {
+    const res = await fetch("/api/merchant/api-keys", {
+      method: "POST", credentials: "include", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ label: record.label }),
+    });
+    const d = await res.json();
+    if (!res.ok) throw new Error(d.error || "Failed to create");
+    return d;
+  },
+  toggle: async (id, field, value) => {
+    const res = await fetch(`/api/merchant/api-keys/${id}`, {
+      method: "PATCH", credentials: "include", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ [field]: value }),
+    });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || "Update failed");
+  },
+  remove: async (id) => {
+    const res = await fetch(`/api/merchant/api-keys/${id}`, { method: "DELETE", credentials: "include" });
+    if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || "Delete failed");
+  },
+};
 
 export default function ApiKeys() {
   return (
@@ -14,12 +40,12 @@ export default function ApiKeys() {
         icon={KeyRound}
       />
       <ConfigManager
-        entity="ApiKey"
+        adapter={adapter}
         addLabel="Générer une paire de clés"
         fields={[
           { name: "label", label: "Libellé", type: "text", placeholder: "Marketplace production", span: "full" },
-          { name: "secret_key", label: "Clé secrète", type: "password", hidden: true, generate: () => `nexa_sk_live_${rand()}` },
-          { name: "publishable_key", label: "Clé publique", type: "text", hidden: true, generate: () => `nexa_pk_live_${rand()}` },
+          { name: "secret_key", label: "Clé secrète", type: "password", hidden: true, generate: () => "" },
+          { name: "publishable_key", label: "Clé publique", type: "text", hidden: true, generate: () => "" },
           { name: "active", label: "Active", type: "boolean", default: true },
         ]}
       />

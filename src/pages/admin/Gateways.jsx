@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ShieldCheck, Loader2, Save, KeyRound } from "lucide-react";
-import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -30,8 +29,9 @@ export default function Gateways() {
   const load = async () => {
     setLoading(true);
     try {
-      const r = await base44.functions.invoke("managePspConfig", { action: "list" });
-      const d = r?.data || r;
+      const r = await fetch("/api/admin/psp-config", { credentials: "include" });
+      const d = await r.json();
+      if (!r.ok) throw new Error(d.error || "Failed to load");
       const map = {};
       (d.configs || []).forEach((c) => { map[c.provider] = c; });
       setConfigs(map);
@@ -68,10 +68,15 @@ export default function Gateways() {
         const s = String(v ?? "").trim();
         if (s && !s.includes("•")) creds[k] = s;
       });
-      await base44.functions.invoke("managePspConfig", {
-        action: "save", provider: p.id, active: dr.active, environment: dr.environment,
-        priority_card: dr.priority_card, priority_momo: dr.priority_momo, notes: dr.notes, credentials: creds,
+      const res = await fetch("/api/admin/psp-config", {
+        method: "POST", credentials: "include", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          provider: p.id, active: dr.active, environment: dr.environment,
+          priority_card: dr.priority_card, priority_momo: dr.priority_momo, notes: dr.notes, credentials: creds,
+        }),
       });
+      const resData = await res.json();
+      if (!res.ok) throw new Error(resData.error || "Save failed");
       toast({ title: "Passerelle mise à jour", description: `${p.label} — ${dr.environment} · ${dr.active ? "Active" : "Inactive"}` });
       await load();
     } catch (e) {

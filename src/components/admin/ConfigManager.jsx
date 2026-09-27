@@ -16,7 +16,12 @@ import { Loader2, Plus, Trash2, Copy, Eye, EyeOff, Check, X } from "lucide-react
 
 // Generic config CRUD: a create form + a list with active toggle, secret reveal/copy and delete.
 // fields: { name, label, type: text|password|number|date|select|boolean, options?, placeholder?, default?, span?, hidden?, generate? }
-export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) {
+// adapter (optional): { list, create, toggle, remove } async functions backed
+// by a Neon/Cloudflare endpoint instead of base44.entities[entity]. When
+// provided, `generate` fields (e.g. secret keys) are expected to be
+// generated SERVER-SIDE by `create` and returned in the response record --
+// client-side Math.random() is not cryptographically secure for secrets.
+export default function ConfigManager({ entity, fields, addLabel = "Ajouter", adapter }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({});
@@ -29,7 +34,7 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) 
   const load = async () => {
     setLoading(true);
     try {
-      const data = await base44.entities[entity].list("-created_date", 200);
+      const data = adapter ? await adapter.list() : await base44.entities[entity].list("-created_date", 200);
       setItems(data);
     } catch (e) {
       setItems([]);
@@ -50,12 +55,16 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) 
     const record = {};
     try {
       for (const f of fields) {
-        if (f.generate) record[f.name] = f.generate();
-        else if (f.type === "boolean") record[f.name] = form[f.name] ?? f.default ?? false;
+        if (f.generate) {
+          // With an adapter, the server generates secrets securely
+          // (crypto.getRandomValues), not client-side Math.random(). Send a
+          // marker so the server knows to fill this field itself.
+          if (!adapter) record[f.name] = f.generate();
+        } else if (f.type === "boolean") record[f.name] = form[f.name] ?? f.default ?? false;
         else if (f.type === "number") record[f.name] = Number(form[f.name] ?? f.default ?? 0);
         else record[f.name] = (form[f.name] ?? f.default ?? "").toString();
       }
-      const created = await base44.entities[entity].create(record);
+      const created = adapter ? await adapter.create(record) : await base44.entities[entity].create(record);
       setForm({});
       const secretFields = fields.filter((f) => f.type === "password" || f.generate);
       setLastCreated({ record: created, recordRaw: record, fields: secretFields });
@@ -76,7 +85,8 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) 
 
   const toggle = async (item, field) => {
     try {
-      await base44.entities[entity].update(item.id, { [field]: !item[field] });
+      if (adapter) await adapter.toggle(item.id, field, !item[field]);
+      else await base44.entities[entity].update(item.id, { [field]: !item[field] });
     } catch (e) {
       toast({ variant: "destructive", title: "Mise à jour impossible", description: e?.message });
     }
@@ -85,7 +95,8 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter" }) 
 
   const remove = async (id) => {
     try {
-      await base44.entities[entity].delete(id);
+      if (adapter) await adapter.remove(id);
+      else await base44.entities[entity].delete(id);
     } catch (e) {
       toast({ variant: "destructive", title: "Suppression impossible", description: e?.message });
     }
