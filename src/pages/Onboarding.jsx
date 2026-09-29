@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { base44 } from "@/api/base44Client";
 import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,12 +38,6 @@ export default function Onboarding() {
     access_method: "CARD", momo_country: "", momo_prefix: "+237", momo_provider: "", momo_phone: "",
   });
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
-  const [pubKey, setPubKey] = useState(null);
-  React.useEffect(() => {
-    fetch("/api/checkout/publishable-key").then((r) => r.json()).then((d) => {
-      if (d?.publishable_key) setPubKey(d.publishable_key);
-    }).catch(() => {});
-  }, []);
   const [threeDS, setThreeDS] = useState(null); // { url, reference }
   const [ussd, setUssd] = useState(null); // { reference }
 
@@ -79,33 +72,31 @@ export default function Onboarding() {
 
   async function upload(key, file) {
     if (!file) return;
+    if (file.size > 1_800_000) {
+      toast({ title: "Fichier trop volumineux", description: "1.8 Mo maximum.", variant: "destructive" });
+      return;
+    }
     setBusy(true);
-    try {
-      const { file_url } = await base44.integrations.Core.UploadPublicFile({ file });
-      set(key, file_url);
-      toast({ title: "Fichier téléversé" });
-    } catch (e) {
-      toast({ title: "Échec upload", description: e.message, variant: "destructive" });
-    } finally { setBusy(false); }
+    const reader = new FileReader();
+    reader.onload = () => { set(key, reader.result); setBusy(false); toast({ title: "Fichier prêt" }); };
+    reader.onerror = () => { setBusy(false); toast({ title: "Échec de lecture du fichier", variant: "destructive" }); };
+    reader.readAsDataURL(file);
   }
 
   async function payAccess() {
     setBusy(true);
     try {
-      const t = TIERS[form.tier];
-      if (!pubKey) {
-        toast({ title: "Erreur", description: "Configuration de paiement indisponible. Réessayez dans un instant.", variant: "destructive" });
+      const sessionRes = await fetch("/api/merchant/onboarding-session", {
+        method: "POST", credentials: "include", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tier: form.tier }),
+      });
+      const sessionData = await sessionRes.json();
+      if (!sessionRes.ok || !sessionData.client_secret) {
+        toast({ title: "Erreur", description: sessionData.error || "Configuration de paiement indisponible.", variant: "destructive" });
         setBusy(false);
         return;
       }
-      const payload = {
-        key: pubKey,
-        amount: t.price,
-        currency: "USD",
-        network: "TRC20",
-        order_id: `ACCESS-${t.id}-${Date.now()}`,
-        webhook_url: "",
-      };
+      const payload = { client_secret: sessionData.client_secret };
       if (form.access_method === "MOMO") {
         payload.payment_method = "MOBILE_MONEY";
         payload.momo = { provider: form.momo_provider || "Orange Money", prefix: form.momo_prefix, phone: form.momo_phone };
@@ -142,30 +133,19 @@ export default function Onboarding() {
   async function finish() {
     setBusy(true);
     try {
-      const t = TIERS[form.tier];
-      const tenant = await base44.entities.Tenant.create({
-        company_name: form.company_name,
-        country: form.country,
-        city: form.city,
-        business_activity: form.business_activity,
-        tier: form.tier,
-        has_paid_access: form.has_paid_access,
-        daily_limit: t.daily_limit,
-        commission_rate: t.commission,
-        checkout_primary_color: form.checkout_primary_color,
-        logo_url: form.logo_url,
-        account_status: "AWAITING_APPROVAL",
-        kyc_status: form.has_paid_access ? "PENDING_KYC" : "PENDING_PAYMENT",
-        kyc_doc_url: form.kyc_doc_url,
-        selfie_url: form.selfie_url,
-        id_name: form.id_name,
-        id_number: form.id_number,
-        phone: `${form.phone_prefix}${form.phone_local}`,
-        receiving_wallet: form.receiving_wallet,
-        blockchain: form.blockchain,
-        onboarding_complete: true,
+      const res = await fetch("/api/merchant/onboarding", {
+        method: "POST", credentials: "include", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          tier: form.tier,
+          company_name: form.company_name, country: form.country, city: form.city, business_activity: form.business_activity,
+          checkout_primary_color: form.checkout_primary_color, logo_url: form.logo_url,
+          kyc_doc: form.kyc_doc_url, selfie: form.selfie_url,
+          id_name: form.id_name, id_number: form.id_number, phone: `${form.phone_prefix}${form.phone_local}`,
+          receiving_wallet: form.receiving_wallet, blockchain: form.blockchain,
+        }),
       });
-      await auth.updateMe({ tenant_id: tenant.id, kyc_status: "PENDING_KYC" });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to submit");
       toast({ title: "Dossier soumis", description: "En attente de validation par NexaPay." });
       setTimeout(() => { window.location.href = "/approval-pending"; }, 1200);
     } catch (e) {

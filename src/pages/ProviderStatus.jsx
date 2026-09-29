@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import StatusPill from "@/components/StatusPill";
 import { Activity, Loader2, RefreshCw } from "lucide-react";
@@ -12,7 +12,7 @@ export default function ProviderStatus() {
 
   const load = async () => {
     setLoading(true);
-    const data = await base44.entities.ProviderConfig.list("-created_date", 50);
+    const data = await db.ProviderConfig.list("-created_date", 50);
     setItems(data);
     setLoading(false);
   };
@@ -24,7 +24,7 @@ export default function ProviderStatus() {
     setChecking((s) => ({ ...s, [id]: true }));
     const pool = ["OPERATIONAL", "OPERATIONAL", "OPERATIONAL", "DEGRADED", "DOWN"];
     const status = pool[Math.floor(Math.random() * pool.length)];
-    await base44.entities.ProviderConfig.update(id, {
+    await db.ProviderConfig.update(id, {
       status,
       last_checked: new Date().toISOString(),
     });

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { Badge } from "@/components/ui/badge";
 import { ScrollText, Loader2, RefreshCw } from "lucide-react";
@@ -19,7 +19,7 @@ export default function WebhookAudit() {
   const load = async () => {
     setLoading(true);
     try {
-      const data = await base44.entities.WebhookLog.list("-created_date", 200);
+      const data = await db.WebhookLog.list("-created_date", 200);
       setLogs(data);
     } catch {
       setLogs([]);

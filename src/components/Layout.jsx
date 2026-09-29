@@ -24,10 +24,12 @@ import {
   RadioTower,
   Plug,
   Crown,
-} from "lucide-react";
-import { base44 } from "@/api/base44Client";
+  Menu,
+} 
+import { db } from "@/lib/db";
 import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { SUPERADMIN_EMAILS } from "@/lib/superadminWhitelist";
 import { NexaMark } from "@/components/NexaPayLogo";
 
@@ -112,7 +114,7 @@ export default function Layout() {
         const path = location.pathname;
         if (path === "/onboarding" || path === "/approval-pending") { if (!cancelled) setGate("ok"); return; }
         if (!me.tenant_id) { navigate("/onboarding", { replace: true }); return; }
-        const tenant = await base44.entities.Tenant.get(me.tenant_id);
+        const tenant = await db.Tenant.get(me.tenant_id);
         const st = tenant.account_status || "PENDING_ONBOARDING";
         if (st === "APPROVED") { if (!cancelled) setGate("ok"); return; }
         if (st === "AWAITING_APPROVAL" || st === "REJECTED") { navigate("/approval-pending", { replace: true }); return; }
@@ -132,82 +134,105 @@ export default function Layout() {
     );
   }
 
-  return (
-    <div className="min-h-screen flex bg-background text-foreground">
-      <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
-        <div className="flex items-center gap-2.5 px-6 h-16 border-b border-border">
-          <NexaMark size={36} />
-          <div className="leading-tight">
-            <p className="font-display font-semibold tracking-tight text-foreground">NexaPay</p>
-            <p className="text-[11px] text-muted-foreground">Crypto Engine</p>
-          </div>
-        </div>
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const closeMobileNav = () => setMobileNavOpen(false);
 
-        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-5">
-          {isSuper && (
-            <div>
-              <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-primary/70">
-                Backoffice
-              </p>
-              <div className="space-y-1">
+  const navContent = (
+    <>
+      <div className="flex items-center gap-2.5 px-6 h-16 border-b border-border">
+        <NexaMark size={36} />
+        <div className="leading-tight">
+          <p className="font-display font-semibold tracking-tight text-foreground">NexaPay</p>
+          <p className="text-[11px] text-muted-foreground">Crypto Engine</p>
+        </div>
+      </div>
+
+      <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-5">
+        {isSuper && (
+          <div>
+            <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-primary/70">
+              Backoffice
+            </p>
+            <div className="space-y-1">
+              <NavLink
+                to="/admin/superadmin"
+                onClick={closeMobileNav}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? "bg-primary/15 text-primary border border-primary/30"
+                      : "text-primary hover:bg-primary/10 border border-transparent"
+                  }`
+                }
+              >
+                <Crown className="h-4 w-4 shrink-0" />
+                <span className="truncate">SuperAdmin</span>
+              </NavLink>
+            </div>
+          </div>
+        )}
+        {SECTIONS.map((section) => (
+          <div key={section.title}>
+            <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+              {section.title}
+            </p>
+            <div className="space-y-1">
+              {section.items.map(({ to, label, icon: Icon, end }) => (
                 <NavLink
-                  to="/admin/superadmin"
+                  key={to}
+                  to={to}
+                  end={end}
+                  onClick={closeMobileNav}
                   className={({ isActive }) =>
                     `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-primary/15 text-primary border border-primary/30"
-                        : "text-primary hover:bg-primary/10 border border-transparent"
+                        : "text-muted-foreground hover:text-foreground hover:bg-accent border border-transparent"
                     }`
                   }
                 >
-                  <Crown className="h-4 w-4 shrink-0" />
-                  <span className="truncate">SuperAdmin</span>
+                  <Icon className="h-4 w-4 shrink-0" />
+                  <span className="truncate">{label}</span>
                 </NavLink>
-              </div>
+              ))}
             </div>
-          )}
-          {SECTIONS.map((section) => (
-            <div key={section.title}>
-              <p className="px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
-                {section.title}
-              </p>
-              <div className="space-y-1">
-                {section.items.map(({ to, label, icon: Icon, end }) => (
-                  <NavLink
-                    key={to}
-                    to={to}
-                    end={end}
-                    className={({ isActive }) =>
-                      `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                        isActive
-                          ? "bg-primary/15 text-primary border border-primary/30"
-                          : "text-muted-foreground hover:text-foreground hover:bg-accent border border-transparent"
-                      }`
-                    }
-                  >
-                    <Icon className="h-4 w-4 shrink-0" />
-                    <span className="truncate">{label}</span>
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-          ))}
-        </nav>
+          </div>
+        ))}
+      </nav>
 
-        <div className="p-3 border-t border-border">
-          <Button
-            variant="ghost"
-            onClick={handleLogout}
-            className="w-full justify-start text-muted-foreground hover:text-foreground"
-          >
-            <LogOut className="h-4 w-4 mr-2" />
-            Sign out
-          </Button>
-        </div>
+      <div className="p-3 border-t border-border">
+        <Button
+          variant="ghost"
+          onClick={handleLogout}
+          className="w-full justify-start text-muted-foreground hover:text-foreground"
+        >
+          <LogOut className="h-4 w-4 mr-2" />
+          Sign out
+        </Button>
+      </div>
+    </>
+  );
+
+  return (
+    <div className="min-h-screen flex bg-background text-foreground">
+      <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
+        {navContent}
       </aside>
+
+      {/* Mobile: the sidebar nav lives in a slide-in drawer instead of being
+          hidden with no way to reach it -- previously `md:hidden` on the
+          aside had no on-mobile equivalent at all. */}
+      <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
+        <SheetContent side="left" className="p-0 w-72 flex flex-col bg-sidebar border-border">
+          {navContent}
+        </SheetContent>
+      </Sheet>
 
       <div className="md:hidden fixed top-0 inset-x-0 z-40 h-14 flex items-center justify-between px-4 border-b border-border bg-sidebar">
         <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" className="-ml-2" onClick={() => setMobileNavOpen(true)} aria-label="Ouvrir le menu">
+            <Menu className="h-5 w-5" />
+          </Button>
           <NexaMark size={32} />
           <span className="font-display font-semibold">NexaPay</span>
         </div>

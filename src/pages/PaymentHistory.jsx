@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import StatusPill from "@/components/StatusPill";
 import { History, Loader2, ExternalLink } from "lucide-react";
@@ -16,7 +16,7 @@ export default function PaymentHistory() {
 
   useEffect(() => {
     (async () => {
-      const data = await base44.entities.Transaction.list("-created_date", 200);
+      const data = await db.Transaction.list("-created_date", 200);
       setRows(data);
       setLoading(false);
     })();

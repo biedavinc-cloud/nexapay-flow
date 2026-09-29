@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { Percent, Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ export default function RateManagement() {
 
   useEffect(() => {
     (async () => {
-      const all = await base44.entities.AppSetting.list("-created_date", 100);
+      const all = await db.AppSetting.list("-created_date", 100);
       const m = all.find((s) => s.key === "margin_pct");
       if (m) setMargin(Number(m.value));
     })();
@@ -22,10 +22,10 @@ export default function RateManagement() {
   const save = async (e) => {
     e.preventDefault();
     setSaving(true);
-    const all = await base44.entities.AppSetting.list("-created_date", 100);
+    const all = await db.AppSetting.list("-created_date", 100);
     const existing = all.find((s) => s.key === "margin_pct");
-    if (existing) await base44.entities.AppSetting.update(existing.id, { value: String(margin) });
-    else await base44.entities.AppSetting.create({ key: "margin_pct", value: String(margin) });
+    if (existing) await db.AppSetting.update(existing.id, { value: String(margin) });
+    else await db.AppSetting.create({ key: "margin_pct", value: String(margin) });
     setSaving(false);
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);

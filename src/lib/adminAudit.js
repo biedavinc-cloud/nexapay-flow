@@ -1,10 +1,10 @@
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { auth } from "@/lib/authClient";
 
 export async function logAudit(action, target_tenant_id, details) {
   try {
     const me = await auth.me();
-    await base44.entities.SuperadminAuditLog.create({
+    await db.SuperadminAuditLog.create({
       action,
       target_tenant_id: target_tenant_id || "",
       details: typeof details === "string" ? details : JSON.stringify(details),

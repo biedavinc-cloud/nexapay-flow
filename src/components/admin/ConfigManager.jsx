@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +13,28 @@ import {
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2, Plus, Trash2, Copy, Eye, EyeOff, Check, X } from "lucide-react";
 
+// Default adapter: admin-only Neon-backed CRUD (functions/api/admin/config.js),
+// keyed by a whitelisted entity name. Pages that need something different
+// (merchant-scoped API keys / webhooks) pass their own `adapter`.
+const adminAdapter = (entity) => {
+  const q = `entity=${encodeURIComponent(entity)}`;
+  const j = async (res, fallback) => {
+    const d = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(d.error || fallback);
+    return d;
+  };
+  return {
+    list: async () => j(await fetch(`/api/admin/config?${q}`, { credentials: "include" }), "Failed to load"),
+    create: async (record) => j(await fetch(`/api/admin/config?${q}`, {
+      method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(record),
+    }), "Failed to create"),
+    toggle: async (id, field, value) => j(await fetch(`/api/admin/config/${id}?${q}`, {
+      method: "PATCH", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ [field]: value }),
+    }), "Update failed"),
+    remove: async (id) => j(await fetch(`/api/admin/config/${id}?${q}`, { method: "DELETE", credentials: "include" }), "Delete failed"),
+  };
+};
+
 // Generic config CRUD: a create form + a list with active toggle, secret reveal/copy and delete.
 // fields: { name, label, type: text|password|number|date|select|boolean, options?, placeholder?, default?, span?, hidden?, generate? }
 // adapter (optional): { list, create, toggle, remove } async functions backed
@@ -21,7 +42,8 @@ import { Loader2, Plus, Trash2, Copy, Eye, EyeOff, Check, X } from "lucide-react
 // provided, `generate` fields (e.g. secret keys) are expected to be
 // generated SERVER-SIDE by `create` and returned in the response record --
 // client-side Math.random() is not cryptographically secure for secrets.
-export default function ConfigManager({ entity, fields, addLabel = "Ajouter", adapter }) {
+export default function ConfigManager({ entity, fields, addLabel = "Ajouter", adapter: customAdapter }) {
+  const adapter = customAdapter || adminAdapter(entity);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({});
@@ -34,7 +56,7 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter", ad
   const load = async () => {
     setLoading(true);
     try {
-      const data = adapter ? await adapter.list() : await base44.entities[entity].list("-created_date", 200);
+      const data = await adapter.list();
       setItems(data);
     } catch (e) {
       setItems([]);
@@ -59,12 +81,12 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter", ad
           // With an adapter, the server generates secrets securely
           // (crypto.getRandomValues), not client-side Math.random(). Send a
           // marker so the server knows to fill this field itself.
-          if (!adapter) record[f.name] = f.generate();
+          if (!customAdapter) record[f.name] = f.generate();
         } else if (f.type === "boolean") record[f.name] = form[f.name] ?? f.default ?? false;
         else if (f.type === "number") record[f.name] = Number(form[f.name] ?? f.default ?? 0);
         else record[f.name] = (form[f.name] ?? f.default ?? "").toString();
       }
-      const created = adapter ? await adapter.create(record) : await base44.entities[entity].create(record);
+      const created = await adapter.create(record);
       setForm({});
       const secretFields = fields.filter((f) => f.type === "password" || f.generate);
       setLastCreated({ record: created, recordRaw: record, fields: secretFields });
@@ -85,8 +107,7 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter", ad
 
   const toggle = async (item, field) => {
     try {
-      if (adapter) await adapter.toggle(item.id, field, !item[field]);
-      else await base44.entities[entity].update(item.id, { [field]: !item[field] });
+      await adapter.toggle(item.id, field, !item[field]);
     } catch (e) {
       toast({ variant: "destructive", title: "Mise à jour impossible", description: e?.message });
     }
@@ -95,8 +116,7 @@ export default function ConfigManager({ entity, fields, addLabel = "Ajouter", ad
 
   const remove = async (id) => {
     try {
-      if (adapter) await adapter.remove(id);
-      else await base44.entities[entity].delete(id);
+      await adapter.remove(id);
     } catch (e) {
       toast({ variant: "destructive", title: "Suppression impossible", description: e?.message });
     }

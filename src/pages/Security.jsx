@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { ShieldCheck, Loader2, Save, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,7 +14,7 @@ export default function Security() {
 
   const load = async () => {
     setLoading(true);
-    const data = await base44.entities.ProviderConfig.list("-created_date", 50);
+    const data = await db.ProviderConfig.list("-created_date", 50);
     setProviders(data);
     setEdit(
       Object.fromEntries(
@@ -35,7 +35,7 @@ export default function Security() {
   }, []);
 
   const save = async (id) => {
-    await base44.entities.ProviderConfig.update(id, edit[id]);
+    await db.ProviderConfig.update(id, edit[id]);
     load();
   };
 

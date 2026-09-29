@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,8 +18,8 @@ export default function AdminRates() {
     setLoading(true);
     try {
       const [curs, settings] = await Promise.all([
-        base44.entities.CurrencyConfig.list("-created_date", 50),
-        base44.entities.AppSetting.list("-created_date", 100),
+        db.CurrencyConfig.list("-created_date", 50),
+        db.AppSetting.list("-created_date", 100),
       ]);
       setRows(curs);
       setEdits(Object.fromEntries(curs.map((c) => [c.id, { enabled: c.enabled, auto_convert: c.auto_convert, min_threshold: c.min_threshold || 0, margin_pct: c.margin_pct || 0 }])));
@@ -32,10 +32,10 @@ export default function AdminRates() {
 
   const saveGlobal = async () => {
     try {
-      const existing = await base44.entities.AppSetting.list("-created_date", 100);
+      const existing = await db.AppSetting.list("-created_date", 100);
       const gm = existing.find((s) => s.key === "global_margin_pct");
-      if (gm) await base44.entities.AppSetting.update(gm.id, { value: String(globalMargin) });
-      else await base44.entities.AppSetting.create({ key: "global_margin_pct", value: String(globalMargin) });
+      if (gm) await db.AppSetting.update(gm.id, { value: String(globalMargin) });
+      else await db.AppSetting.create({ key: "global_margin_pct", value: String(globalMargin) });
       await logAudit("set_global_margin", null, { global_margin_pct: globalMargin });
       toast({ title: "Marge globale enregistrée", description: `${globalMargin}% appliqué sur le taux de change.` });
     } catch (e) { toast({ title: "Erreur", description: e.message, variant: "destructive" }); }
@@ -44,7 +44,7 @@ export default function AdminRates() {
   const save = async (c) => {
     const patch = edits[c.id];
     try {
-      await base44.entities.CurrencyConfig.update(c.id, patch);
+      await db.CurrencyConfig.update(c.id, patch);
       await logAudit("update_currency", null, { code: c.code, patch });
       toast({ title: `${c.code} mis à jour` });
       load();

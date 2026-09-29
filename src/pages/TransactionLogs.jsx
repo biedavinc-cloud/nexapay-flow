@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import StatusPill from "@/components/StatusPill";
 import { ScrollText, Loader2 } from "lucide-react";
@@ -12,7 +12,7 @@ export default function TransactionLogs() {
 
   useEffect(() => {
     (async () => {
-      const data = await base44.entities.TransactionLog.list("-created_date", 200);
+      const data = await db.TransactionLog.list("-created_date", 200);
       setLogs(data);
       setLoading(false);
     })();

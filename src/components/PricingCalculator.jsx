@@ -9,7 +9,7 @@ const TABS = [
 
 // Three merchant plans — one-time onboarding fee + per-volume rate tier.
 const PLANS = [
-  { name: "Starter", fee: "$219", max: 10000, commission: "2.5% + $0.30" },
+  { name: "Starter", fee: "$229", max: 10000, commission: "2.5% + $0.30" },
   { name: "Growth", fee: "$359", max: 50000, commission: "1.9% + $0.20" },
   { name: "Scale", fee: "$1099", max: 100000, commission: "1.5% + $0.10" },
 ];

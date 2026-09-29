@@ -64,13 +64,14 @@ export async function verifyAndSettle(sql, env, keys, ref) {
 
   if (payunitStatus !== "SUCCESS") {
     if (payunitStatus === "FAILED" || payunitStatus === "CANCELLED") {
-      return await markFailed(sql, tx, "PAYUNIT", `Payment ${payunitStatus} at PayUnit${gateway ? ` (${gateway})` : ""}.`);
+      return await markFailed(sql, tx, "PAYUNIT", `Payment ${payunitStatus} at PayUnit${gateway ? ` (${gateway})` : ""}.`, env);
     }
     return { status: "PENDING", transaction_id: tx.id, reference: ref };
   }
 
   const method = /ORANGE|MTN|MOBILE|MOMO/i.test(gateway) ? "MOBILE_MONEY" : tx.payment_method;
-  await sql`update nexapay_transactions set status = 'FIAT_APPROVED', payment_method = ${method}, updated_date = now() where id = ${tx.id}`;
+  const claimed = await sql`update nexapay_transactions set status = 'FIAT_APPROVED', payment_method = ${method}, updated_date = now() where id = ${tx.id} and status in ('PENDING','INITIATED') returning *`;
+  if (!claimed[0]) return { status: "PENDING", transaction_id: tx.id, reference: ref };
   await logTx(sql, tx, tx.status, "FIAT_APPROVED", `PayUnit payment confirmed (${tx.amount_fiat} ${tx.currency_fiat}${gateway ? `, ${gateway}` : ""}).`, "INFO", "payunit");
-  return await settleFiatCaptured(sql, env, { tx: { ...tx, status: "FIAT_APPROVED" }, provider: "PAYUNIT" });
+  return await settleFiatCaptured(sql, env, { tx: claimed[0] });
 }

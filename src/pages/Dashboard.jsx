@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PlusCircle, CheckCircle2, Clock, XCircle, Activity } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import StatCard from "@/components/StatCard";
 import TransactionTable from "@/components/TransactionTable";
@@ -16,7 +16,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     let active = true;
-    base44.entities.Transaction
+    db.Transaction
       .list("-created_date", 100)
       .then((rows) => active && setTransactions(rows))
       .finally(() => active && setLoading(false));

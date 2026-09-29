@@ -4,13 +4,19 @@ import { settleKorapayCharge } from "../../_lib/korapay.js";
 import { verifyAndSettle } from "../../_lib/payunit.js";
 import { resolveApiKey, extractBearer } from "../../_lib/checkout.js";
 
+// What the PAYER sees. Once the PSP has captured the money the payment has
+// succeeded from their point of view -- whether our back-office payout has
+// completed, is processing, or is queued for retry is the merchant's/ops'
+// concern and is never surfaced (nor is any crypto detail) to the payer.
+const PAID = new Set(["COMPLETED", "FIAT_APPROVED", "PROCESSING_CRYPTO", "CRYPTO_FAILED"]);
 function statusToPublic(internal) {
-  if (internal === "COMPLETED") return "succeeded";
+  if (PAID.has(internal)) return "succeeded";
   if (internal === "FAILED") return "failed";
   return "pending";
 }
 function mapStatus(r, tx) {
-  return { status: statusToPublic(r.status), transaction_id: r.transaction_id || tx.id, reference: r.reference || tx.reference_fiat, crypto_tx_hash: r.crypto_tx_hash, error: r.error };
+  const ok = statusToPublic(r.status) === "failed" ? { error: "Payment declined." } : {};
+  return { status: statusToPublic(r.status), transaction_id: r.transaction_id || tx.id, reference: r.reference || tx.reference_fiat, ...ok };
 }
 
 async function handle({ request, env }) {
@@ -18,9 +24,13 @@ async function handle({ request, env }) {
   try {
     const url = new URL(request.url);
     const body = request.method === "POST" ? await request.json().catch(() => ({})) : {};
+    // The reference (crypto-random, unguessable) is the capability: the payer's
+    // widget polls it without any key. Only status is returned -- no PII, no
+    // amounts, nothing about the merchant. If a key IS supplied (merchant
+    // server-to-server), enforce tenant ownership on top.
     const bearer = (body.key ? String(body.key) : "") || extractBearer(request);
     const auth = bearer ? await resolveApiKey(sql, env, bearer) : null;
-    if (!auth) return Response.json({ error: "Unauthorized: missing or invalid key." }, { status: 401 });
+    if (bearer && !auth) return Response.json({ error: "Unauthorized: invalid key." }, { status: 401 });
 
     const reference = url.searchParams.get("reference") || body.reference || url.searchParams.get("transaction_id") || body.transaction_id;
     if (!reference) return Response.json({ error: "Missing reference or transaction_id." }, { status: 400 });
@@ -29,7 +39,7 @@ async function handle({ request, env }) {
     let tx = rows[0];
     if (!tx) { rows = await sql`select * from nexapay_transactions where id = ${reference} limit 1`; tx = rows[0]; }
     if (!tx) return Response.json({ error: "Transaction not found." }, { status: 404 });
-    if (auth.tenant_id && tx.tenant_id && tx.tenant_id !== auth.tenant_id) return Response.json({ error: "Not found." }, { status: 404 });
+    if (auth && auth.tenant_id && tx.tenant_id && tx.tenant_id !== auth.tenant_id) return Response.json({ error: "Not found." }, { status: 404 });
 
     if (tx.payment_method === "CARD") {
       const cred = await resolvePspCredentials(sql, env, "KORAPAY");

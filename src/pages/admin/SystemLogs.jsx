@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 
 export default function AdminSystemLogs() {
   const [tab, setTab] = useState("webhooks");
@@ -11,8 +11,8 @@ export default function AdminSystemLogs() {
     (async () => {
       try {
         const [w, e] = await Promise.all([
-          base44.entities.WebhookLog.list("-created_date", 200),
-          base44.entities.TransactionLog.filter({ level: "ERROR" }, "-created_date", 200),
+          db.WebhookLog.list("-created_date", 200),
+          db.TransactionLog.filter({ level: "ERROR" }, "-created_date", 200),
         ]);
         setWh(w); setErrs(e);
       } catch {}

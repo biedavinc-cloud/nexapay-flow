@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { TrendingUp, Loader2 } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from "recharts";
@@ -10,7 +10,7 @@ export default function RapportsPerformance() {
 
   useEffect(() => {
     (async () => {
-      const data = await base44.entities.Transaction.list("-created_date", 500);
+      const data = await db.Transaction.list("-created_date", 500);
       setTxs(data);
       setLoading(false);
     })();

@@ -98,3 +98,23 @@ export async function executeCryptoOrder(env, { amount, asset, network, wallet, 
   if (ready === 0) return { error: "No exchange configured (missing API keys). Set KuCoin/Binance in Cloudflare Pages env vars." };
   return { error: `Live withdrawal failed on all configured exchanges. Last: ${lastError}.` };
 }
+
+// Merges exchange credentials configured through the superadmin dashboard
+// (nexapay_psp_configs, AES-256-GCM encrypted -- providers KUCOIN, BINANCE,
+// BINGX, COINBASE) over any env-var fallback. Dashboard wins when active.
+import { resolvePspCredentials } from "./pspCrypto.js";
+export async function withExchangeKeys(sql, env) {
+  const merged = { ...env };
+  const map = {
+    KUCOIN: { api_key: "KUCOIN_API_KEY", api_secret: "KUCOIN_API_SECRET", passphrase: "KUCOIN_PASSPHRASE" },
+    BINANCE: { api_key: "BINANCE_API_KEY", api_secret: "BINANCE_API_SECRET" },
+    BINGX: { api_key: "BINGX_API_KEY", api_secret: "BINGX_API_SECRET" },
+    COINBASE: { api_key: "COINBASE_API_KEY", api_secret: "COINBASE_API_SECRET" },
+  };
+  for (const [provider, fields] of Object.entries(map)) {
+    const cred = await resolvePspCredentials(sql, env, provider).catch(() => null);
+    if (!cred?.keys) continue;
+    for (const [k, envName] of Object.entries(fields)) if (cred.keys[k]) merged[envName] = cred.keys[k];
+  }
+  return merged;
+}

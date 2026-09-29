@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import StatusPill from "@/components/StatusPill";
 import { Webhook, Loader2 } from "lucide-react";
@@ -10,7 +10,7 @@ export default function JournalWebhooks() {
 
   useEffect(() => {
     (async () => {
-      const data = await base44.entities.WebhookLog.list("-created_date", 200);
+      const data = await db.WebhookLog.list("-created_date", 200);
       setLogs(data);
       setLoading(false);
     })();

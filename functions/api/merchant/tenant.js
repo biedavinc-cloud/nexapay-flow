@@ -1,5 +1,6 @@
 import { getDb } from "../../_lib/db.js";
 import { requireMerchant } from "../../_lib/merchantAuth.js";
+import { validateWallet } from "../../_lib/wallet.js";
 
 // Self-service fields only. Anything with billing/compliance impact
 // (commission_rate, tier, has_paid_access, kyc_status, account_status) is
@@ -25,6 +26,16 @@ export async function onRequestPatch({ request, env }) {
   const updates = {};
   for (const key of ALLOWED) if (key in body) updates[key] = body[key];
   if (Object.keys(updates).length === 0) return Response.json({ error: "No valid fields to update" }, { status: 400 });
+
+  // A wrong payout address is an irreversible loss of the merchant's funds.
+  if ("receiving_wallet" in updates || "blockchain" in updates) {
+    const cur = (await sql`select receiving_wallet, blockchain from nexapay_tenants where id = ${auth.tenantId}`)[0] || {};
+    const chain = updates.blockchain || cur.blockchain || "POLYGON";
+    const addr = "receiving_wallet" in updates ? updates.receiving_wallet : cur.receiving_wallet;
+    const err = validateWallet(chain, addr);
+    if (err) return Response.json({ error: err }, { status: 400 });
+  }
+  if ("statement_descriptor" in updates) updates.statement_descriptor = String(updates.statement_descriptor || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10);
 
   const [row] = await sql`
     update nexapay_tenants set

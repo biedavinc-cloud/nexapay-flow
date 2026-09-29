@@ -1,7 +1,7 @@
 // Cloudflare-native port of base44/shared/korapay.ts (direct card charge, no
 // redirect). Keys come from Neon (nexapay_psp_configs, AES-256-GCM
 // encrypted) instead of Base44 secrets.
-import { settleFiatCaptured, markFailed, logTx } from "./settlement.js";
+import { settleFiatCaptured, markFailed, logTx, payout } from "./settlement.js";
 
 const BASE_URL = "https://api.korapay.com";
 const enc = new TextEncoder();
@@ -68,12 +68,15 @@ export async function settleKorapayCharge(sql, env, keys, korapayRef) {
 
   if (korapayStatus !== "success") {
     if (korapayStatus === "failed" || korapayStatus === "cancelled") {
-      return await markFailed(sql, tx, "KORAPAY", `Card payment ${korapayStatus} at PSP.`);
+      return await markFailed(sql, tx, "KORAPAY", `Card payment ${korapayStatus} at PSP.`, env);
     }
     return { status: "PENDING", transaction_id: tx.id, reference: tx.reference_fiat };
   }
 
-  await sql`update nexapay_transactions set status = 'FIAT_APPROVED', payment_method = 'CARD', updated_date = now() where id = ${tx.id}`;
+  // Atomic claim: if the status poll and the PSP webhook race, exactly one
+  // wins the PENDING -> FIAT_APPROVED transition and runs the payout.
+  const claimed = await sql`update nexapay_transactions set status = 'FIAT_APPROVED', payment_method = 'CARD', updated_date = now() where id = ${tx.id} and status in ('PENDING','INITIATED') returning *`;
+  if (!claimed[0]) return { status: "PENDING", transaction_id: tx.id, reference: tx.reference_fiat };
   await logTx(sql, tx, tx.status, "FIAT_APPROVED", `Card confirmed (${tx.amount_fiat} ${tx.currency_fiat}).`, "INFO", "korapay");
-  return await settleFiatCaptured(sql, env, { tx: { ...tx, status: "FIAT_APPROVED" }, provider: "KORAPAY" });
+  return await settleFiatCaptured(sql, env, { tx: claimed[0] });
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { Settings as SettingsIcon, Loader2, Save } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,7 +25,7 @@ export default function SettingsPage() {
 
   useEffect(() => {
     (async () => {
-      const all = await base44.entities.AppSetting.list("-created_date", 100);
+      const all = await db.AppSetting.list("-created_date", 100);
       const map = Object.fromEntries(all.map((s) => [s.key, s]));
       if (map.default_provider) setDefaultProvider(map.default_provider.value);
       if (map.routing_mode) setRoutingMode(map.routing_mode.value);
@@ -35,11 +35,11 @@ export default function SettingsPage() {
   const save = async (e) => {
     e.preventDefault();
     setSaving(true);
-    const all = await base44.entities.AppSetting.list("-created_date", 100);
+    const all = await db.AppSetting.list("-created_date", 100);
     const upsert = async (key, value) => {
       const existing = all.find((s) => s.key === key);
-      if (existing) await base44.entities.AppSetting.update(existing.id, { value });
-      else await base44.entities.AppSetting.create({ key, value });
+      if (existing) await db.AppSetting.update(existing.id, { value });
+      else await db.AppSetting.create({ key, value });
     };
     await upsert("default_provider", defaultProvider);
     await upsert("routing_mode", routingMode);

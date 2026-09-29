@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { logAudit } from "@/lib/adminAudit";
@@ -22,7 +23,7 @@ export default function AdminTransactions() {
 
   const load = async () => {
     setLoading(true);
-    try { setRows(await base44.entities.Transaction.list("-created_date", 300)); }
+    try { setRows(await db.Transaction.list("-created_date", 300)); }
     catch (e) { toast({ title: "Erreur", description: e.message, variant: "destructive" }); }
     finally { setLoading(false); }
   };

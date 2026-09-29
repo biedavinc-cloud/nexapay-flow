@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Copy, Check } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import StatusBadge from "@/components/StatusBadge";
 
@@ -25,7 +25,7 @@ export default function TransactionDetail() {
 
   useEffect(() => {
     let active = true;
-    base44.entities.Transaction
+    db.Transaction
       .get(id)
       .then((row) => active && setTx(row))
       .finally(() => active && setLoading(false));

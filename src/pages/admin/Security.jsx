@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,8 +18,8 @@ export default function AdminSecurity() {
     setLoading(true);
     try {
       const [i, l] = await Promise.all([
-        base44.entities.SecurityIp.list("-created_date", 100),
-        base44.entities.SuperadminAuditLog.list("-created_date", 100),
+        db.SecurityIp.list("-created_date", 100),
+        db.SuperadminAuditLog.list("-created_date", 100),
       ]);
       setIps(i); setLogs(l);
     } catch (e) { toast({ title: "Erreur", description: e.message, variant: "destructive" }); }
@@ -30,7 +30,7 @@ export default function AdminSecurity() {
   const addIp = async () => {
     if (!form.ip || !form.label) { toast({ title: "IP et libellé requis", variant: "destructive" }); return; }
     try {
-      await base44.entities.SecurityIp.create({ ip: form.ip, label: form.label, active: true });
+      await db.SecurityIp.create({ ip: form.ip, label: form.label, active: true });
       await logAudit("add_security_ip", null, { ip: form.ip, label: form.label });
       setForm({ ip: "", label: "" });
       toast({ title: "IP ajoutée" });
@@ -40,7 +40,7 @@ export default function AdminSecurity() {
 
   const removeIp = async (ip) => {
     try {
-      await base44.entities.SecurityIp.delete(ip.id);
+      await db.SecurityIp.delete(ip.id);
       await logAudit("remove_security_ip", null, { ip: ip.ip });
       toast({ title: "IP supprimée" });
       load();

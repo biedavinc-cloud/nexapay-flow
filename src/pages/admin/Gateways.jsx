@@ -17,6 +17,7 @@ const PROVIDERS = [
   { id: "MONNIFY", label: "Monnify", methods: "Carte · Mobile Money", fields: [["api_key", "API Key"], ["secret_key", "Secret Key"]] },
   { id: "PAWAPAY", label: "Pawapay", methods: "Mobile Money", fields: [["api_key", "API Key"], ["secret_key", "Secret Key"]] },
   { id: "BIZAO", label: "Bizao", methods: "Mobile Money", fields: [["api_key", "API Key"], ["secret_key", "Secret Key"]] },
+  { id: "RESEND", label: "Email (Resend)", methods: "OTP · Reset password · Notifications", fields: [["api_key", "API Key"], ["from", "Adresse d'envoi (ex: NexaPay <auth@votredomaine.com>)"]] },
 ];
 
 export default function Gateways() {

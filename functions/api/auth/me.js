@@ -3,9 +3,13 @@ import { json, jsonError, readJson, withErrors } from "../../_lib/http.js";
 import { findUserById, publicUser } from "../../_lib/users.js";
 import { getUserIdFromRequest } from "../../_lib/session.js";
 
-// Fields a user is allowed to self-update. `role` is deliberately excluded --
-// it must only ever be changed by an admin-only endpoint (phase 2).
-const ALLOWED_FIELDS = ["full_name", "country", "city", "phone", "tenant_id", "kyc_status"];
+// Fields a user may self-update: profile data ONLY. `role`, `tenant_id` and
+// `kyc_status` are deliberately excluded. tenant_id in particular is the
+// multi-tenant isolation boundary -- if a user could write it, they could
+// attach themselves to ANY merchant's tenant and read/steal its API keys,
+// wallet and data. Only the server-side onboarding endpoint links a user to
+// a tenant it just created for them.
+const ALLOWED_FIELDS = ["full_name", "country", "city", "phone"];
 
 export const onRequestGet = withErrors(async ({ request, env }) => {
   const userId = await getUserIdFromRequest(env, request);
@@ -36,9 +40,7 @@ export const onRequestPatch = withErrors(async ({ request, env }) => {
       full_name = coalesce(${updates.full_name ?? null}, full_name),
       country = coalesce(${updates.country ?? null}, country),
       city = coalesce(${updates.city ?? null}, city),
-      phone = coalesce(${updates.phone ?? null}, phone),
-      tenant_id = coalesce(${updates.tenant_id ?? null}, tenant_id),
-      kyc_status = coalesce(${updates.kyc_status ?? null}, kyc_status)
+      phone = coalesce(${updates.phone ?? null}, phone)
     where id = ${userId}
     returning *
   `;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import StatusPill from "@/components/StatusPill";
 import { Webhook, Loader2, AlertTriangle } from "lucide-react";
@@ -13,8 +13,8 @@ export default function WebhookConsole() {
   useEffect(() => {
     (async () => {
       const [w, e] = await Promise.all([
-        base44.entities.WebhookLog.list("-created_date", 100),
-        base44.entities.TransactionLog.filter({ level: "ERROR" }, "-created_date", 100),
+        db.WebhookLog.list("-created_date", 100),
+        db.TransactionLog.filter({ level: "ERROR" }, "-created_date", 100),
       ]);
       setWebhooks(w);
       setErrors(e);

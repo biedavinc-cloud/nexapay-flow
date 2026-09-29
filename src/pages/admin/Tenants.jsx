@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,7 +20,7 @@ export default function AdminTenants() {
   const load = async () => {
     setLoading(true);
     try {
-      setRows(await base44.entities.Tenant.list("-created_date", 200));
+      setRows(await db.Tenant.list("-created_date", 200));
     } catch (e) { toast({ title: "Erreur", description: e.message, variant: "destructive" }); }
     finally { setLoading(false); }
   };
@@ -28,7 +28,7 @@ export default function AdminTenants() {
 
   const act = async (t, patch, msg, action) => {
     try {
-      await base44.entities.Tenant.update(t.id, patch);
+      await db.Tenant.update(t.id, patch);
       await logAudit(action || msg, t.id, { before: { account_status: t.account_status, tier: t.tier, daily_limit: t.daily_limit }, after: patch });
       toast({ title: msg });
       load();

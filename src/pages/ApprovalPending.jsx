@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Clock, XCircle, RefreshCw } from "lucide-react";
@@ -15,7 +15,7 @@ export default function ApprovalPending() {
       const me = await auth.me();
       if (me.role === "admin") { navigate("/dashboard", { replace: true }); return; }
       if (!me.tenant_id) { navigate("/onboarding", { replace: true }); return; }
-      const tenant = await base44.entities.Tenant.get(me.tenant_id);
+      const tenant = await db.Tenant.get(me.tenant_id);
       setState({ loading: false, status: tenant.account_status, tenant });
       if (tenant.account_status === "APPROVED") {
         setTimeout(() => navigate("/dashboard", { replace: true }), 800);

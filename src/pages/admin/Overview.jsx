@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import { TrendingUp, DollarSign, Building2, CheckCircle2, Coins, ArrowLeftRight, Database, Loader2, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,8 +30,8 @@ export default function AdminOverview() {
 
   useEffect(() => {
     (async () => {
-      const txs = await base44.entities.Transaction.list("-created_date", 500);
-      const tenants = await base44.entities.Tenant.list("-created_date", 500);
+      const txs = await db.Transaction.list("-created_date", 500);
+      const tenants = await db.Tenant.list("-created_date", 500);
       const volume = txs.reduce((a, t) => a + (t.amount_fiat || 0), 0);
       const usdt = txs.reduce((a, t) => a + (t.usdt_amount || 0), 0);
       const commission = txs.reduce((a, t) => a + (t.nexapay_commission || 0), 0);

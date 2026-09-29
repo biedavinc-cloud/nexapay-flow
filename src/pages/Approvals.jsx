@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Check, X } from "lucide-react";
@@ -12,7 +12,7 @@ export default function Approvals() {
   const load = async () => {
     setLoading(true);
     try {
-      const all = await base44.entities.Tenant.list("-created_date", 100);
+      const all = await db.Tenant.list("-created_date", 100);
       setRows(all.filter((t) => t.account_status === "AWAITING_APPROVAL" || t.account_status === "PENDING_ONBOARDING"));
     } catch (e) {
       toast({ title: "Erreur", description: e.message, variant: "destructive" });
@@ -25,7 +25,7 @@ export default function Approvals() {
 
   const decide = async (t, status) => {
     try {
-      await base44.entities.Tenant.update(t.id, {
+      await db.Tenant.update(t.id, {
         account_status: status,
         has_paid_access: status === "APPROVED",
         kyc_status: status === "APPROVED" ? "APPROVED" : "REJECTED",

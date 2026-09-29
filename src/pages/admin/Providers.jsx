@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -16,7 +16,7 @@ export default function AdminProviders() {
   const load = async () => {
     setLoading(true);
     try {
-      const r = await base44.entities.ProviderConfig.list("-created_date", 50);
+      const r = await db.ProviderConfig.list("-created_date", 50);
       setRows(r);
       setEdits(Object.fromEntries(r.map((x) => [x.id, { enabled: x.enabled, is_default: x.is_default, status: x.status, withdrawals_enabled: x.withdrawals_enabled, notes: x.notes || "" }])));
     } catch (e) { toast({ title: "Erreur", description: e.message, variant: "destructive" }); }
@@ -30,9 +30,9 @@ export default function AdminProviders() {
     try {
       if (patch.is_default) {
         // only one primary: clear others
-        for (const o of rows) if (o.id !== p.id && o.is_default) await base44.entities.ProviderConfig.update(o.id, { is_default: false });
+        for (const o of rows) if (o.id !== p.id && o.is_default) await db.ProviderConfig.update(o.id, { is_default: false });
       }
-      await base44.entities.ProviderConfig.update(p.id, patch);
+      await db.ProviderConfig.update(p.id, patch);
       await logAudit("update_provider", null, { provider: p.provider, patch });
       toast({ title: "Fournisseur mis à jour" });
       load();

@@ -25,23 +25,36 @@ export async function onRequestPost({ request, env }) {
   const sql = getDb(env);
   try {
     const body = await request.json().catch(() => ({}));
-    const bearer = (body.key ? String(body.key) : "") || extractBearer(request);
-    const auth = bearer ? await resolveApiKey(sql, env, bearer) : null;
-    if (!auth) return Response.json({ error: "Unauthorized: missing or invalid key." }, { status: 401 });
-    const isPublishable = auth.type === "publishable";
-    if (auth.record) sql`update nexapay_api_keys set last_used = now() where id = ${auth.record.id}`.catch(() => {});
-
+    // Identity comes from ONE of two places, never from the client's say-so:
+    //  - a signed client_secret (server-created session: amount, tenant, purpose are tamper-proof), or
+    //  - an API key (publishable) belonging to a tenant.
     const session = body.client_secret ? await verifyClientSecret(env, body.client_secret) : null;
+    if (body.client_secret && !session) return Response.json({ error: "Invalid client_secret." }, { status: 401 });
+    if (session && Date.now() - Number(session.created || 0) > 60 * 60 * 1000) {
+      return Response.json({ error: "Checkout session expired." }, { status: 401 });
+    }
+    let auth = null, tenantId = null;
+    if (session) {
+      tenantId = session.tenant_id || null;
+    } else {
+      const bearer = (body.key ? String(body.key) : "") || extractBearer(request);
+      auth = bearer ? await resolveApiKey(sql, env, bearer) : null;
+      if (!auth) return Response.json({ error: "Unauthorized: missing or invalid key." }, { status: 401 });
+      if (auth.type !== "publishable" && auth.type !== "secret") return Response.json({ error: "Unauthorized." }, { status: 401 });
+      tenantId = auth.tenant_id;
+      if (auth.record) sql`update nexapay_api_keys set last_used = now() where id = ${auth.record.id}`.catch(() => {});
+    }
+
     let payment_method, amount, currency, network, order_id, webhook_url, card, momo, email;
     if (session) {
-      payment_method = normText(session.payment_method || "CARD").toUpperCase();
+      payment_method = normText(body.payment_method || session.payment_method || "CARD").toUpperCase();
       amount = Number(session.amount);
       currency = normCurrency(session.currency || "EUR");
       network = normText(session.network || "TRC20").toUpperCase();
       order_id = normText(session.order_id);
-      webhook_url = normText(session.webhook_url || body.webhook_url);
+      webhook_url = normText(session.webhook_url);
       card = body.card; momo = body.momo; email = body.payer?.email;
-    } else if (isPublishable && Number(body.amount) > 0) {
+    } else if (Number(body.amount) > 0) {
       payment_method = normText(body.payment_method || "CARD").toUpperCase();
       amount = Number(body.amount);
       currency = normCurrency(body.currency || "EUR");
@@ -50,7 +63,7 @@ export async function onRequestPost({ request, env }) {
       webhook_url = normText(body.webhook_url);
       card = body.card; momo = body.momo; email = body.payer?.email;
     } else {
-      return Response.json({ error: "Invalid client_secret." }, { status: 401 });
+      return Response.json({ error: "amount or client_secret required." }, { status: 400 });
     }
 
     if (!VALID_METHODS.has(payment_method)) return Response.json({ error: "payment_method must be CARD or MOBILE_MONEY." }, { status: 400 });
@@ -63,7 +76,7 @@ export async function onRequestPost({ request, env }) {
       return Response.json({ error: "Invalid Mobile Money number." }, { status: 400 });
     }
 
-    const tenant = await getTenant(sql, auth.tenant_id);
+    const tenant = await getTenant(sql, tenantId);
     if (tenant && tenant.has_paid_access === false) return Response.json({ error: "Merchant access not unlocked (setup fee required)." }, { status: 403 });
     if (tenant) {
       const limitErr = await checkDailyLimit(sql, tenant.id, tenant.daily_limit, amount);
@@ -82,6 +95,12 @@ export async function onRequestPost({ request, env }) {
     }
 
     const quote = await computeQuote(env, { amount, currency, tenant });
+    // Session-bound metadata (set only by trusted server endpoints that signed the session).
+    const tag = async (id) => {
+      if (session && (session.purpose || session.user_id || session.payment_link_id)) {
+        await sql`update nexapay_transactions set purpose = ${session.purpose || null}, payer_user_id = ${session.user_id || null}, payment_link_id = ${session.payment_link_id || null} where id = ${id}`;
+      }
+    };
     const reference_fiat = genReference();
     const rawDescriptor = tenant?.statement_descriptor || tenant?.company_name || "NEXAPAY";
     const descriptor = String(rawDescriptor).toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10);
@@ -100,6 +119,7 @@ export async function onRequestPost({ request, env }) {
         returning *
       `;
 
+      await tag(txRow.id);
       const [expMonth, expYear] = String(card.expiry).split("/").map((s) => s.trim());
       let charge;
       try {
@@ -128,8 +148,8 @@ export async function onRequestPost({ request, env }) {
       if (data.status === "success") {
         await sql`update nexapay_transactions set korapay_reference = ${data.payment_reference || reference_fiat} where id = ${txRow.id}`;
         const settled = await settleKorapayCharge(sql, env, cred.keys, data.payment_reference || reference_fiat);
-        if (settled.status === "COMPLETED") return Response.json({ status: "succeeded", transaction_id: txRow.id, crypto_tx_hash: settled.crypto_tx_hash });
-        return Response.json({ status: "succeeded", transaction_id: txRow.id, settlement: settled.status });
+        // Fiat captured => succeeded for the payer, whatever the payout state.
+        return Response.json({ status: "succeeded", transaction_id: txRow.id, reference: reference_fiat });
       }
       return Response.json({ status: "failed", transaction_id: txRow.id, error: "Payment declined by bank." });
     }
@@ -149,6 +169,7 @@ export async function onRequestPost({ request, env }) {
       returning *
     `;
 
+    await tag(txRow.id);
     try {
       await makePayment(cred.keys, { gateway, amount, currency, transaction_id: payunitTxId, return_url: returnUrl, notify_url: notifyUrl, phone_number: `${momo.prefix || ""}${momo.phone}` });
     } catch (e) {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { base44 } from "@/api/base44Client";
+import { db } from "@/lib/db";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +14,7 @@ export default function ConnectionTester() {
   const load = async () => {
     setLoading(true);
     try {
-      const data = await base44.entities.ProviderConfig.list("-created_date", 50);
+      const data = await db.ProviderConfig.list("-created_date", 50);
       setProviders(data);
     } catch { setProviders([]); }
     setLoading(false);
