@@ -1,236 +1,257 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { auth } from "@/lib/authClient";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { UserPlus, Mail, Lock, Loader2 } from "lucide-react";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
+import AuthLayout from "@/components/AuthLayout";
+import GoogleIcon from "@/components/GoogleIcon";
+import { toast } from "@/components/ui/use-toast";
+import { safeReturnTo } from "@/lib/authReturnTo";
+import { CountrySelect, DialCodeSelect } from "@/components/CountrySelect";
 
 export default function Register() {
-  const navigate = useNavigate();
-
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
-    name: "",
-  });
-
-  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [phonePrefix, setPhonePrefix] = useState("+237");
+  const [phoneLocal, setPhoneLocal] = useState("");
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [showOtp, setShowOtp] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
 
-  function updateField(event) {
-    const { name, value } = event.target;
-
-    setForm((current) => ({
-      ...current,
-      [name]: value,
-    }));
-  }
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setError("");
-    setSuccess(false);
-
-    if (!form.email.trim()) {
-      setError("Please enter your email.");
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
       return;
     }
-
-    if (form.password.length < 8) {
-      setError("Password must contain at least 8 characters.");
-      return;
-    }
-
-    if (form.password !== form.confirmPassword) {
-      setError("Passwords do not match.");
-      return;
-    }
-
+    setLoading(true);
     try {
-      setLoading(true);
-
-      await auth.register({
-        email: form.email.trim().toLowerCase(),
-        password: form.password,
-        name: form.name.trim(),
-      });
-
-      setSuccess(true);
+      await auth.register({ email, password });
+      setShowOtp(true);
     } catch (err) {
-      setError(err?.message || "Unable to create your account.");
+      setError(err.message || "Registration failed");
     } finally {
       setLoading(false);
     }
-  }
+  };
 
-  async function handleGoogle() {
+  const handleVerify = async () => {
+    setError("");
+    setLoading(true);
     try {
-      setError("");
-      setLoading(true);
-
-      await auth.loginWithProvider(
-        "google",
-        `${window.location.origin}/dashboard`
-      );
+      await auth.verifyOtp({ email, otpCode });
+      // Session cookie is set server-side by /verify-otp -- we're logged in now.
+      try {
+        await auth.updateMe({
+          country,
+          city,
+          phone: `${phonePrefix}${phoneLocal}`,
+        });
+      } catch (_) { /* non-blocking: profile completed at onboarding */ }
+      window.location.href = safeReturnTo();
     } catch (err) {
-      setError(err?.message || "Google authentication failed.");
+      setError(err.message || "Invalid verification code");
+    } finally {
       setLoading(false);
     }
-  }
+  };
 
-  if (success) {
+  const handleResend = async () => {
+    setError("");
+    try {
+      await auth.resendOtp(email);
+      toast({
+        title: "Code sent",
+        description: "Check your email for the new code.",
+      });
+    } catch (err) {
+      setError(err.message || "Failed to resend code");
+    }
+  };
+
+  const handleGoogle = () => {
+    auth.loginWithProvider("google", safeReturnTo());
+  };
+
+  if (showOtp) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-6">
-        <div className="w-full max-w-md rounded-2xl border p-8 text-center">
-          <h1 className="text-2xl font-bold mb-4">
-            Check your email
-          </h1>
-
-          <p className="text-muted-foreground mb-6">
-            We sent a verification email to{" "}
-            <strong>{form.email}</strong>.
-          </p>
-
-          <p className="text-sm text-muted-foreground mb-6">
-            Open the email and click the verification link to activate
-            your NexaPay account.
-          </p>
-
-          <button
-            type="button"
-            onClick={() => navigate("/login")}
-            className="w-full rounded-xl bg-primary px-4 py-3 text-primary-foreground"
+      <AuthLayout
+        icon={Mail}
+        title="Verify your email"
+        subtitle={`We sent a code to ${email}`}
+      >
+        {error && (
+          <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+            {error}
+          </div>
+        )}
+        <div className="flex justify-center mb-6">
+          <InputOTP
+            maxLength={6}
+            value={otpCode}
+            onChange={setOtpCode}
+            autoFocus
+            autoComplete="one-time-code"
           >
-            Go to login
-          </button>
+            <InputOTPGroup>
+              <InputOTPSlot index={0} />
+              <InputOTPSlot index={1} />
+              <InputOTPSlot index={2} />
+              <InputOTPSlot index={3} />
+              <InputOTPSlot index={4} />
+              <InputOTPSlot index={5} />
+            </InputOTPGroup>
+          </InputOTP>
         </div>
-      </div>
+        <Button
+          className="w-full h-12 rounded-full font-medium"
+          onClick={handleVerify}
+          disabled={loading || otpCode.length < 6}
+        >
+          {loading ? (
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Verifying...
+            </>
+          ) : (
+            "Verify"
+          )}
+        </Button>
+        <p className="text-center text-sm text-muted-foreground mt-4">
+          Didn't receive the code?{" "}
+          <button onClick={handleResend} className="text-primary font-medium hover:underline">
+            Resend
+          </button>
+        </p>
+      </AuthLayout>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="w-full max-w-md">
-        <div className="rounded-2xl border p-8">
-          <h1 className="text-3xl font-bold mb-2">
-            Create your NexaPay account
-          </h1>
-
-          <p className="text-muted-foreground mb-8">
-            Create an account to continue.
-          </p>
-
-          {error && (
-            <div className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-600">
-              {error}
-            </div>
-          )}
-
-          <button
-            type="button"
-            onClick={handleGoogle}
-            disabled={loading}
-            className="w-full rounded-xl border px-4 py-3 mb-6"
+    <AuthLayout
+      icon={UserPlus}
+      title="Create your account"
+      subtitle="Sign up to get started"
+      footer={
+        <>
+          Already have an account?{" "}
+          <Link
+            to={"/login" + (safeReturnTo() !== "/" ? "?returnTo=" + encodeURIComponent(safeReturnTo()) : "")}
+            className="text-primary font-medium hover:underline"
           >
-            Continue with Google
-          </button>
+            Log in
+          </Link>
+        </>
+      }
+    >
+      <Button
+        variant="outline"
+        className="w-full h-12 rounded-full text-sm font-medium mb-6"
+        onClick={handleGoogle}
+      >
+        <GoogleIcon className="w-5 h-5 mr-2" />
+        Continue with Google
+      </Button>
 
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-px flex-1 bg-border" />
-            <span className="text-sm text-muted-foreground">
-              OR
-            </span>
-            <div className="h-px flex-1 bg-border" />
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Name
-              </label>
-
-              <input
-                name="name"
-                value={form.name}
-                onChange={updateField}
-                placeholder="Your name"
-                autoComplete="name"
-                className="w-full rounded-xl border px-4 py-3"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Email
-              </label>
-
-              <input
-                name="email"
-                type="email"
-                value={form.email}
-                onChange={updateField}
-                placeholder="you@example.com"
-                autoComplete="email"
-                required
-                className="w-full rounded-xl border px-4 py-3"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Password
-              </label>
-
-              <input
-                name="password"
-                type="password"
-                value={form.password}
-                onChange={updateField}
-                placeholder="At least 8 characters"
-                autoComplete="new-password"
-                required
-                className="w-full rounded-xl border px-4 py-3"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                Confirm password
-              </label>
-
-              <input
-                name="confirmPassword"
-                type="password"
-                value={form.confirmPassword}
-                onChange={updateField}
-                placeholder="Repeat your password"
-                autoComplete="new-password"
-                required
-                className="w-full rounded-xl border px-4 py-3"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full rounded-xl bg-primary px-4 py-3 text-primary-foreground disabled:opacity-50"
-            >
-              {loading ? "Creating account..." : "Create account"}
-            </button>
-          </form>
-
-          <p className="mt-6 text-center text-sm text-muted-foreground">
-            Already have an account?{" "}
-            <button
-              type="button"
-              onClick={() => navigate("/login")}
-              className="font-medium underline"
-            >
-              Sign in
-            </button>
-          </p>
+      <div className="relative mb-6">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-border" />
+        </div>
+        <div className="relative flex justify-center text-xs uppercase">
+          <span className="bg-card px-3 text-muted-foreground">or</span>
         </div>
       </div>
-    </div>
+
+      {error && (
+        <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
+          {error}
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <div className="relative">
+            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="email"
+              autoFocus
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="pl-10 h-12"
+              required
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+          <div className="relative">
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="password"
+              type="password"
+              autoComplete="new-password"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="pl-10 h-12"
+              required
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="confirm">Confirm Password</Label>
+          <div className="relative">
+            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="confirm"
+              type="password"
+              autoComplete="new-password"
+              placeholder="••••••••"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className="pl-10 h-12"
+              required
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="country">Country</Label>
+          <CountrySelect value={country} onValueChange={setCountry} />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="city">City</Label>
+          <Input id="city" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Your city" className="h-12" required />
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="phone">Phone</Label>
+          <div className="flex gap-2">
+            <DialCodeSelect value={phonePrefix} onValueChange={setPhonePrefix} />
+            <Input id="phone" inputMode="tel" value={phoneLocal} onChange={(e) => setPhoneLocal(e.target.value.replace(/[^\d]/g, "").slice(0, 12))} placeholder="612 345 678" className="h-12 flex-1 focus:ring-1 focus:ring-ring focus:outline-none" required />
+          </div>
+        </div>
+        <Button type="submit" className="w-full h-12 rounded-full font-medium" disabled={loading}>
+          {loading ? (
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Creating account...
+            </>
+          ) : (
+            "Create account"
+          )}
+        </Button>
+      </form>
+    </AuthLayout>
   );
 }
