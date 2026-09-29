@@ -25,7 +25,7 @@ import {
   Plug,
   Crown,
   Menu,
-} 
+} from "lucide-react";
 import { db } from "@/lib/db";
 import { auth } from "@/lib/authClient";
 import { Button } from "@/components/ui/button";
