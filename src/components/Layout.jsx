@@ -97,6 +97,8 @@ export default function Layout() {
   const location = useLocation();
   const [gate, setGate] = React.useState("loading");
   const [isSuper, setIsSuper] = React.useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const closeMobileNav = () => setMobileNavOpen(false);
 
   const handleLogout = async () => {
     await auth.logout("/login");
@@ -133,9 +135,6 @@ export default function Layout() {
       </div>
     );
   }
-
-  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
-  const closeMobileNav = () => setMobileNavOpen(false);
 
   const navContent = (
     <>
