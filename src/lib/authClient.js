@@ -1,77 +1,142 @@
-// Replaces the Base44 SDK's `base44.auth.*` surface. Sessions are httpOnly
-// cookies set by /functions/api/auth/*, so there is no token to store client
-// side -- every call just needs `credentials: "include"`.
+import { createAuthClient } from "@neondatabase/auth";
+import { BetterAuthReactAdapter } from "@neondatabase/auth/react/adapters";
 
-async function request(path, options = {}) {
-  const res = await fetch(`/api/auth${path}`, {
-    credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    ...options,
-  });
-  let data = {};
-  try {
-    data = await res.json();
-  } catch {
-    // no body (e.g. some 204/redirects)
-  }
-  if (!res.ok) {
-    const err = new Error(data.error || "Request failed");
-    err.status = res.status;
-    throw err;
-  }
-  return data;
+const authUrl = import.meta.env.VITE_NEON_AUTH_URL;
+
+if (!authUrl) {
+  throw new Error(
+    "VITE_NEON_AUTH_URL is missing. Add your Neon Auth URL to the environment variables."
+  );
 }
 
+export const authClient = createAuthClient(authUrl, {
+  adapter: BetterAuthReactAdapter(),
+});
+
 export const auth = {
-  async me() {
-    const { user } = await request("/me");
-    return user;
+  getSession() {
+    return authClient.getSession();
   },
 
-  async updateMe(fields) {
-    const { user } = await request("/me", { method: "PATCH", body: JSON.stringify(fields) });
-    return user;
+  useSession() {
+    return authClient.useSession();
+  },
+
+  async me() {
+    const result = await authClient.getSession();
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Unable to get session");
+    }
+
+    return result?.data?.user ?? null;
+  },
+
+  async register({ email, password, name = "" }) {
+    const result = await authClient.signUp.email({
+      email,
+      password,
+      name: name || email.split("@")[0],
+    });
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Registration failed");
+    }
+
+    return result?.data;
   },
 
   async loginViaEmailPassword(email, password) {
-    return request("/login", { method: "POST", body: JSON.stringify({ email, password }) });
+    const result = await authClient.signIn.email({
+      email,
+      password,
+    });
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Login failed");
+    }
+
+    return result?.data;
   },
 
-  loginWithProvider(provider, returnTo = "/dashboard") {
-    if (provider !== "google") throw new Error(`Unsupported provider: ${provider}`);
-    window.location.href = `/api/auth/google/start?returnTo=${encodeURIComponent(returnTo)}`;
+  async loginWithProvider(provider = "google", callbackURL = "/dashboard") {
+    if (provider !== "google") {
+      throw new Error(`Unsupported provider: ${provider}`);
+    }
+
+    const result = await authClient.signIn.social({
+      provider: "google",
+      callbackURL,
+    });
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Google login failed");
+    }
+
+    return result?.data;
   },
 
-  async register({ email, password }) {
-    return request("/register", { method: "POST", body: JSON.stringify({ email, password }) });
+  async logout() {
+    const result = await authClient.signOut();
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Logout failed");
+    }
+
+    return true;
   },
 
-  async verifyOtp({ email, otpCode }) {
-    return request("/verify-otp", { method: "POST", body: JSON.stringify({ email, otpCode }) });
+  async updateMe(fields) {
+    const result = await authClient.updateUser(fields);
+
+    if (result?.error) {
+      throw new Error(result.error.message || "Unable to update profile");
+    }
+
+    return result?.data?.user ?? result?.data;
   },
 
-  async resendOtp(email) {
-    return request("/resend-otp", { method: "POST", body: JSON.stringify({ email }) });
+  async resendVerificationEmail() {
+    const result = await authClient.sendVerificationEmail({
+      callbackURL: `${window.location.origin}/dashboard`,
+    });
+
+    if (result?.error) {
+      throw new Error(
+        result.error.message || "Unable to resend verification email"
+      );
+    }
+
+    return result?.data;
   },
 
   async resetPasswordRequest(email) {
-    return request("/forgot-password", { method: "POST", body: JSON.stringify({ email }) });
-  },
+    const result = await authClient.requestPasswordReset({
+      email,
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
 
-  async resetPassword({ resetToken, newPassword }) {
-    return request("/reset-password", { method: "POST", body: JSON.stringify({ resetToken, newPassword }) });
-  },
-
-  async logout(redirectTo) {
-    try {
-      await request("/logout", { method: "POST" });
-    } finally {
-      if (redirectTo) window.location.href = redirectTo;
+    if (result?.error) {
+      throw new Error(
+        result.error.message || "Unable to request password reset"
+      );
     }
+
+    return result?.data;
   },
 
-  redirectToLogin(returnUrl) {
-    const path = new URL(returnUrl, window.location.origin).pathname + window.location.search;
-    window.location.href = `/login?returnTo=${encodeURIComponent(path)}`;
+  async resetPassword({ token, newPassword }) {
+    const result = await authClient.resetPassword({
+      token,
+      newPassword,
+    });
+
+    if (result?.error) {
+      throw new Error(
+        result.error.message || "Unable to reset password"
+      );
+    }
+
+    return result?.data;
   },
 };
