@@ -6,12 +6,15 @@ import { Label } from "@/components/ui/label";
 import {
   Select, SelectTrigger, SelectValue, SelectContent, SelectItem,
 } from "@/components/ui/select";
+import { useToast } from "@/components/ui/use-toast";
 
 const NETWORKS = ["TRC20", "ERC20", "POLYGON"];
 const CURRENCIES = ["EUR", "USD", "XAF", "XOF", "GBP", "CAD"];
 
 export default function PaymentLinks() {
+  const { toast } = useToast();
   const [links, setLinks] = useState([]);
+  const [loadError, setLoadError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [copied, setCopied] = useState(null);
@@ -19,11 +22,14 @@ export default function PaymentLinks() {
 
   const load = async () => {
     setLoading(true);
+    setLoadError(null);
     try {
       const res = await fetch("/api/payment-links", { credentials: "include" });
       const d = await res.json();
-      setLinks(d.links || []);
+      if (!res.ok) { setLoadError(d.error || "Impossible de charger les liens."); setLinks([]); }
+      else setLinks(d.links || []);
     } catch (e) {
+      setLoadError(e.message);
       setLinks([]);
     } finally {
       setLoading(false);
@@ -50,6 +56,9 @@ export default function PaymentLinks() {
       if (!res.ok) throw new Error(d.error || "Failed to create link");
       setLinks((p) => [d.link, ...p]);
       setForm({ label: "", amount: "", currency: "EUR", network: "TRC20", description: "" });
+      toast({ title: "Lien de paiement créé" });
+    } catch (e) {
+      toast({ title: "Échec de la création", description: e.message, variant: "destructive" });
     } finally {
       setSaving(false);
     }
@@ -62,11 +71,16 @@ export default function PaymentLinks() {
     });
     const d = await res.json();
     if (res.ok) setLinks((p) => p.map((x) => (x.id === l.id ? d.link : x)));
+    else toast({ title: "Échec de la mise à jour", description: d.error, variant: "destructive" });
   };
 
   const remove = async (l) => {
     const res = await fetch(`/api/payment-links/${l.id}`, { method: "DELETE", credentials: "include" });
     if (res.ok) setLinks((p) => p.filter((x) => x.id !== l.id));
+    else {
+      const d = await res.json().catch(() => ({}));
+      toast({ title: "Échec de la suppression", description: d.error, variant: "destructive" });
+    }
   };
 
   const copy = async (l) => {
@@ -126,6 +140,8 @@ export default function PaymentLinks() {
         </div>
         {loading ? (
           <div className="p-10 flex justify-center"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>
+        ) : loadError ? (
+          <div className="p-10 text-center text-sm text-destructive">{loadError}</div>
         ) : links.length === 0 ? (
           <div className="p-10 text-center text-sm text-muted-foreground">Aucun lien pour l'instant.</div>
         ) : (

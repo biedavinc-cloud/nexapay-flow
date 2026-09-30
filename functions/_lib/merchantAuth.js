@@ -1,8 +1,9 @@
 import { getUserIdFromRequest } from "./session.js";
 
-// Any authenticated user with a tenant_id (or admin/SUPER_ADMIN, who can act
-// on behalf of any tenant via an explicit tenant_id param). Returns
-// { userId, tenantId, role } or null.
+// Any authenticated user. tenantId is null until onboarding completes --
+// callers decide what to do with that (some return an empty list, others a
+// clear "complete onboarding" error) rather than getting a bare 401 here,
+// which would be indistinguishable from "not logged in at all".
 export async function requireMerchant(sql, env, request) {
   const userId = await getUserIdFromRequest(env, request);
   if (!userId) return null;
@@ -10,7 +11,6 @@ export async function requireMerchant(sql, env, request) {
   const row = rows[0];
   if (!row) return null;
   const isAdmin = row.role === "admin" || row.role === "SUPER_ADMIN";
-  if (!row.tenant_id && !isAdmin) return null;
   return { userId, tenantId: row.tenant_id || null, role: row.role, isAdmin };
 }
 

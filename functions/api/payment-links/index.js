@@ -21,9 +21,16 @@ export async function onRequestPost({ request, env }) {
   const sql = getDb(env);
   const auth = await requireMerchant(sql, env, request);
   if (!auth) return Response.json({ error: "Unauthorized" }, { status: 401 });
-  if (!auth.tenantId) return Response.json({ error: "No merchant account linked to this session." }, { status: 422 });
 
   const body = await request.json().catch(() => ({}));
+  const tenantId = auth.tenantId || (auth.isAdmin ? String(body.tenant_id || "").trim() : "");
+  if (!tenantId) {
+    return Response.json(
+      { error: auth.isAdmin ? "tenant_id is required." : "No merchant account linked to this session." },
+      { status: 422 },
+    );
+  }
+
   const label = String(body.label || "").trim();
   const amount = Number(body.amount);
   if (!label || !Number.isFinite(amount) || amount <= 0) {
@@ -32,7 +39,7 @@ export async function onRequestPost({ request, env }) {
 
   const [row] = await sql`
     insert into nexapay_payment_links (id, tenant_id, label, amount, currency, network, description, slug, active, created_date, updated_date)
-    values (gen_random_uuid()::text, ${auth.tenantId}, ${label}, ${amount}, ${body.currency || "EUR"}, ${body.network || "TRC20"}, ${body.description || ""}, ${genSlug()}, true, now(), now())
+    values (gen_random_uuid()::text, ${tenantId}, ${label}, ${amount}, ${body.currency || "EUR"}, ${body.network || "TRC20"}, ${body.description || ""}, ${genSlug()}, true, now(), now())
     returning *
   `;
   return Response.json({ link: row });
