@@ -2,6 +2,7 @@ import { getDb } from "../../../_lib/db.js";
 import { requireMerchant } from "../../../_lib/merchantAuth.js";
 import { coerce } from "../../../_lib/dataPolicy.js";
 import { strip, policyFor, deny } from "../../../_lib/dataApi.js";
+import { validateWallet } from "../../../_lib/wallet.js";
 
 async function loadRow(sql, pol, auth, id) {
   const args = [id];
@@ -38,6 +39,11 @@ export async function onRequestPatch({ request, env, params }) {
   if (!row) return Response.json({ error: "Not found" }, { status: 404 });
 
   const body = await request.json().catch(() => ({}));
+  if (params.entity === "Tenant" && "receiving_wallet" in body) {
+    const chain = body.blockchain || row.blockchain || "POLYGON";
+    const err = validateWallet(chain, body.receiving_wallet);
+    if (err) return Response.json({ error: err }, { status: 400 });
+  }
   const names = Object.keys(pol.cols).filter((c) => c in body);
   if (names.length === 0) return Response.json({ error: "No valid fields" }, { status: 400 });
   const values = names.map((c) => coerce(pol.cols[c], body[c]));

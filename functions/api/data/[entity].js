@@ -2,6 +2,7 @@ import { getDb } from "../../_lib/db.js";
 import { requireMerchant } from "../../_lib/merchantAuth.js";
 import { coerce } from "../../_lib/dataPolicy.js";
 import { strip, policyFor, deny } from "../../_lib/dataApi.js";
+import { validateWallet } from "../../_lib/wallet.js";
 
 // GET /api/data/:entity?sort=-created_date&limit=100&filter={"status":"COMPLETED"}
 export async function onRequestGet({ request, env, params }) {
@@ -46,6 +47,10 @@ export async function onRequestPost({ request, env, params }) {
   if (d) return d;
 
   const body = await request.json().catch(() => ({}));
+  if (params.entity === "Tenant" && body.receiving_wallet) {
+    const err = validateWallet(body.blockchain || "POLYGON", body.receiving_wallet);
+    if (err) return Response.json({ error: err }, { status: 400 });
+  }
   const names = Object.keys(pol.cols).filter((c) => c in body);
   const values = names.map((c) => coerce(pol.cols[c], body[c]));
   const cols = ["id", ...names, "created_date", "updated_date"];

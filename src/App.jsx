@@ -62,17 +62,6 @@ import AdminGateways from '@/pages/admin/Gateways';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError } = useAuth();
-  const isEmbed = new URLSearchParams(window.location.search).get("embed") === "true";
-
-  // Embedded checkout (iframe on a marketplace) — render only the bare checkout, no auth/sidebar.
-  if (isEmbed) {
-    return (
-      <Routes>
-        <Route path="/payments/new" element={<NewTransaction />} />
-        <Route path="*" element={<NewTransaction />} />
-      </Routes>
-    );
-  }
 
   // Show loading spinner while checking app public settings or auth
   if (isLoadingPublicSettings || isLoadingAuth) {
@@ -100,6 +89,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/pay/:slug" element={<PayLink />} />
+      <Route path="/payments/new" element={<NewTransaction />} />
       <Route path="/payunit-return" element={<PayunitReturn />} />
       <Route path="/api-docs" element={<ApiDocs />} />
       <Route path="/refund-policy" element={<RefundPolicy />} />
@@ -114,7 +104,6 @@ const AuthenticatedApp = () => {
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/payment-links" element={<PaymentLinks />} />
-          <Route path="/payments/new" element={<NewTransaction />} />
           <Route path="/payments/:id" element={<TransactionDetail />} />
           <Route path="/provider-status" element={<ProviderStatus />} />
           <Route path="/transaction-logs" element={<TransactionLogs />} />

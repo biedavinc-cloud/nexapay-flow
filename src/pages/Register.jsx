@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { UserPlus, Mail, Lock, Loader2 } from "lucide-react";
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import AuthLayout from "@/components/AuthLayout";
 import GoogleIcon from "@/components/GoogleIcon";
 import { toast } from "@/components/ui/use-toast";
@@ -22,8 +21,8 @@ export default function Register() {
   const [phoneLocal, setPhoneLocal] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [showOtp, setShowOtp] = useState(false);
-  const [otpCode, setOtpCode] = useState("");
+  const [awaitingVerification, setAwaitingVerification] = useState(false);
+  const [resending, setResending] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,8 +33,8 @@ export default function Register() {
     }
     setLoading(true);
     try {
-      await auth.register({ email, password });
-      setShowOtp(true);
+      await auth.register({ email, password, country, city, phone: `${phonePrefix}${phoneLocal}` });
+      setAwaitingVerification(true);
     } catch (err) {
       setError(err.message || "Registration failed");
     } finally {
@@ -43,37 +42,30 @@ export default function Register() {
     }
   };
 
-  const handleVerify = async () => {
-    setError("");
-    setLoading(true);
-    try {
-      await auth.verifyOtp({ email, otpCode });
-      // Session cookie is set server-side by /verify-otp -- we're logged in now.
+  // Same-device convenience: if the link is clicked in this same browser,
+  // the session cookie appears without this tab doing anything -- poll and
+  // jump in automatically instead of making them click back here.
+  React.useEffect(() => {
+    if (!awaitingVerification) return;
+    const interval = setInterval(async () => {
       try {
-        await auth.updateMe({
-          country,
-          city,
-          phone: `${phonePrefix}${phoneLocal}`,
-        });
-      } catch (_) { /* non-blocking: profile completed at onboarding */ }
-      window.location.href = safeReturnTo();
-    } catch (err) {
-      setError(err.message || "Invalid verification code");
-    } finally {
-      setLoading(false);
-    }
-  };
+        await auth.me();
+        window.location.href = safeReturnTo();
+      } catch { /* not verified yet, keep polling */ }
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [awaitingVerification]);
 
   const handleResend = async () => {
     setError("");
+    setResending(true);
     try {
       await auth.resendOtp(email);
-      toast({
-        title: "Code sent",
-        description: "Check your email for the new code.",
-      });
+      toast({ title: "Link sent", description: "Check your email for the new verification link." });
     } catch (err) {
-      setError(err.message || "Failed to resend code");
+      setError(err.message || "Failed to resend the link");
+    } finally {
+      setResending(false);
     }
   };
 
@@ -81,56 +73,37 @@ export default function Register() {
     auth.loginWithProvider("google", safeReturnTo());
   };
 
-  if (showOtp) {
+  if (awaitingVerification) {
     return (
       <AuthLayout
         icon={Mail}
-        title="Verify your email"
-        subtitle={`We sent a code to ${email}`}
+        title="Check your email"
+        subtitle={`We sent a verification link to ${email}`}
       >
         {error && (
           <div className="mb-4 p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
             {error}
           </div>
         )}
-        <div className="flex justify-center mb-6">
-          <InputOTP
-            maxLength={6}
-            value={otpCode}
-            onChange={setOtpCode}
-            autoFocus
-            autoComplete="one-time-code"
-          >
-            <InputOTPGroup>
-              <InputOTPSlot index={0} />
-              <InputOTPSlot index={1} />
-              <InputOTPSlot index={2} />
-              <InputOTPSlot index={3} />
-              <InputOTPSlot index={4} />
-              <InputOTPSlot index={5} />
-            </InputOTPGroup>
-          </InputOTP>
-        </div>
+        <p className="text-center text-sm text-muted-foreground mb-6">
+          Click the link in that email to verify your account and continue.
+          This page will update automatically if you open it on this device.
+        </p>
         <Button
+          variant="outline"
           className="w-full h-12 rounded-full font-medium"
-          onClick={handleVerify}
-          disabled={loading || otpCode.length < 6}
+          onClick={handleResend}
+          disabled={resending}
         >
-          {loading ? (
+          {resending ? (
             <>
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Verifying...
+              Resending...
             </>
           ) : (
-            "Verify"
+            "Resend verification link"
           )}
         </Button>
-        <p className="text-center text-sm text-muted-foreground mt-4">
-          Didn't receive the code?{" "}
-          <button onClick={handleResend} className="text-primary font-medium hover:underline">
-            Resend
-          </button>
-        </p>
       </AuthLayout>
     );
   }

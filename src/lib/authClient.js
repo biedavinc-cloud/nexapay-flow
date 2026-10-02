@@ -46,10 +46,6 @@ export const auth = {
     return request("/register", { method: "POST", body: JSON.stringify({ email, password }) });
   },
 
-  async verifyOtp({ email, otpCode }) {
-    return request("/verify-otp", { method: "POST", body: JSON.stringify({ email, otpCode }) });
-  },
-
   async resendOtp(email) {
     return request("/resend-otp", { method: "POST", body: JSON.stringify({ email }) });
   },

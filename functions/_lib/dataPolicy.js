@@ -22,7 +22,7 @@ export const POLICY = {
   },
   Tenant: {
     table: "nexapay_tenants", scope: "id",
-    list: A, get: S, create: N, delete: A,
+    list: A, get: S, create: A, delete: A,
     update: A,
     cols: {
       company_name: "text", country: "text", city: "text", business_activity: "text", tier: "text",
